@@ -1,5 +1,0 @@
-@mixin breakpoint($query) {
-	@media (min-width: #{$query}) {
-		@content;
-	}
-}
