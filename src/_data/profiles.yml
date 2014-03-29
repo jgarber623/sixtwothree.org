@@ -74,6 +74,10 @@
   class: soundcloud
   url: https://soundcloud.com/jgarber
 
+- name: Storify
+  class: storify
+  url: https://storify.com/jgarber
+
 - name: Twitter
   class: twitter
   url: https://twitter.com/jgarber
