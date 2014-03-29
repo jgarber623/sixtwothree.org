@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html id="sixtwothree-org" lang="en-US">
+<head>
+	<meta charset="utf-8">
+
+	<title>
+		{% if page.title %}
+			{{ page.title }} — {{ site.name }}
+		{% else %}
+			{{ site.name }} — {{ site.description }}
+		{% endif %}
+	</title>
+</head>
+<body>
+
+	{{ content }}
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+source: ./src
+destination: ./public
+
+description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
+name: sixtwothree.org
+url: http://sixtwothree.org/
+
+markdown: redcarpet
+permalink: /:categories/:title
+pygments: true

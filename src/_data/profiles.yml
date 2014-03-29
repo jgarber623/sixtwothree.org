@@ -1,0 +1,91 @@
+- name: Bandcamp
+  class: bandcamp
+  url: https://bandcamp.com/jgarber
+
+- name: CodePen
+  class: codepen
+  url: http://codepen.io/jgarber
+
+- name: Delicious
+  class: delicious
+  url: https://delicious.com/jgarber
+
+- name: Facebook
+  class: facebook
+  url: https://www.facebook.com/jgarber623
+
+- name: Ficly
+  class: ficly
+  url: http://ficly.com/authors/jgarber
+
+- name: Flickr
+  class: flickr
+  url: http://flickr.com/photos/jgarber
+
+- name: GitHub
+  class: github
+  url: https://github.com/jgarber623
+
+- name: Google+
+  class: googleplus
+  url: https://plus.google.com/u/0/114616233667087704378
+
+- name: Instagram
+  class: instagram
+  url: http://instagram.com/jgarber
+
+- name: Keybase
+  class: keybase
+  url: https://keybase.io/jgarber
+
+- name: Kickstarter
+  class: kickstarter
+  url: http://www.kickstarter.com/profile/jgarber
+
+- name: Lanyrd
+  class: lanyrd
+  url: http://lanyrd.com/profile/jgarber
+
+- name: Last.fm
+  class: lastfm
+  url: http://www.last.fm/user/jgarber
+
+- name: LinkedIn
+  class: linkedin
+  url: https://www.linkedin.com/in/jgarber
+
+- name: PhotoDrop
+  class: photodrop
+  url: http://photodrop.in/jgarber
+
+- name: Pinterest
+  class: pinterest
+  url: http://pinterest.com/jgarber623
+
+- name: Polar
+  class: polar
+  url: http://polarb.com/users/jgarber
+
+- name: Rdio
+  class: rdio
+  url: http://www.rdio.c
+
+- name: SoundCloud
+  class: soundcloud
+  url: https://soundcloud.com/jgarber
+
+- name: Twitter
+  class: twitter
+  url: https://twitter.com/jgarber
+
+- name: Vimeo
+  class: vimeo
+  url: https://vimeo.com/jgarber
+
+- name: VSCO Grid
+  class: vsco
+  url: http://jgarber.vsco.co/
+
+- name: YouTube
+  class: youtube
+  url: http://www.youtube.com/user/jgarber623
