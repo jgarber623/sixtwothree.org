@@ -1,0 +1,41 @@
+* {
+	@include box-sizing;
+}
+
+html {
+	background: #fff;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	@extend %source-sans-pro;
+	color: $color--base;
+	margin: 0;
+	padding-bottom: 4em;
+}
+
+article,
+header,
+main,
+footer {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@extend %open-sans;
+	font-weight: 700;
+}
+
+a {
+	color: palette(blue, light);
+
+	&:focus,
+	&:hover {
+		color: palette(blue, dark);
+	}
+}

@@ -1,0 +1,3 @@
+@function em($target, $context: 16) {
+	@return ($target + 0em) / $context;
+}

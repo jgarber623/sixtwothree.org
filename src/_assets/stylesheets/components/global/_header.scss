@@ -1,0 +1,17 @@
+.global-header {
+	background: palette(grey, light);
+	padding: 0.75em 0;
+
+	h1 {
+		font-size: em(18);
+		margin: 0;
+
+		@include breakpoint($break--narrow) {
+			font-size: em(24);
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
