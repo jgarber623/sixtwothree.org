@@ -1,13 +1,15 @@
 source: ./src
 destination: ./public
 
+
+name: sixtwothree.org
+url: http://sixtwothree.org/
 description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
 license:
   title: Creative Commons Attribution-NonCommercial-ShareAlike 3.0
   url: http://creativecommons.org/licenses/by-nc-sa/3.0/
-name: sixtwothree.org
-url: http://sixtwothree.org/
 
-markdown: redcarpet
+
 permalink: /:categories/:title
+markdown: redcarpet
 pygments: true
