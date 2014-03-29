@@ -1,6 +1,11 @@
 source: ./src
 destination: ./public
 
+gems: ['jekyll-assets']
+
+assets:
+  css_compressor: sass
+  gzip: false
 
 name: sixtwothree.org
 url: http://sixtwothree.org/
@@ -8,7 +13,6 @@ description: 'Online home to Jason Garber, one of the Internet’s top Jason Gar
 license:
   title: Creative Commons Attribution-NonCommercial-ShareAlike 3.0
   url: http://creativecommons.org/licenses/by-nc-sa/3.0/
-
 
 permalink: /:categories/:title
 markdown: redcarpet
