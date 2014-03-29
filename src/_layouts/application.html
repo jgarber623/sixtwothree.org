@@ -10,10 +10,30 @@
 			{{ site.name }} — {{ site.description }}
 		{% endif %}
 	</title>
+
+	<meta name="apple-mobile-web-app-title" content="sixtwothree">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon shortcut" href="http://gravatar.com/avatar/0f21734c5383cd5d49234fba7a6b2131?s=16" sizes="16x16">
+	<link rel="icon shortcut" href="http://gravatar.com/avatar/0f21734c5383cd5d49234fba7a6b2131?s=32" sizes="32x32">
 </head>
 <body>
 
-	{{ content }}
+	<header class="global-header" role="banner">
+		<div class="layout-container">
+			<h1><a href="/" rel="home" title="Home">{{ site.name }}</a></h1>
+		</div>
+	</header>
+
+	<div class="layout-container">
+		<main class="global-content{% if page.global_content_classes %} {{ page.global_content_classes }}{% endif %}" role="main">
+			{{ content }}
+		</main>
+
+		<footer class="global-footer" role="contentinfo">
+			<p>Some rights reserved. This site’s content is licensed under a <a href="{{ site.license.url }}" rel="license">{{ site.license.title }} license</a>. Souce code available on <a href="https://github.com/jgarber623/sixtwothree.org" rel="source">GitHub</a>.</p>
+		</footer>
+	</div>
 
 </body>
 </html>
