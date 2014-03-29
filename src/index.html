@@ -18,9 +18,9 @@ layout: application
 
 	<ol reversed>
 		{% for project in site.data.projects %}
-			<li class="project">
-				<h2 class="title"><a href="{{ project.url }}">{{ project.title }}</a></h2>
-				<span class="description">{{ project.description }}, <time datetime="{{ project.date }}">{{ project.date | date: '%B %Y' }}</time>.</span>
+			<li class="project h-event vevent">
+				<h2 class="title p-name summary"><a href="{{ project.url }}">{{ project.title }}</a></h2>
+				<span class="description p-summary">{{ project.description }}, <time class="dt-start dtstart" datetime="{{ project.date }}">{{ project.date | date: '%B %Y' }}</time>.</span>
 			</li>
 		{% endfor %}
 	</ol>
