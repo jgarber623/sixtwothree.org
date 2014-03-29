@@ -1,0 +1,15 @@
+<article class="h-entry hentry">
+	<header class="post-header">
+		<h1 class="post-title p-name entry-title"><a href="{{ post.url }}" class="u-url" rel="bookmark">{{ post.title }}</a></h1>
+	</header>
+
+	{% if include.expanded %}
+		<div class="post-excerpt p-summary entry-summary">
+			<p>{{ post.excerpt }}</p>
+		</div>
+	{% endif %}
+
+	<footer class="post-footer">
+		<p>Published on <time class="dt-published published" datetime="{{ post.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ post.date | date: "%B %e, %Y at %l:%M %P" }}</time>.</p>
+	</footer>
+</article>

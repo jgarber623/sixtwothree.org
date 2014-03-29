@@ -1,0 +1,21 @@
+---
+global_content_classes: h-feed hfeed
+layout: page
+title: All Posts
+---
+
+{% assign posts = site.categories.blog %}
+
+<ol class="posts-list" reversed>
+	{% for post in posts limit: 5 %}
+		<li class="post--expanded post">
+			{% include post.html post=post expanded=true %}
+		</li>
+	{% endfor %}
+
+	{% for post in posts offset: 5 %}
+		<li class="post">
+			{% include post.html post=post %}
+		</li>
+	{% endfor %}
+</ol>

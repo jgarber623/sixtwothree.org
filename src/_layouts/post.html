@@ -1,0 +1,19 @@
+---
+layout: application
+---
+
+<article class="post--single post h-entry hentry">
+	<header class="post-header">
+		<h1 class="post-title p-name entry-title">{{ page.title }}</h1>
+	</header>
+
+	<div class="post-content e-content entry-content">
+		{{ content }}
+	</div>
+
+	<footer class="post-footer">
+		<p>“<a href="{{ page.url }}" class="u-url" rel="bookmark">{{ page.title }}</a>” was published on <time class="dt-published published" datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.date | date: "%B %e, %Y at %l:%M %P" }}</time>.</p>
+
+		{% include bio--mini.html %}
+	</footer>
+</article>
