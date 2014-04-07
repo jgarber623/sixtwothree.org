@@ -16,6 +16,7 @@ after :deploy, 'deploy:after_deploy', 'deploy:cleanup'
 
 namespace :deploy do
   task :after_deploy do
+    `cd #{current_path}`
     `bundle`
     `bundle exec jekyll build --config config/jekyll.yml`
   end
