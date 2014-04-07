@@ -1,7 +1,5 @@
 .bundle
 .DS_Store
-.rbenv-version
-.ruby-version
 .sass-cache
 bower_components
 node_modules
