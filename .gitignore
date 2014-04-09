@@ -1,6 +1,7 @@
 .bundle
 .DS_Store
 .sass-cache
+config/deploy/*.rb
 bower_components
 node_modules
 public
