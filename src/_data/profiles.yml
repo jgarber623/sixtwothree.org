@@ -46,13 +46,9 @@
   class: lanyrd
   url: http://lanyrd.com/profile/jgarber
 
-- name: Last.fm
-  class: lastfm
-  url: http://www.last.fm/user/jgarber
-
-- name: LinkedIn
-  class: linkedin
-  url: https://www.linkedin.com/in/jgarber
+- name: Letterboxd
+  class: letterboxd
+  url: http://letterboxd.com/jgarber
 
 - name: PhotoDrop
   class: photodrop
@@ -68,15 +64,7 @@
 
 - name: Rdio
   class: rdio
-  url: http://www.rdio.c
-
-- name: SoundCloud
-  class: soundcloud
-  url: https://soundcloud.com/jgarber
-
-- name: Storify
-  class: storify
-  url: https://storify.com/jgarber
+  url: http://www.rdio.com/people/jgarber
 
 - name: Twitter
   class: twitter
