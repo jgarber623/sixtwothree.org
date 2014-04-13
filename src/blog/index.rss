@@ -1,0 +1,36 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+	{% assign posts = site.categories.blog %}
+
+	<channel>
+		<title>{{ site.name }}: Posts</title>
+		<atom:link rel="self" href="{{ site.url }}/blog/index.rss" />
+		<link>{{ site.url }}/blog</link>
+		<description>{{ site.description | xml_escape }}</description>
+		<pubDate>{{ posts.first.date | date: '%a, %d %b %Y %H:%M:%S %Z' }}</pubDate>
+		<managingEditor>{{ site.author.email }} ({{ site.author.name }})</managingEditor>
+		<webMaster>{{ site.author.email }} ({{ site.author.name }})</webMaster>
+		<language>en-US</language>
+		<copyright>{{ site.license.title | xml_escape }}</copyright>
+
+		{% for post in posts limit: 10 %}
+			<item>
+				<guid>{{ site.url }}{{ post.url }}</guid>
+				<title>{{ post.title | xml_escape }}</title>
+				<link>{{ site.url }}{{ post.url }}</link>
+				<pubDate>{{ post.date | date: '%a, %d %b %Y %H:%M:%S %Z' }}</pubDate>
+				<description>
+					<![CDATA[
+						{{ post.content }}
+					]]>
+				</description>
+				{% for tag in post.tags %}
+					<category>{{ tag | xml_encode }}</category>
+				{% endfor %}
+			</item>
+		{% endfor %}
+	</channel>
+</rss>

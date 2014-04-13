@@ -12,8 +12,11 @@ markdown: redcarpet
 pygments: true
 
 name: sixtwothree.org
-url: http://sixtwothree.org/
+url: http://sixtwothree.org
 description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
+author:
+  name: Jason Garber
+  email: jason@sixtwothree.org
 license:
   title: Creative Commons Attribution-NonCommercial-ShareAlike 3.0
   url: http://creativecommons.org/licenses/by-nc-sa/3.0/
