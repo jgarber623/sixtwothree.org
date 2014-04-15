@@ -217,7 +217,7 @@ AddDefaultCharset utf-8
 # ------------------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
-    RewriteRule ^blog/feed/$ blog/rss.xml [L]
+    RewriteRule ^blog/feed/$ blog/index.rss [L]
 
     Redirect 301 /blog/archives/2008/04/19/today-is-record-store-day/                                                                /blog/today-is-record-store-day
     Redirect 301 /blog/archives/2008/03/24/sxsw-recap-bullet-point-style/                                                            /blog/sxsw-recap-bullet-point-style
