@@ -1,9 +1,9 @@
 ---
 category: blog
 date: 2014-04-15 17:21:18 -0400
-excerpt:
+excerpt: A recent interview with a candidate got me thinking about values.
 layout: post
-tags:
+tags: webdesign
 title: What do you value?
 ---
 
