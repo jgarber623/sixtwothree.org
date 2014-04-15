@@ -9,6 +9,8 @@ assets:
 
 permalink: /:categories/:title
 markdown: redcarpet
+redcarpet:
+  extensions: ['smart']
 pygments: true
 
 name: sixtwothree.org
