@@ -1,0 +1,13 @@
+@-ms-viewport{
+	width: device-width;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	// @include text-size-adjust(100%);
+}

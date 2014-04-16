@@ -1,0 +1,6 @@
+@mixin text-size-adjust($value: inherit) {
+	@each $prefix in -ms, -webkit {
+		#{$prefix}-text-size-adjust: $value;
+	}
+	text-size-adjust: $value;
+}
