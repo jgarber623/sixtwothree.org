@@ -1,21 +1,24 @@
 <!doctype html>
-<html id="sixtwothree-org" lang="en-US">
+<html id="sixtwothree-org" itemscope itemtype="http://schema.org/WebPage" lang="en-US">
 <head>
 	<meta charset="utf-8">
 
-	<title>
-		{% if page.title %}
-			{{ page.title }} — {{ site.name }}
-		{% else %}
-			{{ site.name }} — {{ site.description }}
-		{% endif %}
-	</title>
+	{% capture page_title %}{% if page.title %}{{ page.title }} — {{ site.name }}{% else %}{{ site.name }} — {{ site.description }}{% endif %}{% endcapture %}
+	{% capture page_description %}{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+
+	<title>{{ page_title }}</title>
 
 	<meta name="apple-mobile-web-app-title" content="sixtwothree">
+	<meta name="application-name" content="sixtwothree">
+	<meta name="description" content="{{ page_description }}">
+	<meta name="og:description" itemprop="description" content="{{ page_description }}">
+	<meta name="og:title" itemprop="name" content="{{ page_title }}">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@jgarber">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="alternate" href="/blog/index.atom" title="{{ site.name }}: Posts (Atom 1.0)" type="application/atom+xml">
-	<link rel="alternate" href="/blog/index.rss" title="{{ site.name }}: Posts (RSS 2.0)" type="application/rss+xml">
+	<link rel="alternate" href="/blog/atom" title="{{ site.name }}: Posts (Atom 1.0)" type="application/atom+xml">
+	<link rel="alternate" href="/blog/rss" title="{{ site.name }}: Posts (RSS 2.0)" type="application/rss+xml">
 	<link rel="icon shortcut" href="http://gravatar.com/avatar/0f21734c5383cd5d49234fba7a6b2131?s=16" sizes="16x16">
 	<link rel="icon shortcut" href="http://gravatar.com/avatar/0f21734c5383cd5d49234fba7a6b2131?s=32" sizes="32x32">
 	{% stylesheet application %}
