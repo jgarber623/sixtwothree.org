@@ -1,0 +1,4 @@
+@mixin box-sizing($value: content-box) {
+	-moz-box-sizing: $value;
+	box-sizing: $value;
+}

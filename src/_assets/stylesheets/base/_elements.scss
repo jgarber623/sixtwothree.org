@@ -5,9 +5,9 @@
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+	@include box-sizing(border-box);
 }
 
 html {
-	// @include text-size-adjust(100%);
+	@include text-size-adjust(100%);
 }
