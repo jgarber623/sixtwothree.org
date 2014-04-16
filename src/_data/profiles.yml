@@ -26,10 +26,6 @@
   class: github
   url: https://github.com/jgarber623
 
-- name: Google+
-  class: googleplus
-  url: https://plus.google.com/u/0/114616233667087704378
-
 - name: Instagram
   class: instagram
   url: http://instagram.com/jgarber
