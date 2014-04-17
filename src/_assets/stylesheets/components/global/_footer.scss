@@ -1,0 +1,13 @@
+.global-footer {
+	color: palette(grey, light);
+	font-size: em(14);
+
+	a {
+		color: palette(grey);
+
+		&:focus,
+		&:hover {
+			color: palette(grey, x-dark);
+		}
+	}
+}

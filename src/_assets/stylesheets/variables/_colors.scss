@@ -1,3 +1,19 @@
+$grey--base: #777;
+
+$palettes: (
+	blue: (
+		light: #4678b9,
+		dark: #465a78
+	),
+	grey: (
+		x-light: lighten($grey--base, 48%),
+		light: lighten($grey--base, 10%),
+		base: $grey--base,
+		dark: darken($grey--base, 10%),
+		x-dark: darken($grey--base, 27%)
+	)
+);
+
 $profiles: (
 	bandcamp: #4e9bac,
 	codepen: #222,
@@ -20,3 +36,53 @@ $profiles: (
 	vsco: #9db636,
 	youtube: #b00
 );
+
+
+
+
+
+
+
+
+
+
+// $color--base: #333;
+
+// $palettes: (
+// 	blue: (
+// 		dark: #435874,
+// 		light: #4778b8
+// 	),
+// 	grey: (
+// 		base: #999,
+// 		light: #f2f2f2,
+// 		dark: #777,
+// 		x-dark: darken(#777, 25%)
+// 	)
+// );
+
+// $profiles: (
+// 	bandcamp: #4e9bac,
+// 	codepen: #222,
+// 	delicious: #248cff,
+// 	facebook: #3b5998,
+// 	ficly: #b51c2c,
+// 	flickr: #0063db,
+// 	github: #4183c4,
+// 	googleplus: #dd4b39,
+// 	instagram: #517fa4,
+// 	keybase: #fe8547,
+// 	kickstarter: #76cc1e,
+// 	lanyrd: #152e51,
+// 	lastfm: #d51007,
+// 	linkedin: #007bb6,
+// 	photodrop: #cdb6e3,
+// 	pinterest: #cb2027,
+// 	polar: #2da1dc,
+// 	rdio: #0088da,
+// 	soundcloud: #f60,
+// 	twitter: #00aced,
+// 	vimeo: #aad450,
+// 	vsco: #9db636,
+// 	youtube: #b00
+// );

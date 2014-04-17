@@ -1,0 +1,19 @@
+.post--single {
+	.post-header h1 {
+		font-size: em(32);
+		line-height: 1.2;
+
+		@include breakpoint($break--narrow) {
+			font-size: em(48);
+		}
+	}
+
+	.post-footer {
+		border-top: 0.5em solid palette(grey, x-light);
+		padding-top: 1em;
+
+		> p {
+			font-size: 1em;
+		}
+	}
+}

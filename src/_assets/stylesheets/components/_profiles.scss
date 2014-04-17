@@ -1,0 +1,44 @@
+.profiles {
+	margin: 3em 0;
+
+	ol {
+		@extend %clear;
+		@extend %ui-list;
+	}
+
+	li {
+		margin-bottom: 0.5em;
+
+		@include breakpoint($tweak--narrow) {
+			float: left;
+			margin-right: 2%;
+			width: 48%;
+		}
+
+		@include breakpoint($break--narrow) {
+			margin-right: 1%;
+			width: 24%;
+		}
+	}
+}
+
+.profile-link {
+	background: palette(grey, x-light);
+	border-radius: em(3);
+	display: block;
+	padding: 0.75em 1em;
+	text-decoration: none;
+
+	&:focus,
+	&:hover {
+		box-shadow: inset -1px -1px 0 rgba(#000, 0.1);
+		color: #fff;
+	}
+}
+
+@each $profile, $bgcolor in $profiles {
+	.profile-link--#{$profile}:focus,
+	.profile-link--#{$profile}:hover {
+		background: $bgcolor;
+	}
+}

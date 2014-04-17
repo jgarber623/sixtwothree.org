@@ -1,0 +1,11 @@
+.post-excerpt {
+	font-size: em(18);
+
+	p {
+		line-height: 1.4;
+
+		@include breakpoint($break--wide) {
+			line-height: 1.6;
+		}
+	}
+}
