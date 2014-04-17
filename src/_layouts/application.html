@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 
 	{% capture page_title %}{% if page.title %}{{ page.title }} — {{ site.name }}{% else %}{{ site.name }} — {{ site.description }}{% endif %}{% endcapture %}
-	{% capture page_description %}{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
+	{% capture page_description %}{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 
 	<title>{{ page_title }}</title>
 

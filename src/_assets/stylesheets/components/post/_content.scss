@@ -2,20 +2,20 @@
 	margin: 3em 0;
 
 	h2 {
-		font-size: em(24);
+		@include font-size(x-large);
 		margin: 1.5em 0 0.75em 0;
 
 		@include breakpoint($break--narrow) {
-			font-size: em(32);
+			@include font-size(xx-large);
 		}
 	}
 
 	h3 {
-		font-size: em(18);
+		@include font-size;
 		margin: 1.5em 0 0.75em 0;
 
 		@include breakpoint($break--narrow) {
-			font-size: em(24);
+			@include font-size(x-large);
 		}
 	}
 
@@ -36,10 +36,10 @@
 
 	p,
 	li {
-		font-size: em(18);
+		@include font-size;
 
 		@include breakpoint($break--wide) {
-			font-size: em(21);
+			@include font-size(large);
 		}
 	}
 
@@ -72,10 +72,10 @@
 
 		p,
 		li {
-			font-size: em($target: 16, $context: 18);
+			@include font-size(x-small);
 
 			@include breakpoint($break--wide) {
-				font-size: em(18);
+				@include font-size;
 			}
 		}
 	}
@@ -91,7 +91,7 @@
 		background: palette(grey, x-light);
 		display: inline-block;
 		font-family: Monaco, "Courier New", Courier, monospace;
-		font-size: em($target: 14, $context: 18);
+		@include font-size(small);
 		padding: 0.25em 0.5em;
 	}
 
@@ -104,7 +104,7 @@
 
 		code {
 			background: none;
-			font-size: em(16);
+			font-size: 1em; // Set directly to counter a Webkit bug with `code` and 1rem
 			padding: 0;
 		}
 	}

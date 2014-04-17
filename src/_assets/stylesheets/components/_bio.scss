@@ -10,23 +10,23 @@
 	}
 
 	.photo {
-		border-radius: em(3);
+		border-radius: 0.25em;
 		display: block;
-		width: em(80);
+		width: 5em;
 	}
 
 	.salutation {
-		font-size: em(24);
+		@include font-size(x-large);
 		font-weight: 700;
 		margin: 1em 0 0.75em 0;
 
 		@include breakpoint($break--narrow) {
-			font-size: em(32);
+			@include font-size(xx-large);
 		}
 	}
 
 	.content {
-		font-size: em(18);
+		@include font-size;
 		line-height: 1.4;
 	}
 
@@ -63,16 +63,16 @@
 		}
 
 		.photo {
-			width: em(40);
+			width: 2.5em;
 		}
 
 		.salutation {
 			@extend %font--open-sans;
-			font-size: em(18);
-			margin: 0 0 0 em($target: 56, $context: 18);
+			@include font-size;
+			margin: 0 0 0 3.1em;
 
 			@include breakpoint($break--wide) {
-				font-size: em(24);
+				@include font-size(x-large);
 				margin: 0;
 			}
 		}

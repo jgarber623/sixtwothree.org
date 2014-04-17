@@ -1,10 +1,10 @@
 .post--single {
 	.post-header h1 {
-		font-size: em(32);
+		@include font-size(xx-large);
 		line-height: 1.2;
 
 		@include breakpoint($break--narrow) {
-			font-size: em(48);
+			@include font-size(xxx-large);
 		}
 	}
 
@@ -13,7 +13,7 @@
 		padding-top: 1em;
 
 		> p {
-			font-size: 1em;
+			@include font-size(small);
 		}
 	}
 }

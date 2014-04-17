@@ -2,7 +2,7 @@
 	color: palette(grey, light);
 
 	> p {
-		font-size: em(14);
+		@include font-size(x-small);
 		margin: 0;
 	}
 }

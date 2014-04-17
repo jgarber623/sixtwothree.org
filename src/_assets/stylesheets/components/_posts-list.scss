@@ -16,7 +16,7 @@
 		font-size: 1em;
 
 		@include breakpoint($break--wide) {
-			font-size: em(24);
+			@include font-size(x-large);
 		}
 	}
 
@@ -36,7 +36,7 @@
 			padding-bottom: 3em;
 
 			.post-title {
-				font-size: em(24);
+				@include font-size(x-large);
 			}
 		}
 	}

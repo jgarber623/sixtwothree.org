@@ -17,7 +17,7 @@
 	}
 
 	.title {
-		font-size: em(18);
+		@include font-size;
 		margin: 0 0 0.25em 0;
 
 		@include breakpoint($break--narrow) {

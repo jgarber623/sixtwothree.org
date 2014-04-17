@@ -1,5 +1,5 @@
 .post-excerpt {
-	font-size: em(18);
+	@include font-size;
 
 	p {
 		line-height: 1.4;

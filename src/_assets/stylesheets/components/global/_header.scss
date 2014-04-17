@@ -3,11 +3,11 @@
 	padding: 0.75em 0;
 
 	h1 {
-		font-size: em(18);
+		@include font-size;
 		margin: 0;
 
 		@include breakpoint($break--narrow) {
-			font-size: em(24);
+			@include font-size(x-large);
 		}
 	}
 

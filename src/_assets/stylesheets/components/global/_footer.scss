@@ -1,6 +1,6 @@
 .global-footer {
 	color: palette(grey, light);
-	font-size: em(14);
+	@include font-size(x-small);
 
 	a {
 		color: palette(grey);
