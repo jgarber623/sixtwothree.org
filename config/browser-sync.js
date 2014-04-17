@@ -4,6 +4,9 @@ module.exports = {
 		'public/assets/**/*',
 		'public/**/*.html'
 	],
+	ghostMode: {
+		location: true
+	},
 	open: false,
 	server: {
 		baseDir: 'public'
