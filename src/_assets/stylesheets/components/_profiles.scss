@@ -2,23 +2,20 @@
 	margin: 3em 0;
 
 	ol {
-		@extend %clear;
 		@extend %ui-list;
+
+		@include breakpoint($tweak--narrow) {
+			@include column-count(2);
+			@include column-gap(0.5em);
+		}
+
+		@include breakpoint($tweak--wide) {
+			@include column-count(4);
+		}
 	}
 
 	li {
 		margin-bottom: 0.5em;
-
-		@include breakpoint($tweak--narrow) {
-			float: left;
-			margin-right: 2%;
-			width: 48%;
-		}
-
-		@include breakpoint($break--narrow) {
-			margin-right: 1%;
-			width: 24%;
-		}
 	}
 }
 
