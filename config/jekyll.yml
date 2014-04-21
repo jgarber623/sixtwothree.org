@@ -10,7 +10,7 @@ assets:
 permalink: /:categories/:title
 markdown: redcarpet
 redcarpet:
-  extensions: ['smart']
+  extensions: ['smart', 'strikethrough']
 pygments: true
 
 name: sixtwothree.org
