@@ -1,5 +1,5 @@
-@mixin breakpoint($query) {
-	@media (min-width: #{$query}) {
+@mixin breakpoint($value, $property: min-width) {
+	@media ($property: $value) {
 		@content;
 	}
 }
