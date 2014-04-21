@@ -18,11 +18,11 @@ As a test, I saved World Wildlife Fund's recently-launched [Find Your Inner Anim
 Total bummer!
 
 
-## <del>App manifest to the rescue</del>
+## ~~App manifest to the rescue~~
 
-<del>A quick bit of digging around online revealed why: Firefox OS looks for a file named `manifest.webapp` in the root of your site. This manifest file is a standard JSON file with a handful of properties describing your website. (Full documentation can be found on [MDN's App manifest page](https://developer.mozilla.org/en-US/Apps/Developing/Manifest).)</del>
+~~A quick bit of digging around online revealed why: Firefox OS looks for a file named `manifest.webapp` in the root of your site. This manifest file is a standard JSON file with a handful of properties describing your website. (Full documentation can be found on [MDN's App manifest page](https://developer.mozilla.org/en-US/Apps/Developing/Manifest).)~~
 
-<del>A sample `manifest.webapp` might look like:</del>
+~~A sample `manifest.webapp` might look like:~~
 
 	{
 	    "name": "sixtwothree.org",
@@ -42,9 +42,9 @@ Total bummer!
 	    "default_locale": "en"
 	}
 
-<del>Most of the properties and values in the manifest file are self-explanatory. One to note is the `chrome` object where I'm explicitly instructing Firefox OS to display navigation UI ([example screenshots](https://developer.mozilla.org/en-US/Apps/Developing/Manifest#chrome)). If your website doesn't include in-page navigational elements, you'll want to include this setting. For example, [Pinterest's `manifest.webapp`](http://m.pinterest.com/manifest.webapp) includes this setting.</del>
+~~Most of the properties and values in the manifest file are self-explanatory. One to note is the `chrome` object where I'm explicitly instructing Firefox OS to display navigation UI ([example screenshots](https://developer.mozilla.org/en-US/Apps/Developing/Manifest#chrome)). If your website doesn't include in-page navigational elements, you'll want to include this setting. For example, [Pinterest's `manifest.webapp`](http://m.pinterest.com/manifest.webapp) includes this setting.~~
 
-<del>Depending on the nature of your website, `manifest.webapp` could be as simple as what I've shown above or [much, much more involved](https://developer.mozilla.org/en-US/Apps/Developing/Manifest). For a basic website such as this one, adding `manifest.webapp` should take no more than a few minutes!</del>
+~~Depending on the nature of your website, `manifest.webapp` could be as simple as what I've shown above or [much, much more involved](https://developer.mozilla.org/en-US/Apps/Developing/Manifest). For a basic website such as this one, adding `manifest.webapp` should take no more than a few minutes!~~
 
 
 ## Late-Breaking Afternoon Update
