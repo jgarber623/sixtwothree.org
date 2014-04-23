@@ -3,10 +3,16 @@
 
 	ol {
 		@extend %ui-list;
+		margin-top: -0.5em;
+		padding-bottom: 1px;
 
 		@include breakpoint($tweak--narrow) {
 			@include column-count(2);
 			@include column-gap(0.5em);
+		}
+
+		@include breakpoint($tweak--medium) {
+			@include column-count(3);
 		}
 
 		@include breakpoint($tweak--wide) {
@@ -15,7 +21,8 @@
 	}
 
 	li {
-		margin-bottom: 0.5em;
+		-webkit-column-break-inside: avoid;
+		padding-top: 0.5em;
 	}
 }
 
