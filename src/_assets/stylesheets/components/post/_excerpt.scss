@@ -4,7 +4,7 @@
 	p {
 		line-height: 1.4;
 
-		@include breakpoint($break--wide) {
+		@include breakpoint($tweak--medium) {
 			line-height: 1.6;
 		}
 	}

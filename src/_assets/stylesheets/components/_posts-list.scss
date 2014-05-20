@@ -4,18 +4,18 @@
 	margin: 3em 0;
 	padding: 0 0 2em 1em;
 
-	@include breakpoint($break--wide) {
+	@include breakpoint($tweak--medium) {
 		padding-left: 0;
 	}
 
 	.post {
-		margin-bottom: 1em;
+		margin-bottom: 1.5em;
 	}
 
 	.post-title {
 		font-size: 1em;
 
-		@include breakpoint($break--wide) {
+		@include breakpoint($tweak--medium) {
 			@include font-size(x-large);
 		}
 	}
@@ -23,17 +23,17 @@
 	.post-excerpt {
 		display: none;
 
-		@include breakpoint($break--wide) {
+		@include breakpoint($tweak--medium) {
 			display: block;
 		}
 	}
 
-	@include breakpoint($break--wide) {
+	@include breakpoint($tweak--medium) {
 		.post--expanded {
 			border-bottom: 0.5em solid palette(grey, x-light);
 			list-style: none;
-			margin-bottom: 3em;
-			padding-bottom: 3em;
+			margin-bottom: 2.5em;
+			padding-bottom: 2.5em;
 
 			.post-title {
 				@include font-size(x-large);
