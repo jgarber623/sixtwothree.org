@@ -11,7 +11,6 @@ url: http://sixtwothree.org
 permalink: /:categories/:title
 
 # Authoring
-highlighter: pygments
 markdown: redcarpet
 redcarpet:
   extensions: ['smart', 'strikethrough']
