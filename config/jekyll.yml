@@ -1,18 +1,28 @@
+# Build sources
 source: ./src
 destination: ./public
 
+# Site variables
+title: sixtwothree.org
+description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
+url: http://sixtwothree.org
+
+# Permalink settings
 permalink: /:categories/:title
+
+# Authoring
+highlighter: pygments
 markdown: redcarpet
 redcarpet:
   extensions: ['smart', 'strikethrough']
-highlighter: pygments
 
-name: sixtwothree.org
-url: http://sixtwothree.org
-description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
+# Author meta
 author:
   name: Jason Garber
   email: jason@sixtwothree.org
+  urL: http://sixtwothree.org
+
+# License
 license:
   title: Creative Commons Attribution-NonCommercial-ShareAlike 3.0
   url: http://creativecommons.org/licenses/by-nc-sa/3.0/

@@ -6,8 +6,8 @@
 	{% assign posts = site.categories.blog %}
 
 	<id>{{ site.url }}/</id>
-	<title>{{ site.name | xml_escape }}: Posts</title>
-	<subtitle>All posts from {{ site.name }} — {{ site.description | xml_escape }}</subtitle>
+	<title>{{ site.title | xml_escape }}: Posts</title>
+	<subtitle>All posts from {{ site.title }} — {{ site.description | xml_escape }}</subtitle>
 	<link rel="self" href="{{ site.url }}/blog/index.atom" />
 	<link href="{{ site.url }}/blog" />
 	<updated>{{ posts.first.date | date: '%Y-%m-%dT%H:%M:%SZ' }}</updated>
