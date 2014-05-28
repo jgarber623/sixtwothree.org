@@ -1,17 +1,11 @@
 source: ./src
 destination: ./public
 
-gems: ['jekyll-assets', 'sass', 'sprockets-sass']
-
-assets:
-  css_compressor: sass
-  gzip: false
-
 permalink: /:categories/:title
 markdown: redcarpet
 redcarpet:
   extensions: ['smart', 'strikethrough']
-pygments: true
+highlighter: pygments
 
 name: sixtwothree.org
 url: http://sixtwothree.org
