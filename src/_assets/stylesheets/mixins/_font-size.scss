@@ -1,3 +1,0 @@
-@mixin font-size($size: medium) {
-	font-size: map-get($font-sizes, $size) * 1rem;
-}
