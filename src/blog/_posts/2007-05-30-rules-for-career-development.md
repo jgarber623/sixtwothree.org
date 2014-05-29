@@ -1,7 +1,6 @@
 ---
 date: 2007-05-30 19:42:00 -05:00
 excerpt: Kevin and I were talking today about career development and pretty quickly came up with a list of tips.
-layout: post
 title: Rules for Career Development
 ---
 

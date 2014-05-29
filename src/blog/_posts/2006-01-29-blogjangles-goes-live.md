@@ -1,7 +1,6 @@
 ---
 date: 2006-01-29 22:36:00 -05:00
 excerpt: My homeboy Charlie just launched his blog, appropriately titled “Blogjangles.”
-layout: post
 tags: blogging links
 title: Blogjangles goes live!
 ---

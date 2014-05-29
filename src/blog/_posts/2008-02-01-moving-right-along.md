@@ -1,7 +1,6 @@
 ---
 date: 2008-02-01 19:36:00 -05:00
 excerpt: Seems like everyone’s on the move these days when it comes to jobs.
-layout: post
 title: Moving right along
 ---
 

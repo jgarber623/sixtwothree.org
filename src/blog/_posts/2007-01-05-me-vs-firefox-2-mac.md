@@ -1,6 +1,5 @@
 ---
 date: 2007-01-05 21:52:00 -05:00
-layout: post
 title: Me vs. Firefox 2 (Mac)
 ---
 

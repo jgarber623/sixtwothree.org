@@ -1,7 +1,6 @@
 ---
 date: 2013-10-15 10:25:34 -0500
 excerpt: This past weekend at SassConf, the authors of Sass announced the first version 3.3 release candidate of the popular CSS extension language. There are a ton of new features in 3.3 that I'm excited to try out, but I want to share a personal favorite with you.
-layout: post
 tags: sass webdesign
 title: Sass Maps Are Awesome!
 ---

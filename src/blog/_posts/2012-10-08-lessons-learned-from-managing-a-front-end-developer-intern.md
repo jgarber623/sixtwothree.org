@@ -1,7 +1,6 @@
 ---
 date: 2012-10-08 9:55:46 -0500
 excerpt: This summer, Viget hosted a handful of amazing interns.
-layout: post
 title: Lessons Learned from Managing a Front-End Developer Intern
 ---
 

@@ -1,7 +1,6 @@
 ---
 date: 2012-03-29 10:45:47 -0500
 excerpt: SXSW in recent years has been a mixed bag of emotions and takeaways.
-layout: post
 tags: conference sxsw
 title: 'SXSW Recap (4 of 4): Back to Austin'
 ---

@@ -1,7 +1,6 @@
 ---
 date: 2005-12-12 22:05:00 -05:00
 excerpt: AIGA has been posting a series of podcasts with the speakers for An Event Apart.
-layout: post
 tags: webdesign
 title: And now a word from Mr. Eric Meyer
 ---

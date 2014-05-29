@@ -1,6 +1,5 @@
 ---
 date: 2006-08-24 22:39:00 -05:00
-layout: post
 tags: music
 title: The Sound of Animals Fighting interview
 ---

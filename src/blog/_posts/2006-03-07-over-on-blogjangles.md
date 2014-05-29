@@ -1,6 +1,5 @@
 ---
 date: 2006-03-07 20:02:00 -05:00
-layout: post
 tags: blogging digitallife links
 title: Over on Blogjangles
 ---

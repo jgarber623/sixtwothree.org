@@ -1,7 +1,6 @@
 ---
 date: 2007-03-07 10:01:00 -05:00
 excerpt: It’s been a while since my last post.
-layout: post
 tags: refreshdc webdesign
 title: Catching up
 ---

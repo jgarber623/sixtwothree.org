@@ -1,7 +1,6 @@
 ---
 date: 2006-04-09 19:09:00 -05:00
 excerpt: Ben Watkins and I are pleased to announce the launching of Rhythmic Uprising podcasts.
-layout: post
 tags: links webdesign
 title: Rhythmic Uprising podcasts
 ---

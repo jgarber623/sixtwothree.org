@@ -1,7 +1,6 @@
 ---
 date: 2013-10-14 12:30:30 -0500
 excerpt: This past weekend, most of the Viget FED team attended the first-ever ConvergeRVA conference down in Richmond, Virginia.
-layout: post
 tags: conference convergerva
 title: Quick Thoughts from ConvergeRVA 2013
 ---

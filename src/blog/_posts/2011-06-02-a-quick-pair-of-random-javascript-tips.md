@@ -1,6 +1,5 @@
 ---
 date: 2011-06-02 12:15:00 -0500
-layout: post
 tags: javascript
 title: A Quick Pair of Random JavaScript Tips
 ---

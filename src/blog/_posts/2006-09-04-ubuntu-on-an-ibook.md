@@ -1,7 +1,6 @@
 ---
 date: 2006-09-04 14:47:00 -05:00
 excerpt: For a laugh, I decided to try out a Linux distro on my old 700 Mhz G3 iBook (mid-2002 revision).
-layout: post
 title: Ubuntu on an iBook
 ---
 

@@ -1,7 +1,6 @@
 ---
 date: 2006-07-07 18:09:00 -05:00
 excerpt: In the grand tradition of the 37signals job board, there are a few good positions available at DC-area companies.
-layout: post
 tags: links refreshdc
 title: Recent job postings on the Refresh DC forum
 ---

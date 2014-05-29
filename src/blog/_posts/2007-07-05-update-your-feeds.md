@@ -1,6 +1,5 @@
 ---
 date: 2007-07-05 22:25:00 -05:00
-layout: post
 title: Update your feeds
 ---
 

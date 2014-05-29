@@ -1,7 +1,6 @@
 ---
 date: 2005-12-12 22:07:00 -05:00
 excerpt: This is amazing.
-layout: post
 tags: photography
 title: Color photos from the World War I era
 ---

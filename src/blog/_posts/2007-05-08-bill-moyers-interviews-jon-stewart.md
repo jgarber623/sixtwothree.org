@@ -1,7 +1,6 @@
 ---
 date: 2007-05-08 21:44:00 -05:00
 excerpt: I found this over on Ryan Gantz’s site. Bill Moyers sat down for an interview with Daily Show host Jon Stewart, who is quickly becoming the news-bearer for my generation.
-layout: post
 tags: links politics
 title: Bill Moyers interviews Jon Stewart
 ---

@@ -1,6 +1,5 @@
 ---
 date: 2007-03-26 23:11:00 -05:00
-layout: post
 tags: blogging
 title: Real quick
 ---

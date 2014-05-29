@@ -1,7 +1,6 @@
 ---
 date: 2006-06-21 22:17:00 -05:00
 excerpt: My partner in crime, Jeremy Carbaugh, and I will be speaking next Thursday night at the June meeting of Refresh DC.
-layout: post
 tags: refreshdc
 title: Speaking at Refresh DC
 ---

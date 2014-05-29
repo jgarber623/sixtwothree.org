@@ -1,7 +1,6 @@
 ---
 date: 2006-08-24 08:39:00 -05:00
 excerpt: I’ve accepted a position as Associate Software Engineer with AOL
-layout: post
 title: Walking On
 ---
 

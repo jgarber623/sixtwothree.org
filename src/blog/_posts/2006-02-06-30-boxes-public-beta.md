@@ -1,7 +1,6 @@
 ---
 date: 2006-02-06 20:46:00
 excerpt: 30 Boxes, a new web-based calendar app, just went public beta today.
-layout: post
 tags: links
 title: 30 Boxes public beta
 ---

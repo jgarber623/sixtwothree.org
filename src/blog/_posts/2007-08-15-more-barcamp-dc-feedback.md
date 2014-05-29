@@ -1,7 +1,6 @@
 ---
 date: 2007-08-15 22:23:00 -05:00
 excerpt: There’s a good amount of conversation going on post-BarCamp DC.
-layout: post
 tags: barcampdc links
 title: More BarCamp DC feedback
 ---

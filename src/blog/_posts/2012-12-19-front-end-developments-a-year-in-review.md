@@ -1,7 +1,6 @@
 ---
 date: 2012-12-19 10:16:08 -0500
 excerpt: We've had a tremendous year here at Viget.
-layout: post
 title: 'Front-End Developments: A Year in Review'
 ---
 

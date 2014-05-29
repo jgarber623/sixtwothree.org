@@ -1,7 +1,6 @@
 ---
 date: 2011-07-19 10:30:35 -0500
 excerpt: I’m in the middle of working out a new feature for a project that requires JavaScript to append some markup, stylesheets, and scripts to a page. A piece of JavaScript required styles be applied to certain elements before it should execute.
-layout: post
 tags: javascript
 title: 'JS 201: Run a function when a stylesheet finishes loading'
 ---

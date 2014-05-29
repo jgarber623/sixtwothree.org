@@ -1,6 +1,5 @@
 ---
 date: 2005-12-15 21:21:00 -05:00
-layout: post
 title: Update to the presentations
 ---
 

@@ -1,7 +1,6 @@
 ---
 date: 2011-01-04 10:10:00 -0500
 excerpt: It should come as no surprise that we at Viget love having fun with design. On a recent project, Blair and I had the opportunity to do just that.
-layout: post
 tags: animation css webdesign
 title: Adding Delight to Your Design with CSS3 and Webkit Keyframe Animation
 ---

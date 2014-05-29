@@ -1,7 +1,6 @@
 ---
 date: 2007-01-20 16:40:00 -05:00
 excerpt: I’m happy to announce we’ve just relaunched the Refresh DC site.
-layout: post
 tags: links refreshdc webdesign
 title: Refresh DC site relaunch
 ---

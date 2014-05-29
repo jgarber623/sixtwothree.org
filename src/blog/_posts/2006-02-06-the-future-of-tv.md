@@ -1,6 +1,5 @@
 ---
 date: 2006-02-06 20:39:00
-layout: post
 tags: digitallife television
 title: The future of TV?
 ---

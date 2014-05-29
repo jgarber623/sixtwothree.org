@@ -1,7 +1,6 @@
 ---
 date: 2007-12-24 14:05:00 -05:00
 excerpt: I’ll be speaking at South by Southwest.
-layout: post
 title: Speaking at SXSW ’08
 ---
 

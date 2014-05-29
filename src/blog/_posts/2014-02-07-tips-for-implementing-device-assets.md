@@ -1,7 +1,6 @@
 ---
 date: 2014-02-07 09:30:00 -0500
 excerpt: In this post, I'll outline the approach I used to create a practical and manageable set of device assets for World Wildlife Fund's recently-launched Find Your Inner Animal quiz.
-layout: post
 tags: development
 title: Tips For Implementing Device Assets
 ---

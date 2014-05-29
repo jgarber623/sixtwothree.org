@@ -1,7 +1,6 @@
 ---
 date: 2006-03-01 23:44:00 -05:00
 excerpt: Murphy’s Kids will blow up in a big way this year.
-layout: post
 tags: music
 title: Murphy's Kids
 ---

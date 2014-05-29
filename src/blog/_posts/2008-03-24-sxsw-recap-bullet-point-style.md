@@ -1,7 +1,6 @@
 ---
 date: 2008-03-24 20:51:00 -05:00
 excerpt: SXSW 2008 by the bullet points.
-layout: post
 tags: webdesign
 title: SXSW Recap (bullet point style)
 ---

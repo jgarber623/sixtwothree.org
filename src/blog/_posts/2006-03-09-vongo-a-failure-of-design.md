@@ -1,7 +1,6 @@
 ---
 date: 2006-03-09 00:05:00 -05:00
 excerpt: This is horrible design.
-layout: post
 tags: webdesign
 title: 'Vongo: A failure of design'
 ---

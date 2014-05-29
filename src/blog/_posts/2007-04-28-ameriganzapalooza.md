@@ -1,7 +1,6 @@
 ---
 date: 2007-04-28 23:39:00 -05:00
 excerpt: Cindy and I set off tomorrow morning (okay, actually this morning, it’s really late) to drive ‘cross country from DC to San Francisco.
-layout: post
 title: Ameriganzapalooza
 ---
 

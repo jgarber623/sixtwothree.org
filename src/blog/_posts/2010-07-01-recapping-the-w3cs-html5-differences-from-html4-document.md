@@ -1,7 +1,6 @@
 ---
 date: 2010-07-01 9:45:00 -0500
 excerpt: I just finished reading over the latest version of the "differences" document and thought it'd be helpful to jot down some thoughts on things I hadn't seen before when reading up on HTML5.
-layout: post
 tags: html w3c
 title: Recapping the W3C’s “HTML5 differences from HTML4” document
 ---

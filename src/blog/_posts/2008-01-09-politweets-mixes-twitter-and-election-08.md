@@ -1,7 +1,6 @@
 ---
 date: 2008-01-09 22:30:00 -05:00
 excerpt: What if one could harness Twitter messages from the general populous based around a single topic or event? Enter Politweets.
-layout: post
 tags: politics webdesign
 title: Politweets mixes Twitter and Election ’08
 ---

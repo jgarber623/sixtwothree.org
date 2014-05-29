@@ -15,6 +15,15 @@ markdown: redcarpet
 redcarpet:
   extensions: ['smart', 'strikethrough']
 
+# Defaults
+defaults:
+  -
+    scope:
+      path: "blog"
+      type: "post"
+    values:
+      layout: "post"
+
 # Author meta
 author:
   name: Jason Garber

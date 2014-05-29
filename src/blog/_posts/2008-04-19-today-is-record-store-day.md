@@ -1,7 +1,6 @@
 ---
 date: 2008-04-19 11:29:00 -05:00
 excerpt: Get out there and support your local indie record store.
-layout: post
 tags: music
 title: Today is Record Store Day
 ---

@@ -1,7 +1,6 @@
 ---
 date: 2005-12-22 23:52:00 -05:00
 excerpt: Carbomb and Mary sent me this wonderful holiday card last week.
-layout: post
 title: Happy Holidays, Everyone!
 ---
 

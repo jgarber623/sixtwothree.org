@@ -1,7 +1,6 @@
 ---
 date: 2010-06-21 10:10:00 -0500
 excerpt: I present to you a short jQuery plugin that utilizes the placeholder attribute and enables it (in a manner of speaking) in non-supporting user agents.
-layout: post
 tags: javascript jquery plugin
 title: Is this form field taken? A jQuery placeholder-enabling plugin
 ---

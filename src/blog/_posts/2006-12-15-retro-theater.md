@@ -1,7 +1,6 @@
 ---
 date: 2006-12-15 00:15:00 -05:00
 excerpt: The latest design over at the Zen Garden is sick.
-layout: post
 tags: webdesign
 title: Retro Theater
 ---
