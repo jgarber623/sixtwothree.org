@@ -2,6 +2,9 @@
 source: ./src
 destination: ./public
 
+# Gems
+gems: ['jekyll-assets']
+
 # Site variables
 title: sixtwothree.org
 description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
@@ -9,6 +12,11 @@ url: http://sixtwothree.org
 
 # Permalink settings
 permalink: /:categories/:title
+
+# Assets
+assets:
+  css_compressor: sass
+  gzip: false
 
 # Authoring
 markdown: redcarpet
