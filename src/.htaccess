@@ -217,86 +217,16 @@ AddDefaultCharset utf-8
 # ------------------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
-    RewriteRule ^blog/rss$      blog/index.rss [L]
-    RewriteRule ^blog/atom$     blog/index.atom [L]
+    # Feeds
+    RewriteRule ^blog/rss$   /blog/index.rss [L]
+    RewriteRule ^blog/atom$  /blog/index.atom [L]
 
-    Redirect 301 /blog/archives/2008/04/19/today-is-record-store-day/                                                                /blog/today-is-record-store-day
-    Redirect 301 /blog/archives/2008/03/24/sxsw-recap-bullet-point-style/                                                            /blog/sxsw-recap-bullet-point-style
-    Redirect 301 /blog/archives/2008/02/12/introducing-the-dc-talks-series/                                                          /blog/introducing-the-dc-talks-series
-    Redirect 301 /blog/archives/2008/02/01/moving-right-along/                                                                       /blog/moving-right-along
-    Redirect 301 /blog/archives/2008/01/09/politweets-mixes-twitter-and-election-08/                                                 /blog/politweets-mixes-twitter-and-election-08
-    Redirect 301 /blog/archives/2007/12/30/my-year-in-cities-2007/                                                                   /blog/my-year-in-cities-2007
-    Redirect 301 /blog/archives/2007/12/24/speaking-at-sxsw-08/                                                                      /blog/speaking-at-sxsw-08
-    Redirect 301 /blog/archives/2007/11/02/heading-to-future-of-web-design/                                                          /blog/heading-to-future-of-web-design
-    Redirect 301 /blog/archives/2007/09/19/mixx-goes-beta/                                                                           /blog/mixx-goes-beta
-    Redirect 301 /blog/archives/2007/08/21/nclud-after-after-party/                                                                  /blog/nclud-after-after-party
-    Redirect 301 /blog/archives/2007/08/20/sxsw-panel-pickin-time/                                                                   /blog/sxsw-panel-pickin-time
-    Redirect 301 /blog/archives/2007/08/15/more-barcamp-dc-feedback/                                                                 /blog/more-barcamp-dc-feedback
-    Redirect 301 /blog/archives/2007/08/13/barcamp-dc-and-community/                                                                 /blog/barcamp-dc-and-community
-    Redirect 301 /blog/archives/2007/07/25/barcamp-washington-dc-logo/                                                               /blog/barcamp-washington-dc-logo
-    Redirect 301 /blog/archives/2007/07/25/circavie-launches/                                                                        /blog/circavie-launches
-    Redirect 301 /blog/archives/2007/07/05/update-your-feeds/                                                                        /blog/update-your-feeds
-    Redirect 301 /blog/archives/2007/06/25/farewell-dear-aol-friends/                                                                /blog/farewell-dear-aol-friends
-    Redirect 301 /blog/archives/2007/06/03/adding-microformats-to-roundcube-webmail/                                                 /blog/adding-microformats-to-roundcube-webmail
-    Redirect 301 /blog/archives/2007/05/30/rules-for-career-development/                                                             /blog/rules-for-career-development
-    Redirect 301 /blog/archives/2007/05/19/reading-mode/                                                                             /blog/reading-mode
-    Redirect 301 /blog/archives/2007/05/18/skypedriving/                                                                             /blog/skypedriving
-    Redirect 301 /blog/archives/2007/05/15/derek-and-heather-leave-jpg-magazine/                                                     /blog/derek-and-heather-leave-jpg-magazine
-    Redirect 301 /blog/archives/2007/05/08/bill-moyers-interviews-jon-stewart/                                                       /blog/bill-moyers-interviews-jon-stewart
-    Redirect 301 /blog/archives/2007/04/28/ameriganzapalooza/                                                                        /blog/ameriganzapalooza
-    Redirect 301 /blog/archives/2007/03/26/real-quick/                                                                               /blog/real-quick
-    Redirect 301 /blog/archives/2007/03/16/ficlets/                                                                                  /blog/ficlets
-    Redirect 301 /blog/archives/2007/03/07/catching-up/                                                                              /blog/catching-up
-    Redirect 301 /blog/archives/2007/01/20/refresh-dc-site-relaunch/                                                                 /blog/refresh-dc-site-relaunch
-    Redirect 301 /blog/archives/2007/01/11/five-things-you-may-not-know-about-jason/                                                 /blog/five-things-you-may-not-know-about-jason
-    Redirect 301 /blog/archives/2007/01/05/me-vs-firefox-2-mac/                                                                      /blog/me-vs-firefox-2-mac
-    Redirect 301 /blog/archives/2006/12/15/retro-theater/                                                                            /blog/retro-theater
-    Redirect 301 /blog/archives/2006/12/10/musings/                                                                                  /blog/musings
-    Redirect 301 /blog/archives/2006/11/29/recent-goings-on/                                                                         /blog/recent-goings-on
-    Redirect 301 /blog/archives/2006/11/10/activateactivex-12/                                                                       /blog/activateactivex-12
-    Redirect 301 /blog/archives/2006/11/07/yahoos-wii-feature/                                                                       /blog/yahoos-wii-feature
-    Redirect 301 /blog/archives/2006/11/07/design-fckr-launches/                                                                     /blog/design-fckr-launches
-    Redirect 301 /blog/archives/2006/10/22/refresh-dc-october-meeting-wrap-up/                                                       /blog/refresh-dc-october-meeting-wrap-up
-    Redirect 301 /blog/archives/2006/10/14/hemingways-six-word-story/                                                                /blog/hemingways-six-word-story
-    Redirect 301 /blog/archives/2006/10/11/on-the-impending-closing-of-tower-records/                                                /blog/on-the-impending-closing-of-tower-records
-    Redirect 301 /blog/archives/2006/09/19/quick-reaction-to-this-months-refresh-dc-meeting/                                         /blog/quick-reaction-to-this-months-refresh-dc-meeting
-    Redirect 301 /blog/archives/2006/09/16/black-and-white-ibook/                                                                    /blog/black-and-white-ibook
-    Redirect 301 /blog/archives/2006/09/14/refresh-dc-gets-some-microformat-lovin/                                                   /blog/refresh-dc-gets-some-microformat-lovin
-    Redirect 301 /blog/archives/2006/09/04/ubuntu-on-an-ibook/                                                                       /blog/ubuntu-on-an-ibook
-    Redirect 301 /blog/archives/2006/08/29/the-sound-of-animals-fighting-interview/                                                  /blog/the-sound-of-animals-fighting-interview
-    Redirect 301 /blog/archives/2006/08/24/walking-on/                                                                               /blog/walking-on
-    Redirect 301 /blog/archives/2006/08/16/what-ive-been-up-to-lately/                                                               /blog/what-ive-been-up-to-lately
-    Redirect 301 /blog/archives/2006/07/07/recent-job-postings-on-the-refresh-dc-forum/                                              /blog/recent-job-postings-on-the-refresh-dc-forum
-    Redirect 301 /blog/archives/2006/06/23/pj-hyett/                                                                                 /blog/pj-hyett
-    Redirect 301 /blog/archives/2006/06/21/speaking-at-refresh-dc/                                                                   /blog/speaking-at-refresh-dc
-    Redirect 301 /blog/archives/2006/06/13/cindy-li-redesigns/                                                                       /blog/cindy-li-redesigns
-    Redirect 301 /blog/archives/2006/05/20/activateactivex-11/                                                                       /blog/activateactivex-11
-    Redirect 301 /blog/archives/2006/05/15/thank-you-commander-obvious/                                                              /blog/thank-you-commander-obvious
-    Redirect 301 /blog/archives/2006/05/07/activateactivex-a-standards-based-solution-to-internet-explorers-active-content-woes/     /blog/activateactivex-a-standards-based-solution-to-internet-explorers-active-content-woes
-    Redirect 301 /blog/archives/2006/04/20/incomprehensible/                                                                         /blog/incomprehensible
-    Redirect 301 /blog/archives/2006/04/19/rhythmic-uprising-podcasts/                                                               /blog/rhythmic-uprising-podcasts
-    Redirect 301 /blog/archives/2006/04/09/sxsw-badge/                                                                               /blog/sxsw-badge
-    Redirect 301 /blog/archives/2006/04/09/grassroots-and-the-new-web/                                                               /blog/grassroots-and-the-new-web
-    Redirect 301 /blog/archives/2006/03/12/groupr-makes-lifehacker/                                                                  /blog/groupr-makes-lifehacker
-    Redirect 301 /blog/archives/2006/03/09/vongo-a-failure-of-design/                                                                /blog/vongo-a-failure-of-design
-    Redirect 301 /blog/archives/2006/03/07/over-on-blogjangles/                                                                      /blog/over-on-blogjangles
-    Redirect 301 /blog/archives/2006/03/01/murphys-kids/                                                                             /blog/murphys-kids
-    Redirect 301 /blog/archives/2006/02/19/2006-avalon-star-bowling-extravaganza/                                                    /blog/2006-avalon-star-bowling-extravaganza
-    Redirect 301 /blog/archives/2006/02/16/the-flying-luxury-hotel/                                                                  /blog/the-flying-luxury-hotel
-    Redirect 301 /blog/archives/2006/02/11/groupr-11/                                                                                /blog/groupr-11
-    Redirect 301 /blog/archives/2006/02/09/groupr-on-digg/                                                                           /blog/groupr-on-digg
-    Redirect 301 /blog/archives/2006/02/09/groupr/                                                                                   /blog/groupr
-    Redirect 301 /blog/archives/2006/02/07/things-are-picking-up-steam/                                                              /blog/things-are-picking-up-steam
-    Redirect 301 /blog/archives/2006/02/06/30-boxes-public-beta/                                                                     /blog/30-boxes-public-beta
-    Redirect 301 /blog/archives/2006/02/06/the-future-of-tv-2/                                                                       /blog/the-future-of-tv
-    Redirect 301 /blog/archives/2006/02/04/refresh-dc/                                                                               /blog/refresh-dc
-    Redirect 301 /blog/archives/2006/01/29/blogjangles-goes-live/                                                                    /blog/blogjangles-goes-live
-    Redirect 301 /blog/archives/2005/12/28/wal-mart-the-high-cost-of-low-price/                                                      /blog/wal-mart-the-high-cost-of-low-price
-    Redirect 301 /blog/archives/2005/12/22/happy-holidays-everyone/                                                                  /blog/happy-holidays-everyone
-    Redirect 301 /blog/archives/2005/12/15/update-to-the-presentations/                                                              /blog/update-to-the-presentations
-    Redirect 301 /blog/archives/2005/12/12/7/                                                                                        /blog/color-photos-from-the-world-war-i-era
-    Redirect 301 /blog/archives/2005/12/12/and-now-a-word-from-mr-eric-meyer/                                                        /blog/and-now-a-word-from-mr-eric-meyer
-    Redirect 301 /blog/archives/2005/12/12/mandatory-introductory-post/                                                              /blog/mandatory-introductory-post
+    # Redirect oddball old blog posts to new URLs
+    RewriteRule ^blog/archives/2006/02/06/the-future-of-tv-2/$ /blog/the-future-of-tv [R=301,L]
+    RewriteRule ^blog/archives/2005/12/12/7/$                  /blog/color-photos-from-the-world-war-i-era [R=301,L]
+
+    # Redirect old blog posts to new URLs
+    RewriteRule ^blog/archives/[0-9]{4}/[0-9]{2}/[0-9]{2}/([A-Za-z0-9-]+)/$ /blog/$1 [R=301,L]
 </IfModule>
 
 
