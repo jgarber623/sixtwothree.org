@@ -217,7 +217,6 @@ AddDefaultCharset utf-8
 # ------------------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
-    RewriteRule ^blog/feed/$    blog/index.rss [L]
     RewriteRule ^blog/rss$      blog/index.rss [L]
     RewriteRule ^blog/atom$     blog/index.atom [L]
 
