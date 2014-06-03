@@ -1,4 +1,5 @@
 require 'erb'
+require 'slugify'
 
 namespace :post do
   desc 'Create a new blog post'
@@ -12,7 +13,17 @@ namespace :post do
 
     title = ask?('What would you like to title your blog post?')
 
-    filename = pubdate.strftime('%F') + '-' + title.downcase.gsub('’', '').gsub(/[^0-9A-Za-z]/i, '-').gsub(/-+/, '-').chomp('-')
+    slug = title.slugify
+
+    notify "This post's URL is currently `#{slug}`."
+
+    if confirm?("Would you like to customize this post's URL? [yes/no]")
+      custom_slug = ask?("What would you like this post's URL to be?").slugify
+
+      slug = custom_slug.length > 0 ? custom_slug : slug
+    end
+
+    filename = "#{pubdate.strftime('%F')}-#{slug}"
     filepath = "#{posts_path}/#{filename}.md"
 
     if File.exists?(filepath)

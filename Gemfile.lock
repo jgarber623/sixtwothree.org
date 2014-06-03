@@ -77,6 +77,7 @@ GEM
     redcarpet (3.1.2)
     safe_yaml (1.0.3)
     sass (3.3.7)
+    slugify (1.0.5)
     sprockets (2.12.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -102,4 +103,5 @@ DEPENDENCIES
   jekyll
   jekyll-assets
   rake
+  slugify
   sprockets-sass

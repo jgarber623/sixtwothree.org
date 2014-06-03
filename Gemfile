@@ -8,6 +8,7 @@ gem 'sprockets-sass'
 group :development do
   gem 'rake'
   gem 'colored'
+  gem 'slugify'
   gem 'capistrano', '~> 2.15.5'
   gem 'foreman'
 end
