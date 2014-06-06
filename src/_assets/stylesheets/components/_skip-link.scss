@@ -1,0 +1,9 @@
+.skip-link {
+	@extend .ui-hidden--focusable;
+	display: block;
+
+	span {
+		padding-bottom: 0.5em;
+		padding-top: 0.5em;
+	}
+}

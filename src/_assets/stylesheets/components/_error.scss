@@ -1,0 +1,9 @@
+.error {
+	h1 {
+		@include font-size(xx-large);
+	}
+
+	p {
+		@include font-size;
+	}
+}

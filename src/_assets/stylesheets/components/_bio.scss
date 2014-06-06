@@ -1,0 +1,81 @@
+.bio {
+	position: relative;
+
+	@include breakpoint($tweak--wide) {
+		.home-link {
+			left: -6em;
+			position: absolute;
+			top: 0.5em;
+		}
+	}
+
+	.photo {
+		border-radius: 0.25em;
+		display: block;
+		width: 5em;
+	}
+
+	.salutation {
+		@include font-size(x-large);
+		font-weight: 700;
+		margin: 1em 0 0.75em 0;
+
+		@include breakpoint($break--narrow) {
+			@include font-size(xx-large);
+		}
+	}
+
+	.content {
+		@include font-size;
+		line-height: 1.4;
+	}
+
+	abbr {
+		border: none;
+	}
+}
+
+
+/* @group Mini Bio */
+
+	.bio--mini {
+		@extend %clear;
+		color: palette(grey, x-dark);
+		margin-top: 4em;
+
+		.home-link {
+			float: left;
+			left: auto;
+			position: relative;
+			top: 0;
+
+			@include breakpoint($break--narrow) {
+				top: -0.3em;
+			}
+
+			@include breakpoint($break--wide) {
+				float: none;
+				left: -3.5em;
+				margin: 0;
+				position: absolute;
+				top: -0.2em;
+			}
+		}
+
+		.photo {
+			width: 2.5em;
+		}
+
+		.salutation {
+			@extend %font--open-sans;
+			@include font-size;
+			margin: 0 0 0 3.1em;
+
+			@include breakpoint($break--wide) {
+				@include font-size(x-large);
+				margin: 0;
+			}
+		}
+	}
+
+/* @end */
