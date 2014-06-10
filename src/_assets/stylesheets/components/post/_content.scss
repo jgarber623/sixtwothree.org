@@ -124,4 +124,13 @@
 			padding: 0;
 		}
 	}
+
+	hr {
+		background: palette(grey, x-light);
+		border: 0;
+		display: block;
+		height: 0.5em;
+		margin: 2em auto;
+		width: 50%;
+	}
 }

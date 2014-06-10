@@ -7,7 +7,7 @@ title: The Sound of Animals Fighting
 
 Back in August of 2006, [I interviewed Rich Balling](/blog/the-sound-of-animals-fighting-interview)—referred to by his pseudonym, The Nightingale—of [The Sound of Animals Fighting](http://thesoundofanimalsfighting.com/). The interview was arranged by Jason Shawn through and [originally posted to his music site Smother](http://www.smother.net/interviews/the-sound-of-animals-fighting.php).
 
-At the time, the band was gearing up for a brief run of shows on the West Coast. At the time, those were to be their only shows ever. Thankfully, that proved not to be the case. The band recently reunited for a brief tour of both coasts, including a weekend stop in New York City (only a five-hour bus ride from DC!).
+The band was gearing up for a brief run of shows on the West Coast which, at the time, were to be their only shows ever. Thankfully, that would prove not to be the case. Fast forward nearly eight years and the band regroups to celebrate the tenth anniversary of their first record. The brief tour of hit both coasts, including a weekend stop in New York City (only a five-hour bus ride from DC!).
 
 Seeing the group perform live was quite an experience and reminded me of my brief intersection with some of my all-time favorite musicians.
 
