@@ -1,6 +1,6 @@
 ---
 date: 2014-06-11 15:29:55 -0400
-excerpt: 'My first Craft plugin sends webmentions to supported websites!'
+excerpt: 'My first Craft plugin sends webmentions to supported websites.'
 tags: craft indieweb webmention
 title: Sending Webmentions with Craft
 ---
@@ -38,4 +38,4 @@ The latter item would involve a lot of heavy lifting and some potentially tricky
 
 ---
 
-In true IndieWeb fashion, I've published this on my own blog first and syndicated it on [Viget's Extend blog](http://viget.com/extend/sending-webmentions-with-craft).
+In true IndieWeb fashion, I've published this on my own website first and syndicated it on [Viget's Extend blog](http://viget.com/extend/sending-webmentions-with-craft).
