@@ -21,21 +21,26 @@ body {
 }
 
 article,
+footer,
 header,
-main,
-footer {
+main {
 	display: block;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
 	@extend %font--open-sans;
 	font-weight: 700;
 }
 
 a {
+	background: none;
 	color: palette(blue, light);
+	text-decoration: underline;
 
 	&:focus,
 	&:hover {
