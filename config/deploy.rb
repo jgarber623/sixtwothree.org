@@ -8,7 +8,7 @@ set :application, 'sixtwothree.org'
 
 set :repository, 'git@github.com:jgarber623/sixtwothree.org.git'
 set :deploy_via, :remote_cache
-set :ssh_options, {:forward_agent => true}
+set :ssh_options, {forward_agent: true}
 set :use_sudo, false
 
 set :ruby_version, '2.1.1'
