@@ -2,23 +2,23 @@
 layout: application
 ---
 
-<article class="post--single post h-entry hentry">
+<article class="post--single post h-entry">
 	<header class="post-header">
-		<h1 class="post-title p-name entry-title">{{ page.title }}</h1>
+		<h1 class="post-title p-name">{{ page.title }}</h1>
 	</header>
 
-	<div class="post-content e-content entry-content">
+	<div class="post-content e-content">
 		{{ content }}
 	</div>
 
 	<footer class="post-footer">
-		<p>“<a href="{{ page.url }}" class="u-url" rel="bookmark">{{ page.title }}</a>” was published on <time class="dt-published published" datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.date | date: "%B %e, %Y at %l:%M %P" }}</time>.</p>
+		<p>“<a href="{{ page.url }}" class="u-url">{{ page.title }}</a>” was published on <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.date | date: "%B %e, %Y at %l:%M %P" }}</time>.</p>
 
 		{% if page.tags.size > 0 %}
 			<dl>
 				<dt>Tagged:</dt>
 				{% for tag in page.tags %}
-					<dd><a href="/tags/{{ tag }}" rel="tag">{{ tag }}</a></dd>
+					<dd><a href="/tags/{{ tag }}" class="p-category">{{ tag }}</a></dd>
 				{% endfor %}
 			</dl>
 		{% endif %}

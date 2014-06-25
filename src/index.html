@@ -2,14 +2,14 @@
 layout: application
 ---
 
-<section class="bio h-card vcard">
-	<a href="{{ site.author.url }}" class="home-link u-url url uid" rel="home"><img src="/jgarber.png" alt="" class="u-photo photo"></a>
+<section class="bio h-card">
+	<a href="{{ site.author.url }}" class="home-link u-url" rel="home"><img src="/jgarber.png" alt="" class="avatar u-photo"></a>
 
-	<h1 class="salutation">Hi! I’m <a href="mailto:jason&#064;sixtwothree&#46;org" class="p-name u-email fn email">{{ site.author.name }}</a>.</h1>
+	<h1 class="salutation">Hi! I’m <a href="mailto:jason&#064;sixtwothree&#46;org" class="p-name u-email">{{ site.author.name }}</a>.</h1>
 
-	<div class="content p-note note">
-		<p>I’m a <a href="http://viget.com/about/team/jgarber" class="p-role role">web developer</a>, <a href="http://www.whoistheorchid.com/" title="Listen to my band, The Orchid">musician</a>, <a href="http://refresh-dc.org/" title="Visit the Refresh DC website">community organizer</a>, <a href="http://flickr.com/photos/jgarber" rel="me" title="View my Flickr photos">photographer</a>, and <a href="/blog" title="Read my semi-regular ramblings">occasional author</a> living in <span class="h-adr p-adr adr"><span class="p-locality locality">Washington</span>, <abbr class="p-region region" title="District of Columbia">DC</abbr></span>.</p>
-		<p>You can find me all over the web, typically as “<span class="p-nickname nickname" title="And sometimes, jgarber623.">jgarber</span>.”</p>
+	<div class="content p-note">
+		<p>I’m a <a href="http://viget.com/about/team/jgarber" class="p-role">web developer</a>, <a href="http://www.whoistheorchid.com/" title="Listen to my band, The Orchid">musician</a>, <a href="http://refresh-dc.org/" title="Visit the Refresh DC website">community organizer</a>, <a href="http://flickr.com/photos/jgarber" rel="me" title="View my Flickr photos">photographer</a>, and <a href="/blog" title="Read my semi-regular ramblings">occasional author</a> living in <span class="p-locality">Washington</span>, <abbr class="p-region" title="District of Columbia">DC</abbr>.</p>
+		<p>You can find me all over the web, typically as “<span class="p-nickname" title="And sometimes, jgarber623.">jgarber</span>.”</p>
 	</div>
 </section>
 
@@ -18,9 +18,9 @@ layout: application
 
 	<ol reversed>
 		{% for project in site.data.projects %}
-			<li class="project h-event vevent">
-				<h2 class="title p-name summary"><a href="{{ project.url }}">{{ project.title }}</a></h2>
-				<span class="description p-summary">{{ project.description }}, <time class="dt-start dtstart" datetime="{{ project.date }}">{{ project.date | date: '%B %Y' }}</time>.</span>
+			<li class="project h-event">
+				<h2 class="title p-name"><a href="{{ project.url }}">{{ project.title }}</a></h2>
+				<span class="description p-summary">{{ project.description }}, <time class="dt-start" datetime="{{ project.date }}">{{ project.date | date: '%B %Y' }}</time>.</span>
 			</li>
 		{% endfor %}
 	</ol>
