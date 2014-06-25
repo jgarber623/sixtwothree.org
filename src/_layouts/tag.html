@@ -1,0 +1,12 @@
+---
+global_content_classes: h-feed hfeed
+layout: page
+---
+
+<ol class="posts-list" reversed>
+	{% for post in page.posts %}
+		<li class="post">
+			{% include post.html post=post %}
+		</li>
+	{% endfor %}
+</ol>

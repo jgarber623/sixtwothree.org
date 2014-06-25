@@ -96,7 +96,6 @@
 	code {
 		background: palette(grey, x-light);
 		display: inline-block;
-		font-family: Monaco, "Courier New", Courier, monospace;
 		@include font-size(small);
 		padding: 0.25em 0.5em;
 	}
@@ -110,7 +109,6 @@
 
 		code {
 			background: none;
-			font-size: 1em; // Set directly to counter a Webkit bug with `code` and 1rem
 			padding: 0;
 		}
 	}
@@ -131,6 +129,6 @@
 		display: block;
 		height: 0.25em;
 		margin: 2em auto;
-		width: 50%;
+		width: 66%;
 	}
 }

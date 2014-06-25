@@ -1,0 +1,20 @@
+.tags-list {
+	@extend %ui-list;
+	margin: 3em 0;
+
+	li {
+		display: inline-block;
+		margin: 0 0.75em 0.75em 0;
+
+		@include breakpoint($break--narrow) {
+			@include font-size(medium);
+		}
+	}
+
+	a {
+		display: inline-block;
+		margin: -0.25em;
+		padding: 0.25em;
+		white-space: nowrap;
+	}
+}

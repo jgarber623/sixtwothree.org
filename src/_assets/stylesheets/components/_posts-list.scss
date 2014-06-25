@@ -13,18 +13,20 @@
 	}
 
 	.post-title {
-		font-size: 1em;
+		@include font-size(small);
 
 		@include breakpoint($tweak--medium) {
 			@include font-size(x-large);
 		}
 	}
 
-	.post-excerpt {
-		display: none;
+	.post-excerpt p {
+		@include font-size(small);
+		margin: 0.5em 0;
 
 		@include breakpoint($tweak--medium) {
-			display: block;
+			@include font-size(medium);
+			margin: 1em 0;
 		}
 	}
 

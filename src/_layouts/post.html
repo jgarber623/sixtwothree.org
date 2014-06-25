@@ -14,6 +14,15 @@ layout: application
 	<footer class="post-footer">
 		<p>“<a href="{{ page.url }}" class="u-url" rel="bookmark">{{ page.title }}</a>” was published on <time class="dt-published published" datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.date | date: "%B %e, %Y at %l:%M %P" }}</time>.</p>
 
+		{% if page.tags.size > 0 %}
+			<dl>
+				<dt>Tagged:</dt>
+				{% for tag in page.tags %}
+					<dd><a href="/tags/{{ tag }}" rel="tag">{{ tag }}</a></dd>
+				{% endfor %}
+			</dl>
+		{% endif %}
+
 		{% include bio--mini.html %}
 	</footer>
 </article>

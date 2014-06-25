@@ -37,6 +37,12 @@ h6 {
 	font-weight: 700;
 }
 
+code,
+pre {
+	font-family: Monaco, "Courier New", Courier, monospace;
+	font-size: 1em;
+}
+
 a {
 	background: none;
 	color: palette(blue, light);

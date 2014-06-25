@@ -5,4 +5,26 @@
 		@include font-size(x-small);
 		margin: 0;
 	}
+
+	dl {
+		margin: 0.5em 0 0 0;
+	}
+
+	dt {
+		display: inline-block;
+		margin-right: 0.25em;
+	}
+
+	dd {
+		display: inline-block;
+		margin: 0;
+
+		&:after {
+			content: ', ';
+		}
+
+		&:last-child:after {
+			content: '';
+		}
+	}
 }
