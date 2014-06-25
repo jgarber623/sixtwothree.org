@@ -3,6 +3,9 @@
 <head>
 	<meta charset="utf-8">
 
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
+
 	{% capture page_title %}{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}{% endcapture %}
 	{% capture page_description %}{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 
