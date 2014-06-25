@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Viget Extend
+    url: http://viget.com/extend/tips-for-implementing-device-assets
 date: 2014-02-07 09:30:00 -0500
 excerpt: In this post, I'll outline the approach I used to create a practical and manageable set of device assets for World Wildlife Fund's recently-launched Find Your Inner Animal quiz.
 tags: development

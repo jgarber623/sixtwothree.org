@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Viget Extend
+    url: http://viget.com/extend/kickstarting-your-craft-project-with-ruby-and-rake
 date: 2014-01-28 10:15:00 -0500
 excerpt: craft-master is a set of tools written in Ruby using Rake tasks for common Craft-related installation tasks.
 tags: craft ruby

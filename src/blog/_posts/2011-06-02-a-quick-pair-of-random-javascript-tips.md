@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Viget Inspire
+    url: http://viget.com/inspire/a-quick-pair-of-random-javascript-tips
 date: 2011-06-02 12:15:00 -0500
 tags: javascript
 title: A Quick Pair of Random JavaScript Tips

@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Viget Inspire
+    url: http://viget.com/inspire/recapping-the-w3cs-html5-differences-from-html4-document
 date: 2010-07-01 9:45:00 -0500
 excerpt: I just finished reading over the latest version of the "differences" document and thought it'd be helpful to jot down some thoughts on things I hadn't seen before when reading up on HTML5.
 tags: html w3c

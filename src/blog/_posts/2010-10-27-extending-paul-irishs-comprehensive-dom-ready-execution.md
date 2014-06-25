@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Viget Inspire
+    url: http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution
 date: 2010-10-27 9:30:00 -0500
 excerpt: Way back in March of '09, Paul Irish laid forth a markup-based means of executing JavaScript on page load. I iterated on Paul's method, adding a touch of HTML5 and making use of some built-in Rails magic.
 tags: html javascript rubyonrails
