@@ -7,6 +7,8 @@ require 'capistrano/ext/multistage'
 set :application, 'sixtwothree.org'
 
 set :repository, 'git@github.com:jgarber623/sixtwothree.org.git'
+set :deploy_to, '/var/www/sixtwothree.org'
+set :user, 'www-data'
 set :deploy_via, :remote_cache
 set :ssh_options, {forward_agent: true}
 set :use_sudo, false
