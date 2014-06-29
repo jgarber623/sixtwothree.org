@@ -12,7 +12,7 @@ layout: application
 	</div>
 
 	<footer class="post-footer">
-		<p>“<a href="{{ page.url }}" class="u-url">{{ page.title }}</a>” was published on <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.date | date: "%B %e, %Y at %l:%M %P" }}</time>.</p>
+		<p>“<a href="{{ page.url }}" class="u-url">{{ page.title }}</a>” was published on <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.date | date: "%B %e, %Y at %l:%M %P" }}</time>. Also available as <a href="{{ page.url }}.json" rel="alternate" type="application/json">JSON</a>.</p>
 
 		{% if page.tags.size > 0 %}
 			<dl>

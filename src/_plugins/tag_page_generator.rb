@@ -11,7 +11,7 @@ module Jekyll
 
       self.data = data
 
-      self.process(@name)
+      process(@name)
     end
 
     def read_yaml(*)
@@ -24,7 +24,7 @@ module Jekyll
 
     def generate(site)
       site.tags.each do |tag, posts|
-        site.pages << TagPage.new(site, site.source, File.join('tags', tag), { 'tag' => tag, 'posts' => posts })
+        site.pages << TagPage.new(site, site.source, File.join('tags', tag), {'tag' => tag, 'posts' => posts})
       end
     end
   end
