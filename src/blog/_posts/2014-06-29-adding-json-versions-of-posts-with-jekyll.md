@@ -9,4 +9,8 @@ Using [Ben Balter's JekyllBot](http://ben.balter.com/2012/12/27/introducing-jeky
 
 Now, every post automatically has an associated JSON representation of its content and metadata. Simply replace the trailing `/` in the URL with `.json`. I've also linked to the JSON file in each post's footer.
 
+As an example, this post's associated JSON is available at this URL:
+
+[http://sixtwothree.org/blog/adding-json-versions-of-posts-with-jekyll.json](http://sixtwothree.org/blog/adding-json-versions-of-posts-with-jekyll.json)
+
 As I add more features and capabilities to this site, the list of alternate formats may grow. For now, though, feel free to enjoy my posts in HTML or JSON!
