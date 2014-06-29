@@ -1,0 +1,33 @@
+.post-meta {
+	@extend %ui-list;
+
+	li {
+		@include font-size(x-small);
+
+		@include breakpoint($break--narrow) {
+			@include font-size(small);
+		}
+
+		+ li {
+			margin-top: 0.5em;
+		}
+	}
+
+	dt {
+		display: inline-block;
+		margin-right: 0.25em;
+	}
+
+	dd {
+		display: inline-block;
+		margin: 0;
+
+		&:after {
+			content: ', ';
+		}
+
+		&:last-child:after {
+			content: '';
+		}
+	}
+}

@@ -5,6 +5,7 @@ layout: application
 <article class="post--single post h-entry">
 	<header class="post-header">
 		<h1 class="post-title p-name">{{ page.title }}</h1>
+		<p>Published <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.date | date: "%B %e, %Y at %l:%M %P" }}</time></p>
 	</header>
 
 	<div class="post-content e-content">
@@ -12,25 +13,29 @@ layout: application
 	</div>
 
 	<footer class="post-footer">
-		<p>“<a href="{{ page.url }}" class="u-url">{{ page.title }}</a>” was published on <time class="dt-published" datetime="{{ page.date | date: "%Y-%m-%dT%H:%M:%S" }}">{{ page.date | date: "%B %e, %Y at %l:%M %P" }}</time>. Also available as <a href="{{ page.url }}.json" rel="alternate" type="application/json">JSON</a>.</p>
-
-		{% if page.tags.size > 0 %}
-			<dl>
-				<dt>Tagged:</dt>
-				{% for tag in page.tags %}
-					<dd><a href="/tags/{{ tag }}" class="p-category">{{ tag }}</a></dd>
-				{% endfor %}
-			</dl>
-		{% endif %}
-
-		{% if page.copies %}
-			<dl>
-				<dt>Syndicated:</dt>
-				{% for copy in page.copies %}
-					<dd><a href="{{ copy.url }}" class="u-syndication">{{ copy.title }}</a></dd>
-				{% endfor %}
-			</dl>
-		{% endif %}
+		<ul class="post-meta">
+			<li>“<a href="{{ page.url }}" class="u-url">{{ page.title }}</a>”  is also available as <a href="{{ page.url }}.json" rel="alternate" type="application/json">JSON</a>. View <a href="{{ site.repository_url }}/commits/master/src/{{ page.path }}">revision history</a>.</li>
+			{% if page.tags.size > 0 %}
+				<li>
+					<dl>
+						<dt>Tagged:</dt>
+						{% for tag in page.tags %}
+							<dd><a href="/tags/{{ tag }}" class="p-category">{{ tag }}</a></dd>
+						{% endfor %}
+					</dl>
+				</li>
+			{% endif %}
+			{% if page.copies %}
+				<li>
+					<dl>
+						<dt>Syndicated:</dt>
+						{% for copy in page.copies %}
+							<dd><a href="{{ copy.url }}" class="u-syndication">{{ copy.title }}</a></dd>
+						{% endfor %}
+					</dl>
+				</li>
+			{% endif %}
+		</ul>
 
 		{% include bio--mini.html %}
 	</footer>

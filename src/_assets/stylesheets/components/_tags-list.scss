@@ -7,7 +7,7 @@
 		margin: 0 0.75em 0.75em 0;
 
 		@include breakpoint($break--narrow) {
-			@include font-size(medium);
+			@include font-size;
 		}
 	}
 

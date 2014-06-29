@@ -1,5 +1,19 @@
 .post--single {
-	.post-header h1 {
+	.post-header {
+		text-align: center;
+
+		p {
+			color: palette(grey, light);
+			@include font-size(x-small);
+			margin: 1.5em 0 0 0;
+
+			@include breakpoint($break--narrow) {
+				@include font-size(small);
+			}
+		}
+	}
+
+	.post-title {
 		@include font-size(xx-large);
 		line-height: 1.2;
 

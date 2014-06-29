@@ -9,6 +9,7 @@ gems: ['jekyll-assets', 'sprockets-sass']
 title: sixtwothree.org
 description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
 url: http://sixtwothree.org
+repository_url: https://github.com/jgarber623/sixtwothree.org
 
 # Permalink settings
 permalink: /:categories/:title
