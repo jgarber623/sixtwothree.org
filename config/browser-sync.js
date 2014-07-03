@@ -1,5 +1,5 @@
 module.exports = {
-	debounce: 1000,
+	debounce: 250,
 	files: [
 		'public/assets/**/*',
 		'public/**/*.html'
