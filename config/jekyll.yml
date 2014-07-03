@@ -28,10 +28,10 @@ redcarpet:
 defaults:
   -
     scope:
-      path: "blog"
-      type: "post"
+      path: 'blog'
+      type: 'post'
     values:
-      layout: "post"
+      layout: 'post'
 
 # Author meta
 author:
