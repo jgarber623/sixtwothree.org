@@ -116,4 +116,3 @@ DEPENDENCIES
   jekyll-assets
   rake
   slugify
-  sprockets-sass

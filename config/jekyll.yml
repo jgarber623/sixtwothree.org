@@ -3,7 +3,7 @@ source: ./src
 destination: ./public
 
 # Gems
-gems: ['jekyll-assets', 'sprockets-sass']
+gems: ['jekyll-assets']
 
 # Site variables
 title: sixtwothree.org
