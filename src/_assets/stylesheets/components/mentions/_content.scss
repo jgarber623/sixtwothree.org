@@ -9,4 +9,12 @@
 		line-height: 1.4;
 		margin: 0;
 	}
+
+	a {
+		display: inline-block;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		vertical-align: top;
+	}
 }
