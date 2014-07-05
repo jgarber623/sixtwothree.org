@@ -31,16 +31,22 @@ define('modules/mentions', ['vendor/dateformatter'], function(DateFormatter) {
 		},
 
 		processMentions: function() {
-			if (this.xhr.status === 200) {
-				var mentions = JSON.parse(this.xhr.response);
+			var response = [];
 
-				if (mentions.length) {
-					this.setTemplateVars();
+			if (this.request.status === 200) {
+				response = this.request.response;
+			} else if (this.request.contentType == 'application/json') {
+				response = this.request.responseText;
+			}
 
-					mentions.forEach(this.appendMention, this);
+			var mentions = JSON.parse(response);
 
-					this.$post.insertBefore(this.containerTemplateContent, this.$postFooter);
-				}
+			if (mentions.length) {
+				this.setTemplateVars();
+
+				mentions.forEach(this.appendMention, this);
+
+				this.$post.insertBefore(this.containerTemplateContent, this.$postFooter);
 			}
 		},
 
@@ -57,17 +63,18 @@ define('modules/mentions', ['vendor/dateformatter'], function(DateFormatter) {
 		},
 
 		setVars: function() {
-			this.xhr = new XMLHttpRequest();
+			this.supportsCors = 'withCredentials' in new XMLHttpRequest();
+			this.request = this.supportsCors ? new XMLHttpRequest() : new XDomainRequest();
 
 			this.$post = document.querySelector('#main .post--single');
 			this.$postFooter = this.$post.querySelector('.post-footer');
 		},
 
 		_get: function(url, callback) {
-			this.xhr.onload = callback.bind(this);
+			this.request.onload = callback.bind(this);
 
-			this.xhr.open('GET', url);
-			this.xhr.send();
+			this.request.open('GET', url);
+			this.request.send();
 		},
 
 		_objectToUrlParams: function(obj) {

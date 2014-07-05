@@ -72,7 +72,7 @@
 		};
 
 		(function(d,t) {
-			if ('querySelector' in d) {
+			if ('querySelector' in d && 'addEventListener' in window) {
 				r=d.createElement(t);s=d.querySelector(t);
 				r.src='{% asset_path vendor/require %}';
 				r.setAttribute('data-main', '{% asset_path application.js %}');
