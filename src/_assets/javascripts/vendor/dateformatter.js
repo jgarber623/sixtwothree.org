@@ -56,8 +56,6 @@
 			hours = hours % 12;
 			hours = hours ? hours : 12;
 
-			console.log( this.dateObj.getDay() )
-
 			strtime += months[this.dateObj.getMonth()] + ' ';
 			strtime += this.dateObj.getDate() + '<sup>' + this.getOrdinal() + '</sup>, ';
 			strtime += this.dateObj.getFullYear() + ' at ';
