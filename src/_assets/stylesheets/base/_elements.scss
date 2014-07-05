@@ -27,6 +27,10 @@ main {
 	display: block;
 }
 
+template {
+	display: none;
+}
+
 h1,
 h2,
 h3,
@@ -43,6 +47,17 @@ pre {
 	font-size: 1em;
 }
 
+sup {
+	font-size: 100%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+img {
+	-ms-interpolation-mode: bicubic;
+}
+
 a {
 	background: none;
 	color: palette(blue, light);
@@ -51,5 +66,9 @@ a {
 	&:focus,
 	&:hover {
 		color: palette(blue, dark);
+	}
+
+	img {
+		border: 0;
 	}
 }

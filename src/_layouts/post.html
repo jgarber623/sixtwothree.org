@@ -40,3 +40,27 @@ layout: application
 		{% include bio--mini.html %}
 	</footer>
 </article>
+
+<template id="template--mentions">
+	<aside class="mentions" role="complementary">
+		<header class="mentions-header">
+			<h1>Responses</h1>
+		</header>
+
+		<ol class="mentions-list"></ol>
+	</aside>
+</template>
+
+<template id="template--mention">
+	<li>
+		<article class="mention p-comment h-entry">
+			<div class="mention-content e-content">
+				<p><a class="u-url"></a> mentioned this post.</p>
+			</div>
+
+			<footer class="mention-footer">
+				<time class="dt-published"></time>
+			</footer>
+		</article>
+	</li>
+</template>

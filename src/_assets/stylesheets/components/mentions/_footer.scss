@@ -1,0 +1,12 @@
+.mention-footer {
+	time {
+		color: palette(grey, light);
+		display: block;
+		@include font-size(x-small);
+		margin-top: 0.25em;
+
+		@include breakpoint($break--narrow) {
+			@include font-size(small);
+		}
+	}
+}

@@ -1,0 +1,12 @@
+.mentions-header {
+	margin-bottom: 1.5em;
+
+	h1 {
+		@include font-size(x-large);
+		margin: 0;
+
+		@include breakpoint($break--narrow) {
+			@include font-size(xx-large);
+		}
+	}
+}

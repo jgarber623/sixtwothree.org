@@ -1,0 +1,11 @@
+.mentions-list {
+	padding-left: 1.5em;
+
+	@include breakpoint($break--wide) {
+		padding-left: 0;
+	}
+
+	li + li {
+		margin-top: 1.5em;
+	}
+}

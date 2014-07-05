@@ -28,6 +28,10 @@
 	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:700|Source+Sans+Pro:400,400italic,700">
 	{% stylesheet application %}
 	<link rel="webmention" href="http://webmention.sixtwothree.org">
+
+	<!--[if lte IE 8]>
+		{% javascript legacy %}
+	<![endif]-->
 </head>
 <body>
 
@@ -56,6 +60,26 @@
 			<p>Some rights reserved. This site’s content is licensed under a <a href="{{ site.license.url }}" rel="license">{{ site.license.title }} license</a>. Source code available on <a href="{{ site.repository_url }}" rel="source">GitHub</a>.</p>
 		</footer>
 	</div>
+
+	<script>
+		var require = {
+			paths: {
+				{% assign modules = 'modules/mentions,vendor/dateformatter,vendor/routerrouter' | split: ',' %}
+				{% for module in modules %}
+					'{{ module }}': '{{ module | asset_path | remove: ".js" }}'{% unless forloop.last %},{% endunless %}
+				{% endfor %}
+			}
+		};
+
+		(function(d,t) {
+			if ('querySelector' in d && 'content' in d.createElement('template')) {
+				r=d.createElement(t);s=d.querySelector(t);
+				r.src='{% asset_path vendor/require %}';
+				r.setAttribute('data-main', '{% asset_path application.js %}');
+				s.parentNode.insertBefore(r,s);
+			}
+		})(document,'script');
+	</script>
 
 	<script>
 		var _gaq = [
