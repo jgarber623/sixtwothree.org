@@ -7,9 +7,13 @@ define('modules/mentions', ['vendor/dateformatter'], function(DateFormatter) {
 
 	Mentions.prototype = {
 		init: function() {
-			this.setVars();
+			var deps = !('content' in document.createElement('template')) ? ['polyfills/template']: [];
 
-			this._get(this.options.endpoint + '?' + this._objectToUrlParams(this.options.params), this.processMentions);
+			require(deps, function() {
+				this.setVars();
+
+				this._get(this.options.endpoint + '?' + this._objectToUrlParams(this.options.params), this.processMentions);
+			}.bind(this));
 		},
 
 		appendMention: function(mention) {

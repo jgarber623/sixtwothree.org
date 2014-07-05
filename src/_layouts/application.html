@@ -64,15 +64,15 @@
 	<script>
 		var require = {
 			paths: {
-				{% assign modules = 'modules/mentions,vendor/dateformatter,vendor/routerrouter' | split: ',' %}
-				{% for module in modules %}
-					'{{ module }}': '{{ module | asset_path | remove: ".js" }}'{% unless forloop.last %},{% endunless %}
+				{% assign filepaths = 'modules/mentions,polyfills/template,vendor/dateformatter,vendor/routerrouter' | split: ',' %}
+				{% for filepath in filepaths %}
+					'{{ filepath }}': '{{ filepath | asset_path | remove: ".js" }}'{% unless forloop.last %},{% endunless %}
 				{% endfor %}
 			}
 		};
 
 		(function(d,t) {
-			if ('querySelector' in d && 'content' in d.createElement('template')) {
+			if ('querySelector' in d) {
 				r=d.createElement(t);s=d.querySelector(t);
 				r.src='{% asset_path vendor/require %}';
 				r.setAttribute('data-main', '{% asset_path application.js %}');
