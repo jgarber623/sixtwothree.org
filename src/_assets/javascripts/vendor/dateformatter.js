@@ -59,7 +59,7 @@
 			strtime += months[this.dateObj.getMonth()] + ' ';
 			strtime += this.dateObj.getDate() + '<sup>' + this.getOrdinal() + '</sup>, ';
 			strtime += this.dateObj.getFullYear() + ' at ';
-			strtime += hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + meridian + ' GMT';
+			strtime += hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + meridian + ' UTC';
 
 			return strtime;
 		},
