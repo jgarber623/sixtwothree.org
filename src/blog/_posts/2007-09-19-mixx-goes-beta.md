@@ -1,5 +1,5 @@
 ---
-date: 2007-09-19 23:08:00 -05:00
+date: 2007-09-19 23:08:00 -0500
 excerpt: I’m happy to announce that Mixx has gone beta and we’re slowly letting people in to hammer away on the system.
 tags: webdesign
 title: Mixx goes beta

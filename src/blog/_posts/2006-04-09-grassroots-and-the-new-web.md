@@ -1,5 +1,5 @@
 ---
-date: 2006-04-09 00:02:00 -05:00
+date: 2006-04-09 00:02:00 -0500
 excerpt: I recently handed over the reigns of the Global Youth Partnership for Africa site to their team.
 tags: digitallife links webdesign
 title: Grassroots and The New Web

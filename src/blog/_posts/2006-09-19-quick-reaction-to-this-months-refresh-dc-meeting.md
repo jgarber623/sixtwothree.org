@@ -1,5 +1,5 @@
 ---
-date: 2006-09-19 23:01:00 -05:00
+date: 2006-09-19 23:01:00 -0500
 excerpt: 'One word: wow.'
 tags: refreshdc
 title: Quick reaction to this month’s Refresh DC meeting

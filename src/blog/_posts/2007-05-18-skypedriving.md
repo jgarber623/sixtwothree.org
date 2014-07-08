@@ -1,5 +1,5 @@
 ---
-date: 2007-05-18 22:27:00 -05:00
+date: 2007-05-18 22:27:00 -0500
 excerpt: Did Cindy and I inadvertently invent something?
 tags: links
 title: SkypeDriving

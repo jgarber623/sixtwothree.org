@@ -1,5 +1,5 @@
 ---
-date: 2007-12-24 14:05:00 -05:00
+date: 2007-12-24 14:05:00 -0500
 excerpt: I’ll be speaking at South by Southwest.
 title: Speaking at SXSW ’08
 ---

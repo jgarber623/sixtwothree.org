@@ -1,5 +1,5 @@
 ---
-date: 2005-12-22 23:52:00 -05:00
+date: 2005-12-22 23:52:00 -0500
 excerpt: Carbomb and Mary sent me this wonderful holiday card last week.
 title: Happy Holidays, Everyone!
 ---

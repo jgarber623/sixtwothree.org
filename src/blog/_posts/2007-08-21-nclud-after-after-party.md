@@ -1,5 +1,5 @@
 ---
-date: 2007-08-21 22:27:00 -05:00
+date: 2007-08-21 22:27:00 -0500
 excerpt: The good gentlemen at nclud are putting together an “After After Party.”
 tags: barcampdc links refreshdc
 title: nclud After After Party

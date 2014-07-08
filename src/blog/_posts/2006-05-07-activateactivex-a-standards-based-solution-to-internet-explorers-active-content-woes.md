@@ -1,5 +1,5 @@
 ---
-date: 2006-05-07 00:43:00 -05:00
+date: 2006-05-07 00:43:00 -0500
 excerpt:
 tags: webdesign
 title: activateActiveX() – A Standards-Based Solution to Internet Explorer’s Active Content Woes

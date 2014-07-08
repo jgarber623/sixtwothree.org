@@ -1,5 +1,5 @@
 ---
-date: 2006-10-11 20:40:00 -05:00
+date: 2006-10-11 20:40:00 -0500
 excerpt: Tonight I made what will likely be the first of many trips to my local Tower Records before the impending shutdown.
 tags: music
 title: On the impending closing of Tower Records

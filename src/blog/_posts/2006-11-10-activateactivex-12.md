@@ -1,5 +1,5 @@
 ---
-date: 2006-11-10 17:26:00 -05:00
+date: 2006-11-10 17:26:00 -0500
 tags: webdesign
 title: activateActiveX 1.2
 ---

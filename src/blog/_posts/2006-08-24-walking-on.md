@@ -1,5 +1,5 @@
 ---
-date: 2006-08-24 08:39:00 -05:00
+date: 2006-08-24 08:39:00 -0500
 excerpt: I’ve accepted a position as Associate Software Engineer with AOL
 title: Walking On
 ---

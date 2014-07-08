@@ -1,5 +1,5 @@
 ---
-date: 2007-01-11 21:40:00 -05:00
+date: 2007-01-11 21:40:00 -0500
 title: Five things you may not know about Jason
 ---
 

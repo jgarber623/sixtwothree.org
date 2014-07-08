@@ -1,5 +1,5 @@
 ---
-date: 2006-02-19 16:54:00 -05:00
+date: 2006-02-19 16:54:00 -0500
 excerpt: At SXSWi this year, Avalonstar is hosting a Bowling Extravaganza at The Union Underground on Monday night, March 13.
 tags: links
 title: 2006 Avalonstar Bowling Extravaganza

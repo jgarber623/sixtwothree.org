@@ -1,5 +1,5 @@
 ---
-date: 2006-02-09 23:24:00 -05:00
+date: 2006-02-09 23:24:00 -0500
 tags: groupr links
 title: Groupr on digg
 ---

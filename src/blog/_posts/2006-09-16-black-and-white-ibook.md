@@ -1,5 +1,5 @@
 ---
-date: 2006-09-16 17:47:00 -05:00
+date: 2006-09-16 17:47:00 -0500
 excerpt: The old iBook gets a touch of cool.
 title: Black and white iBook
 ---

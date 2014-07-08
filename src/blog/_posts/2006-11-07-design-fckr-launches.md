@@ -1,5 +1,5 @@
 ---
-date: 2006-11-07 22:20:00 -05:00
+date: 2006-11-07 22:20:00 -0500
 excerpt: Alex Giron just launched a new site, design fckr.
 tags: webdesign
 title: design fckr launches

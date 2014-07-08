@@ -1,5 +1,5 @@
 ---
-date: 2006-03-09 00:05:00 -05:00
+date: 2006-03-09 00:05:00 -0500
 excerpt: This is horrible design.
 tags: webdesign
 title: 'Vongo: A failure of design'
