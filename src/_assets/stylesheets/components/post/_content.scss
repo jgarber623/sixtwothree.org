@@ -86,9 +86,30 @@
 		}
 	}
 
+	figure {
+		margin: 0;
+		text-align: center;
+
+		p {
+			color: palette(grey, light);
+			@include font-size(small);
+			margin: 0.5em 0 0;
+
+			a {
+				color: palette(grey);
+
+				&:focus,
+				&:hover {
+					color: palette(grey, x-dark);
+				}
+			}
+		}
+	}
+
 	img {
 		border: 0.25em solid palette(grey, x-light);
 		display: block;
+		margin: 0 auto;
 		max-width: 100%;
 		padding: 0.25em;
 	}
