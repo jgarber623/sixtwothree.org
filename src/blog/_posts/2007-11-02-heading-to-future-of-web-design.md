@@ -1,5 +1,5 @@
 ---
-date: 2007-11-02 22:39:00 -0500
+date: 2007-11-02 22:39:00 -0400
 excerpt: A whole bunch of the DC crew is heading up to New York City for the Future of Web Design conference next week.
 tags: webdesign
 title: Heading to Future of Web Design

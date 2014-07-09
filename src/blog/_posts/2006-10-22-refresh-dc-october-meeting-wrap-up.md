@@ -1,5 +1,5 @@
 ---
-date: 2006-10-22 21:02:00 -0500
+date: 2006-10-22 21:02:00 -0400
 tags: refreshdc
 title: Refresh DC October meeting wrap-up
 ---

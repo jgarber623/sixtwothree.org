@@ -2,7 +2,7 @@
 copies:
   - title: Viget Inspire
     url: http://viget.com/inspire/quick-thoughts-from-convergerva-2013
-date: 2013-10-14 12:30:30 -0500
+date: 2013-10-14 12:30:30 -0400
 excerpt: This past weekend, most of the Viget FED team attended the first-ever ConvergeRVA conference down in Richmond, Virginia.
 tags: conference convergerva
 title: Quick Thoughts from ConvergeRVA 2013

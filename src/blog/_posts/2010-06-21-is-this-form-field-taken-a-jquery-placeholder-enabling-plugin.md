@@ -2,7 +2,7 @@
 copies:
   - title: Viget Inspire
     url: http://viget.com/inspire/a-jquery-placeholder-enabling-plugin
-date: 2010-06-21 10:10:00 -0500
+date: 2010-06-21 10:10:00 -0400
 excerpt: I present to you a short jQuery plugin that utilizes the placeholder attribute and enables it (in a manner of speaking) in non-supporting user agents.
 tags: javascript jquery plugin
 title: Is this form field taken? A jQuery placeholder-enabling plugin

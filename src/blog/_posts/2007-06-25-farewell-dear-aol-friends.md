@@ -1,5 +1,5 @@
 ---
-date: 2007-06-25 20:53:00 -0500
+date: 2007-06-25 20:53:00 -0400
 excerpt: This past Friday was my last day with AOL.
 title: Farewell, dear AOL friends
 ---

@@ -1,5 +1,5 @@
 ---
-date: 2007-05-15 18:14:00 -0500
+date: 2007-05-15 18:14:00 -0400
 excerpt: Two of the founding members of JPG Magazine, Derek Powazek and Heather Champ have left 8020 Publishing over what appears to be an attempt at revisionism on the part of JPG’s “CEO.”
 tags: links photography
 title: Derek and Heather leave JPG Magazine

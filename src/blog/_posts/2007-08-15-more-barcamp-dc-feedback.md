@@ -1,5 +1,5 @@
 ---
-date: 2007-08-15 22:23:00 -0500
+date: 2007-08-15 22:23:00 -0400
 excerpt: There’s a good amount of conversation going on post-BarCamp DC.
 tags: barcampdc links
 title: More BarCamp DC feedback

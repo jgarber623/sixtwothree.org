@@ -1,5 +1,5 @@
 ---
-date: 2007-03-26 23:11:00 -0500
+date: 2007-03-26 23:11:00 -0400
 tags: blogging
 title: Real quick
 ---

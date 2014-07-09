@@ -1,5 +1,5 @@
 ---
-date: 2006-06-21 22:17:00 -0500
+date: 2006-06-21 22:17:00 -0400
 excerpt: My partner in crime, Jeremy Carbaugh, and I will be speaking next Thursday night at the June meeting of Refresh DC.
 tags: refreshdc
 title: Speaking at Refresh DC

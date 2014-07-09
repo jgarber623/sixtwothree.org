@@ -1,5 +1,5 @@
 ---
-date: 2006-07-07 18:09:00 -0500
+date: 2006-07-07 18:09:00 -0400
 excerpt: In the grand tradition of the 37signals job board, there are a few good positions available at DC-area companies.
 tags: links refreshdc
 title: Recent job postings on the Refresh DC forum
