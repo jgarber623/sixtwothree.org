@@ -13,6 +13,18 @@ layout: application
 	</div>
 </section>
 
+<section class="recent-posts h-feed">
+	<h1 class="p-name">Recent Posts</h1>
+
+	<ol reversed>
+		{% for post in site.categories.blog limit: 5 %}
+			<li class="post">
+				{% include post.html %}
+			</li>
+		{% endfor %}
+	</ol>
+</section>
+
 <section class="projects">
 	<h1>Selected Works</h1>
 
