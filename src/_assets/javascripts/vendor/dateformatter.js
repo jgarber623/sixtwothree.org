@@ -20,7 +20,7 @@
 
 	var DateFormatter = function(date) {
 		this.date = date;
-		this.dateObj = new Date(this.date.replace('Z', ''));
+		this.dateObj = new Date(this.normalizeDateString());
 	};
 
 	DateFormatter.prototype = {
@@ -44,6 +44,10 @@
 			}
 
 			return ordinal;
+		},
+
+		normalizeDateString: function() {
+			return this.date.replace(/-/g, '/').replace('T', ' ').replace(/\.\d{3}Z$/, '');
 		},
 
 		toFormattedString: function() {
