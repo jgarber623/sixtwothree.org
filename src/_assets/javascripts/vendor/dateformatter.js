@@ -20,7 +20,7 @@
 
 	var DateFormatter = function(date) {
 		this.date = date;
-		this.dateObj = new Date(this.date);
+		this.dateObj = new Date(this.date.replace('Z', ''));
 	};
 
 	DateFormatter.prototype = {
