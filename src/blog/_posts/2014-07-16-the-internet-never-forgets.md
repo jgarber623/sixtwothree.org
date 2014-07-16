@@ -23,6 +23,6 @@ It was only thanks to the efforts of [The Internet Archive](https://archive.org/
 From this experience, I've been reminded of two things:
 
 1. The content I create online is incredibly important and should exist first on a domain that I own and have control over. Remember, [cool URLs don't change](http://www.w3.org/Provider/Style/URI.html).
-2. The Internet Archive is a global treasure. I encourage you to [make a donation](https://archive.org/donate/) to support the efforts of the fine people who dedicate their careers to preserving our digital culture.
+2. The Internet Archive is a global treasure. You should [make a donation](https://archive.org/donate/) and support the efforts of the fine people who dedicate their careers to preserving our digital culture.
 
 I encourage you all to take a moment and consider the importance of preserving your online creations for yourself, your family, and for future generations.
