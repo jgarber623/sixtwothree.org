@@ -1,21 +1,6 @@
-/*!
- *  DateFormatter 0.1.0
- *
- *  A small JavaScript library for formatting dates.
- *
- */
-
 (function(root, factory) {
-	if (typeof define === 'function' && define.amd) {
-		define([], factory);
-	} else if (typeof exports === 'object') {
-		module.exports = factory();
-	} else {
-		root.DateFormatter = factory();
-	}
+	root.DateFormatter = factory();
 }(this, function() {
-	'use strict';
-
 	var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 	var DateFormatter = function(date) {

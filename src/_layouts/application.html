@@ -62,20 +62,10 @@
 	</div>
 
 	<script>
-		var require = {
-			paths: {
-				{% assign filepaths = 'modules/mentions,polyfills/template,vendor/dateformatter,vendor/routerrouter' | split: ',' %}
-				{% for filepath in filepaths %}
-					'{{ filepath }}': '{{ filepath | asset_path | remove: ".js" }}'{% unless forloop.last %},{% endunless %}
-				{% endfor %}
-			}
-		};
-
 		(function(d,t) {
 			if ('querySelector' in d && 'addEventListener' in window) {
 				r=d.createElement(t);s=d.querySelector(t);
-				r.src='{% asset_path vendor/require %}';
-				r.setAttribute('data-main', '{% asset_path application.js %}');
+				r.src='{% asset_path application.js %}';
 				s.parentNode.insertBefore(r,s);
 			}
 		})(document,'script');
