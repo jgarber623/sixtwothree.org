@@ -8,7 +8,7 @@ title: Presentations
 <ol class="presentations-list" reversed>
 	{% for presentation in site.data.presentations %}
 		<li class="presentation h-event">
-			<h2 class="title p-name"><a href="{{ presentation.url }}">{{ presentation.title }}</a></h2>
+			<h2 class="title p-name"><a href="/presentations/{{ presentation.url }}">{{ presentation.title }}</a></h2>
 			<time class="dt-start" datetime="{{ presentation.date }}">{{ presentation.date | date: '%B %e, %Y' }}</time>
 		</li>
 	{% endfor %}
