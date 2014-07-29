@@ -5,12 +5,13 @@
 *,
 *:before,
 *:after {
-	@include box-sizing(border-box);
+	box-sizing: inherit;
 }
 
 html {
 	background: #fff;
-	@include text-size-adjust(100%);
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {

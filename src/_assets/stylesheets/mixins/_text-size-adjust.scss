@@ -1,6 +1,0 @@
-@mixin text-size-adjust($value: auto) {
-	@each $prefix in -moz, -ms, -webkit {
-		#{$prefix}-text-size-adjust: $value;
-	}
-	text-size-adjust: $value;
-}
