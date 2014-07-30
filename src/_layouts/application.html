@@ -63,24 +63,19 @@
 		(function(d,t) {
 			if ('querySelector' in d && 'addEventListener' in window) {
 				r=d.createElement(t);s=d.querySelector(t);
-				r.src='{% asset_path application.js %}';
-				s.parentNode.insertBefore(r,s);
+				r.src='{% asset_path application.js %}';s.parentNode.insertBefore(r,s);
 			}
-		})(document,'script');
-	</script>
 
-	<script>
-		var _gaq = [
-			['_setAccount', 'UA-5230764-4'],
-			['_setDomainName', 'sixtwothree.org'],
-			['_setCustomVar', 1, 'DevicePixelRatio', (window.devicePixelRatio >= 1.5) ? 'HiDPI' : '1X', 2],
-			['_trackPageview']
-		];
+			var _gaq = [
+				['_setAccount', 'UA-5230764-4'],
+				['_setDomainName', 'sixtwothree.org'],
+				['_setCustomVar', 1, 'DevicePixelRatio', (window.devicePixelRatio >= 1.5) ? 'HiDPI' : '1X', 2],
+				['_trackPageview']
+			];
 
-		(function(d,t) {
 			g=d.createElement(t);s=d.getElementsByTagName(t)[0];
 			g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s);
-		}(document,'script'));
+		})(document,'script');
 	</script>
 
 </body>
