@@ -53,10 +53,9 @@
 				top: -0.3em;
 			}
 
-			@include breakpoint($break--wide) {
+			@include breakpoint($tweak--medium-wide) {
 				float: none;
 				left: -3.5em;
-				margin: 0;
 				position: absolute;
 				top: -0.2em;
 			}
@@ -71,7 +70,7 @@
 			@include font-size;
 			margin: 0 0 0 3.1em;
 
-			@include breakpoint($break--wide) {
+			@include breakpoint($tweak--medium-wide) {
 				@include font-size(x-large);
 				margin: 0;
 			}

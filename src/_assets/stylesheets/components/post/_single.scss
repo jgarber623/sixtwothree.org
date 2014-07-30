@@ -2,6 +2,10 @@
 	.post-header {
 		text-align: center;
 
+		@include breakpoint($tweak--wide) {
+			margin: 0 -6em;
+		}
+
 		p {
 			color: palette(grey, light);
 			@include font-size(x-small);
