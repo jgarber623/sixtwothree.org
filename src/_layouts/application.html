@@ -3,8 +3,6 @@
 <head>
 	<meta charset="utf-8">
 
-	<link rel="dns-prefetch" href="//www.google-analytics.com">
-
 	{% capture page_title %}{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}{% endcapture %}
 	{% capture page_description %}{% if page.excerpt %}{{ page.excerpt | strip_html }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
 
@@ -65,16 +63,6 @@
 				r=d.createElement(t);s=d.querySelector(t);
 				r.src='{% asset_path application.js %}';s.parentNode.insertBefore(r,s);
 			}
-
-			var _gaq = [
-				['_setAccount', 'UA-5230764-4'],
-				['_setDomainName', 'sixtwothree.org'],
-				['_setCustomVar', 1, 'DevicePixelRatio', (window.devicePixelRatio >= 1.5) ? 'HiDPI' : '1X', 2],
-				['_trackPageview']
-			];
-
-			g=d.createElement(t);s=d.getElementsByTagName(t)[0];
-			g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s);
 		})(document,'script');
 	</script>
 
