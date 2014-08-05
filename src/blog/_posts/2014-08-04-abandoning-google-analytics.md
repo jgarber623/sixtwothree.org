@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152190543487343
 date: 2014-08-04 18:38:55 -0400
 excerpt: As of today, I’ve removed Google Analytics from this site. Here’s why.
 tags: development googleanalytics

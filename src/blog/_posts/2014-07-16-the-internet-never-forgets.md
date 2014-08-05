@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152155578157343
 date: 2014-07-16 12:10:32 -0400
 excerpt: 'You may have heard someone say, “The Internet never forgets.” This couldn’t be further from the truth.'
 tags: indieweb preservation

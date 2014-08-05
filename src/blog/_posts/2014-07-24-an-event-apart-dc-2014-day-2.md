@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152169116917343
 date: 2014-07-24 09:12:46 -0400
 excerpt: More links to more notes from the 2014 edition of An Event Apart DC.
 tags: aneventapart conference
