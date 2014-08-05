@@ -15,17 +15,19 @@
  		},
 
  		appendMention: function(mention) {
- 			if (mention.verified_at !== null) {
- 				this.$mentionAnchor.setAttribute('href', mention.source);
- 				this.$mentionAnchor.textContent = mention.source;
+ 			this.$mentionAnchor.setAttribute('href', mention.source);
+ 			this.$mentionAnchor.textContent = mention.source;
 
- 				var date = new DateFormatter(mention.created_at);
+ 			var date = new DateFormatter(mention.created_at);
 
- 				this.$mentionTime.setAttribute('datetime', date.toIso8601());
- 				this.$mentionTime.innerHTML = date.toFormattedString();
+ 			this.$mentionTime.setAttribute('datetime', date.toIso8601());
+ 			this.$mentionTime.innerHTML = date.toFormattedString();
 
- 				this.$mentionsList.appendChild(document.importNode(this.mentionTemplateContent, true));
- 			}
+ 			this.$mentionsList.appendChild(document.importNode(this.mentionTemplateContent, true));
+ 		},
+
+ 		mentionIsVerified: function(mention) {
+ 			return mention.verified_at !== null;
  		},
 
  		processMentions: function() {
@@ -37,7 +39,7 @@
  				response = this.request.responseText;
  			}
 
- 			var mentions = JSON.parse(response);
+ 			var mentions = JSON.parse(response).filter(this.mentionIsVerified);
 
  			if (mentions.length) {
  				this.setTemplateVars();
