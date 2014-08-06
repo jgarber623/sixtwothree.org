@@ -1,5 +1,5 @@
 .skip-link {
-	@extend .ui-hidden--focusable;
+	@extend %ui-hidden--focusable;
 	background: #fff;
 	display: block;
 
