@@ -31,12 +31,13 @@
  		},
 
  		processMentions: function() {
- 			var response = [];
+ 			var request = this.request,
+ 				response = [];
 
- 			if (this.request.status === 200) {
- 				response = this.request.response;
- 			} else if (this.request.contentType == 'application/json') {
- 				response = this.request.responseText;
+ 			if (request.status === 200) {
+ 				response = request.response;
+ 			} else if (request.contentType == 'application/json') {
+ 				response = request.responseText;
  			}
 
  			var mentions = JSON.parse(response).filter(this.mentionIsVerified);
@@ -51,11 +52,11 @@
  		},
 
  		setTemplateVars: function() {
- 			this.containerTemplate = document.querySelector('#template--mentions');
- 			this.containerTemplateContent = this.containerTemplate.content;
+ 			var containerTemplate = document.querySelector('#template--mentions'),
+ 				mentionTemplate = document.querySelector('#template--mention');
 
- 			this.mentionTemplate = document.querySelector('#template--mention');
- 			this.mentionTemplateContent = this.mentionTemplate.content;
+ 			this.containerTemplateContent = containerTemplate.content;
+ 			this.mentionTemplateContent = mentionTemplate.content;
 
  			this.$mentionsList = this.containerTemplateContent.querySelector('.mentions-list');
  			this.$mentionAnchor = this.mentionTemplateContent.querySelector('a');
@@ -63,18 +64,19 @@
  		},
 
  		setVars: function() {
- 			this.supportsCors = 'withCredentials' in new XMLHttpRequest();
- 			this.request = this.supportsCors ? new XMLHttpRequest() : new XDomainRequest();
+ 			this.request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest();
 
  			this.$post = document.querySelector('#main .post--single');
  			this.$postFooter = this.$post.querySelector('.post-footer');
  		},
 
  		_get: function(url, callback) {
- 			this.request.onload = callback.bind(this);
+ 			var request = this.request;
 
- 			this.request.open('GET', url);
- 			this.request.send();
+ 			request.onload = callback.bind(this);
+
+ 			request.open('GET', url);
+ 			request.send();
  		},
 
  		_objectToUrlParams: function(obj) {
