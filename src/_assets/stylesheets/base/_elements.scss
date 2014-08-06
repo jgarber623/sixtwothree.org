@@ -56,6 +56,7 @@ sup {
 }
 
 img {
+	border: 0;
 	-ms-interpolation-mode: bicubic;
 	vertical-align: middle;
 }
@@ -68,9 +69,5 @@ a {
 	&:focus,
 	&:hover {
 		color: palette(blue, dark);
-	}
-
-	img {
-		border: 0;
 	}
 }
