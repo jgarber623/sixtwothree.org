@@ -38,16 +38,17 @@
 		toFormattedString: function() {
 			// Derived from http://stackoverflow.com/a/8888498
 			var strtime = '',
-				hours = this.dateObj.getHours(),
-				minutes = this.dateObj.getMinutes(),
+				dateObj = this.dateObj,
+				hours = dateObj.getHours(),
+				minutes = dateObj.getMinutes(),
 				meridian = hours < 12 ? 'am' : 'pm';
 
 			hours = hours % 12;
 			hours = hours ? hours : 12;
 
-			strtime += months[this.dateObj.getMonth()] + ' ';
-			strtime += this.dateObj.getDate() + '<sup>' + this.getOrdinal() + '</sup>, ';
-			strtime += this.dateObj.getFullYear() + ' at ';
+			strtime += months[dateObj.getMonth()] + ' ';
+			strtime += dateObj.getDate() + '<sup>' + this.getOrdinal() + '</sup>, ';
+			strtime += dateObj.getFullYear() + ' at ';
 			strtime += hours + ':' + (minutes < 10 ? '0' + minutes : minutes) + ' ' + meridian + ' UTC';
 
 			return strtime;
