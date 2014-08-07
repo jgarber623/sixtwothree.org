@@ -14,6 +14,7 @@ layout: application
 
 	<aside class="mentions" id="responses" role="complementary">
 		<form method="post" action="http://webmention.sixtwothree.org/" class="mention-form">
+			<input type="hidden" name="referer" value="{{ site.title }}">
 			<input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
 
 			<label for="mention-url">Have you written a response to this? Let me know the URL:</label>
