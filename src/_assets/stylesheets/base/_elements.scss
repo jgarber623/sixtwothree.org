@@ -21,53 +21,102 @@ body {
 	padding-bottom: 4em;
 }
 
-article,
-footer,
-header,
-main {
-	display: block;
-}
+/* @group HTML5 elements */
 
-template {
-	display: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	@extend %font--open-sans;
-	font-weight: 700;
-}
-
-code,
-pre {
-	font-family: Monaco, "Courier New", Courier, monospace;
-	font-size: 1em;
-}
-
-sup {
-	font-size: 100%;
-	line-height: 0;
-	position: relative;
-	vertical-align: baseline;
-}
-
-img {
-	border: 0;
-	-ms-interpolation-mode: bicubic;
-	vertical-align: middle;
-}
-
-a {
-	background: none;
-	color: palette(blue, light);
-	text-decoration: underline;
-
-	&:focus,
-	&:hover {
-		color: palette(blue, dark);
+	article,
+	footer,
+	header,
+	main {
+		display: block;
 	}
-}
+
+	template {
+		display: none;
+	}
+
+/* @end */
+
+/* @group Links */
+
+	a {
+		background: none;
+		color: palette(blue, light);
+		text-decoration: underline;
+
+		&:focus,
+		&:hover {
+			color: palette(blue, dark);
+		}
+	}
+
+/* @end */
+
+/* @group Text-level semantics */
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@extend %font--open-sans;
+		font-weight: 700;
+	}
+
+	sup {
+		font-size: 100%;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
+
+/* @end */
+
+/* @group Embedded content */
+
+	img {
+		border: 0;
+		-ms-interpolation-mode: bicubic;
+		vertical-align: middle;
+	}
+
+/* @end */
+
+/* @group Grouping content */
+
+	code,
+	pre {
+		font-family: Monaco, "Courier New", Courier, monospace;
+		font-size: 1em;
+	}
+
+/* @end */
+
+/* @group Forms */
+
+	button,
+	input {
+		color: inherit;
+		font: inherit;
+		margin: 0;
+
+		&::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+		}
+	}
+
+	button {
+		-webkit-appearance: button;
+		cursor: pointer;
+		overflow: visible;
+		text-transform: none;
+	}
+
+	input {
+		-webkit-appearance: none;
+		border-radius: 0;
+		line-height: normal;
+	}
+
+/* @end */

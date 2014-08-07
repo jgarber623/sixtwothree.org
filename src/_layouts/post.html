@@ -12,6 +12,19 @@ layout: application
 		{{ content }}
 	</div>
 
+	<aside class="mentions" id="responses" role="complementary">
+		<form method="post" action="http://webmention.sixtwothree.org/" class="mention-form">
+			<input type="hidden" name="target" value="{{ site.url }}{{ page.url }}">
+
+			<label for="mention-url">Have you written a response to this? Let me know the URL:</label>
+
+			<div class="mention-fields">
+				<input type="url" id="mention-url" name="source" placeholder="http://…">
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</aside>
+
 	<footer class="post-footer" role="complementary">
 		<ul class="post-meta">
 			<li>“<a href="{{ page.url }}" class="u-url">{{ page.title }}</a>”  is also available as <a href="{{ page.url }}.json" rel="alternate" type="application/json">JSON</a>. View <a href="{{ site.repository_url }}/commits/master/src/{{ page.path }}">revision history</a>.</li>
@@ -42,13 +55,11 @@ layout: application
 </article>
 
 <template id="template--mentions">
-	<aside class="mentions" role="complementary">
-		<header class="mentions-header">
-			<h1>Responses</h1>
-		</header>
+	<header class="mentions-header">
+		<h1>Responses</h1>
+	</header>
 
-		<ol class="mentions-list"></ol>
-	</aside>
+	<ol class="mentions-list"></ol>
 </template>
 
 <template id="template--mention">

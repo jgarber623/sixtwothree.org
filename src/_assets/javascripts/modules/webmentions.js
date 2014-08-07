@@ -9,7 +9,7 @@
 
  	Webmentions.prototype = {
  		init: function() {
- 			this.setVars();
+ 			this.request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest();
 
  			this._get(this.options.endpoint + '?' + this._objectToUrlParams(this.options.params), this.processMentions);
  		},
@@ -47,7 +47,7 @@
 
  				mentions.forEach(this.appendMention, this);
 
- 				this.$post.insertBefore(this.containerTemplateContent, this.$postFooter);
+ 				document.querySelector('#responses').appendChild(this.containerTemplateContent);
  			}
  		},
 
@@ -61,13 +61,6 @@
  			this.$mentionsList = this.containerTemplateContent.querySelector('.mentions-list');
  			this.$mentionAnchor = this.mentionTemplateContent.querySelector('a');
  			this.$mentionTime = this.mentionTemplateContent.querySelector('time');
- 		},
-
- 		setVars: function() {
- 			this.request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest();
-
- 			this.$post = document.querySelector('#main .post--single');
- 			this.$postFooter = this.$post.querySelector('.post-footer');
  		},
 
  		_get: function(url, callback) {
