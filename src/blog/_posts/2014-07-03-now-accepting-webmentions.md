@@ -2,6 +2,8 @@
 copies:
   - title: Facebook
     url: https://www.facebook.com/jgarber623/posts/10152132303592343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/484850127677706240
 date: 2014-07-03 19:48:41 -0400
 excerpt: You can now let me know when you publish responses to any of my posts.
 tags: indieweb webmention
