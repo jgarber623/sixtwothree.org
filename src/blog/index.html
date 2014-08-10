@@ -2,7 +2,7 @@
 content_header_classes: p-name
 global_content_classes: h-feed
 layout: page
-title: Posts
+title: Recent Posts
 ---
 
 {% assign posts = site.categories.blog %}
@@ -10,13 +10,17 @@ title: Posts
 <ol class="posts-list" reversed>
 	{% for post in posts limit: 5 %}
 		<li class="post--expanded post">
-			{% include post.html expanded=true %}
-		</li>
-	{% endfor %}
-
-	{% for post in posts offset: 5 %}
-		<li class="post">
 			{% include post.html %}
 		</li>
 	{% endfor %}
+
+	{% for post in posts offset: 5 limit: 10 %}
+		<li class="post">
+			{% include post.html minimized=true %}
+		</li>
+	{% endfor %}
 </ol>
+
+<div class="notice">
+	<p><b>Looking for more great posts from years past?</b> Browse the <a href="/blog/archive">the archive</a>.</p>
+</div>

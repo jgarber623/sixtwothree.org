@@ -4,7 +4,7 @@ global_content_classes: h-feed
 layout: page
 ---
 
-<ol class="posts-list" reversed>
+<ol class="posts-list"{% if page.order %} {{ page.order }}{% endif %}>
 	{% for post in page.posts %}
 		<li class="post">
 			{% include post.html %}

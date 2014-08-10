@@ -5,7 +5,7 @@ title: Tags
 
 {% assign tags = site.tags | sort %}
 
-<ol class="tags-list">
+<ol class="inline-list">
 	{% for tag in tags %}
 		<li class="tag"><a href="/tags/{{ tag[0] }}">{{ tag[0] }}</a></li>
 	{% endfor %}

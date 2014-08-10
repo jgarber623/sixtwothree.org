@@ -1,10 +1,9 @@
 .posts-list {
-	border-bottom: 0.5em solid palette(grey, x-light);
 	list-style: disc;
 	margin: 3em 0;
-	padding: 0 0 2em 1em;
+	padding-left: 1.25em;
 
-	@include breakpoint($tweak--medium) {
+	@include breakpoint($tweak--medium-wide) {
 		padding-left: 0;
 	}
 

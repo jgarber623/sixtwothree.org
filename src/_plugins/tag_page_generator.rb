@@ -6,7 +6,8 @@ module Jekyll
       @dir  = dir
       @name = 'index.html'
 
-      data['layout'] = 'tag'
+      data['layout'] = 'posts-list'
+      data['order'] = 'reversed';
       data['title'] = "Posts tagged “#{data['tag']}”"
 
       self.data = data
