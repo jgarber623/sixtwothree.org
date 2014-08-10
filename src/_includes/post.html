@@ -3,11 +3,11 @@
 		<h1 class="post-title p-name"><a href="{{ post.url }}" class="u-url">{{ post.title }}</a></h1>
 	</header>
 
-	{% unless include.minimized %}
+	{% if include.expanded %}
 		<div class="post-excerpt p-summary">
 			<p>{{ post.excerpt | strip_html }}</p>
 		</div>
-	{% endunless %}
+	{% endif %}
 
 	<footer class="post-footer">
 		<p>Published on <time class="dt-published" datetime="{{ post.date | datetime_to_iso_string }}">{{ post.date | datetime_to_string }}</time>.</p>
