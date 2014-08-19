@@ -29,16 +29,21 @@
 		}
 	}
 
-	@include breakpoint($tweak--medium) {
-		.post--expanded {
+	.post--expanded {
+		@include breakpoint($tweak--medium) {
 			border-bottom: 0.5em solid palette(grey, x-light);
 			list-style: none;
 			margin-bottom: 2.5em;
+			margin-left: -1.25em;
 			padding-bottom: 2.5em;
 
 			.post-title {
 				@include font-size(x-large);
 			}
+		}
+
+		@include breakpoint($tweak--medium-wide) {
+			margin-left: 0;
 		}
 	}
 }
