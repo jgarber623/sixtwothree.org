@@ -33,8 +33,7 @@ module Jekyll
         path["#{dest}/"] = ''
         path['/index.html'] = '.json'
 
-        # Render the post's content and convert the post to a hash
-        post.render({}, site.site_payload)
+        # Convert the post to a hash
         output = post.to_liquid
 
         # Prepare the output for JSON conversion
@@ -42,6 +41,7 @@ module Jekyll
           output.delete(key)
         end
 
+        output['content'] = post.transform
         output['next'] = output['next'].id unless output['next'].nil?
         output['previous'] = output['previous'].id unless output['previous'].nil?
 
