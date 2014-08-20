@@ -1,7 +1,7 @@
 ---
 date: 2007-03-07 10:01:00 -0500
 excerpt: It’s been a while since my last post.
-tags: refreshdc webdesign
+tags: design ficlets refreshdc sxsw
 title: Catching up
 ---
 
@@ -15,4 +15,4 @@ In recent months, [200ok](http://200ok.net/) has gone from being a quirky name t
 
 [South by Southwest](http://2007.sxsw.com/) is coming up right soon. I fly out tomorrow morning bright and early with [Mr. Lawver](http://lawver.net/) and a whole litany of other AOL folk. This will be my third trip to Austin for the conference and, once again, it’s going to be amazing. The crowd this year is going to be larger than ever (by all accounts), so I’m interested to see how that goes. There are more events and panels that I’m interested in than I have time to list here, so go [check it out](http://2007.sxsw.com/interactive/) for yourself.
 
-Odds are I’ll have another big announcement (hopefully) later today regarding a project I’ve been working on. Some of you may know it as Ape Shirt, but right soon you’ll know it by it’s real name. Stay tuned…
+Odds are I’ll have another big announcement (hopefully) later today regarding a project I’ve been working on. Some of you may know it as Ape Shirt, but right soon you’ll know it by its real name. Stay tuned…

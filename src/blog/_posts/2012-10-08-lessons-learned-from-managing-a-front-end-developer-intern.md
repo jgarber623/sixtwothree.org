@@ -4,6 +4,7 @@ copies:
     url: http://viget.com/flourish/lessons-learned-from-managing-a-front-end-developer-intern
 date: 2012-10-08 9:55:46 -0400
 excerpt: This summer, Viget hosted a handful of amazing interns.
+tag: career internship work
 title: Lessons Learned from Managing a Front-End Developer Intern
 ---
 

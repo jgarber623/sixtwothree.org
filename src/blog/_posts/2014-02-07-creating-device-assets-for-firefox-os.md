@@ -1,7 +1,7 @@
 ---
 date: 2014-02-07 16:00:54 -0500
 excerpt: Wherein I learn about Firefox OS and App manifests.
-tags: development
+tags: assets development firefoxos
 title: Creating Device Assets for Firefox OS
 ---
 

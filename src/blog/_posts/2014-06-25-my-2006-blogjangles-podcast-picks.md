@@ -4,7 +4,7 @@ copies:
     url: http://www.blogjangles.com/blogjangles_music_n_biscu/2006/03/jasons_podcast_.html
 date: 2014-06-25 19:07:10 -0400
 excerpt: An article I wrote about my favorite podcasts in 2006.
-tags: blogjangles podcasts
+tags: blogjangles linkrot links podcast
 title: My 2006 Blogjangles Podcast Picks
 ---
 

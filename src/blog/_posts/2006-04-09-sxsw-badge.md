@@ -1,7 +1,7 @@
 ---
 date: 2006-04-09 00:10:00 -0400
 excerpt: Casually late, it’s a ridiculously brief wrap-up of this year’s trip to Austin for SXSWi.
-tags: webdesign
+tags: conference design event sxsw
 title: SXSW 2k6
 ---
 

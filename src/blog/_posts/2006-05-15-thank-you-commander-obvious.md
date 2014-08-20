@@ -1,7 +1,7 @@
 ---
 date: 2006-05-15 19:23:00 -0400
 excerpt: Presidential adviser Karl Rove blamed the war in Iraq on Monday for dragging down President Bush’s job approval ratings in public opinion polls.
-tags: politics
+tags: links politics
 title: Thank you, Commander Obvious
 ---
 

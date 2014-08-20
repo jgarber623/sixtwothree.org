@@ -1,7 +1,7 @@
 ---
 date: 2014-05-30 16:07:52 -0400
 excerpt: My 2006 interview with Rich Balling, also known as The Nightingale, of The Sound of Animals Fighting.
-tags: music
+tags: interview music
 title: The Sound of Animals Fighting
 ---
 

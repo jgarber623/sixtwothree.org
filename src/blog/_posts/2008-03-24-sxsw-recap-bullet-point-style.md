@@ -1,7 +1,7 @@
 ---
 date: 2008-03-24 20:51:00 -0400
 excerpt: SXSW 2008 by the bullet points.
-tags: webdesign
+tags: conference design event sxsw
 title: SXSW Recap (bullet point style)
 ---
 

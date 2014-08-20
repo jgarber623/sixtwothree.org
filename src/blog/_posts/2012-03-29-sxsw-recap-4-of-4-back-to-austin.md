@@ -4,7 +4,7 @@ copies:
     url: http://viget.com/inspire/sxsw-recap-4-of-4
 date: 2012-03-29 10:45:47 -0400
 excerpt: SXSW in recent years has been a mixed bag of emotions and takeaways.
-tags: conference sxsw
+tags: conference event sxsw
 title: 'SXSW Recap (4 of 4): Back to Austin'
 ---
 

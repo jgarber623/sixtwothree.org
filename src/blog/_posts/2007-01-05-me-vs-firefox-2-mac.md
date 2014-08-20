@@ -1,5 +1,6 @@
 ---
 date: 2007-01-05 21:52:00 -0500
+tags: browser firefox
 title: Me vs. Firefox 2 (Mac)
 ---
 

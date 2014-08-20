@@ -1,6 +1,7 @@
 ---
 date: 2006-09-16 17:47:00 -0400
 excerpt: The old iBook gets a touch of cool.
+tags: hack ibook mac
 title: Black and white iBook
 ---
 

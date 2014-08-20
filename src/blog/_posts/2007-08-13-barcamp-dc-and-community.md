@@ -1,7 +1,7 @@
 ---
 date: 2007-08-13 20:50:00 -0400
 excerpt: BarCamp DC has come and gone.
-tags: barcampdc
+tags: barcampdc conference event
 title: BarCamp DC and community
 ---
 

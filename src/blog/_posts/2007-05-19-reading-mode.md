@@ -1,7 +1,7 @@
 ---
 date: 2007-05-19 21:14:00 -0400
 excerpt:  I just added a feature I’m rather fond of.
-tags: webdesign
+tags: design javascript
 title: Reading Mode
 ---
 

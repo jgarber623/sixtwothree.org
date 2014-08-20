@@ -1,7 +1,7 @@
 ---
 date: 2008-02-12 17:53:00 -0500
 excerpt: DC Design Talks is the first of what we hope are many one-day, low-cost conferences for DC/Mid-Atlantic web folks by DC/Mid-Atlantic web folks.
-tags: dctalks
+tags: conference dctalks event
 title: Introducing the DC Talks series
 ---
 

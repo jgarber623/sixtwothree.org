@@ -1,7 +1,7 @@
 ---
 date: 2007-06-03 22:48:00 -0400
 excerpt: Add hCards to your RoundCube Webmail installation.
-tags: webdesign
+tags: design microformats
 title: Adding microformats to RoundCube Webmail
 ---
 

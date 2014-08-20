@@ -1,7 +1,7 @@
 ---
 date: 2006-06-13 23:06:00 -0400
 excerpt: Superfriend Cindy Li just launched a CSS-ified redesign of her personal site.
-tags: webdesign
+tags: design links
 title: Cindy Li redesigns
 ---
 

@@ -1,7 +1,7 @@
 ---
 date: 2006-02-04 01:31:00 -0500
 excerpt: Refresh DC launched today.
-tags: links refreshdc webdesign
+tags: design event links refreshdc
 title: Refresh DC
 ---
 

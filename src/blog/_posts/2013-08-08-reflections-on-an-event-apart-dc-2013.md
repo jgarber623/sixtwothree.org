@@ -4,7 +4,7 @@ copies:
     url: http://viget.com/inspire/reflections-on-an-event-apart-dc-2013
 date: 2013-08-08 9:45:14 -0400
 excerpt: This week, Trevor and I attended An Event Apart, the annual design conference roadshow organized by Eric Meyer and Jeffrey Zeldman.
-tags: aneventapart conference
+tags: aneventapart conference event
 title: Reflections on An Event Apart DC 2013
 ---
 

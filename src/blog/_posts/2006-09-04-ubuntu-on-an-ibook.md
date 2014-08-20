@@ -1,6 +1,7 @@
 ---
 date: 2006-09-04 14:47:00 -0400
 excerpt: For a laugh, I decided to try out a Linux distro on my old 700 Mhz G3 iBook (mid-2002 revision).
+tags: hack ibook linux mac software ubuntu
 title: Ubuntu on an iBook
 ---
 

@@ -1,11 +1,11 @@
 ---
 date: 2014-06-29 11:21:49 -0400
 excerpt: Every post on this site is now also represented in JSON format.
-tags: jekyll json
+tags: development jekyll json
 title: Adding JSON versions of Posts with Jekyll
 ---
 
-Using [Ben Balter's JekyllBot](http://ben.balter.com/2012/12/27/introducing-jekyllbot/) as a guide, I've added a [JSON Page Generator](https://github.com/jgarber623/sixtwothree.org/blob/master/src/_plugins/json_page_generator.rb) plugin to this site. 
+Using [Ben Balter's JekyllBot](http://ben.balter.com/2012/12/27/introducing-jekyllbot/) as a guide, I've added a [JSON Page Generator](https://github.com/jgarber623/sixtwothree.org/blob/master/src/_plugins/json_page_generator.rb) plugin to this site.
 
 Now, every post automatically has an associated JSON representation of its content and metadata. Simply replace the trailing `/` in the URL with `.json`. I've also linked to the JSON file in each post's footer.
 

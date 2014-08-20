@@ -1,7 +1,7 @@
 ---
 date: 2007-07-25 20:17:00 -0400
 excerpt: The vaunted BarCamp un-conference is coming to Washington, DC this August 11th!
-tags: barcampdc
+tags: barcampdc conference event
 title: BarCamp DC
 ---
 

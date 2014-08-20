@@ -1,7 +1,7 @@
 ---
 date: 2006-11-07 12:18:00 -0500
 excerpt: Yahoo! has a feature/mini-site devoted to the Nintendo Wii.
-tags: videogames webdesign
+tags: design links videogames web2.0
 title: Yahoo!’s Wii feature
 ---
 

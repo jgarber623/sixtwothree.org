@@ -4,7 +4,7 @@ copies:
     url: http://viget.com/inspire/refresh-dc-november-2010-recap-designing-for-one-billion-people
 date: 2010-11-30 17:50:00 -0500
 excerpt: Refresh DC returned in a big way a week before the Thanksgiving holiday with a top-notch talk.
-tags: refreshdc
+tags: event refreshdc
 title: 'Refresh DC November 2010 Recap: Designing for One Billion People'
 ---
 

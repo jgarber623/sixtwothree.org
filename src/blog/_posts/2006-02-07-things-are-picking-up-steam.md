@@ -1,7 +1,7 @@
 ---
 date: 2006-02-07 22:24:00
 excerpt: So far the response for Refresh DC has been astounding.
-tags: refreshdc
+tags: groupr event refreshdc
 title: Things are picking up steam…
 ---
 
