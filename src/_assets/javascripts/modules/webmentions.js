@@ -1,23 +1,6 @@
 (function(root, factory) {
  	root.Webmentions = factory();
 }(this, function() {
-	var get = function(url, callback) {
-		var request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest();
-
-		request.onload = function() {
-			if (request.status === 200) {
-				response = request.response;
-			} else if (request.contentType == 'application/json') {
-				response = request.responseText;
-			}
-
-			callback(response);
-		};
-
-		request.open('GET', url);
-		request.send();
-	};
-
 	var objectToUrlParams = function(obj) {
 		return Object.keys(obj).map(function(key) {
 			return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
@@ -32,7 +15,7 @@
 
  	Webmentions.prototype = {
  		init: function() {
- 			get(this.options.endpoint + '?' + objectToUrlParams(this.options.params), this.processMentions.bind(this));
+ 			this._get(this.options.endpoint + '?' + objectToUrlParams(this.options.params), this.processMentions.bind(this));
  		},
 
  		appendMention: function(mention) {
@@ -69,6 +52,23 @@
  			this.$mentionsList = this.containerTemplateContent.querySelector('.mentions-list');
  			this.$mentionAnchor = this.mentionTemplateContent.querySelector('a');
  			this.$mentionTime = this.mentionTemplateContent.querySelector('time');
+ 		},
+
+ 		_get: function(url, callback) {
+ 			var request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest();
+
+ 			request.onload = function() {
+ 				if (request.status === 200) {
+ 					response = request.response;
+ 				} else if (request.contentType == 'application/json') {
+ 					response = request.responseText;
+ 				}
+
+ 				callback(response);
+ 			};
+
+ 			request.open('GET', url);
+ 			request.send();
  		}
  	};
 
