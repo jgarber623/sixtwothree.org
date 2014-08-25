@@ -1,6 +1,12 @@
 (function(root, factory) {
  	root.Webmentions = factory();
 }(this, function() {
+	var objectToUrlParams = function(obj) {
+		return Object.keys(obj).map(function(key) {
+			return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
+		}).join('&');
+	};
+
  	var Webmentions = function(options) {
  		this.options = options;
 
@@ -11,7 +17,7 @@
  		init: function() {
  			this.request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest();
 
- 			this._get(this.options.endpoint + '?' + this._objectToUrlParams(this.options.params), this.processMentions);
+ 			this._get(this.options.endpoint + '?' + objectToUrlParams(this.options.params), this.processMentions);
  		},
 
  		appendMention: function(mention) {
@@ -70,12 +76,6 @@
 
  			request.open('GET', url);
  			request.send();
- 		},
-
- 		_objectToUrlParams: function(obj) {
- 			return Object.keys(obj).map(function(key) {
- 				return encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]);
- 			}).join('&');
  		}
  	};
 
