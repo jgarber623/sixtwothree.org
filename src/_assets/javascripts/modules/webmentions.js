@@ -32,10 +32,6 @@
  			this.$mentionsList.appendChild(document.importNode(this.mentionTemplateContent, true));
  		},
 
- 		mentionIsVerified: function(mention) {
- 			return mention.verified_at !== null;
- 		},
-
  		processMentions: function() {
  			var request = this.request,
  				response = [];
@@ -46,7 +42,7 @@
  				response = request.responseText;
  			}
 
- 			var mentions = JSON.parse(response).filter(this.mentionIsVerified);
+ 			var mentions = JSON.parse(response);
 
  			if (mentions.length) {
  				this.setTemplateVars();
