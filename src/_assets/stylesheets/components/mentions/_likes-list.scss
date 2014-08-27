@@ -1,0 +1,16 @@
+.likes-list {
+	@extend %clear;
+	@extend %ui-list;
+	margin-top: 1em;
+
+	li {
+		float: left;
+		margin: 0 0.25em 0.25em 0;
+	}
+
+	img {
+		border: 1px solid palette(grey, x-light);
+		border-radius: 0.25em;
+		height: 2.5em;
+	}
+}

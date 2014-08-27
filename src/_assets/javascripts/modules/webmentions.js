@@ -7,6 +7,41 @@
 		}).join('&');
 	};
 
+	var Likes = function(likes) {
+		this.likes = likes;
+
+		this.init();
+	};
+
+	Likes.prototype = {
+		init: function() {
+			this.templates = {
+				container: document.querySelector('#template--likes').content,
+				like: document.querySelector('#template--like').content
+			};
+		},
+
+		render: function() {
+			var list = this.templates.container.querySelector('.likes-list'),
+				anchor = this.templates.like.querySelector('a'),
+				img = this.templates.like.querySelector('img');
+
+			this.likes.forEach(function(like) {
+				var author = like.entry.properties.author[0].properties;
+
+				anchor.setAttribute('href', author.url[0]);
+
+				img.setAttribute('alt', author.name[0]);
+				img.setAttribute('src', author.photo[0]);
+				img.setAttribute('title', author.name[0] + ' likes this.');
+
+				list.appendChild(document.importNode(this.templates.like, true));
+			}, this);
+
+			return this.templates.container;
+		}
+	};
+
  	var Webmentions = function(options) {
  		this.options = options;
 
@@ -15,47 +50,57 @@
 
  	Webmentions.prototype = {
  		init: function() {
+ 			this.likes = [];
+ 			this.replies = [];
+ 			this.reposts = [];
+ 			this.responses = [];
+
  			this._get(this.options.endpoint + '?' + objectToUrlParams(this.options.params), this.processMentions.bind(this));
  		},
 
- 		appendMention: function(mention) {
- 			this.$mentionAnchor.setAttribute('href', mention.source);
- 			this.$mentionAnchor.textContent = mention.source;
-
- 			var date = new DateFormatter(mention.created_at);
-
- 			this.$mentionTime.setAttribute('datetime', date.toIso8601());
- 			this.$mentionTime.innerHTML = date.toFormattedString();
-
- 			this.$mentionsList.appendChild(document.importNode(this.mentionTemplateContent, true));
+ 		groupMentions: function(mention) {
+ 			switch (mention.webmention_type) {
+ 				case 'like':
+ 					this.likes.push(mention);
+ 					break;
+ 				case 'reply':
+ 					this.replies.push(mention);
+ 					break;
+ 				case 'repost':
+ 					this.reposts.push(mention);
+ 					break;
+ 				default:
+ 					this.responses.push(mention);
+ 			}
  		},
 
  		processMentions: function(response) {
  			var mentions = JSON.parse(response);
 
  			if (mentions.length) {
- 				this.setTemplateVars();
+ 				var nodes = [];
 
- 				mentions.forEach(this.appendMention, this);
+ 				mentions.forEach(this.groupMentions, this);
 
- 				document.querySelector('#responses').appendChild(this.containerTemplateContent);
+ 				if (this.likes.length) {
+ 					nodes.push(new Likes(this.likes).render());
+ 				}
+
+ 				this.render(nodes);
  			}
  		},
 
- 		setTemplateVars: function() {
- 			var containerTemplate = document.querySelector('#template--mentions'),
- 				mentionTemplate = document.querySelector('#template--mention');
+ 		render: function(nodes) {
+ 			var container = document.querySelector('#responses');
 
- 			this.containerTemplateContent = containerTemplate.content;
- 			this.mentionTemplateContent = mentionTemplate.content;
-
- 			this.$mentionsList = this.containerTemplateContent.querySelector('.mentions-list');
- 			this.$mentionAnchor = this.mentionTemplateContent.querySelector('a');
- 			this.$mentionTime = this.mentionTemplateContent.querySelector('time');
+ 			nodes.forEach(function(node) {
+ 				container.appendChild(node);
+ 			});
  		},
 
  		_get: function(url, callback) {
- 			var request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest();
+ 			var request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest(),
+ 				response = [];
 
  			request.onload = function() {
  				if (request.status === 200) {

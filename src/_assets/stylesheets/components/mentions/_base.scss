@@ -1,4 +1,13 @@
 .mentions {
 	border-top: 0.5em solid palette(grey, x-light);
 	padding: 2em 0;
+
+	h2 {
+		@include font-size(large);
+		margin: 1.5em 0 0 0;
+
+		@include breakpoint($break--narrow) {
+			@include font-size(x-large);
+		}
+	}
 }
