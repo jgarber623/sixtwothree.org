@@ -32,7 +32,7 @@
 		},
 
 		normalizeDateString: function() {
-			return this.date.replace(/-/g, '/').replace('T', ' ').replace(/\.\d{3}Z$/, '');
+			return this.date.replace(/[+|-]\d{2}:\d{2}$/, '').replace(/-/g, '/').replace('T', ' ');
 		},
 
 		toFormattedString: function() {
