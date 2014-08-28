@@ -98,7 +98,7 @@
 		setUrl: function(obj) {
 			var url = obj.entry.properties.url;
 
-			return typeof url !== 'undefined' ? url[0] : obj.source;
+			return typeof url !== 'undefined' ? this._normalizeUrl(url[0], obj.source) : obj.source;
 		},
 
 		sort: function(a, b) {
