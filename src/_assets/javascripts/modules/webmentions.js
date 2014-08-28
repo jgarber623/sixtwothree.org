@@ -7,42 +7,7 @@
 		}).join('&');
 	};
 
-	var Likes = function(likes) {
-		this.likes = likes;
-
-		this.init();
-	};
-
-	Likes.prototype = {
-		init: function() {
-			this.templates = {
-				container: document.querySelector('#template--likes').content,
-				like: document.querySelector('#template--like').content
-			};
-		},
-
-		render: function() {
-			var list = this.templates.container.querySelector('.likes-list'),
-				anchor = this.templates.like.querySelector('a'),
-				img = this.templates.like.querySelector('img');
-
-			this.likes.forEach(function(like) {
-				var author = like.entry.properties.author[0].properties;
-
-				anchor.setAttribute('href', author.url[0]);
-
-				img.setAttribute('alt', author.name[0]);
-				img.setAttribute('src', author.photo[0]);
-				img.setAttribute('title', author.name[0] + ' likes this.');
-
-				list.appendChild(document.importNode(this.templates.like, true));
-			}, this);
-
-			return this.templates.container;
-		}
-	};
-
- 	var Webmentions = function(options) {
+	var Webmentions = function(options) {
  		this.options = options;
 
  		this.init();
@@ -51,9 +16,9 @@
  	Webmentions.prototype = {
  		init: function() {
  			this.likes = [];
+ 			this.references = [];
  			this.replies = [];
  			this.reposts = [];
- 			this.responses = [];
 
  			this._get(this.options.endpoint + '?' + objectToUrlParams(this.options.params), this.processMentions.bind(this));
  		},
@@ -70,7 +35,7 @@
  					this.reposts.push(mention);
  					break;
  				default:
- 					this.responses.push(mention);
+ 					this.references.push(mention);
  			}
  		},
 
@@ -81,6 +46,12 @@
  				var nodes = [];
 
  				mentions.forEach(this.groupMentions, this);
+
+ 				if (this.references.length || this.replies.length) {
+ 					var responses = this.references.concat(this.replies);
+
+ 					nodes.push(new Responses(responses).render());
+ 				}
 
  				if (this.likes.length) {
  					nodes.push(new Likes(this.likes).render());
@@ -99,7 +70,7 @@
  		},
 
  		_get: function(url, callback) {
- 			var request = ('withCredentials' in new XMLHttpRequest()) ? new XMLHttpRequest() : new XDomainRequest(),
+ 			var request = 'withCredentials' in new XMLHttpRequest() ? new XMLHttpRequest() : new XDomainRequest(),
  				response = [];
 
  			request.onload = function() {

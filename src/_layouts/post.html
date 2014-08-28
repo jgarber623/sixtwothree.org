@@ -55,36 +55,9 @@ layout: application
 	</footer>
 </article>
 
-<!-- <template id="template--mentions">
-	<header class="mentions-header">
-		<h1>Responses</h1>
-	</header>
+{% include templates/responses.html %}
+{% include templates/reply.html %}
+{% include templates/reference.html %}
 
-	<ol class="mentions-list"></ol>
-</template>
-
-<template id="template--mention">
-	<li>
-		<article class="mention p-comment h-entry">
-			<div class="mention-content e-content">
-				<p><a class="u-url"></a> mentioned this post.</p>
-			</div>
-
-			<footer class="mention-footer">
-				<time class="dt-published"></time>
-			</footer>
-		</article>
-	</li>
-</template> -->
-
-<template id="template--likes">
-	<h2>Likes</h2>
-
-	<ul class="likes-list"></ul>
-</template>
-
-<template id="template--like">
-	<li class="h-card">
-		<a class="u-url"><img class="p-name u-photo"></a>
-	</li>
-</template>
+{% include templates/likes.html %}
+{% include templates/like.html %}

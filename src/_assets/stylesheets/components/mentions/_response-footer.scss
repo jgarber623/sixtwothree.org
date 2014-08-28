@@ -1,0 +1,37 @@
+.response-footer {
+	@extend %clear;
+	color: palette(grey, light);
+	@include font-size(x-small);
+	margin-top: 0.5em;
+
+	@include breakpoint($break--narrow) {
+		@include font-size(small);
+		margin-top: 0.25em;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.avatar {
+		@extend %mention-avatar;
+		float: left;
+		margin-right: 0.5em;
+
+		@include breakpoint($tweak--medium-wide) {
+			margin-right: 1em;
+			position: absolute;
+			right: 100%;
+			top: 0.25em;
+		}
+	}
+
+	.permalink {
+		color: palette(grey);
+
+		&:focus,
+		&:hover {
+			color: palette(grey, x-dark);
+		}
+	}
+}
