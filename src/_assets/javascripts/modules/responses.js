@@ -47,7 +47,7 @@
 			pubdate.innerHTML = published.toFormattedString();
 
 			if (type === 'reply') {
-				template.querySelector('.response-content p').innerHTML = entry.content[0].replace(/<p class="u-mention">.*<\/p>$/, '');
+				template.querySelector('.response-content').innerHTML = entry.content[0].replace(/<p class="u-mention">.*<\/p>/g, '').replace(/^\s+|\s+$/g, '').replace(/(?:\n\n)+/g, '<br><br>');
 
 				template.querySelector('.permalink').setAttribute('href', url);
 			} else {

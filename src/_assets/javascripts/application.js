@@ -9,7 +9,7 @@
 		new Webmentions({
 			endpoint: 'http://webmention.sixtwothree.org/api/webmentions',
 			params: {
-				'target': location.href
+				// 'target': location.href
 			}
 		});
 	});
