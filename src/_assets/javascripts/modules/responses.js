@@ -78,11 +78,11 @@
 				}
 
 				if (typeof url !== 'undefined') {
-					data.url = this._normalizeUrl(url[0], obj.source);
+					data.url = this._relativeToAbsoluteUrl(url[0], obj.source);
 				}
 
 				if (typeof photo !== 'undefined') {
-					data.photo = this._normalizeUrl(photo[0], obj.source);
+					data.photo = this._relativeToAbsoluteUrl(photo[0], obj.source);
 				}
 			}
 
@@ -98,14 +98,14 @@
 		setUrl: function(obj) {
 			var url = obj.entry.properties.url;
 
-			return typeof url !== 'undefined' ? this._normalizeUrl(url[0], obj.source) : obj.source;
+			return typeof url !== 'undefined' ? this._relativeToAbsoluteUrl(url[0], obj.source) : obj.source;
 		},
 
 		sort: function(a, b) {
 			return new Date(a.entry.properties.published[0]) - new Date(b.entry.properties.published[0]);
 		},
 
-		_normalizeUrl: function(url, sourceUrl) {
+		_relativeToAbsoluteUrl: function(url, sourceUrl) {
 			if (!/^https?:\/\//.test(url)) {
 				url = sourceUrl.match(/^https?:\/\/(?:.[^\/]+)\//)[0].replace(/\/$/, url);
 			}
