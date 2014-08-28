@@ -28,10 +28,10 @@
 			var type = response.webmention_type,
 				entry = response.entry.properties,
 				template = document.importNode(type === 'reply' ? this.replyTemplate : this.referenceTemplate, true),
-				author = this.setAuthorData(response),
+				author = this._normalizeAuthor(response),
 				avatar = template.querySelector('.avatar'),
-				url = this.setUrl(response),
-				published = new DateFormatter(this.setPublishedDate(response)),
+				url = this._normalizeUrl(response),
+				published = new DateFormatter(this._normalizePublishedDate(response)),
 				pubdate = template.querySelector('.pubdate');
 
 			template.querySelector('.author').setAttribute('href', author.url);
@@ -60,7 +60,11 @@
 			this.list.appendChild(template);
 		},
 
-		setAuthorData: function(obj) {
+		sort: function(a, b) {
+			return new Date(a.entry.properties.published[0]) - new Date(b.entry.properties.published[0]);
+		},
+
+		_normalizeAuthor: function(obj) {
 			var author = obj.entry.properties.author,
 				domain = obj.source.match(/^https?:\/\/(.[^\/]+)\//),
 				data = {
@@ -89,20 +93,16 @@
 			return data;
 		},
 
-		setPublishedDate: function(obj) {
+		_normalizePublishedDate: function(obj) {
 			var published = obj.entry.properties.published;
 
 			return typeof published !== 'undefined' ? published[0] : obj.created_at;
 		},
 
-		setUrl: function(obj) {
+		_normalizeUrl: function(obj) {
 			var url = obj.entry.properties.url;
 
 			return typeof url !== 'undefined' ? this._relativeToAbsoluteUrl(url[0], obj.source) : obj.source;
-		},
-
-		sort: function(a, b) {
-			return new Date(a.entry.properties.published[0]) - new Date(b.entry.properties.published[0]);
 		},
 
 		_relativeToAbsoluteUrl: function(url, sourceUrl) {
