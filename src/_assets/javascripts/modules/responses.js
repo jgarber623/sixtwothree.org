@@ -34,6 +34,8 @@
 				published = new DateFormatter(this._normalizePublishedDate(response)),
 				pubdate = template.querySelector('.pubdate');
 
+			template.querySelector('.response').setAttribute('id', 'comment-' + response.id);
+
 			template.querySelector('.author').setAttribute('href', author.url);
 			template.querySelector('.name').textContent = author.name;
 
