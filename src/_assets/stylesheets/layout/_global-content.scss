@@ -1,0 +1,7 @@
+.global-content {
+	margin: 3em 0 4em 0;
+
+	@include breakpoint($break--narrow) {
+		margin: 4em 0;
+	}
+}
