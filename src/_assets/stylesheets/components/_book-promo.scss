@@ -33,17 +33,17 @@
 		max-width: 18em;
 		text-align: center;
 
-		img {
-			max-height: 12em;
-			max-width: 100%;
-		}
-
-		@include breakpoint($break--narrow $tweak--medium) {
+		@include breakpoint($break--narrow ($tweak--medium - 0.001em)) {
 			float: left;
 			padding-right: 1em;
 			width: 40%;
+		}
 
-			img {
+		img {
+			max-height: 12em;
+			max-width: 100%;
+
+			@include breakpoint($break--narrow) {
 				max-height: none;
 			}
 		}
@@ -52,7 +52,7 @@
 	figcaption {
 		margin-top: 1.5em;
 
-		@include breakpoint($break--narrow $tweak--medium) {
+		@include breakpoint($break--narrow ($tweak--medium - 0.001em)) {
 			float: right;
 			margin: 0;
 			width: 60%;
