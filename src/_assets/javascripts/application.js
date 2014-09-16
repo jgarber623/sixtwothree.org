@@ -7,6 +7,7 @@
 
 	router.route('blog/:slug', function() {
 		new Webmentions({
+			container: document.querySelector('#responses'),
 			endpoint: 'http://webmention.sixtwothree.org/api/webmentions',
 			params: {
 				'target': location.href.replace(location.hash, '')

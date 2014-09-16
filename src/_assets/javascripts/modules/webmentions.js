@@ -62,7 +62,7 @@
  		},
 
  		render: function(nodes) {
- 			var container = document.querySelector('#responses');
+ 			var container = this.options.container;
 
  			nodes.forEach(function(node) {
  				container.appendChild(node);
