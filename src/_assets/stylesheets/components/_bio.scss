@@ -1,11 +1,19 @@
 .bio {
 	position: relative;
 
-	@include breakpoint($tweak--wide) {
-		.home-link {
-			left: -6em;
+	@include breakpoint($break--narrow $tweak--wide) {
+		padding-left: 6em;
+	}
+
+	.home-link {
+		@include breakpoint($break--narrow) {
+			left: 0;
 			position: absolute;
-			top: 0.5em;
+			top: 0.25em;
+		}
+
+		@include breakpoint($tweak--wide) {
+			left: -6em;
 		}
 	}
 
@@ -20,7 +28,7 @@
 		font-weight: 700;
 		margin: 1em 0 0.75em 0;
 
-		@include breakpoint($break--narrow) {
+		@include breakpoint($tweak--medium) {
 			@include font-size(xx-large);
 		}
 	}
@@ -42,6 +50,7 @@
 		@extend %clear;
 		color: palette(grey, x-dark);
 		margin-top: 4em;
+		padding: 0;
 
 		.home-link {
 			float: left;
