@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'jekyll-assets'
+gem 'breakpoint'
 gem 'uglifier'
 
 group :development do

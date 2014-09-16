@@ -38,7 +38,7 @@
 			max-width: 100%;
 		}
 
-		@include breakpoint($break--narrow) {
+		@include breakpoint($break--narrow $tweak--medium) {
 			float: left;
 			padding-right: 1em;
 			width: 40%;
@@ -47,27 +47,15 @@
 				max-height: none;
 			}
 		}
-
-		@include breakpoint($tweak--medium) {
-			float: none;
-			padding: 0;
-			width: auto;
-		}
 	}
 
 	figcaption {
 		margin-top: 1.5em;
 
-		@include breakpoint($break--narrow) {
+		@include breakpoint($break--narrow $tweak--medium) {
 			float: right;
 			margin: 0;
 			width: 60%;
-		}
-
-		@include breakpoint($tweak--medium) {
-			float: none;
-			margin-top: 1.5em;
-			width: auto;
 		}
 
 		p {

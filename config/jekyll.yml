@@ -3,7 +3,7 @@ source: ./src
 destination: ./public
 
 # Gems
-gems: ['jekyll-assets', 'uglifier']
+gems: ['jekyll-assets', 'breakpoint', 'uglifier']
 
 # Site variables
 title: sixtwothree.org
