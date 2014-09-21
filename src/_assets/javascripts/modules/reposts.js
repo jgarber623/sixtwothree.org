@@ -1,31 +1,31 @@
 (function(root, factory) {
-	root.Likes = factory();
+	root.Reposts = factory();
 }(this, function() {
-	var Likes = function(likes) {
-		this.likes = likes;
+	var Reposts = function(reposts) {
+		this.reposts = reposts;
 
 		this.init();
 	};
 
-	Likes.prototype = {
+	Reposts.prototype = {
 		init: function() {
-			this.containerTemplate = document.querySelector('#template--likes').content;
-			this.likeTemplate = document.querySelector('#template--avatar').content;
+			this.containerTemplate = document.querySelector('#template--reposts').content;
+			this.repostTemplate = document.querySelector('#template--avatar').content;
 
 			this.list = this.containerTemplate.querySelector('.avatars-list');
 		},
 
 		render: function() {
-			this.likes.sort(this.sort);
+			this.reposts.sort(this.sort);
 
-			this.likes.forEach(this.process, this);
+			this.reposts.forEach(this.process, this);
 
 			return this.containerTemplate;
 		},
 
-		process: function(like) {
-			var author = like.entry.properties.author[0].properties,
-				template = document.importNode(this.likeTemplate, true),
+		process: function(repost) {
+			var author = repost.entry.properties.author[0].properties,
+				template = document.importNode(this.repostTemplate, true),
 				anchor = template.querySelector('a'),
 				avatar = template.querySelector('img');
 
@@ -33,7 +33,7 @@
 
 			avatar.setAttribute('alt', author.name[0]);
 			avatar.setAttribute('src', author.photo[0]);
-			avatar.setAttribute('title', author.name[0] + ' likes this.');
+			avatar.setAttribute('title', author.name[0] + ' shared this.');
 
 			this.list.appendChild(template);
 		},
@@ -43,5 +43,5 @@
 		}
 	};
 
-	return Likes;
+	return Reposts;
 }));

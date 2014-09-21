@@ -57,6 +57,10 @@
  					nodes.push(new Likes(this.likes).render());
  				}
 
+ 				if (this.reposts.length) {
+ 					nodes.push(new Reposts(this.reposts).render());
+ 				}
+
  				this.render(nodes);
  			}
  		},
