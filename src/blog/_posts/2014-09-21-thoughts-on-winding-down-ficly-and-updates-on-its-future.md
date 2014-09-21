@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152287974162343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/513773797867290625
 date: 2014-09-21 15:23:11 -0400
 excerpt: Last week, Kevin and I turned off login access to Ficly.
 tags: ficlets ficly preservation
