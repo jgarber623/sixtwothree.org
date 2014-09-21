@@ -3,6 +3,7 @@
 
 	ol {
 		list-style: disc;
+		margin-bottom: 1.5em;
 		padding-left: 1em;
 
 		@include breakpoint($break--wide) {
@@ -17,5 +18,11 @@
 	.post-title {
 		@include font-size;
 		margin: 0 0 0.25em 0;
+	}
+
+	.more {
+		display: inline-block;
+		margin: -0.5em;
+		padding: 0.5em;
 	}
 }
