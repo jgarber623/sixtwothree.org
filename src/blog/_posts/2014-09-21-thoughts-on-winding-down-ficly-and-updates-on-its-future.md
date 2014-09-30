@@ -56,4 +56,4 @@ We'll also be [open-sourcing the code](https://github.com/ficly) that powered th
 
 It's a strange thing to change Ficly in the way we have. I don't like that all logical signs point to this being the right thing to do, but I do like that we're going about it in a way that doesn't leave users completely out in the cold and doesn't destroy five and a half years of art and shared culture.
 
-To the all the authors who contributed to Ficly over the years: thank you and we love you so very much. Thank you for sharing your creativity with the world.
+To all the authors who contributed to Ficly over the years: thank you and we love you so very much. Thank you for sharing your creativity with the world.
