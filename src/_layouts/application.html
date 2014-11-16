@@ -67,10 +67,10 @@
 	<script>
 		function loadCSS(e){var l=document.createElement('link'),o=document.getElementsByTagName('script')[0],s=document.styleSheets;l.rel='stylesheet';l.href=e;l.media='only x';o.parentNode.insertBefore(l,o);function t(){var d;for(var i=0;i<s.length;i++){if(s[i].href && s[i].href.indexOf(e)>-1){d=true;}}if(d){l.media='all';}else{setTimeout(t);}}t();return l;}
 
-		(function(d,t) {
-			loadCSS('//fonts.googleapis.com/css?family=Open+Sans:700|Source+Sans+Pro:400,400italic,700');
-			loadCSS('{% asset_path application.css %}');
+		loadCSS('//fonts.googleapis.com/css?family=Open+Sans:700|Source+Sans+Pro:400,400italic,700');
+		loadCSS('{% asset_path application.css %}');
 
+		(function(d,t) {
 			if ('querySelector' in d && 'addEventListener' in window) {
 				r=d.createElement(t);s=d.querySelector(t);
 				r.src='{% asset_path application.js %}';s.parentNode.insertBefore(r,s);
