@@ -6,7 +6,7 @@ copies:
     url: https://twitter.com/jgarber/status/539897179645956096
 date: 2014-12-02 16:35:06 -0500
 excerpt:
-tags: delicious, magnolia, indieweb, preservation, ruby
+tags: delicious magnolia indieweb preservation ruby
 title: Homesteading a Decade's Worth of Shared Links
 ---
 
