@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152422968357343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/539897179645956096
 date: 2014-12-02 16:35:06 -0500
 excerpt:
 tags: delicious, magnolia, indieweb, preservation, ruby
