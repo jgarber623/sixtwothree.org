@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152424305652343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/540219927425482754
 date: 2014-12-03 13:51:36 -0500
 excerpt: Just over a year ago, I wrote a small JS library for mapping functions to URLs. It's based on Backbone's Router.
 tags: backbone development javascript routerrouter
