@@ -26,7 +26,7 @@ Put simply, [Backbone's Router](http://backbonejs.org/#Router) triggers actions 
 
 It's a brilliantly simple design that's dramatically different from techniques I'd previously considered (see: [The Garber-Irish Implementation](http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution)). I was a fan, to say the least.
 
-But… the thought of including Backbone wholesale in every project ever [really rustled my jimmies](http://i0.kym-cdn.com/photos/images/newsfeed/000/249/839/14f.jpg). I looked at some other routing libraries ([there's a great list here](http://microjs.com/#routing)), but each was either too feature-heavy or just not quite like Backbone's Router. I wanted Just this one feature. And even then, not _all_ of that feature.
+But… the thought of including Backbone wholesale in every project ever [really rustled my jimmies](http://i0.kym-cdn.com/photos/images/newsfeed/000/249/839/14f.jpg). I looked at some other routing libraries ([there's a great list here](http://microjs.com/#routing)), but each was either too feature-heavy or just not quite like Backbone's Router. I wanted just this one feature. And even then, not _all_ of that feature.
 
 So I set out to build my own by extracting Backbone's Router into a standalone library.
 
