@@ -45,10 +45,10 @@ module Jekyll
     def generate(site)
       grouped_posts = posts_grouped_by_year(site)
 
-      site.pages << ArchiveIndexPage.new(site, site.source, 'blog/archive', {'years' => grouped_posts.keys})
+      site.pages << ArchiveIndexPage.new(site, site.source, 'posts/archive', {'years' => grouped_posts.keys})
 
       grouped_posts.each do |year, posts|
-        site.pages << ArchivePage.new(site, site.source, File.join('blog/archive', year.to_s), {'posts' => posts, 'year' => year})
+        site.pages << ArchivePage.new(site, site.source, File.join('posts/archive', year.to_s), {'posts' => posts, 'year' => year})
       end
     end
 

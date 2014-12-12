@@ -6,7 +6,7 @@ title: Posts
 ---
 
 {% assign current_year = site.time | date: '%Y' %}
-{% assign posts = site.categories.blog %}
+{% assign posts = site.categories.posts %}
 
 <ol class="posts-list" reversed>
 	{% for post in posts %}
@@ -29,5 +29,5 @@ title: Posts
 </ol>
 
 <div class="notice">
-	<p><b>Looking for more great posts from years past?</b> Browse <a href="/blog/archive">the archive</a>.</p>
+	<p><b>Looking for more great posts from years past?</b> Browse <a href="/posts/archive">the archive</a>.</p>
 </div>

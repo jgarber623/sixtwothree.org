@@ -5,7 +5,7 @@
 (function() {
 	var router = new RouterRouter();
 
-	router.route('blog/:slug', function() {
+	router.route('posts/:slug', function() {
 		new Webmentions({
 			container: document.querySelector('#responses'),
 			endpoint: 'http://webmention.sixtwothree.org/api/webmentions',

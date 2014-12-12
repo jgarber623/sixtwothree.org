@@ -8,7 +8,7 @@ layout: application
 	<h1 class="salutation">Hi! I’m <a href="mailto:jason&#064;sixtwothree&#46;org" class="p-name u-email">{{ site.author.name }}</a>.</h1>
 
 	<div class="content p-note">
-		<p>I’m a <a href="http://viget.com/about/team/jgarber" class="p-role">web developer</a>, <a href="http://www.whoistheorchid.com/" class="p-role" title="Listen to my band, The Orchid">musician</a>, <a href="http://refresh-dc.org/" class="p-role" title="Visit the Refresh DC website">community organizer</a>, <a href="http://flickr.com/photos/jgarber" class="p-role" rel="me" title="View my Flickr photos">photographer</a>, and <a href="/blog" class="p-role" title="Read my semi-regular ramblings">occasional author</a> living in <span class="p-locality">Washington</span>, <abbr class="p-region" title="District of Columbia">DC</abbr>.</p>
+		<p>I’m a <a href="http://viget.com/about/team/jgarber" class="p-role">web developer</a>, <a href="http://www.whoistheorchid.com/" class="p-role" title="Listen to my band, The Orchid">musician</a>, <a href="http://refresh-dc.org/" class="p-role" title="Visit the Refresh DC website">community organizer</a>, <a href="http://flickr.com/photos/jgarber" class="p-role" rel="me" title="View my Flickr photos">photographer</a>, and <a href="/posts" class="p-role" title="Read my semi-regular ramblings">occasional author</a> living in <span class="p-locality">Washington</span>, <abbr class="p-region" title="District of Columbia">DC</abbr>.</p>
 		<p>You can find me all over the web, typically as “<span class="p-nickname" title="And sometimes, jgarber623.">jgarber</span>.”</p>
 	</div>
 </section>
@@ -32,14 +32,14 @@ layout: application
 	<h1 class="p-name">Recent Posts</h1>
 
 	<ol reversed>
-		{% for post in site.categories.blog limit: 5 %}
+		{% for post in site.categories.posts limit: 5 %}
 			<li class="post">
 				{% include post.html %}
 			</li>
 		{% endfor %}
 	</ol>
 
-	<a href="/blog" class="more">See more posts →</a>
+	<a href="/posts" class="more">See more posts →</a>
 </section>
 
 <section class="projects">

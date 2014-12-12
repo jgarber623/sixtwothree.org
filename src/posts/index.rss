@@ -3,12 +3,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 
-	{% assign posts = site.categories.blog %}
+	{% assign posts = site.categories.posts %}
 
 	<channel>
 		<title>{{ site.title }}: Posts</title>
-		<atom:link rel="self" href="{{ site.url }}/blog/index.rss" />
-		<link>{{ site.url }}/blog</link>
+		<atom:link rel="self" href="{{ site.url }}/posts/index.rss" />
+		<link>{{ site.url }}/posts</link>
 		<description>All posts from {{ site.title }} — {{ site.description | xml_escape }}</description>
 		<pubDate>{{ posts.first.date | date: '%a, %d %b %Y %H:%M:%S %Z' }}</pubDate>
 		<managingEditor>{{ site.author.email }} ({{ site.author.name }})</managingEditor>

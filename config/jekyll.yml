@@ -29,7 +29,7 @@ redcarpet:
 defaults:
   -
     scope:
-      path: blog
+      path: posts
       type: posts
     values:
       layout: post

@@ -6,7 +6,7 @@ namespace :post do
   task :create do
     include Conversable;
 
-    posts_path = 'src/blog/_posts'
+    posts_path = 'src/posts/_posts'
     templates_path = 'lib/templates'
 
     pubdate = Time.now
