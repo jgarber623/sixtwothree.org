@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152450606207343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/545241533210189824
 date: 2014-12-17 10:21:29 -0500
 excerpt: It may have taken five months, but I finally published the code behind webmention.sixtwothree.org.
 tags: development indieweb webmention
