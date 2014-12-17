@@ -108,7 +108,7 @@
 
 		_relativeToAbsoluteUrl: function(url, sourceUrl) {
 			if (!/^https?:\/\//.test(url)) {
-				url = sourceUrl.match(/^https?:\/\/(?:.[^\/]+)\//)[0].replace(/\/$/, url);
+				url = sourceUrl.match(/^(https?:\/\/(?:.[^\/]+))\/?/)[1] + url;
 			}
 
 			return url;
