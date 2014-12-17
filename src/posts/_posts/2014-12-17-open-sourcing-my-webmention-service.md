@@ -14,7 +14,7 @@ Since November 2011, I've used the excellent static-site generator [Jekyll](http
 
 Some IndieWeb features, like adding  `rel="me"` to profile links, are easily achievable and fit nicely within Jekyll's boundaries as a static HTML-generating tool. More dynamic features, like webmentions, require a service or application—something with the ability to respond to incoming requests.
 
-In July, I wrote about [the launch of my webmention endpoint](http://sixtwothree.org/posts/now-accepting-webmentions). That small web app, living at [webmention.sixtwothree.org](http://webmention.sixtwothree.org/), collects, verifies, and stores comments from around the web related to my posts. I then use JavaScript to pull those comments and display them on the relevant post over here on sixtwothree.org. It's a simple little service: the webmention app accepts and verifies webmentions and provides a JSON API for retrieving webmention data by URL.
+In July, I wrote about [the launch of my webmention endpoint](/posts/now-accepting-webmentions). That small web app, living at [webmention.sixtwothree.org](http://webmention.sixtwothree.org/), collects, verifies, and stores comments from around the web related to my posts. I then use JavaScript to pull those comments and display them on the relevant post over here on sixtwothree.org. It's a simple little service: the webmention app accepts and verifies webmentions and provides a JSON API for retrieving webmention data by URL.
 
 For instance, if I want to display webmentions for this post, I request the following URL:
 
