@@ -287,8 +287,8 @@ AddDefaultCharset utf-8
     DirectorySlash Off
 
     # Feeds
-    RewriteRule ^(blog|posts)/rss$   posts/index.rss [L]
-    RewriteRule ^(blog|posts)/atom$  posts/index.atom [L]
+    RewriteRule ^posts/rss$   posts/index.rss [L]
+    RewriteRule ^posts/atom$  posts/index.atom [L]
 
     # Redirect oddball old blog posts to new URLs
     RewriteRule ^blog/archives/2006/02/06/the-future-of-tv-2/$ posts/the-future-of-tv [R=301,L]
