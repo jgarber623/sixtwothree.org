@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152493531492343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/550792421739884544
 date: 2015-01-01 17:54:49 -0500
 excerpt: Taking a brief look back at a very difficult year.
 tags: personal
