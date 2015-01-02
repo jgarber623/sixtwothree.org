@@ -17,7 +17,7 @@
 		},
 
 		render: function() {
-			this.responses.sort(this.sort);
+			this.responses.sort(this.sort.bind(this));
 
 			this.responses.forEach(this.process, this);
 
@@ -62,7 +62,7 @@
 		},
 
 		sort: function(a, b) {
-			return new Date(a.entry.properties.published[0]) - new Date(b.entry.properties.published[0]);
+			return new Date(this._normalizePublishedDate(a)) - new Date(this._normalizePublishedDate(b));
 		},
 
 		_normalizeAuthor: function(obj) {
@@ -95,9 +95,14 @@
 		},
 
 		_normalizePublishedDate: function(obj) {
-			var published = obj.entry.properties.published;
+			var normalizedPublishedDate = obj.created_at,
+				entry = obj.entry;
 
-			return typeof published !== 'undefined' ? published[0] : obj.created_at;
+			if (typeof entry !== 'undefined' && typeof entry.properties.published !== 'undefined') {
+				normalizedPublishedDate = entry.properties.published[0];
+			}
+
+			return normalizedPublishedDate;
 		},
 
 		_normalizeUrl: function(obj) {
