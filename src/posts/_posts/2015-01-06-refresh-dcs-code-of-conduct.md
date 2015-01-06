@@ -19,5 +19,5 @@ If you have any questions, comments, or concerns about the [Refresh DC Code of C
 
 In [her September post](http://incisive.nu/2014/codes-of-conduct/) on the topic, [Erin Kissane](http://incisive.nu) linked to several helpful resources we used while creating our Code of Conduct:
 
-- The Ada Initative's [How to design a code of conduct for your community](https://adainitiative.org/2014/02/howto-design-a-code-of-conduct-for-your-community/)
+- The Ada Initiative's [How to design a code of conduct for your community](https://adainitiative.org/2014/02/howto-design-a-code-of-conduct-for-your-community/)
 - [Codes of Conduct 101 and FAQ](http://www.ashedryden.com/blog/codes-of-conduct-101-faq) by Ashe Dryden
