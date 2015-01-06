@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152514772912343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/552495193187155969
 date: 2015-01-06 10:51:06 -0500
 excerpt: Beginning today, Refresh DC has a clearly-written Code of Conduct.
 tags: codeofconduct community refreshdc
