@@ -5,7 +5,7 @@ copies:
   - title: Twitter
     url: https://twitter.com/jgarber/status/553318807289466881
 date: 2015-01-08 17:22:26 -0500
-excerpt: Today I uncovered a curious little bug while using Rails Assets and Bower packages with dots in the package name. Here's how to solve it.
+excerpt: I uncovered a curious little bug while using Rails Assets with a Bower package that had a dot in the package name. Here's how I solved it.
 tags: bower development rubyonrails railsassets scss
 title: Using Rails Assets Gems with Dots in the Bower Package Name
 ---
