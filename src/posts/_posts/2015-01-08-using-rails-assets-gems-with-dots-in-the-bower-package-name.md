@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152518773277343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/553318807289466881
 date: 2015-01-08 17:22:26 -0500
 excerpt: Today I uncovered a curious little bug while using Rails Assets and Bower packages with dots in the package name. Here's how to solve it.
 tags: bower development rubyonrails railsassets scss
