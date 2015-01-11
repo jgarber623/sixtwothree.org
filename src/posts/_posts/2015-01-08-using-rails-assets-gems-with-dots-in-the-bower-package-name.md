@@ -12,7 +12,7 @@ title: Using Rails Assets Gems with Dots in the Bower Package Name
 
 I recently came across the brilliant [Rails Assets](https://rails-assets.org/) service. Rails Assets is great. It acts as a bridge between your application and all of the packages available via [Bower](http://bower.io/) while still playing within the familiar confines of Rails' oft-maligned [Asset Pipeline](http://guides.rubyonrails.org/asset_pipeline.html). Bower packages are available as gems in the form of `rails-assets-bower-package-name`. Easy peasy.
 
-I did, however, uncover a minor snag today while a CSS package with a dot in the package name ([normalize.css](http://bower.io/search/?q=normalize.css)). In `application.scss`, I had:
+I did, however, uncover a minor snag today while using a CSS package with a dot in the package name ([normalize.css](http://bower.io/search/?q=normalize.css)). In `application.scss`, I had:
 
 ```scss
 @import "dependencies";
