@@ -1,0 +1,21 @@
+.welcome {
+	.salutation {
+		@include font-size(2);
+
+		@include breakpoint($tp-medium) {
+			@include font-size(1);
+		}
+	}
+
+	.content {
+		@include font-size(4);
+
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	abbr {
+		border: none;
+	}
+}

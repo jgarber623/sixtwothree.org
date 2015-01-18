@@ -1,0 +1,65 @@
+.book-promo {
+	margin-bottom: $spacing-4;
+
+	@include breakpoint($tp-medium) {
+		float: right;
+		margin-left: $spacing-3;
+		width: 40%;
+	}
+
+	@include breakpoint($tp-wide) {
+		margin-right: -$spacing-4;
+	}
+
+	@include breakpoint($tp-ultra) {
+		margin-right: -$spacing-5;
+	}
+
+	h1 {
+		@include font-size(4);
+		margin-top: 0.375rem;
+	}
+
+	figure {
+		@extend %clearfix;
+		background-color: $darken-1;
+		margin: 0;
+		padding: $spacing-2;
+	}
+
+	.cover {
+		display: block;
+		margin: 0 auto $spacing-2 auto;
+		max-width: 18rem;
+		text-align: center;
+
+		@include breakpoint($bp-narrow ($tp-medium - 0.001em)) {
+			float: left;
+			margin-bottom: 0;
+			padding-right: $spacing-2;
+			width: 40%;
+		}
+
+		img {
+			max-height: 12rem;
+			max-width: 100%;
+
+			@include breakpoint($bp-narrow) {
+				max-height: none;
+			}
+		}
+	}
+
+	figcaption {
+		@include breakpoint($bp-narrow ($tp-medium - 0.001em)) {
+			float: right;
+			width: 60%;
+		}
+
+		a {
+			@extend %button--blue;
+			display: block;
+			text-align: center;
+		}
+	}
+}

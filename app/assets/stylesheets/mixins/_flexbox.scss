@@ -1,0 +1,17 @@
+@mixin flex-box() {
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex-direction($value: row) {
+	-ms-flex-direction: $value;
+	-webkit-flex-direction: $value;
+	flex-direction: $value;
+}
+
+@mixin flex-order($value: 0) {
+	-ms-flex-order: $value;
+	-webkit-order: $value;
+	order: $value;
+}

@@ -1,0 +1,14 @@
+@include breakpoint(max-width ($tp-medium - 0.001em)) {
+	.homepage-content {
+		@include flex-box;
+		@include flex-direction(column);
+	}
+
+	.section {
+		@include flex-order;
+	}
+
+	.book-promo {
+		@include flex-order(1);
+	}
+}

@@ -1,0 +1,51 @@
+.global-navigation {
+	@include breakpoint($bp-wide) {
+		@include table-cell;
+		text-align: right;
+	}
+
+	ul {
+		@extend %clearfix;
+		@extend %reset-list;
+		@include margin-y(1);
+
+		@include breakpoint($bp-wide) {
+			margin: 0;
+		}
+	}
+
+	@include breakpoint($bp-narrow) {
+		li {
+			display: inline-block;
+			margin-right: $spacing-3;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	a,
+	button {
+		@extend %button;
+		font-weight: bold;
+		@include caps;
+		@include margin-xn(2);
+		text-decoration: none;
+
+		&:focus,
+		&:hover {
+			background-color: $darken-1;
+		}
+	}
+
+	button {
+		background-color: transparent;
+		@include color($blue);
+
+		&:focus,
+		&:hover {
+			@include color($blue, darker);
+		}
+	}
+}

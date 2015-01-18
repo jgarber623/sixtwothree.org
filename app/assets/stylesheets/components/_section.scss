@@ -1,0 +1,8 @@
+.section {
+	margin-bottom: $spacing-4;
+
+	> h1 {
+		@include font-size(2);
+		margin-top: 0;
+	}
+}

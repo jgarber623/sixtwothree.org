@@ -1,15 +1,15 @@
-ruby '2.1.1'
-source 'https://rubygems.org'
+ruby '2.1.5'
 
-gem 'jekyll'
-gem 'jekyll-assets'
-gem 'breakpoint'
+source 'https://rubygems.org'
+source 'https://rails-assets.org'
+
+# Application
+gem 'rails', '4.2'
+gem 'francis_cms', path: '~/Projects/FrancisCMS'
+
+# Assets
+gem 'breakpoint', '~> 2.5.0'
+gem 'rails-assets-normalize-css'
+gem 'sass-rails', '~> 5.0.0'
 gem 'uglifier'
 
-group :development do
-  gem 'rake'
-  gem 'colored'
-  gem 'slugify'
-  gem 'capistrano', '~> 2.15.5'
-  gem 'foreman'
-end

@@ -1,0 +1,87 @@
+<!doctype html>
+<html id="<%= francis_cms_config.site_url.gsub(/^https?:\/\//, '').parameterize %>" itemscope itemtype="http://schema.org/WebPage" lang="en-US">
+<head>
+	<meta charset="utf-8">
+
+	<title><%= page_title %></title>
+
+	<meta name="description" content="<%= page_description %>">
+	<meta name="og:description" itemprop="description" content="<%= page_description %>">
+	<meta name="og:title" itemprop="name" content="<%= page_title %>">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@jgarber">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="alternate" href="<%= francis_cms.links_path(format: :rss) %>" title="<%= francis_cms_config.site_title %>: Links" type="application/rss+xml">
+	<link rel="alternate" href="<%= francis_cms.posts_path(format: :rss) %>" title="<%= francis_cms_config.site_title %>: Posts" type="application/rss+xml">
+	<link rel="alternate" href="<%= francis_cms.webmentions_path(format: :rss) %>" title="<%= francis_cms_config.site_title %>: Webmentions" type="application/rss+xml">
+	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
+
+	<%- if include_full_css? -%>
+		<link rel="stylesheet" href="<%= asset_path 'application.css' %>">
+		<%= raw %Q{<link rel="stylesheet" href="#{asset_path 'admin.css'}">} if logged_in? %>
+	<%- else -%>
+		<style>
+			<%= raw assets.find_asset('critical.css') %>
+		</style>
+
+		<script>
+			function loadCSS(e) {
+				var l=document.createElement('link'),o=document.getElementsByTagName('script')[0],s=document.styleSheets;l.rel='stylesheet';l.href=e;l.media='only x';o.parentNode.insertBefore(l,o);
+				function m(){var d;for(var i=0;i<s.length;i++){if(s[i].href && s[i].href.indexOf(e)>-1){d=true;}}if(d){l.media='all';}else{setTimeout(m);}}m();return l;
+			}
+
+			loadCSS('<%= asset_path('application.css') %>');
+			<%= raw "loadCSS('#{asset_path('admin.css')}');" if logged_in? %>
+
+			document.cookie = 'fullCSS=true; expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>; path=/';
+		</script>
+
+		<noscript>
+			<link rel="stylesheet" href="<%= asset_path 'application.css' %>">
+			<%= raw %Q{<link rel="stylesheet" href="#{asset_path 'admin.css'}">} if logged_in? %>
+		</noscript>
+	<%- end -%>
+</head>
+<body>
+
+	<%= link_to 'Skip to main content', '#main', class: 'skip-link' %>
+
+	<header class="global-header" role="banner">
+		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
+
+		<nav class="global-navigation" role="navigation">
+			<ul>
+				<li><%= link_to 'Posts', francis_cms.posts_path %></li>
+				<li><%= link_to 'Links', francis_cms.links_path %></li>
+				<li><%= link_to 'Tags', francis_cms.tags_path %></li>
+				<%= raw %Q{<li>#{link_to 'Webmentions', francis_cms.webmentions_path}</li>} if logged_in? %>
+				<li>
+					<%- if logged_in? -%>
+						<%= form_tag main_app.logout_path, method: :delete do %>
+							<button type="submit">Log Out</button>
+						<% end %>
+					<%- else -%>
+						<%= link_to 'Log In', main_app.login_path %>
+					<%- end -%>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="global-content" id="main" role="main">
+		<div class="container">
+			<%= yield %>
+		</div>
+	</main>
+
+	<footer class="global-footer" role="contentinfo">
+		<div class="container">
+			<p>Some rights reserved. This site’s content is licensed under a <%= link_to francis_cms_config.license_title, francis_cms_config.license_url, rel: 'license' %>. Source code available on <%= link_to 'GitHub', 'https://github.com/jgarber623/sixtwothree.org', rel: 'source' %>.</p>
+		</div>
+	</footer>
+
+	<%= francis_cms_admin_panel if logged_in? %>
+
+</body>
+</html>

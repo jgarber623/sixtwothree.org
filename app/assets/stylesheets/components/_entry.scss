@@ -1,0 +1,69 @@
+.entry-header {
+	margin-bottom: $spacing-2;
+}
+
+.entry-title {
+	@include font-size(4);
+	margin: 0;
+
+	@include breakpoint($tp-medium) {
+		@include font-size(2);
+	}
+}
+
+.entry-content,
+.entry-excerpt {
+	p {
+		margin-bottom: $spacing-2;
+	}
+
+	blockquote {
+		font-style: italic;
+		margin: 0;
+		@include padding-x(3);
+		@include thick-border(left);
+
+		em,
+		i {
+			font-style: normal;
+		}
+	}
+}
+
+.entry-footer {
+	@include color($grey, light);
+	@include font-size(6);
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		@extend %anchor--grey;
+	}
+}
+
+.entry-meta-list {
+	@extend %reset-list;
+
+	dt,
+	dd {
+		display: inline-block;
+	}
+
+	dt {
+		margin-right: $spacing-1;
+	}
+
+	dd {
+		margin: 0;
+
+		&:after {
+			content: ", ";
+		}
+
+		&:last-child:after {
+			content: "";
+		}
+	}
+}

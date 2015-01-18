@@ -1,9 +1,0 @@
-.content-header h1 {
-	@include font-size(xx-large);
-	line-height: 1.2;
-	margin: 0;
-
-	@include breakpoint($break--narrow) {
-		@include font-size(xxx-large);
-	}
-}

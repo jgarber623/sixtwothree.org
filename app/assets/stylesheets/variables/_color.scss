@@ -1,0 +1,59 @@
+$blue: (
+	mid: #4678b9,
+	dark: #3f6ca7,
+	darker: #465a78
+);
+
+$green: (
+	mid: #0a0,
+	dark: #080
+);
+
+$grey: (
+	lighter: #ddd,
+	light: #999,
+	mid: #777,
+	dark: #555,
+	darker: #333
+);
+
+$red: (
+	mid: #c00,
+	dark: #a00
+);
+
+$darken: (
+	rgba(#000, 0.0625),
+	rgba(#000, 0.125),
+	rgba(#000, 0.25),
+	rgba(#000, 0.5)
+);
+
+$darken-1: nth($darken, 1);
+$darken-2: nth($darken, 2);
+$darken-3: nth($darken, 3);
+$darken-4: nth($darken, 4);
+
+$profiles: (
+	bandcamp: #4e9bac,
+	codepen: #222,
+	delicious: #39f,
+	facebook: #3b5998,
+	ficly: #b51c2c,
+	flickr: #0063dc,
+	github: #4183c4,
+	instagram: #3f729b,
+	keybase: #fe8547,
+	kickstarter: #2bde73,
+	lanyrd: #152e51,
+	letterboxd: #ff9a00,
+	photodrop: #cdb6e3,
+	pinterest: #cc2127,
+	polar: #2da1dc,
+	rdio: #007dc3,
+	twitter: #55acee,
+	untappd: #ffcf00,
+	vimeo: #1ab7ea,
+	vsco: #a8a749,
+	youtube: #e52d27
+);

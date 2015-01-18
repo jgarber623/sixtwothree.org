@@ -1,1 +1,0 @@
-jekyll: bundle exec jekyll serve --config config/jekyll.yml,config/jekyll/development.yml --trace
