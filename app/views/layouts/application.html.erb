@@ -19,7 +19,9 @@
 
 	<%- if include_full_css? -%>
 		<link rel="stylesheet" href="<%= asset_path 'application.css' %>">
-		<%= raw %Q{<link rel="stylesheet" href="#{asset_path 'admin.css'}">} if logged_in? %>
+		<%- if logged_in? -%>
+			<link rel="stylesheet" href="<%= asset_path 'admin.css' %>">
+		<%- end -%>
 	<%- else -%>
 		<style>
 			<%= raw assets.find_asset('critical.css') %>
@@ -31,15 +33,19 @@
 				function m(){var d;for(var i=0;i<s.length;i++){if(s[i].href && s[i].href.indexOf(e)>-1){d=true;}}if(d){l.media='all';}else{setTimeout(m);}}m();return l;
 			}
 
-			loadCSS('<%= asset_path('application.css') %>');
-			<%= raw "loadCSS('#{asset_path('admin.css')}');" if logged_in? %>
+			loadCSS('<%= asset_path 'application.css' %>');
+			<%- if logged_in? -%>
+				loadCSS('<%= asset_path 'admin.css' %>');
+			<%- end -%>
 
 			document.cookie = 'fullCSS=true; expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>; path=/';
 		</script>
 
 		<noscript>
 			<link rel="stylesheet" href="<%= asset_path 'application.css' %>">
-			<%= raw %Q{<link rel="stylesheet" href="#{asset_path 'admin.css'}">} if logged_in? %>
+			<%- if logged_in? -%>
+				<link rel="stylesheet" href="<%= asset_path 'admin.css' %>">
+			<%- end -%>
 		</noscript>
 	<%- end -%>
 </head>
@@ -84,6 +90,5 @@
 	</footer>
 
 	<%= francis_cms_admin_panel if logged_in? %>
-
 </body>
 </html>
