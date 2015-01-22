@@ -3,9 +3,7 @@
 (function() {
 	var forms = document.querySelectorAll('.delete-form');
 
-	if (forms.length) {
-		for (var i = 0, j = forms.length; i < j; i++) {
-			new DeleteForm(forms[i]);
-		}
+	for (var i = 0, j = forms.length; i < j; i++) {
+		new DeleteForm(forms[i]);
 	}
 })();
