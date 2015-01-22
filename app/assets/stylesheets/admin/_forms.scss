@@ -18,6 +18,14 @@
 		@include font-size(6);
 	}
 
+	.for-checkbox {
+		background-color: $darken-1;
+		@include border-radius;
+		@include color($grey, dark);
+		display: inline-block;
+		padding: $spacing-1 $spacing-2;
+	}
+
 /* @end */
 
 /* @group Form errors */

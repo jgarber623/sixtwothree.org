@@ -4,7 +4,7 @@
 (function() {
 	var router = new RouterRouter();
 
-	router.route(/posts|links/, function() {
+	router.route(/links|posts/, function() {
 		new Pagination();
 	});
 })();
