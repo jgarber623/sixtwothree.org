@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20150107153844) do
   create_table "tags", force: :cascade do |t|
     t.string  "name"
     t.integer "taggings_count", default: 0
-    t.text    "slug",                       null: false
+    t.text    "slug"
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
