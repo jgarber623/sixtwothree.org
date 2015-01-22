@@ -90,5 +90,8 @@
 	</footer>
 
 	<%= francis_cms_admin_panel if logged_in? %>
+
+	<%= javascript_include_tag 'application' %>
+	<%= javascript_include_tag 'admin' if logged_in? %>
 </body>
 </html>
