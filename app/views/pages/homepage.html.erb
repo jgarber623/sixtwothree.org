@@ -1,9 +1,13 @@
 <div class="homepage-content">
 	<section class="welcome section h-card">
+		<%= link_to main_app.root_path, class: 'avatar u-url', rel: 'home' do %>
+			<%= image_tag francis_cms_config.user_avatar, alt: '', class: 'u-photo' %>
+		<% end %>
+
 		<h1 class="salutation">Hi! I'm <%= mail_to francis_cms_config.user_email, francis_cms_config.user_name, class: 'p-name u-email' %>.</h1>
 
 		<div class="content p-note">
-			<p>I’m a <%= link_to 'web developer', 'http://viget.com/about/team/jgarber', class: 'p-role' %>, <%= link_to 'musician', 'http://www.whoistheorchid.com/', class: 'p-role', title: 'Listen to my band, The Orchid.' %>, <%= link_to 'community organizer', 'http://refresh-dc.org/', class: 'p-role', title: 'Visit the Refresh DC website.' %>, <%= link_to 'photographer', 'http://flickr.com/photos/jgarber', class: 'p-role', rel: 'me', title: 'View my Flickr photos.' %>, and <%= link_to 'occasional author', francis_cms.posts_path, class: 'p-role', title: 'Read my semi-regular ramblings.' %> living in <span class="p-locality">Washington</span>, <abbr class="p-region" title="District of Columbia">DC</abbr>.</p>
+			<p>I’m a <%= link_to 'web developer', 'http://viget.com/about/team/jgarber', class: 'p-role' %>, <%= link_to 'musician', 'http://whoistheorchid.com/', class: 'p-role', title: 'Listen to my band, The Orchid.' %>, <%= link_to 'community organizer', 'http://refresh-dc.org/', class: 'p-role', title: 'Visit the Refresh DC website.' %>, <%= link_to 'photographer', 'http://flickr.com/photos/jgarber', class: 'p-role', rel: 'me', title: 'View my Flickr photos.' %>, and <%= link_to 'occasional author', francis_cms.posts_path, class: 'p-role', title: 'Read my semi-regular ramblings.' %> living in <span class="p-locality">Washington</span>, <abbr class="p-region" title="District of Columbia">DC</abbr>.</p>
 			<p>You can find me all over the web, typically as “<span class="p-nickname" title="And sometimes, jgarber623.">jgarber</span>.”</p>
 		</div>
 	</section>

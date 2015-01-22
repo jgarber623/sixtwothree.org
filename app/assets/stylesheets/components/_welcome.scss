@@ -1,4 +1,34 @@
 .welcome {
+	position: relative;
+
+	@include breakpoint($bp-narrow ($tp-ultra - 0.001em)) {
+		padding-left: $spacing-5;
+	}
+
+	.avatar {
+		display: inline-block;
+		margin-bottom: $spacing-2;
+
+		@include breakpoint($bp-narrow) {
+			left: 0;
+			margin: 0;
+			position: absolute;
+			top: 0;
+
+			img {
+				height: 5rem;
+			}
+		}
+
+		@include breakpoint($tp-ultra) {
+			left: -$spacing-5;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+
 	.salutation {
 		@include font-size(2);
 

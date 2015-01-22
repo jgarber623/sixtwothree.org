@@ -1,5 +1,20 @@
 .bio {
 	@include margin-y(4);
+	position: relative;
+
+	.avatar {
+		float: left;
+		margin-right: $spacing-2;
+		position: relative;
+		top: -$spacing-1;
+
+		@include breakpoint($tp-wide) {
+			float: none;
+			position: absolute;
+			right: 100%;
+			top: -0.2rem;
+		}
+	}
 
 	p {
 		font-family: "Open Sans", sans-serif;
