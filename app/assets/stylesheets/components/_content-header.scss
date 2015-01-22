@@ -2,10 +2,27 @@
 	margin-bottom: $spacing-4;
 
 	h1 {
+		display: inline-block;
 		margin: 0;
 
 		@include breakpoint($bp-narrow) {
 			@include font-size(0);
+		}
+	}
+
+	small {
+		@include color($grey, light);
+		display: inline-block;
+		@include font-size(2);
+		font-weight: bold;
+		margin-left: $spacing-1;
+
+		&:before {
+			content: "("
+		}
+
+		&:after {
+			content: ")"
 		}
 	}
 }
