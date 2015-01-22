@@ -1,13 +1,13 @@
 (function(root, factory) {
-	root.Destroyer = factory();
+	root.DeleteForm = factory();
 }(this, function() {
-	var Destroyer = function(el) {
+	var DeleteForm = function(el) {
 		this.el = el;
 
 		this.init();
 	};
 
-	Destroyer.prototype = {
+	DeleteForm.prototype = {
 		init: function() {
 			this.el.addEventListener('submit', this.submit);
 		},
@@ -19,5 +19,5 @@
 		}
 	};
 
-	return Destroyer;
+	return DeleteForm;
 }));

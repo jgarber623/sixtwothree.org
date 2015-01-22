@@ -5,7 +5,7 @@
 
 	if (forms.length) {
 		for (var i = 0, j = forms.length; i < j; i++) {
-			new Destroyer(forms[i]);
+			new DeleteForm(forms[i]);
 		}
 	}
 })();
