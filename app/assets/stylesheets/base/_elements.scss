@@ -133,7 +133,9 @@ body {
 	input[type="text"],
 	input[type="url"],
 	textarea {
+		-webkit-appearance: none;
 		border: 0.125rem solid $darken-1;
+		@include border-radius(0);
 		padding: $spacing-1;
 		width: 100%;
 

@@ -6,7 +6,10 @@
 		float: left;
 		margin-right: $spacing-2;
 		position: relative;
-		top: -$spacing-1;
+
+		@include breakpoint($bp-narrow) {
+			top: -$spacing-1;
+		}
 
 		@include breakpoint($tp-wide) {
 			float: none;
@@ -20,10 +23,11 @@
 		font-family: "Open Sans", sans-serif;
 		@include font-size(4);
 		font-weight: bold;
-		margin: 0;
+		margin: 0 0 0 3.5rem;
 
 		@include breakpoint($tp-wide) {
 			@include font-size(2);
+			margin: 0;
 		}
 	}
 }

@@ -3,7 +3,7 @@
 	position: relative;
 
 	&:after {
-		border-radius: 0 0 0.125rem 0.125rem;
+		@include border-radius(0 0 0.125rem 0.125rem);
 		bottom: 0;
 		content: "";
 		display: block;
