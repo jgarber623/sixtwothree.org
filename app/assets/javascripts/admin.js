@@ -1,4 +1,4 @@
-//= require_tree ./admin_modules
+//= require_tree ./admin
 
 (function() {
 	var router = new RouterRouter();
