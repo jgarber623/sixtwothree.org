@@ -29,4 +29,16 @@
 			margin-right: $spacing-1;
 		}
 	}
+
+	.hint {
+		clear: both;
+		margin: 0;
+		padding-top: $spacing-2;
+		text-align: center;
+
+		@include breakpoint($bp-wide) {
+			clear: none;
+			padding-top: $spacing-1;
+		}
+	}
 }

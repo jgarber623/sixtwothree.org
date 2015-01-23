@@ -1,15 +1,15 @@
 (function(root, factory) {
 	root.DeleteForm = factory();
 }(this, function() {
-	var DeleteForm = function(el) {
-		this.el = el;
+	var DeleteForm = function($el) {
+		this.$el = $el;
 
 		this.init();
 	};
 
 	DeleteForm.prototype = {
 		init: function() {
-			this.el.addEventListener('submit', this.submit);
+			this.$el.addEventListener('submit', this.submit);
 		},
 
 		submit: function(event) {

@@ -7,16 +7,30 @@
 
 	Pagination.prototype = {
 		init: function() {
-			var $container = document.querySelector('.pagination');
+			this.$container = document.querySelector('.pagination');
 
-			if ($container) {
-				this.$next = $container.querySelector('a.next_page');
-				this.$prev = $container.querySelector('a.previous_page');
+			if (this.$container) {
+				this.$next = this.$container.querySelector('a.next_page');
+				this.$prev = this.$container.querySelector('a.previous_page');
 
 				if (this.$next || this.$prev) {
-					window.addEventListener('keyup', this.keyup.bind(this));
+					this.bindEvents();
+					this.appendHint();
 				}
 			}
+		},
+
+		appendHint: function() {
+			var $hint = document.createElement('p');
+
+			$hint.classList.add('hint');
+			$hint.innerHTML = '<b>Hint:</b> Use the left and right arrow keys to navigate between pages.';
+
+			this.$container.appendChild($hint);
+		},
+
+		bindEvents: function() {
+			window.addEventListener('keyup', this.keyup.bind(this));
 		},
 
 		keyup: function(event) {
