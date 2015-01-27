@@ -1,8 +1,7 @@
 .tags {
 	@extend %clearfix;
 	@extend %reset-list;
-	padding-bottom: $spacing-4;
-	@include thick-border;
+	margin-bottom: $spacing-4;
 
 	li {
 		float: left;
