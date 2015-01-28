@@ -28,8 +28,8 @@
 	a,
 	button {
 		@extend %button;
-		font-weight: bold;
 		@include caps;
+		font-weight: bold;
 		@include margin-xn(2);
 		text-decoration: none;
 

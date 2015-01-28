@@ -1,6 +1,7 @@
 .pagination {
 	@extend %clearfix;
 	margin-bottom: $spacing-4;
+	position: relative;
 
 	a {
 		@extend %button--grey;
@@ -37,8 +38,11 @@
 		text-align: center;
 
 		@include breakpoint($bp-wide) {
-			clear: none;
+			left: 0;
 			padding-top: $spacing-1;
+			position: absolute;
+			right: 0;
+			top: 0;
 		}
 	}
 }

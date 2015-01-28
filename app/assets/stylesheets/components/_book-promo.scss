@@ -1,8 +1,10 @@
 .book-promo {
-	margin-bottom: $spacing-4;
+	// IE less than 9-specific hack
+	margin-bottom: nth($spacing, 4)\9;
 
 	@include breakpoint($tp-medium) {
 		float: right;
+		margin-bottom: $spacing-4;
 		margin-left: $spacing-3;
 		width: 40%;
 	}
