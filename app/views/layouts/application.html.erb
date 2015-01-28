@@ -31,8 +31,8 @@
 
 		<script>
 			function loadCSS(e) {
-				var l=document.createElement('link'),o=document.getElementsByTagName('script')[0],s=document.styleSheets;l.rel='stylesheet';l.href=e;l.media='only x';o.parentNode.insertBefore(l,o);
-				function m(){var d;for(var i=0;i<s.length;i++){if(s[i].href && s[i].href.indexOf(e)>-1){d=true;}}if(d){l.media='all';}else{setTimeout(m);}}m();return l;
+				var d=document,l=d.createElement('link'),o=d.getElementsByTagName('script')[0],s=d.styleSheets;l.rel='stylesheet';l.href=e;l.media='only x';o.parentNode.insertBefore(l,o);
+				function m(){var x;for(var i=0;i<s.length;i++){if(s[i].href && s[i].href.indexOf(e)>-1){x=true;}}if(x){l.media='all';}else{setTimeout(m);}}m();return l;
 			}
 
 			loadCSS('<%= asset_path 'application.css' %>');
@@ -93,7 +93,21 @@
 
 	<%= francis_cms_admin_panel if logged_in? %>
 
-	<%= javascript_include_tag 'application' %>
-	<%= javascript_include_tag 'admin' if logged_in? %>
+	<script>
+		(function() {
+			if ('querySelector' in document && 'addEventListener' in window) {
+				function loadJS(e) {
+					var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
+					r.src=e;o.parentNode.insertBefore(r,o);return r;
+				}
+
+				loadJS('<%= asset_path 'application.js' %>');
+
+				<%- if logged_in? -%>
+					loadJS('<%= asset_path 'admin.js' %>');
+				<%- end -%>
+			}
+		})();
+	</script>
 </body>
 </html>

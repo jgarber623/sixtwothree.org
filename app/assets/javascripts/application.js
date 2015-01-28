@@ -3,6 +3,10 @@
 
 ;(function() {
 	new RouterRouter().route(/links|posts/, function() {
-		new Pagination().init();
+		var $pagination = document.querySelector('.pagination');
+
+		if ($pagination) {
+			new Pagination($pagination).init();
+		}
 	});
 })();

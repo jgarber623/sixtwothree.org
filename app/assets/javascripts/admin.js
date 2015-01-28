@@ -1,3 +1,4 @@
+//= require routerrouter
 //= require_tree ./admin
 
 ;(function() {
