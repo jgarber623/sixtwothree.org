@@ -94,20 +94,18 @@
 	<%= francis_cms_admin_panel if logged_in? %>
 
 	<script>
-		(function() {
-			if ('querySelector' in document && 'addEventListener' in window) {
-				function loadJS(e) {
-					var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
-					r.src=e;o.parentNode.insertBefore(r,o);return r;
-				}
+		function loadJS(e) {
+			var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
+			r.src=e;o.parentNode.insertBefore(r,o);return r;
+		}
 
-				loadJS('<%= asset_path 'application.js' %>');
+		if ('querySelector' in document && 'addEventListener' in window) {
+			loadJS('<%= asset_path 'application.js' %>');
 
-				<%- if logged_in? -%>
-					loadJS('<%= asset_path 'admin.js' %>');
-				<%- end -%>
-			}
-		})();
+			<%- if logged_in? -%>
+				loadJS('<%= asset_path 'admin.js' %>');
+			<%- end -%>
+		}
 	</script>
 </body>
 </html>
