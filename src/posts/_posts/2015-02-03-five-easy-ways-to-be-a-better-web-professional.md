@@ -4,6 +4,8 @@ copies:
     url: https://www.facebook.com/jgarber623/posts/10152567759847343
   - title: Twitter
     url: https://twitter.com/jgarber/status/562626826884091904
+  - title: Viget Flourish
+    url: http://viget.com/flourish/five-easy-ways-to-be-a-better-web-professional
 date: 2015-02-03 09:49:03 -0500
 excerpt: Old Man Garber lays out some solid advice for anyone building things on the Web.
 tags: advice career work
