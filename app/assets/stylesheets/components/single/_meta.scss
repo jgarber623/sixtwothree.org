@@ -1,6 +1,7 @@
 .single-meta {
 	@include color($grey, light);
 	@extend %reset-list;
+	margin-bottom: $spacing-4;
 
 	li {
 		margin-bottom: $spacing-1;
