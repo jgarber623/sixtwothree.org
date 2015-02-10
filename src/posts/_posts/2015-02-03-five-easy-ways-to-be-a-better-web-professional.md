@@ -67,7 +67,7 @@ In his recent post, [A question of timing](https://adactio.com/journal/8252), [J
 
 A++, would quote again. Jeremy's speaking specifically about front-end frameworks that allow for rapid development of so-called "web apps." I'll take his statement a step further and apply it to our entire design and development process.
 
-It's concerning that so much web design and development occurs on the largest, most color-accurate displays available driven by the latest hardware jacked straight into the Internet via an always-on broadband connection. To be fair, these conveniences make development a breeze, but they don't reflect our users' reality. While some of your audience may be using cutting-edge desktop computers, a growing number of people are [mobile-only users](https://hbr.org/2013/05/the-rise-of-the-mobile-only-us/).
+It's troubling that so much web design and development occurs on the largest, most color-accurate displays available driven by the latest hardware jacked straight into the Internet via an always-on broadband connection. To be fair, these conveniences make development a breeze, but they don't reflect our users' reality. While some of your audience may be using cutting-edge desktop computers, a growing number of people are [mobile-only users](https://hbr.org/2013/05/the-rise-of-the-mobile-only-us/).
 
 Ask anyone with a Comcast—err, XFINITY—Internet connection about the reliability of their service. Ask anyone with a limited-bandwidth mobile data plan about exorbitant overage charges. For that matter, ask anyone who lives in a rural area about their cellular network coverage. Travel anywhere outside of the United States and these challenges are just the tip of the iceberg.
 
