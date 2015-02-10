@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152582462777343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/565152172049182723
 date: 2015-02-10 09:07:58 -0500
 excerpt: Wherein I rattle on about the Web, content-first design, and progressive enhancement.
 tags: design jeremykeith progressiveenhancement stephenhay
