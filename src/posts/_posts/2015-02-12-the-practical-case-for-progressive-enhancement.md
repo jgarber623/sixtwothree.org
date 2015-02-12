@@ -19,7 +19,7 @@ In [Designing Experience Layers](/posts/designing-experience-layers), I describe
 
 While I find these particular kinds of conversations thought-provoking and potentially persuasive, others clearly don't. And that's fine! Diversity of opinion makes for effective teams.
 
-Josh takes issue with my quote:
+Josh takes issue with my statement:
 
 > It's our responsibility to do right by the billions already online and the next billion preparing to come online.
 
