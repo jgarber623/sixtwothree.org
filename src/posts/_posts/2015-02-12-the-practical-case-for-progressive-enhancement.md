@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152585900862343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/565880379429912576
 date: 2015-02-12 09:19:22 -0500
 excerpt: The third, and hopefully final, post in a series about developing websites using progressive enhancement.
 tags: development progressiveenhancement
