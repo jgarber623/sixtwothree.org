@@ -14,7 +14,7 @@ This is the third in an unexpected series of posts on design and [progressive en
 
 So far, the feedback on my original post is a generous mix of honest commentary and critique with a helping of misconceptions about the strategy for which I advocate. In this post, I'll address some major points brought up by my colleague [Josh Korr](http://viget.com/about/team/jkorr) and The Man in Charge, [Brian Williams](http://viget.com/about/team/bwilliams).
 
-Josh and I debated the topic yesterday afternoon in [Slack](https://slack.com/) and Brian and I have discussed these very issues multiple times in the past. I'm prone to getting _really excited_ when I talk about Web development and my arguments tend to be less rigorous in one-on-one conversation than when writing. I'll attempt to do better here.
+Josh and I debated the topic yesterday afternoon in [Slack](https://slack.com/) and Brian and I have discussed these very issues multiple times in the past. I'm prone to getting _really excited_ when I talk about Web development and my arguments tend to be less rigorous in one-on-one conversation than in writing. I'll attempt to do better here.
 
 [Let's do this](https://www.youtube.com/watch?v=LkCNJRfSZBU&t=1m20s).
 
@@ -60,7 +60,7 @@ And honestly, when something inevitably breaks with your progressively-enhanced 
 
 In conversation, Josh asked about testing progressively-enhanced websites. His concern was that progressive enhancement would mean _more_ testing since you'd have a "basic" experience and an "enhanced" experience, each needing rigorous automated and manual testing. More testing is _always_ better, but it can certainly run up cost quickly.
 
-I posit that a progressively-enhanced website may require _less_ testing. Any Web developer worth her salt should be able to build out a website that looks good at a basic level—meaning HTML and CSS—in most common browsers. She should also test her work along the way, correcting _major_ layout problems as they arise. Now, keep in mind that [websites don't need to look the same in every browser](http://dowebsitesneedtolookexactlythesameineverybrowser.com/).
+I posit that a progressively-enhanced website may require _less_ testing. Any Web developer worth her salt should be able to build out a website that looks good at a basic level—meaning HTML and CSS—in most common browsers. She should also test her work along the way, correcting _major_ layout problems as they arise, keeing in mind that [websites don't need to look the same in every browser](http://dowebsitesneedtolookexactlythesameineverybrowser.com/).
 
 Start by building the basic structure and layout and enhance upward from there, providing a better experience to more capable browsers and devices. The sky's the limit! When it comes time to add JavaScript—and that time _will_ come—there are a variety of techniques for ensuring that the appropriate browsers execute your code. The BBC's [Cutting the mustard](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard) technique is a personal favorite.
 
@@ -86,7 +86,7 @@ If you're building an in-browser video game using [HTML5's Canvas API](https://d
 
 Your Web "app." We could go 'round and 'round all day trying to define a Web "app." Odds are good your Web "app," whatever it may be, could benefit from a little progressive enhancement. It may never be 100% progressively enhanced, but give it a shot. Try building that user-facing form HTML-first and enhance upward from there.
 
-A 100% pure progressively-enhanced website may not be practical on every single project you will ever encounter. While that sort of purity _can_ exist, it's unlikely in many business scenarios. Budgets, timelines: these things exist. Progressive enhancement isn't a zero sum game. It's a continuum, just like the Web. And just because you may not be able to do something _all the way_ doesn't give you a reason to forsake a strategy supported by Internet titans like [Google](http://googlewebmastercentral.blogspot.com/2014/10/updating-our-technical-webmaster.html) and [Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom).
+A 100% pure progressively-enhanced website may not be practical on every single project you will ever encounter. While that sort of purity _can_ exist, it's unlikely in many business scenarios. Budgets, timelines: these things exist. Progressive enhancement isn't a zero sum game; it's a continuum, just like the Web. Just because you may not be able to do something _all the way_ doesn't give you a reason to forsake a strategy supported by Internet titans like [Google](http://googlewebmastercentral.blogspot.com/2014/10/updating-our-technical-webmaster.html) and [Twitter](https://blog.twitter.com/2012/improving-performance-on-twittercom).
 
 I'm speaking, of course, about progressive enhancement.
 

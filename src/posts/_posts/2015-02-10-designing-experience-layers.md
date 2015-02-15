@@ -14,7 +14,7 @@ title: Designing Experience Layers
 
 Yesterday afternoon, I [posted a little jab at Vine](https://twitter.com/jgarber/status/564855344934170625). What you see in that screenshot is a Vine video page completely devoid of usable content owing to a JavaScript error. I'm attempting a pretty typical task and a primary function of Vine's service: I want to watch [Jay-Z's reaction to Kanye reprising his schtick at the Grammys](https://vine.co/v/OUvAvAYQm6I). As you do.
 
-But I can't. Something went wrong. You see, Vine's video pages are built in a way that expects everything goes off without a hitch. The web browser will receive all the necessary assets in the necessary order and execute everything _exactly_ as the developer intended. Unfortunately, that's not the way the Web often works.
+But I can't. Something went wrong. You see, Vine's video pages are built in a way that expects everything goes off without a hitch. The Web browser will receive all the necessary assets in the necessary order and execute everything _exactly_ as the developer intended. Unfortunately, that's not the way the Web often works.
 
 (For those curious, I was using the most up-to-date version of Google Chrome on a MacBook Air running the latest operating system on my home's broadband Internet connection. Pretty optimal conditions, right?)
 
@@ -42,13 +42,13 @@ Lower foundational levels should never rely on higher layers for their primary f
 
 ## Designing from the Bottom Up
 
-In his book <cite>[Responsive Design Workflow](http://www.amazon.com/dp/0321887867/?tag=sixtwothree-20)</cite>, [Stephen Hay](http://www.the-haystack.com/) details his process for designing in text. The entire book is worth your time, but you can read [this particular chapter](http://www.peachpit.com/articles/article.aspx?p=2040824) for free online. Stephen also detailed this technique as well in [his presentation at Mobilism](https://vimeo.com/45915667) back in 2012.
+In his book <cite>[Responsive Design Workflow](http://www.amazon.com/dp/0321887867/?tag=sixtwothree-20)</cite>, [Stephen Hay](http://www.the-haystack.com/) details his process for designing in text. The entire book is worth your time, but you can read [this particular chapter](http://www.peachpit.com/articles/article.aspx?p=2040824) for free online. Stephen also detailed this technique in [his presentation at Mobilism](https://vimeo.com/45915667) back in 2012.
 
 Stephen advocates a content-first approach using plain text. The emphasis on content is critical: everything in your interface is content whether it be the text of an article, the navigation, or control elements like form inputs. It's all content and it all needs writing.
 
 I _love_ this content-focused approach to design. It just makes sense.
 
-Moving up a layer from plain text, Stephen recommends the popular [Markdown](http://daringfireball.net/projects/markdown/) text formatting syntax. Markdown is a simple set of formatting rules for describing common text components such as headings and lists and maps closely to the elements in HTML. _Awfully convenient._ There are a bunch of great Markdown editors available—I use [Byword](http://bywordapp.com/)—and every one of them will easily convert Markdown documents to HTML.
+Moving up a layer from plain text, Stephen recommends the popular [Markdown](http://daringfireball.net/projects/markdown/) text formatting syntax. Markdown is a simple set of formatting rules for describing common text components (such as headings and lists) and maps closely to the elements in HTML. _Awfully convenient._ There are a bunch of great Markdown editors available—I use [Byword](http://bywordapp.com/)—and every one of them will easily convert Markdown documents to HTML.
 
 Now that you have an HTML file full of well-structured content, you can begin layering on design. This is where existing design tools and techniques like branding guidelines, [style tiles](http://styletil.es/), and Photoshop mockups are most useful. The HTML generated from Markdown is barebones, so you'll want to add additional structural elements as necessary to accommodate your website's visual design.
 

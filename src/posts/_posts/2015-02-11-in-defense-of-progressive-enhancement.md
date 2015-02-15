@@ -12,7 +12,7 @@ title: In Defense of Progressive Enhancement
 
 Yesterday's [experience layers post](/posts/designing-experience-layers)—cross-published to [Viget's Inspire blog](http://viget.com/inspire/designing-experience-layers)—was overwhelmingly well-received by friends and colleagues (Mom said I sounded _real smart!_). It wasn't without its detractors, though.
 
-Over on Inspire, my supervisor Doug took issue with several of my key points. Doug's a brilliant web designer and a friend, but on the matter of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_Enhancement), he and I couldn't be farther apart. I'm grateful he took the time to comment, giving me an opportunity to revisit my original post's thesis.
+Over on Inspire, my supervisor Doug took issue with several of my key points. Doug's a brilliant Web designer and a friend, but on the matter of [progressive enhancement](https://en.wikipedia.org/wiki/Progressive_Enhancement), he and I couldn't be farther apart. I'm grateful he took the time to comment, giving me an opportunity to revisit my original post's thesis.
 
 [Doug's lengthy comment](http://viget.com/inspire/designing-experience-layers#comment-1847156038) covers quite a bit of ground and I'd like to address several of his remarks. His main gripe is my use of [Vine's broken video page](https://twitter.com/jgarber/status/564855344934170625) as a foundation for a conversation about progressive enhancement.
 
