@@ -50,4 +50,4 @@ Getting holistic feedback from the entire team would help to quickly root out im
 
 GitHub's feature set may not be "enterprise" (I think that's a good thing), so it may not be appropriate for every project or every team. But if you dive in, you'll quickly see that GitHub's project management, documentation, and tasking features are _much_ more full-featured than they appear.
 
-I hope you've found the ideas in this post interesting and I'm interested to hear how you and your project teams are using GitHub.
+I hope you've found the ideas in this post interesting and I'd like to hear how you and your project teams are using GitHub.
