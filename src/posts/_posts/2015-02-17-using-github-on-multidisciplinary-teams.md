@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152595315532343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/567697084288352256
 date: 2015-02-17 09:41:34 -0500
 excerpt: GitHub’s not just for developers. Here are some ideas for getting the entire team involved.
 tags: design development github process
