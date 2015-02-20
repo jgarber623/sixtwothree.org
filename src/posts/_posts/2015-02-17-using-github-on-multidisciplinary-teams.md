@@ -29,7 +29,7 @@ Additional uses for project wikis include:
 - **Visual Design Documentation:** Links to [style tiles](http://styletil.es) or mood boards, font choices and sizing, and other design-related documentation could easily be captured on a project wiki. GitHub's not great at handling large binary files like Photoshop mockups, so including links to these resources on wiki pages would be a good approach.
 - **Development Documentation:** We make good use of project-specific `README.md` files. This document's great for holding information relevant to getting the website up and running for local development. There's typically more information that's worth documenting, though: usage of third-party code libraries, project-specific coding conventions, browser optimization list, etc.
 
-* _What_ ends up in a project wiki will vary greatly depending on the nature of the project, of course. Regardless of the type of project, odds are the team would benefit from a central repository of information. GitHub's Wikis are great for this!
+_What_ ends up in a project wiki will vary greatly depending on the nature of the project, of course. Regardless of the type of project, odds are the team would benefit from a central repository of information. GitHub's Wikis are great for this!
 
 ## Issues
 
