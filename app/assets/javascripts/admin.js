@@ -2,11 +2,21 @@
 //= require_tree ./admin
 
 ;(function() {
-	new RouterRouter().route(/(?:links|posts|webmentions)(?:\/.+)?/, function() {
-		var forms = document.querySelectorAll('.delete-form');
+	var router = new RouterRouter();
 
-		for (var i = 0, j = forms.length; i < j; i++) {
-			new DeleteForm(forms[i]).init();
+	router.route(/(?:links|posts|webmentions)(?:\/.+)?/, function() {
+		var $forms = document.querySelectorAll('.delete-form');
+
+		for (var i = 0, j = $forms.length; i < j; i++) {
+			new DeleteForm($forms[i]).init();
+		}
+	});
+
+	router.route(/\/edit$/, function() {
+		var $forms = document.querySelectorAll('.syndication-form');
+
+		for (var i = 0, j = $forms.length; i < j; i++) {
+			new SyndicationForm($forms[i]).init();
 		}
 	});
 })();
