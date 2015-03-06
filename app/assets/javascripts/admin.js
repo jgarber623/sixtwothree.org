@@ -1,22 +1,28 @@
 //= require routerrouter
 //= require_tree ./admin
 
-;(function() {
+;(function(document) {
+	// Modifying prototypes… ¯\_(Y O L O)_/¯
+	NodeList.prototype.forEach = Array.prototype.forEach;
+
+	// Initialize a new router…
 	var router = new RouterRouter();
 
+	// Enhance delete forms…
 	router.route(/(?:links|posts|webmentions)(?:\/.+)?/, function() {
 		var $forms = document.querySelectorAll('.delete-form');
 
-		for (var i = 0, j = $forms.length; i < j; i++) {
-			new DeleteForm($forms[i]).init();
-		}
+		$forms.forEach(function($form) {
+			new DeleteForm($form).init();
+		});
 	});
 
+	// Enhance syndication form…
 	router.route(/\/edit$/, function() {
 		var $forms = document.querySelectorAll('.syndication-form');
 
-		for (var i = 0, j = $forms.length; i < j; i++) {
-			new SyndicationForm($forms[i]).init();
-		}
+		$forms.forEach(function($form) {
+			new SyndicationForm($form).init();
+		});
 	});
-})();
+})(document);
