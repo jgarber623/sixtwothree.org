@@ -3,8 +3,8 @@
 }(this, function() {
 	var SyndicationForm = function($el) {
 		this.$el = $el;
-		this.$name = $el.querySelector('input[type="text"]');
-		this.$url = $el.querySelector('input[type="url"]');
+		this.$name = document.getElementById('syndication_name');
+		this.$url = document.getElementById('syndication_url');
 	};
 
 	SyndicationForm.prototype.init = function() {
