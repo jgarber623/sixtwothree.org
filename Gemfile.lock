@@ -112,7 +112,7 @@ GEM
       railties (= 4.2.0)
       sprockets-rails
     rails-assets-normalize-css (3.0.2)
-    rails-assets-routerrouter (0.2.2)
+    rails-assets-routerrouter (0.2.4)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.5)
