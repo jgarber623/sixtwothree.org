@@ -2,6 +2,8 @@
 copies:
   - title: Facebook
     url: https://www.facebook.com/jgarber623/posts/10152155578157343
+  - title: Medium
+    url: https://medium.com/@jgarber/the-internet-never-forgets-1126694ec957
   - title: Twitter
     url: https://twitter.com/jgarber/status/489455441551036417
 date: 2014-07-16 12:10:32 -0400
