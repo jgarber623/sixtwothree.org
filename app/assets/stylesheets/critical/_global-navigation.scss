@@ -4,6 +4,20 @@
 		text-align: right;
 	}
 
+	[aria-hidden="true"] {
+		display: none;
+	}
+
+	.toggle-button {
+		position: absolute;
+		right: $spacing-2;
+		top: $spacing-1;
+
+		@include breakpoint($bp-narrow) {
+			top: $spacing-1 * 1.5;
+		}
+	}
+
 	ul {
 		@extend %clearfix;
 		@extend %reset-list;

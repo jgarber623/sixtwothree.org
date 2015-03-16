@@ -9,4 +9,6 @@
 			new Pagination($pagination).init();
 		}
 	});
+
+	new Navigation(document.getElementById('navigation')).init();
 })();
