@@ -2,6 +2,8 @@
 copies:
   - title: Facebook
     url: https://www.facebook.com/jgarber623/posts/10152582462777343
+  - title: Medium
+    url: https://medium.com/@jgarber/designing-experience-layers-c73733426c31
   - title: Twitter
     url: https://twitter.com/jgarber/status/565152172049182723
   - title: Viget Inspire

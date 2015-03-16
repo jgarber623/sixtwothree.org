@@ -2,6 +2,8 @@
 copies:
   - title: Facebook
     url: https://www.facebook.com/jgarber623/posts/10152567759847343
+  - title: Medium
+    url: https://medium.com/@jgarber/five-easy-ways-to-be-a-better-web-professional-4291cb710968
   - title: Twitter
     url: https://twitter.com/jgarber/status/562626826884091904
   - title: Viget Flourish
