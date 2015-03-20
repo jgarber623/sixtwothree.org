@@ -59,6 +59,11 @@
 		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
 
 		<nav class="global-navigation" role="navigation">
+			<%= link_to '#navigation', :'aria-controls' => 'navigation', :'aria-expanded' => false, :'aria-hidden' => true, class: 'global-navigation-toggle' do %>
+				<%= raw assets.find_asset('icons/list.svg') %>
+				Menu
+			<% end %>
+
 			<ul id="navigation">
 				<li><%= link_to 'Posts', francis_cms.posts_path %></li>
 				<li><%= link_to 'Links', francis_cms.links_path %></li>
@@ -79,7 +84,7 @@
 		</nav>
 	</header>
 
-	<main class="global-content" id="main" role="main">
+	<main class="global-content" id="main" role="main" tabindex="-1">
 		<div class="container">
 			<%= yield %>
 		</div>

@@ -1,3 +1,5 @@
 .global-content {
-	@include margin-y(4);
+	margin-bottom: $spacing-4;
+	margin-top: $spacing-3;
+	padding-top: $spacing-3;
 }

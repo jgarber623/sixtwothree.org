@@ -8,6 +8,10 @@
 	box-sizing: inherit;
 }
 
+[tabindex="-1"]:focus {
+	outline: none;
+}
+
 html {
 	background-color: #fff;
 	box-sizing: border-box;

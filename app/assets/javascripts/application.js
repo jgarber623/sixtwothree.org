@@ -10,5 +10,5 @@
 		}
 	});
 
-	new Navigation(document.getElementById('navigation')).init();
+	new Navigation(document.querySelector('.global-navigation')).init();
 })();

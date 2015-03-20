@@ -7,28 +7,10 @@
 
 	Navigation.prototype = {
 		init: function() {
-			this.appendButton();
+			this.$button = this.$el.querySelector('.global-navigation-toggle');
+			this.$list = document.getElementById('navigation');
+
 			this.bindEvents();
-		},
-
-		appendButton: function() {
-			this.$button = document.createElement('button');
-
-			var attributes = {
-				'aria-controls': 'navigation',
-				'aria-expanded': false,
-				'aria-hidden': true,
-				'class': 'toggle-button',
-				'type': 'button'
-			};
-
-			for (var key in attributes) {
-				this.$button.setAttribute(key, attributes[key]);
-			}
-
-			this.$button.innerHTML = 'Menu';
-
-			this.$el.parentNode.insertBefore(this.$button, this.$el);
 		},
 
 		bindEvents: function() {
@@ -57,7 +39,7 @@
 
 		toggle: function(value) {
 			this.$button.setAttribute('aria-expanded', value);
-			this.$el.setAttribute('aria-hidden', !value);
+			this.$list.setAttribute('aria-hidden', !value);
 		}
 	};
 

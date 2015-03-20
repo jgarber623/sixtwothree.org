@@ -8,16 +8,6 @@
 		display: none;
 	}
 
-	.toggle-button {
-		position: absolute;
-		right: $spacing-2;
-		top: $spacing-1;
-
-		@include breakpoint($bp-narrow) {
-			top: $spacing-1 * 1.5;
-		}
-	}
-
 	ul {
 		@extend %clearfix;
 		@extend %reset-list;
@@ -61,5 +51,24 @@
 		&:hover {
 			@include color($blue, darker);
 		}
+	}
+}
+
+.global-navigation-toggle {
+	position: absolute;
+	right: $spacing-2;
+	top: $spacing-1;
+
+	@include breakpoint($bp-narrow) {
+		top: $spacing-1 * 1.5;
+	}
+
+	svg {
+		display: inline-block;
+		height: 1em;
+		position: relative;
+		top: -1px;
+		vertical-align: middle;
+		width: 1em;
 	}
 }
