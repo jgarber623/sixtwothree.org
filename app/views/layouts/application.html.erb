@@ -53,6 +53,8 @@
 </head>
 <body>
 
+	<%= raw assets.find_asset('icons.svg') %>
+
 	<%= link_to 'Skip to main content', '#main', class: 'skip-link' %>
 
 	<header class="global-header" role="banner">
@@ -60,7 +62,7 @@
 
 		<nav class="global-navigation" role="navigation">
 			<%= link_to '#navigation', :'aria-controls' => 'navigation', :'aria-expanded' => false, :'aria-hidden' => true, class: 'global-navigation-toggle' do %>
-				<%= raw assets.find_asset('icons/list.svg') %>
+				<svg><use xlink:href="#icon-list" /></svg>
 				Menu
 			<% end %>
 
