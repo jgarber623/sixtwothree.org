@@ -11,6 +11,7 @@
 
 	menu {
 		@extend %reset-list;
+		font-size: 0;
 
 		+ menu {
 			margin-top: $spacing-2;
@@ -21,8 +22,9 @@
 		}
 
 		li {
-			@include table-cell;
-			@include padding-x(1);
+			display: inline-block;
+			@include font-size;
+			@include margin-x(1);
 		}
 
 		a,
