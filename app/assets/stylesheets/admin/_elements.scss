@@ -30,11 +30,11 @@ table {
 		}
 	}
 
-	[data-status="unverified"] {
+	[data-webmention-status="unverified"] {
 		@include color($red);
 	}
 
-	[data-status="verified"] {
+	[data-webmention-status="verified"] {
 		@include color($green);
 	}
 

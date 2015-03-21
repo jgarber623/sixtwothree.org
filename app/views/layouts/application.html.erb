@@ -61,8 +61,8 @@
 		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
 
 		<nav class="global-navigation" role="navigation">
-			<%= link_to '#navigation', :'aria-controls' => 'navigation', :'aria-expanded' => false, :'aria-hidden' => true, class: 'global-navigation-toggle' do %>
-				<svg><use xlink:href="#icon-list" /></svg>
+			<%= link_to '#navigation', aria: { controls: 'navigation', expanded: false, hidden: true }, class: 'global-navigation-toggle' do %>
+				<svg><use xlink:href="#icon-menu" /></svg>
 				Menu
 			<% end %>
 
