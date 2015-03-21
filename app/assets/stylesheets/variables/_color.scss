@@ -21,17 +21,11 @@ $grey: (
 	darker: #333
 );
 
-$darken: (
-	rgba(#000, 0.0625),
-	rgba(#000, 0.125),
-	rgba(#000, 0.25),
-	rgba(#000, 0.5)
-);
-
-$darken-1: nth($darken, 1);
-$darken-2: nth($darken, 2);
-$darken-3: nth($darken, 3);
-$darken-4: nth($darken, 4);
+$darken-1: rgba(#000, 0.0625);
+$darken-2: rgba(#000, 0.125);
+$darken-3: rgba(#000, 0.25);
+$darken-4: rgba(#000, 0.5);
+$darken-5: rgba(#000, 0.85);
 
 $profiles: (
 	bandcamp: #4e9bac,

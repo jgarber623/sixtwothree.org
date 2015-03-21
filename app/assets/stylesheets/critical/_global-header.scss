@@ -1,5 +1,5 @@
 .global-header {
-	background-color: $darken-1;
+	background-color: $darken-5;
 	@include padding-x(2);
 	@include padding-y;
 
@@ -20,10 +20,15 @@
 		}
 
 		a {
-			@extend %anchor--grey--dark;
 			@extend %button;
+			color: #fff;
 			@include margin-xn(2);
 			text-decoration: none;
+
+			&:focus,
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

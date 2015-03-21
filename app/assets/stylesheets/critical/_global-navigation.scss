@@ -32,23 +32,18 @@
 	button {
 		@extend %button;
 		@include caps;
+		color: #fff;
 		font-weight: bold;
 		@include margin-xn(2);
 		text-decoration: none;
 
 		&:focus,
 		&:hover {
-			background-color: $darken-1;
+			background-color: rgba(#fff, 0.0625);
 		}
 	}
 
 	button {
 		background-color: transparent;
-		@include color($blue);
-
-		&:focus,
-		&:hover {
-			@include color($blue, dark);
-		}
 	}
 }

@@ -1,6 +1,5 @@
 .admin-panel {
 	@extend %clearfix;
-	background-color: rgba(#000, 0.85);
 	padding: $spacing-2 $spacing-1;
 
 	@include breakpoint($bp-narrow) {
@@ -11,7 +10,6 @@
 	}
 
 	menu {
-		@extend %clearfix;
 		@extend %reset-list;
 
 		+ menu {
@@ -23,8 +21,13 @@
 		}
 
 		li {
-			float: left;
-			@include margin-x(1);
+			@include table-cell;
+			@include padding-x(1);
+		}
+
+		a,
+		button {
+			box-shadow: 0 0 0 0.125rem #fff;
 		}
 
 		a {
