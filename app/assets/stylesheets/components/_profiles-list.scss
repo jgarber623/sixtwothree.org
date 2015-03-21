@@ -34,7 +34,7 @@
 	@each $profile, $bgcolor in $profiles {
 		.#{$profile}:focus,
 		.#{$profile}:hover {
-			background: $bgcolor;
+			background-color: $bgcolor;
 		}
 	}
 }

@@ -48,7 +48,7 @@
 
 		&:focus,
 		&:hover {
-			@include color($blue, darker);
+			@include color($blue, dark);
 		}
 	}
 }
