@@ -1,10 +1,11 @@
 .tags {
-	@extend %clearfix;
 	@extend %reset-list;
+	font-size: 0;
 	margin-bottom: $spacing-4;
 
 	li {
-		float: left;
+		display: inline-block;
+		@include font-size;
 		margin: 0 $spacing-1 $spacing-1 0;
 	}
 
