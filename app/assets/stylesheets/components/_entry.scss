@@ -1,5 +1,36 @@
 .entry-header {
 	margin-bottom: $spacing-2;
+	position: relative;
+
+	i {
+		display: block;
+		height: 1.5rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 1.5rem;
+
+		@include breakpoint($bp-narrow) {
+			left: 0;
+			right: auto;
+		}
+
+		@include breakpoint($tp-medium) {
+			height: 2rem;
+			width: 2rem;
+		}
+
+		@include breakpoint($tp-wide) {
+			left: auto;
+			margin-right: $spacing-1;
+			right: 100%;
+		}
+	}
+
+	svg {
+		fill: $darken-1;
+		width: 100%;
+	}
 }
 
 .entry-title {
@@ -8,6 +39,22 @@
 
 	@include breakpoint($tp-medium) {
 		@include font-size(2);
+	}
+
+	i + & {
+		margin-right: $spacing-3;
+
+		@include breakpoint($bp-narrow) {
+			margin: 0 0 0 $spacing-3;
+		}
+
+		@include breakpoint($tp-medium) {
+			margin-left: $spacing-3 * 1.25;
+		}
+
+		@include breakpoint($tp-wide) {
+			margin: 0;
+		}
 	}
 }
 

@@ -6,10 +6,10 @@
 	NodeList.prototype.forEach = Array.prototype.forEach;
 
 	// Initialize a new router…
-	var router = new RouterRouter();
+	var Router = new RouterRouter();
 
 	// Enhance delete forms…
-	router.route(/(?:links|posts|webmentions)(?:\/.+)?/, function() {
+	Router.route(/(?:links|posts|webmentions)(?:\/.+)?/, function() {
 		var $forms = document.querySelectorAll('.delete-form');
 
 		$forms.forEach(function($form) {
@@ -18,14 +18,14 @@
 	});
 
 	// Enhance post editing form…
-	router.route(/posts\/(?:.+?\/edit|new)/, function() {
+	Router.route(/posts\/(?:.+?\/edit|new)/, function() {
 		var $form = document.querySelector('.post-form');
 
 		new PostForm($form).init();
 	});
 
 	// Enhance syndication form…
-	router.route(/\/edit$/, function() {
+	Router.route(/\/edit$/, function() {
 		var $form = document.querySelector('.syndication-form');
 
 		new SyndicationForm($form).init();
