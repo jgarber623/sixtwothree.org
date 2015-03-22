@@ -24,9 +24,16 @@
 		new PostForm($form).init();
 	});
 
+	// Enhance link editing form…
+	Router.route(/links\/new/, function() {
+		var $form = document.getElementById('new_link');
+
+		new LinkForm($form).init();
+	});
+
 	// Enhance syndication form…
 	Router.route(/\/edit$/, function() {
-		var $form = document.querySelector('.syndication-form');
+		var $form = document.getElementById('new_syndication');
 
 		new SyndicationForm($form).init();
 	});

@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   get    'auth',   to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
+  post 'links/fetch', to: 'links#fetch'
+
   mount FrancisCms::Engine, at: '/'
 end
