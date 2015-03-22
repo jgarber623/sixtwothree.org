@@ -14,10 +14,10 @@
 			this.xhr = new XMLHttpRequest();
 			this.xhr.onload = this.onload.bind(this);
 
-			this.$url.addEventListener('keyup', this.keyup.bind(this));
+			this.$url.addEventListener('blur', this.blur.bind(this));
 		},
 
-		fetch: function() {
+		blur: function(event) {
 			var val = this.$url.value;
 
 			if (/^https?:\/\//.test(val)) {
@@ -32,10 +32,6 @@
 
 				this.xhr.send(params);
 			}
-		},
-
-		keyup: function(event) {
-			setTimeout(this.fetch.bind(this), 500);
 		},
 
 		onload: function() {
