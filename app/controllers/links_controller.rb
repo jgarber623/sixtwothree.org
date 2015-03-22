@@ -7,8 +7,14 @@ class LinksController < ApplicationController
 
       begin
         source_page = agent.get(params[:url])
+        collection = Microformats2.parse(source_page.body)
 
-        json = { success: true, title: source_page.try(:title) }
+        json[:success] = true
+        json[:title] = source_page.try(:title)
+
+        if categories = collection.try(:entry).try(:categories)
+          json[:tags] = categories.collect { |category| category.to_s }
+        end
       rescue
       end
     end

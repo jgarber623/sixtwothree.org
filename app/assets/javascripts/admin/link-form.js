@@ -9,6 +9,7 @@
 		init: function() {
 			this.$url = document.getElementById('link_url');
 			this.$title = document.getElementById('link_title');
+			this.$tags = document.getElementById('link_tag_list');
 
 			this.xhr = new XMLHttpRequest();
 			this.xhr.onload = this.onload.bind(this);
@@ -34,7 +35,7 @@
 		},
 
 		keyup: function(event) {
-			setTimeout(this.fetch.bind(this), 1000);
+			setTimeout(this.fetch.bind(this), 500);
 		},
 
 		onload: function() {
@@ -43,6 +44,10 @@
 
 				if (response.success) {
 					this.$title.value = response.title;
+
+					if (response.tags) {
+						this.$tags.value = response.tags.join(', ');
+					}
 				}
 			}
 		}
