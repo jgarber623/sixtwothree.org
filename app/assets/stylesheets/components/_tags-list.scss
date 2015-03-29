@@ -13,6 +13,7 @@
 		margin-bottom: $spacing-1;
 		padding-right: $spacing-2;
 		position: relative;
+		text-transform: uppercase;
 		width: $spacing-4;
 
 		@include breakpoint($bp-narrow) {
