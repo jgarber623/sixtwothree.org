@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 # Application
-gem 'rails', '4.2'
+gem 'rails', '4.2.1'
 gem 'francis_cms', path: '~/Projects/FrancisCMS'
 
 # Assets
