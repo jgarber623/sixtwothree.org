@@ -34,7 +34,7 @@ We quickly graduated from meeting at restaurants and bars to meeting at the [Lib
 
 Things got _real_. And quick. In February, 2008, nearly 200 people attended that month's event.
 
-By no coincidence, the very next month, I handed the reins over to my close friend [Jackson Wilkinson](http://jounce.net/) who shepherded the community through some serious growing pains. Jackson did a masterful job lining up interesting, engaging speakers for two more years before handing organizational duties over to wizard-in-training [Dave Desandro](http://desandro.com/). A year later, I'd find myself back at the helm.
+By no coincidence, the very next month, I handed the reins over to my close friend [Jackson Wilkinson](http://jounce.net/) who shepherded the community through some serious growing pains. Jackson did a masterful job lining up interesting, engaging speakers for two more years before handing organizational duties over to wizard-in-training [Dave DeSandro](http://desandro.com/). A year later, I'd find myself back at the helm.
 
 ---
 
