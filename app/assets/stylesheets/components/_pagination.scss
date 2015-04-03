@@ -35,17 +35,16 @@
 
 	.hint {
 		clear: both;
-		display: none;
 		left: 0;
 		margin: 0;
-		padding-top: $spacing-1;
-		position: absolute;
-		right: 0;
+		padding-top: $spacing-2;
 		text-align: center;
-		top: 0;
 
 		@include breakpoint($bp-wide) {
-			display: block;
+			padding-top: $spacing-1;
+			position: absolute;
+			right: 0;
+			top: 0;
 		}
 	}
 }
