@@ -14,3 +14,6 @@ gem 'rails-assets-routerrouter'
 gem 'sass-rails', '~> 5.0.0'
 gem 'uglifier'
 
+group :development do
+  gem 'pry'
+end
