@@ -20,8 +20,10 @@ _The following assumes that you are somewhat familiar with front-end development
 
 You can find detailed installation instructions for each of the dependencies on their respective websites. But, briefly:
 
-	npm install -g browser-sync
-	gem install compass foreman jekyll
+```sh
+npm install -g browser-sync
+gem install compass foreman jekyll
+```
 
 
 ## File Structure
@@ -44,13 +46,15 @@ For this example, we're using a pretty basic [Compass](http://compass-style.org/
 
 From `config/compass.rb`:
 
-	http_path       = '/'
-	css_dir         = 'src/jekyll/assets/stylesheets'
-	images_dir      = 'src/jekyll/assets/images'
-	sass_dir        = 'src/sass'
+```rb
+http_path       = '/'
+css_dir         = 'src/jekyll/assets/stylesheets'
+images_dir      = 'src/jekyll/assets/images'
+sass_dir        = 'src/sass'
 
-	output_style    = :compressed
-	relative_assets = true
+output_style    = :compressed
+relative_assets = true
+```
 
 The above settings will compile all Sass files in `src/sass` into `src/jekyll/assets/stylesheets`. Your settings may differ, of course, based on your project's file structure (there's [a long list of available options](http://compass-style.org/help/tutorials/configuration-reference/)).
 
@@ -61,8 +65,10 @@ Configuring [Jekyll](http://jekyllrb.com/) is similarly straightforward. You'll 
 
 From `config/jekyll.yml`:
 
-	source: ./src/jekyll
-	destination: ./html
+```yaml
+source: ./src/jekyll
+destination: ./html
+```
 
 Set a `source` and a `destination`. Pretty simple, right?
 
@@ -75,21 +81,23 @@ browser-sync, being a Node.js module, takes a configuration file similar to othe
 
 From `config/browser-sync.js`:
 
-	module.exports = {
-	    debugInfo: true,
-	    files: [
-	        'html/assets/stylesheets/*.css',
-	        'html/**/*.html'
-	    ],
-	    ghostMode: {
-	        forms: true,
-	        links: true,
-	        scroll: true
-	    },
-	    server: {
-	        baseDir: 'html'
-	    }
-	};
+```js
+module.exports = {
+    debugInfo: true,
+    files: [
+        'html/assets/stylesheets/*.css',
+        'html/**/*.html'
+    ],
+    ghostMode: {
+        forms: true,
+        links: true,
+        scroll: true
+    },
+    server: {
+        baseDir: 'html'
+    }
+};
+```
 
 There are plenty of [configuration options](https://github.com/shakyShane/browser-sync/wiki/Working-with-a-Config-File) available. In our config, we're telling browser-sync to do the following:
 
@@ -105,13 +113,17 @@ Now that we have the configuration sorted out for each of our application's thre
 
 In the root of your project, create a `Procfile` and add the following:
 
-	jekyll:       bundle exec jekyll build --config config/jekyll.yml --trace --watch
-	compass:      bundle exec compass watch
-	browser-sync: browser-sync --config config/browser-sync.js
+```rb
+jekyll:       bundle exec jekyll build --config config/jekyll.yml --trace --watch
+compass:      bundle exec compass watch
+browser-sync: browser-sync --config config/browser-sync.js
+```
 
 Let's take a look the `jekyll` process:
 
-	bundle exec jekyll build --config config/jekyll.yml --trace --watch
+```rb
+bundle exec jekyll build --config config/jekyll.yml --trace --watch
+```
 
 We're using `jekyll build` with the `--watch` flag instead of `jekyll serve` since we rely on browser-sync's built-in server. The `--trace` switch is a convenient addition that will display a backtrace when an error occurs. Super handy for rooting out bugs.
 

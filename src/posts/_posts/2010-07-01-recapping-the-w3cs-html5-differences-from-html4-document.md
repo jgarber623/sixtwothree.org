@@ -30,10 +30,12 @@ This is a pretty cool addition as it bakes into the browser behavior that is alr
 
 > The new `form` attribute for `input`, `output`, `select`, `textarea`, `button` and `fieldset` elements allows for controls to be associated with a form. I.e. these elements can now be placed anywhere on a page, not just as descendants of the form element.
 
-	<label>Email:
-	    <input type=email form=x name=email>
-	</label>
-	<form id=x></form>
+```html
+<label>Email:
+    <input type=email form=x name=email>
+</label>
+<form id=x></form>
+```
 
 This is a huge change from the historic approach to form development. Let's be honest, though, building huge complex forms into an already complex design can be a bear. The new `form` attribute, when applied judiciously and with an eye toward accessibility, will go a long way to relieving some of the pain of modern form development. I'd love to get [John's](http://www.jfciii.com/) or [William's](http://zaxbypass.com/) opinion on the accessibility implications here.
 

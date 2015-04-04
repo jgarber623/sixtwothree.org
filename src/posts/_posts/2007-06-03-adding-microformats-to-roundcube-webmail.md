@@ -15,15 +15,19 @@ Being the <abbr title="microformat">µF</abbr> geek that I am, I took it upon my
 
 In `~/program/steps/addressbook/show.inc` (line 51):
 
-	'<a href="#compose" onclick="%s.command(\'compose\', \'%s\')" title="%s" class="email">%s</a>',
+```php
+'<a href="#compose" onclick="%s.command(\'compose\', \'%s\')" title="%s" class="email">%s</a>',
+```
 
 In `~/skins/default/templates/showcontact.html` (lines 8 & 10):
 
-	<body class="iframe vcard">
+```html
+<body class="iframe vcard">
 
-	<div id="contact-title" class="boxtitle fn">
-	    <roundcube :object name="contactdetails" part="name" />
-	</div>
+<div id="contact-title" class="boxtitle fn">
+    <roundcube :object name="contactdetails" part="name" />
+</div>
+```
 
 That should do it! The only issue I’m seeing is that [Tails](https://addons.mozilla.org/en-US/firefox/addon/2240) and [Operator](https://addons.mozilla.org/en-US/firefox/addon/4106) have some trouble finding the hCards. RoundCube is using a mix of JavaScript and an iframe (_shudder_) to display contacts, so my best guess is this is what’s causing the confusion. I have noticed, though, that if you switch to another tab in Firefox and then switch back to RoundCube, Operator can find the hCard.
 

@@ -22,23 +22,25 @@ Total bummer!
 
 ~~A sample `manifest.webapp` might look like:~~
 
-	{
-	    "name": "sixtwothree.org",
-	    "description": "Online home to Jason Garber, one of the Internet’s top Jason Garbers.",
-	    "launch_path": "/",
-	    "icons": {
-	        "60": "/webapp-icon-60x60.png",
-	        "128": "/webapp-icon-128x128.png"
-	    },
-	    "developer": {
-	        "name": "Jason Garber",
-	        "url": "http://sixtowthree.org"
-	    },
-	    "chrome": {
-	        "navigation": true
-	    },
-	    "default_locale": "en"
-	}
+```json
+{
+    "name": "sixtwothree.org",
+    "description": "Online home to Jason Garber, one of the Internet’s top Jason Garbers.",
+    "launch_path": "/",
+    "icons": {
+        "60": "/webapp-icon-60x60.png",
+        "128": "/webapp-icon-128x128.png"
+    },
+    "developer": {
+        "name": "Jason Garber",
+        "url": "http://sixtowthree.org"
+    },
+    "chrome": {
+        "navigation": true
+    },
+    "default_locale": "en"
+}
+```
 
 ~~Most of the properties and values in the manifest file are self-explanatory. One to note is the `chrome` object where I'm explicitly instructing Firefox OS to display navigation UI ([example screenshots](https://developer.mozilla.org/en-US/Apps/Developing/Manifest#chrome)). If your website doesn't include in-page navigational elements, you'll want to include this setting. For example, [Pinterest's `manifest.webapp`](http://m.pinterest.com/manifest.webapp) includes this setting.~~
 
@@ -53,8 +55,10 @@ This, friends, is why you always test your work before writing about it. Firefox
 
 There is some hope, though! I mentioned at the onset of this article that Firefox OS uses the website's favicon on the home screen. While a far cry from a customized full-size icon, you can add or update the following markup in the `<head>` of your website:
 
-	<link rel="icon shortcut" href="/path/to/shortcut-icon.png" sizes="16x16">
-	<link rel="icon shortcut" href="/path/to/shortcut-icon.png" sizes="32x32">
+```html
+<link rel="icon shortcut" href="/path/to/shortcut-icon.png" sizes="16x16">
+<link rel="icon shortcut" href="/path/to/shortcut-icon.png" sizes="32x32">
+```
 
 That code should look familiar as it's how we've implemented favicons since time immemorial. What's different in this example (and how I've implemented it on this site) is the addition of the `sizes` attribute. This attribute allows supporting browsers to choose the correct icon to display.
 

@@ -20,15 +20,19 @@ For our not-quite-bleeding-edge browsers, I present to you a short jQuery plugin
 
 The implementation is pretty simple:
 
-	$( "input, textarea" ).placehold();
+```js
+$( "input, textarea" ).placehold();
+```
 
 You can't get much easier than that. The method takes one optional parameter: `placeholderClassName`. This allows you to specify a class name that will be attached to the form field when the placeholder text is being shown (the class is removed when a user focuses the form field). This gives you a styling hook whereby you can present your placeholder text in a different way from filled-in form fields.
 
 An example:
 
-	$( "input, textarea" ).placehold({
-	    placeholderClassName: "temporary"
-	});
+```js
+$( "input, textarea" ).placehold({
+    placeholderClassName: "temporary"
+});
+```
 
 The default for `placeholderClassName` is "placeholder" (I dug deep for that one…). Hat tip to Mr. Avery for suggesting the addition of this option.
 

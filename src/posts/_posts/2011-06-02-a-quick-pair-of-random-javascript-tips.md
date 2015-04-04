@@ -18,9 +18,13 @@ Here are two quick tips gleaned from the wiki.
 
 This piece of code will set a variable to a value that evaluates to true or false depending on the presence or absence of a string (your needle) in another string (your haystack).
 
-	has_my_name = "Most times, Jason knows what he's doing.".indexOf( "Jason" ) >= 0;
+```js
+has_my_name = "Most times, Jason knows what he's doing.".indexOf( "Jason" ) >= 0;
+```
 
-	has_my_name = ~"Most times, Jason knows what he's doing.".indexOf( "Jason" );
+```js
+has_my_name = ~"Most times, Jason knows what he's doing.".indexOf( "Jason" );
+```
 
 The first line (the traditional method) sets `has_my_name` to `true`. The second, shorter, line sets `has_my_name` to -13 which, being non-zero, would also evaluate to `true`. <strike>I’m not entirely sure why the returned index is negative, but it works.</strike> [Chris Jones](http://www.viget.com/about/team/cjones) unearthed [this article on the tilde](http://dreaminginjavascript.wordpress.com/2008/07/04/28/) that more-or-less clarifies what the tilde is doing. Thanks, Chris!
 
@@ -31,9 +35,13 @@ The first line (the traditional method) sets `has_my_name` to `true`. The second
 
 Quickly generating blocks of HTML in JavaScript can be a mess of concatenated strings. Reign in some of the mess with the `.link` String method.
 
-	anchor = '<a href="' + url + ">' + text + '</a>';
+```js
+anchor = '<a href="' + url + ">' + text + '</a>';
+```
 
-	anchor = text.link( url );
+```js
+anchor = text.link( url );
+```
 
 The first line is the string-concatenating method of building anchor elements with which we’re all familiar. The second line is the new hotness. Turns out, though, that it’s actually the old hotness: `.link` has been available to us since [IE 3.0 and Netscape 2.0](http://www.hunlock.com/blogs/The_Complete_Javascript_Strings_Reference#link). If I’d known then what I know now…
 

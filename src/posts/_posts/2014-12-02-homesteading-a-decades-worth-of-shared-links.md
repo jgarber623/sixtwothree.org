@@ -48,24 +48,28 @@ I spent a couple hours hacking away at the problem and came up with a [Delicious
 
 The convertor takes this:
 
-	<DT><A HREF="https://developer.apple.com/library/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/index.html#//apple_ref/doc/-%20uid/TP40014508" ADD_DATE="1414706885" PRIVATE="0" TAGS="javascript,mac,osx,yosemite">JavaScript for Automation Release Notes</A>
-	<DD>This article describes JavaScript for Automation, a new feature in OS X Yosemite.
+```html
+<DT><A HREF="https://developer.apple.com/library/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/index.html#//apple_ref/doc/-%20uid/TP40014508" ADD_DATE="1414706885" PRIVATE="0" TAGS="javascript,mac,osx,yosemite">JavaScript for Automation Release Notes</A>
+<DD>This article describes JavaScript for Automation, a new feature in OS X Yosemite.
+```
 
 and transforms it into this:
 
-	{
-	    "add_date": "2014-10-30 18:08:05 -0400",
-	    "comment": "This article describes JavaScript for Automation, a new feature in OS X Yosemite.",
-	    "private": "0",
-	    "tags": [
-	        "javascript",
-	        "mac",
-	        "osx",
-	        "yosemite"
-	    ],
-	    "title": "JavaScript for Automation Release Notes",
-	    "url": "https://developer.apple.com/library/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/index.html#//apple_ref/doc/-%20uid/TP40014508"
-	}
+```json
+{
+    "add_date": "2014-10-30 18:08:05 -0400",
+    "comment": "This article describes JavaScript for Automation, a new feature in OS X Yosemite.",
+    "private": "0",
+    "tags": [
+        "javascript",
+        "mac",
+        "osx",
+        "yosemite"
+    ],
+    "title": "JavaScript for Automation Release Notes",
+    "url": "https://developer.apple.com/library/mac/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/index.html#//apple_ref/doc/-%20uid/TP40014508"
+}
+```
 
 While using the Delicous Data Convertor introduces an extra step in the process of going from data to database, I feel _much_ better working with well-structured JSON than I do with crusty old Netscape Bookmark File formatted HTML.
 

@@ -20,23 +20,25 @@ Currently, only [Opera and Internet Explorer](http://thudjs.tumblr.com/post/6378
 
 What are we to do? Exploit the `img` element's `onerror` event, that's what!
 
-	var head = document.getElementsByTagName( "head" )[0],
-	    body = document.body,
-	    css = document.createElement( "link" ),
-	    img = document.createElement( "img" ),
-	    cssUrl = "/path/to/a/css/file.css";
+```js
+var head = document.getElementsByTagName( "head" )[0],
+    body = document.body,
+    css = document.createElement( "link" ),
+    img = document.createElement( "img" ),
+    cssUrl = "/path/to/a/css/file.css";
 
-	css.href = cssUrl;
-	css.rel = "stylesheet";
-	head.appendChild( css );
+css.href = cssUrl;
+css.rel = "stylesheet";
+head.appendChild( css );
 
-	img.onerror = function() {
-	    // Code to execute when the stylesheet is loaded
-	    body.removeChild( img );
-	}
+img.onerror = function() {
+    // Code to execute when the stylesheet is loaded
+    body.removeChild( img );
+}
 
-	body.appendChild( img );
-	img.src = cssUrl;
+body.appendChild( img );
+img.src = cssUrl;
+```
 
 What's happening above isn't at all complex. We first grab references to the `head` and `body`. We create our `link` and a dummy `img` and define the path to our CSS file. Next, we set some attributes on our `link` element and append it to the `head`.
 

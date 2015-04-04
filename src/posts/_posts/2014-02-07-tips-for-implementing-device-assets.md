@@ -49,10 +49,12 @@ The icons:
 
 The markup:
 
-	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-152x152-precomposed.png" sizes="152x152">
-	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-120x120-precomposed.png" sizes="120x120">
-	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-76x76-precomposed.png" sizes="76x76">
-	<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+```html
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-152x152-precomposed.png" sizes="152x152">
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-120x120-precomposed.png" sizes="120x120">
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-76x76-precomposed.png" sizes="76x76">
+<link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-precomposed.png">
+```
 
 This bizarre collection of images and markup provides Retina-quality touch icons to high-DPI displays and ever-so-slightly scaled touch icons to older devices running iOS and Android. The scaling isn't the _greatest_, but it's a practical tradeoff.
 
@@ -61,26 +63,30 @@ This bizarre collection of images and markup provides Retina-quality touch icons
 
 Adding support for Windows Tiles to your site requires a tiny bit of legwork. The first thing to know is that implementation differs dramatically between Internet Explorer versions 10 and 11. Let's take a look at the following markup:
 
-	<meta name="msapplication-config" content="/ieconfig.xml">
-	<meta name="msapplication-TileColor" content="#6a9a22">
-	<meta name="msapplication-TileImage" content="/ms-tile-144x144.png">
+```html
+<meta name="msapplication-config" content="/ieconfig.xml">
+<meta name="msapplication-TileColor" content="#6a9a22">
+<meta name="msapplication-TileImage" content="/ms-tile-144x144.png">
+```
 
 I'll come back to that first line in a moment. Lines 2 and 3 are custom `meta` elements that instruct IE 10 to use `#6a9a22` as the tile's background color and `/ms-tile-144x144.png` as the tile's image. The color you choose and the file name are entirely up to you, but the image should be 144 pixels square.
 
 Now for that first line. `ieconfig.xml` is a small file that looks like this:
 
-	<?xml version="1.0" encoding="utf-8"?>
-	<browserconfig>
-	    <msapplication>
-	        <tile>
-	            <square70x70logo src="ms-tile-128x128.png"/>
-	            <square150x150logo src="ms-tile-270x270.png"/>
-	            <wide310x150logo src="ms-tile-558x270.png"/>
-	            <square310x310logo src="ms-tile-558x558.png"/>
-	            <TileColor>#6a9a22</TileColor>
-	        </tile>
-	    </msapplication>
-	</browserconfig>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="ms-tile-128x128.png"/>
+            <square150x150logo src="ms-tile-270x270.png"/>
+            <wide310x150logo src="ms-tile-558x270.png"/>
+            <square310x310logo src="ms-tile-558x558.png"/>
+            <TileColor>#6a9a22</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
+```
 
 Ignore as best you can those heinously-named elements. The important parts are the various paths to file names and the `TileColor` element. As mentioned in [Creating custom tiles for IE11 websites](http://msdn.microsoft.com/en-us/library/ie/dn455106.aspx), tile images should be 1.8 times larger than you'd think in order to accommodate a wide range of devices. This accounts for the apparent discrepancy between an element's name (`square70x70logo`) and its associated image (`ms-tile-128x128.png`).
 

@@ -21,14 +21,18 @@ I’m happy to announce a standards-based fix for IE’s ActiveX activation: [ac
 
 First, a look at the `activateActiveX()` function itself. The first thing we do is a little object detection to prevent the script from executing in non-affected browsers. `outerHTML` is IE-only and `compatMode` is supported only in IE6.0+.
 
-	if ( !document.getElementsByTagName || !document.body.outerHTML || !document.compatMode ) return false;
+```js
+if ( !document.getElementsByTagName || !document.body.outerHTML || !document.compatMode ) return false;
+```
 
 The next thing we do is determine which tags we’re replacing, and loop through them.
 
-	var elems = new Array( "object", "embed", "applet" );
-	for ( h = 0; h &lt; elems.length; h++ ) {
-	    var objects = document.getElementsByTagName( elems[h] );
-	}
+```js
+var elems = new Array( "object", "embed", "applet" );
+for ( h = 0; h &lt; elems.length; h++ ) {
+    var objects = document.getElementsByTagName( elems[h] );
+}
+```
 
 This is where things start to get sticky. Most existing methods refer to the `object`'s or `applet`'s parent element, assuming that the replaced element will be the lone child of another element (a `div` for instance). Practically speaking, this isn’t always the case. I needed to find a way to replace the element without referring to its parent or siblings. This is where `outerHTML` comes into play.
 
@@ -36,16 +40,20 @@ This is where things start to get sticky. Most existing methods refer to the `ob
 
 Back on target, `outerHTML` was only returning the `object` tag and my non-Flash content (in this case an image). Hence the need for the second loop to grab my `param`s.
 
-	var params = "";
-	for ( var j = 0; j &lt; objects[i].childNodes.length; j++ ) {
-	    params += objects[i].childNodes[j].outerHTML;
-	}
+```js
+var params = "";
+for ( var j = 0; j &lt; objects[i].childNodes.length; j++ ) {
+    params += objects[i].childNodes[j].outerHTML;
+}
+```
 
 Still with me? Okay, great. We’re almost there. The last thing we need to do is replace the element. We can achieve that with the following:
 
-	objects[i].outerHTML = objects[i].outerHTML.replace( "&lt;/" +
-	elems[h].toUpperCase() + "&gt;",
-	params + "&lt;/" + elems[h].toUpperCase() + "&gt;" );
+```js
+objects[i].outerHTML = objects[i].outerHTML.replace( "&lt;/" +
+elems[h].toUpperCase() + "&gt;",
+params + "&lt;/" + elems[h].toUpperCase() + "&gt;" );
+```
 
 It’s certainly not pretty, but it works. All that’s left is to add a call to `activateActiveX()` in your `onload`. For this type of task, I’m a big fan of Simon Willison’s [addLoadEvent](http://simon.incutio.com/archive/2004/05/26/addLoadEvent).
 

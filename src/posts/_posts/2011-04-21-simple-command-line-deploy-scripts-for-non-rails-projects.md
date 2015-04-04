@@ -23,9 +23,11 @@ The system I devised utilizes a single function and a folder full of project-spe
 
 This part is pretty straight forward. In your `.bashrc`, `.profile`, or wherever works for your environment, add:
 
-	function deploy() {
-	    sh "/path/to/deploy/scripts/folder/$1.sh"
-	}
+```sh
+function deploy() {
+    sh "/path/to/deploy/scripts/folder/$1.sh"
+}
+```
 
 Throw `. ~/.profile` into your console to make sure that the new function is available. Next up…
 
@@ -36,18 +38,22 @@ In `/path/to/deploy/scripts/folder`, create as many `projectname.sh` files as yo
 
 A basic example, using `scp`:
 
-	#!/bin/bash
-	scp -pr ~/path/to/local/project/folder/* user@server:/path/to/remote/project/folder;
-	echo "Success! Your project was deployed without a hitch.";
+```sh
+#!/bin/bash
+scp -pr ~/path/to/local/project/folder/* user@server:/path/to/remote/project/folder;
+echo "Success! Your project was deployed without a hitch.";
+```
 
 A more complicated example, using `ssh` and `git`:
 
-	#!/bin/bash
-	ssh user@server "\
-	cd /path/to/remote/project/folder/;\
-	git pull;
-	exit;";
-	echo "Success! Your project was deployed without a hitch.";
+```sh
+#!/bin/bash
+ssh user@server "\
+cd /path/to/remote/project/folder/;\
+git pull;
+exit;";
+echo "Success! Your project was deployed without a hitch.";
+```
 
 Save one of the above as something like projectname.sh in your deploy folder, change the appropriate server/path/etc., and you'll be ready for the next step.
 
@@ -56,7 +62,9 @@ Save one of the above as something like projectname.sh in your deploy folder, ch
 
 To deploy a project, simply invoke the following on the command line:
 
-	deploy projectname
+```sh
+deploy projectname
+```
 
 How easy is that, right?
 

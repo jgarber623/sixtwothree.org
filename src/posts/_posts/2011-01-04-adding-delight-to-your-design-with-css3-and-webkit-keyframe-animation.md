@@ -33,49 +33,53 @@ In an article on the Surfin' Safari blog way back in 2009, Dean Jackson [announc
 
 First, we must mark up our clock:
 
-	<span class="clock">
-	    <span>Tick</span>
-	    <span>Tock</span>
-	</span>
+```html
+<span class="clock">
+    <span>Tick</span>
+    <span>Tock</span>
+</span>
+```
 
 Next, in our stylesheet, we define our two animations, "tick" and "tock."
 
-	@-webkit-keyframes tick {
-	    0% {
-	        opacity: 1;
-	    }
-	    50% {
-	        opacity: 0;
-	        -webkit-transform: translateY(-10px);
-	    }
-	    80% {
-	        opacity: 0;
-	        -webkit-transform: translateY(0);
-	    }
-	    100% {
-	        opacity: 1;
-	    }
-	}
+```css
+@-webkit-keyframes tick {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+    80% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
-	@-webkit-keyframes tock {
-	    0% {
-	        opacity: 1;
-	    }
-	    30% {
-	        opacity: 1;
-	    }
-	    70% {
-	        opacity: 0;
-	        -webkit-transform: translateY(-10px);
-	    }
-	    80% {
-	        opacity: 0;
-	        -webkit-transform: translateY(0);
-	    }
-	    100% {
-	        opacity: 1;
-	    }
-	}
+@-webkit-keyframes tock {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+        -webkit-transform: translateY(-10px);
+    }
+    80% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+```
 
 What we're doing in these two definitions is animating the element's opacity and using the CSS3 `transform` property and [translateY transformation function](http://www.w3.org/TR/css3-2d-transforms/#transform-functions) to shift the element ten pixels up. So, as you can see in [the final product](http://www.viget.com/uploads/file/webkit-animations/), the elements fade out and move up over the duration of the animation.
 
@@ -83,13 +87,15 @@ From experimenting with these animation definitions, I've learned that you **mus
 
 Lastly, we want to make a reference to our animations:
 
-	span.clock span:first-child {
-	    -webkit-animation: tick 3s infinite;
-	}
+```css
+span.clock span:first-child {
+    -webkit-animation: tick 3s infinite;
+}
 
-	span.clock span:last-child {
-	    -webkit-animation: tock 3s infinite;
-	}
+span.clock span:last-child {
+    -webkit-animation: tock 3s infinite;
+}
+```
 
 The syntax here is pretty straightforward. First we specify the animation name, followed by duration, followed by a repeat value. I had initially tried specifying an `animation-delay`, but it proved to be too difficult to sync up the animations. I'm also using the `:last-child` pseudo-class as a selector. Might as well take advantage of Webkit's advanced selector engine!
 
@@ -97,10 +103,12 @@ The syntax here is pretty straightforward. First we specify the animation name, 
 
 **Update:** [Elliott](http://www.viget.com/about/team/emunoz/) astutely pointed out that I never mentioned how I rotated the "tick" and "tock" elements. Here's how:
 
-	span.clock {
-	    -moz-transform: rotate(-10deg);
-	    -webkit-transform: rotate(-10deg);
-	    transform: rotate(-10deg);
-	}
+```css
+span.clock {
+    -moz-transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+```
 
 Rich Bradshaw wrote [an excellent series of tutorials](http://css3.bradshawenterprises.com/) on how to use the different `transform` functions and animation. It's a must-read.

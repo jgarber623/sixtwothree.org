@@ -31,4 +31,3 @@ Earlier this week, after much dragging of feet and checking that I didn't commit
 The code is presented as-is and I've noted as much as I could in the [README.md](https://github.com/jgarber623/webmention.sixtwothree.org/blob/master/README.md). If you find any glaring holes in the documentation, submit an [Issue](https://github.com/jgarber623/FrancisCMS/issues) and I'll try to fill in the gaps.
 
 While I'm currently working on replacing Jekyll with [my own custom-built CMS](https://github.com/jgarber623/FrancisCMS), I wanted to make the code for this project available to anyone who may find it helpful. It's served me well and I hope you find it useful for implementing webmentions into your own project.
-

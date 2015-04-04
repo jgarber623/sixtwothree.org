@@ -23,63 +23,71 @@ On a recent Ruby on Rails project, I iterated on Paul's method (dubbed the [Garb
 
 First off, it'd be negligent to not mention that I'm a huge fan of [HTML5's `data-*` attributes](http://html5doctor.com/html5-custom-data-attributes/). While I firmly believe that useful data should be made visible to users, there are circumstances where `data-*` attributes make sense. For instance, including `data-lat` and `data-lng` attributes in an element containing a street address would allow for easily adding markers to a Google Map on the page:
 
-	<span data-lat="38.8951" data-lng="-77.0363">
-	    1600 Pennsylvania Ave.
-	    Washington, DC
-	</span>
+```html
+<span data-lat="38.8951" data-lng="-77.0363">
+    1600 Pennsylvania Ave.
+    Washington, DC
+</span>
+```
 
 Taking a step back, we can use `data-\*` attributes on the `body` element to provide an indication of where we are within an application:
 
-	<body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
+```erb
+<body data-controller="<%= controller_name %>" data-action="<%= action_name %>">
+```
 
 The above code will yield something like:
 
-	<body data-controller="users" data-action="show">
+```html
+<body data-controller="users" data-action="show">
+```
 
 This presumes, of course, that you have a "users" controller with a "show" action in your application. Throw that code in your application's `layout.html.erb` and we're done on the markup front.
 
 The JavaScript is also relatively straightforward:
 
-	SITENAME = {
-	    common: {
-	        init: function() {
-	            // application-wide code
-	        }
-	    },
+```js
+SITENAME = {
+    common: {
+        init: function() {
+            // application-wide code
+        }
+    },
 
-	    users: {
-	        init: function() {
-	            // controller-wide code
-	        },
+    users: {
+        init: function() {
+            // controller-wide code
+        },
 
-	        show: function() {
-	            // action-specific code
-	        }
-	    }
-	};
+        show: function() {
+            // action-specific code
+        }
+    }
+};
 
-	UTIL = {
-	    exec: function( controller, action ) {
-	        var ns = SITENAME,
-	            action = ( action === undefined ) ? "init" : action;
+UTIL = {
+    exec: function( controller, action ) {
+        var ns = SITENAME,
+            action = ( action === undefined ) ? "init" : action;
 
-	        if ( controller !== "" && ns[controller] && typeof ns[controller][action] == "function" ) {
-	            ns[controller][action]();
-	        }
-	    },
+        if ( controller !== "" && ns[controller] && typeof ns[controller][action] == "function" ) {
+            ns[controller][action]();
+        }
+    },
 
-	    init: function() {
-	        var body = document.body,
-	            controller = body.getAttribute( "data-controller" ),
-	            action = body.getAttribute( "data-action" );
+    init: function() {
+        var body = document.body,
+            controller = body.getAttribute( "data-controller" ),
+            action = body.getAttribute( "data-action" );
 
-	        UTIL.exec( "common" );
-	        UTIL.exec( controller );
-	        UTIL.exec( controller, action );
-	    }
-	};
+        UTIL.exec( "common" );
+        UTIL.exec( controller );
+        UTIL.exec( controller, action );
+    }
+};
 
-	$( document ).ready( UTIL.init );
+$( document ).ready( UTIL.init );
+```
 
 The above example relies on jQuery's `$( document ).ready()` to fire off `UTIL.init`, but you could just as easily use a straight JavaScript event handler.
 
@@ -89,9 +97,11 @@ Before any of that, though, a "common" function is executed (`SITENAME.common.in
 
 So, the order of operations in our example would be:
 
-	SITENAME.common.init();
-	SITENAME.users.init();
-	SITENAME.users.show();
+```js
+SITENAME.common.init();
+SITENAME.users.init();
+SITENAME.users.show();
+```
 
 In Paul's original method, he includes a `finalize()` function which you can add in should you need it.
 
@@ -103,7 +113,9 @@ First, depending on the nature of your application, you may not want to expose c
 
 Second, page-specific CSS selectors can get really awkward:
 
-	body[data-controller="users"][data-action="show"] div.some-element { … }
+```css
+body[data-controller="users"][data-action="show"] div.some-element { … }
+```
 
 Whether or not you do something like this completely depends on how you architect your CSS, but be warned things can get verbose fast if you're not careful.
 

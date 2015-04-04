@@ -16,13 +16,15 @@ Just over a year ago now, I wrapped up [a significantly large project for The Ch
 
 Put simply, [Backbone's Router](http://backbonejs.org/#Router) triggers actions based on the current page's URL. The class accepts an object whose keys represent URLs (or patterns that match URLs) and whose values are functions (or calls to functions). Like so:
 
-	var router = new Backbone.Router.extend({
-	    routes: {
-	        'foo/:bar': function(bar) {
-	            console.log(bar);
-	        }
-	    }
-	});
+```js
+var router = new Backbone.Router.extend({
+    routes: {
+        'foo/:bar': function(bar) {
+            console.log(bar);
+        }
+    }
+});
+```
 
 It's a brilliantly simple design that's dramatically different from techniques I'd previously considered (see: [The Garber-Irish Implementation](http://viget.com/inspire/extending-paul-irishs-comprehensive-dom-ready-execution)). I was a fan, to say the least.
 
@@ -38,33 +40,37 @@ What I ended up with is a dependency-free, modular library clocking in at a whop
 
 A basic example of RouterRouter in action, re-using the Backbone example from above:
 
-	var router = new RouterRouter();
+```js
+var router = new RouterRouter();
 
-	router.route('foo/:bar', function(bar) {
-	    console.log(bar);
-	});
+router.route('foo/:bar', function(bar) {
+    console.log(bar);
+});
+```
 
 In the above example, the function will fire on any URL matching the pattern `foo/:bar` and passes `:bar` into the function for use. That's great if you want to match one route at a time. But, just like Backbone, you can supply a hash of routes to match against a variety of functions:
 
-	var router = new RouterRouter({
-	    routes: {
-	        'foo/:bar': 'whiskey', // matches http://example.com/foo/1234
-	        'biz/*baz': 'tango',   // matches http://example.com/biz/1/2/3/4
-	        '': 'foxtrot'          // matches http://example.com/
-	    },
+```js
+var router = new RouterRouter({
+    routes: {
+        'foo/:bar': 'whiskey', // matches http://example.com/foo/1234
+        'biz/*baz': 'tango',   // matches http://example.com/biz/1/2/3/4
+        '': 'foxtrot'          // matches http://example.com/
+    },
 
-	    foxtrot: function() {
-	        console.log('This very basic route matches the root URL.');
-	    },
+    foxtrot: function() {
+        console.log('This very basic route matches the root URL.');
+    },
 
-	    tango: function(baz) {
-	        console.log(baz); // logs 1/2/3/4
-	    },
+    tango: function(baz) {
+        console.log(baz); // logs 1/2/3/4
+    },
 
-	    whiskey: function(bar) {
-	        console.log(bar); // logs 1234
-	    }
-	});
+    whiskey: function(bar) {
+        console.log(bar); // logs 1234
+    }
+});
+```
 
 In this example, the `routes` hash is checked for a matching pattern against the current URL, firing the appropriate function when a match occurs. Any values specified in the `routes` hash are passed along to the fired callback function. Additional usage examples are provided in [the project's the README file](https://github.com/jgarber623/RouterRouter/blob/master/README.md).
 
