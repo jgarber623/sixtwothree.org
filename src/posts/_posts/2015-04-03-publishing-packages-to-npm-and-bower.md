@@ -6,7 +6,11 @@ copies:
     url: https://twitter.com/jgarber/status/584012621516509185
 date: 2015-04-03 11:16:17 -0400
 excerpt: In this post, I’ll run through the process by which you can publish code to the npm and Bower repositories.
-tags: bower development javascript npm
+tags:
+  - bower
+  - development
+  - javascript
+  - npm
 title: Publishing Packages to npm and Bower
 ---
 

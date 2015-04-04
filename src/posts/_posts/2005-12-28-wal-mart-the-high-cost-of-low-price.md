@@ -1,7 +1,9 @@
 ---
 date: 2005-12-28 21:27:00 -0500
 excerpt: 'Over the weekend, I watched Wal-mart: The High Cost of Low Price, a recent documentary look into the business practices and influence of the largest corporation in the world.'
-tags: documentary movie
+tags:
+  - documentary
+  - movie
 title: 'Wal-mart: The High Cost of Low Price'
 ---
 

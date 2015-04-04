@@ -1,7 +1,9 @@
 ---
 date: 2007-12-30 17:34:00 -0500
 excerpt: I present to you the cities I traveled to and through in 2007.
-tags: personal travel
+tags:
+  - personal
+  - travel
 title: My Year in Cities, 2007
 ---
 

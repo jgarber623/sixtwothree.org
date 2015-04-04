@@ -1,6 +1,11 @@
 ---
 date: 2006-05-07 00:43:00 -0400
-tags: development hack internetexplorer javascript polyfill
+tags:
+  - development
+  - hack
+  - internetexplorer
+  - javascript
+  - polyfill
 title: activateActiveX() – A Standards-Based Solution to Internet Explorer’s Active Content Woes
 ---
 

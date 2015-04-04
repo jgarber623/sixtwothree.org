@@ -1,7 +1,10 @@
 ---
 date: 2007-07-25 20:03:00 -0400
 excerpt: 'CircaVie allows you to create visual timelines of events: your life, a vacation, etc. etc.'
-tags: design circavie work
+tags:
+  - design
+  - circavie
+  - work
 title: circaVie launches
 ---
 

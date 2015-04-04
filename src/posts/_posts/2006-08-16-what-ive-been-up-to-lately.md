@@ -1,7 +1,9 @@
 ---
 date: 2006-08-16 21:49:00 -0400
 excerpt: Wow, so it’s been awhile.
-tags: personal refreshdc
+tags:
+  - personal
+  - refreshdc
 title: What I’ve been up to lately
 ---
 

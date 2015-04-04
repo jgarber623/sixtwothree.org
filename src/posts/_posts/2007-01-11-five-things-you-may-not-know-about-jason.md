@@ -1,6 +1,7 @@
 ---
 date: 2007-01-11 21:40:00 -0500
-tags: personal
+tags:
+  - personal
 title: Five things you may not know about Jason
 ---
 

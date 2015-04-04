@@ -8,7 +8,10 @@ copies:
     url: http://viget.com/extend/use-editorconfig-to-manage-coding-styles-on-team-projects
 date: 2015-02-05 10:44:40 -0500
 excerpt: In this post, I show how you can use EditorConfig to declare your project’s coding styles and why that’s useful on team projects.
-tags: development editorconfig programming
+tags:
+  - development
+  - editorconfig
+  - programming
 title: Use EditorConfig to Manage Coding Styles on Team Projects
 ---
 

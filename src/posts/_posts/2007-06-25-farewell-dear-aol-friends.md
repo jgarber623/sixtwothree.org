@@ -1,7 +1,10 @@
 ---
 date: 2007-06-25 20:53:00 -0400
 excerpt: This past Friday was my last day with AOL.
-tags: career personal work
+tags:
+  - career
+  - personal
+  - work
 title: Farewell, dear AOL friends
 ---
 

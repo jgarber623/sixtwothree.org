@@ -3,8 +3,12 @@ copies:
   - title: Viget Extend
     url: http://viget.com/extend/sending-webmentions-with-craft
 date: 2014-06-11 15:29:55 -0400
-excerpt: 'My first Craft plugin sends webmentions to supported websites.'
-tags: craft development indieweb webmention
+excerpt: My first Craft plugin sends webmentions to supported websites.
+tags:
+  - craft
+  - development
+  - indieweb
+  - webmention
 title: Sending Webmentions with Craft
 ---
 

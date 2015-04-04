@@ -6,7 +6,10 @@ copies:
     url: https://twitter.com/jgarber/status/513773797867290625
 date: 2014-09-21 15:23:11 -0400
 excerpt: Last week, Kevin and I turned off login access to Ficly.
-tags: ficlets ficly preservation
+tags:
+  - ficlets
+  - ficly
+  - preservation
 title: Thoughts on Winding Down Ficly and Updates on Its Future
 ---
 

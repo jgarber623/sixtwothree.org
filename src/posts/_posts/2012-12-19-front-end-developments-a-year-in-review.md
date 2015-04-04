@@ -3,8 +3,10 @@ copies:
   - title: Viget Flourish
     url: http://viget.com/flourish/front-end-developments-a-year-in-review
 date: 2012-12-19 10:16:08 -0500
-excerpt: We've had a tremendous year here at Viget.
-tag: career work
+excerpt: We’ve had a tremendous year here at Viget.
+tag:
+  - career
+  - work
 title: 'Front-End Developments: A Year in Review'
 ---
 

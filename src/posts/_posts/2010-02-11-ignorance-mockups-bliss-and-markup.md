@@ -3,8 +3,9 @@ copies:
   - title: FullBleed
     url: http://fullbleed.adcmw.org/articles/ignorance-mockups-bliss-and-markup
 date: 2010-02-11 18:23:09 -0500
-excerpt: 'In this article for ADCMW’s FullBleed, I interview several well-known web designers and get their thoughts on the controversial topic of designing in the browser.'
-tags: design
+excerpt: In this article for ADCMW’s FullBleed, I interview several well-known web designers and get their thoughts on the controversial topic of designing in the browser.
+tags:
+  - design
 title: Ignorance, Mockups, Bliss, and Markup
 ---
 

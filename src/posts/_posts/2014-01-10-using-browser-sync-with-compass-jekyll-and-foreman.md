@@ -1,7 +1,13 @@
 ---
 date: 2014-01-10 18:21:09 -0500
 excerpt: In this post, I'll cover how I combined browser-sync with a couple of my favorite tools (Compass, Jekyll, and Foreman) to build out a static site and make browser and device testing easier.
-tags: browsersync compass development foreman jekyll ruby
+tags:
+  - browsersync
+  - compass
+  - development
+  - foreman
+  - jekyll
+  - ruby
 title: Using browser-sync with Compass, Jekyll, and Foreman
 ---
 

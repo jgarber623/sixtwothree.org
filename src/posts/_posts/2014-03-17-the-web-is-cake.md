@@ -1,7 +1,10 @@
 ---
 date: 2014-03-17 20:21:51 -0400
 excerpt: Or, more specifically, web pages are cake. Here's why.
-tags: design development principles
+tags:
+  - design
+  - development
+  - principles
 title: The Web Is Cake
 ---
 

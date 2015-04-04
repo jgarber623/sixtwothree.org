@@ -1,7 +1,10 @@
 ---
 date: 2014-06-29 11:21:49 -0400
 excerpt: Every post on this site is now also represented in JSON format.
-tags: development jekyll json
+tags:
+  - development
+  - jekyll
+  - json
 title: Adding JSON versions of Posts with Jekyll
 ---
 

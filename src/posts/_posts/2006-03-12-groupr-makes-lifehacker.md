@@ -1,6 +1,8 @@
 ---
 date: 2006-03-12 17:20:00 -0500
-tags: groupr links
+tags:
+  - groupr
+  - links
 title: Groupr makes Lifehacker
 ---
 

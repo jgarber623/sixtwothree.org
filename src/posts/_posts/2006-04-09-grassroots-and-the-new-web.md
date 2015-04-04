@@ -1,7 +1,11 @@
 ---
 date: 2006-04-09 00:02:00 -0400
 excerpt: I recently handed over the reigns of the Global Youth Partnership for Africa site to their team.
-tags: design digitallife links web2.0
+tags:
+  - design
+  - digitallife
+  - links
+  - web2.0
 title: Grassroots and The New Web
 ---
 

@@ -1,6 +1,11 @@
 ---
 date: 2006-05-20 18:05:00 -0400
-tags: development hack internetexplorer javascript polyfill
+tags:
+  - development
+  - hack
+  - internetexplorer
+  - javascript
+  - polyfill
 title: activateActiveX 1.1
 ---
 

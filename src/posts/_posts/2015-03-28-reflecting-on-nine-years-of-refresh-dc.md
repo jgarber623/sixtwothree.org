@@ -6,7 +6,9 @@ copies:
     url: https://twitter.com/jgarber/status/581997152601247744
 date: 2015-03-28 21:47:16 -0400
 excerpt: Since March, 2006, Refresh DC has served as a monthly gathering point for Web professionals. I can’t believe it’s been nine years.
-tags: community refreshdc
+tags:
+  - community
+  - refreshdc
 title: Reflecting on Nine Years of Refresh DC
 ---
 

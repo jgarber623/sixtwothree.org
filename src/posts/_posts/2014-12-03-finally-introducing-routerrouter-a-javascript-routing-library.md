@@ -8,7 +8,11 @@ copies:
     url: http://viget.com/extend/finally-introducing-routerrouter-a-javascript-routing-library
 date: 2014-12-03 13:51:36 -0500
 excerpt: Just over a year ago, I wrote a small JS library for mapping functions to URLs. It's based on Backbone's Router.
-tags: backbone development javascript routerrouter
+tags:
+  - backbone
+  - development
+  - javascript
+  - routerrouter
 title: (Finally) Introducing RouterRouter, a JavaScript Routing Library derived from Backbone
 ---
 

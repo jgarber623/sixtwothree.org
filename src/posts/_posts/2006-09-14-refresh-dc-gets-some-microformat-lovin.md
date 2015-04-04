@@ -1,7 +1,11 @@
 ---
 date: 2006-09-14 21:54:00 -0400
 excerpt: The Refresh DC site gets a jolt of Microformat-y goodness.
-tags: design event links refreshdc
+tags:
+  - design
+  - event
+  - links
+  - refreshdc
 title: Refresh DC gets some Microformat lovin’
 ---
 

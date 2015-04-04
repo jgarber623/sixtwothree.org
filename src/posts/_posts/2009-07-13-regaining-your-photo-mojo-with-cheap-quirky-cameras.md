@@ -4,7 +4,8 @@ copies:
     url: http://fullbleed.adcmw.org/articles/regaining-your-photo-mojo-with-cheap-quirky-cameras
 date: 2009-07-13 17:10:18 -0400
 excerpt: 'In this article for ADCMW’s FullBleed, I take a step back in time and revisit three cameras that will re-inject fun (and mystery!) into your photo-taking adventures.'
-tags: photography
+tags:
+  - photography
 title: Regaining Your Photo Mojo with Cheap, Quirky Cameras
 ---
 

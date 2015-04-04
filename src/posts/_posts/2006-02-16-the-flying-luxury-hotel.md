@@ -1,6 +1,7 @@
 ---
 date: 2006-02-16 21:02:00 -0500
-tags: links
+tags:
+  - links
 title: The Flying Luxury Hotel
 ---
 

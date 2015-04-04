@@ -1,7 +1,11 @@
 ---
 date: 2006-11-29 01:07:00 -0500
 excerpt: Here’s an abbreviated list of things that have been going on lately.
-tags: design music personal refreshdc
+tags:
+  - design
+  - music
+  - personal
+  - refreshdc
 title: Recent goings-on
 ---
 

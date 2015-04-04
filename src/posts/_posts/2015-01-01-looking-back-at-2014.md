@@ -6,7 +6,8 @@ copies:
     url: https://twitter.com/jgarber/status/550792421739884544
 date: 2015-01-01 17:54:49 -0500
 excerpt: Taking a brief look back at a very difficult year.
-tags: personal
+tags:
+  - personal
 title: Looking Back At 2014
 ---
 

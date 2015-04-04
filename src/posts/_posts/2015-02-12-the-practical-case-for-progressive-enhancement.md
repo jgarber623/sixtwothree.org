@@ -6,7 +6,9 @@ copies:
     url: https://twitter.com/jgarber/status/565880379429912576
 date: 2015-02-12 09:19:22 -0500
 excerpt: The third, and hopefully final, post in a series about developing websites using progressive enhancement.
-tags: development progressiveenhancement
+tags:
+  - development
+  - progressiveenhancement
 title: The Practical Case for Progressive Enhancement
 ---
 

@@ -4,7 +4,9 @@ copies:
     url: http://viget.com/inspire/js-201-run-a-function-when-a-stylesheet-finishes-loading
 date: 2011-07-19 10:30:35 -0400
 excerpt: I’m in the middle of working out a new feature for a project that requires JavaScript to append some markup, stylesheets, and scripts to a page. A piece of JavaScript required styles be applied to certain elements before it should execute.
-tags: development javascript
+tags:
+  - development
+  - javascript
 title: 'JS 201: Run a function when a stylesheet finishes loading'
 ---
 

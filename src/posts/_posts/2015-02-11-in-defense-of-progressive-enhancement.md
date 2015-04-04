@@ -6,7 +6,9 @@ copies:
     url: https://twitter.com/jgarber/status/565534498260267008
 date: 2015-02-11 10:27:44 -0500
 excerpt: Furthering the conversation after receiving some critical feedback on my previous post.
-tags: development progressiveenhancement
+tags:
+  - development
+  - progressiveenhancement
 title: In Defense of Progressive Enhancement
 ---
 

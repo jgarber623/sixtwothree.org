@@ -1,6 +1,7 @@
 ---
 date: 2007-07-05 22:25:00 -0400
-tags: feeds
+tags:
+  - feeds
 title: Update your feeds
 ---
 

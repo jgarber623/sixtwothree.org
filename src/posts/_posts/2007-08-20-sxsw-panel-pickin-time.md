@@ -1,7 +1,11 @@
 ---
 date: 2007-08-20 23:12:00 -0400
 excerpt: It’s that special time of year again. Time for all the web geeks to come out of the woodwork and determine panels for this coming year’s South by Southwest Interactive conference.
-tags: conference event speaking sxsw
+tags:
+  - conference
+  - event
+  - speaking
+  - sxsw
 title: SXSW Panel Pickin’ Time!
 ---
 

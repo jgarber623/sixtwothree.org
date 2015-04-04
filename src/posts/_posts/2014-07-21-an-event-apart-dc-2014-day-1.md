@@ -6,7 +6,10 @@ copies:
     url: https://twitter.com/jgarber/status/491373364351881218
 date: 2014-07-21 19:50:13 -0400
 excerpt: I’m at An Event Apart DC again this year and taking notes! Lots of notes.
-tags: aneventapart conference event
+tags:
+  - aneventapart
+  - conference
+  - event
 title: An Event Apart DC 2014, Day 1
 ---
 

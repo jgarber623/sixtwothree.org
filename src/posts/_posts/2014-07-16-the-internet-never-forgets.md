@@ -7,8 +7,11 @@ copies:
   - title: Twitter
     url: https://twitter.com/jgarber/status/489455441551036417
 date: 2014-07-16 12:10:32 -0400
-excerpt: 'You may have heard someone say, “The Internet never forgets.” This couldn’t be further from the truth.'
-tags: indieweb linkrot preservation
+excerpt: You may have heard someone say, “The Internet never forgets.” This couldn’t be further from the truth.
+tags:
+  - indieweb
+  - linkrot
+  - preservation
 title: “The Internet Never Forgets”
 ---
 

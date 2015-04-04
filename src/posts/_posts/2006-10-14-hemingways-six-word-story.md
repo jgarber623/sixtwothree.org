@@ -1,6 +1,7 @@
 ---
 date: 2006-10-14 00:47:00 -0400
-tags: links
+tags:
+  - links
 title: Hemingway’s six word story
 ---
 

@@ -1,7 +1,10 @@
 ---
 date: 2007-01-20 16:40:00 -0500
 excerpt: I’m happy to announce we’ve just relaunched the Refresh DC site.
-tags: design links refreshdc
+tags:
+  - design
+  - links
+  - refreshdc
 title: Refresh DC site relaunch
 ---
 

@@ -1,7 +1,9 @@
 ---
 date: 2014-05-20 08:09:37 -0400
 excerpt: Turns out the most popular mobile devices in the world aren’t from the makers of the iPhone or Galaxy.
-tags: design mobile
+tags:
+  - design
+  - mobile
 title: The Mobile Web Beyond Apple and Samsung
 ---
 

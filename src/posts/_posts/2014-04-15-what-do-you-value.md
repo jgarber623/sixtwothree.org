@@ -1,7 +1,9 @@
 ---
 date: 2014-04-15 17:21:18 -0400
 excerpt: A recent interview with a candidate got me thinking about values.
-tags: design principles
+tags:
+  - design
+  - principles
 title: What do you value?
 ---
 

@@ -1,7 +1,11 @@
 ---
 date: 2007-03-07 10:01:00 -0500
 excerpt: It’s been a while since my last post.
-tags: design ficlets refreshdc sxsw
+tags:
+  - design
+  - ficlets
+  - refreshdc
+  - sxsw
 title: Catching up
 ---
 

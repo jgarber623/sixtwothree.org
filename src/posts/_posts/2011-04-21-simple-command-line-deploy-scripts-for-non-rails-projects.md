@@ -4,7 +4,8 @@ copies:
     url: http://viget.com/extend/simple-command-line-deploy-scripts-for-non-rails-projects
 date: 2011-04-21 11:30:00 -0400
 excerpt: I've been working on a lot of non-Rails projects lately. At some point during the buildout process, I start spending a fair amount of time uploading my changes to one of our testing servers. I needed a better system. So I wrote one.
-tags: development
+tags:
+  - development
 title: Simple Command Line Deploy Scripts for Non-Rails Projects
 ---
 

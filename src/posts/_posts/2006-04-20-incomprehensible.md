@@ -1,6 +1,8 @@
 ---
 date: 2006-04-20 21:19:00 -0400
-tags: links politics
+tags:
+  - links
+  - politics
 title: Incomprehensible
 ---
 

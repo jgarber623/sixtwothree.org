@@ -4,7 +4,9 @@ copies:
     url: http://viget.com/extend/sass-maps-are-awesome
 date: 2013-10-15 10:25:34 -0400
 excerpt: This past weekend at SassConf, the authors of Sass announced the first version 3.3 release candidate of the popular CSS extension language. There are a ton of new features in 3.3 that I'm excited to try out, but I want to share a personal favorite with you.
-tags: development sass
+tags:
+  - development
+  - sass
 title: Sass Maps Are Awesome!
 ---
 

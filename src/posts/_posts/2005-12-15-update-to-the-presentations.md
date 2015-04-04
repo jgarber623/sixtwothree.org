@@ -1,6 +1,8 @@
 ---
 date: 2005-12-15 21:21:00 -0500
-tags: s5 presentation
+tags:
+  - s5
+  - presentation
 title: Update to the presentations
 ---
 

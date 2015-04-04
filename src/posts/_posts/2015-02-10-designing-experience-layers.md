@@ -10,7 +10,9 @@ copies:
     url: http://viget.com/inspire/designing-experience-layers
 date: 2015-02-10 09:07:58 -0500
 excerpt: Wherein I rattle on about the Web, content-first design, and progressive enhancement.
-tags: design progressiveenhancement
+tags:
+  - design
+  - progressiveenhancement
 title: Designing Experience Layers
 ---
 

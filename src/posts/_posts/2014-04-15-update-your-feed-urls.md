@@ -1,7 +1,8 @@
 ---
 date: 2014-04-15 18:15:36 -0400
 excerpt: It’s feed migrating season.
-tags: feeds
+tags:
+  - feeds
 title: Update your feed URLs
 ---
 

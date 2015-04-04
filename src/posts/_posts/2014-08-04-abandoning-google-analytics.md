@@ -6,7 +6,10 @@ copies:
     url: https://twitter.com/jgarber/status/496431514742431745
 date: 2014-08-04 18:38:55 -0400
 excerpt: As of today, I’ve removed Google Analytics from this site. Here’s why.
-tags: development googleanalytics performance
+tags:
+  - development
+  - googleanalytics
+  - performance
 title: Abandoning Google Analytics
 ---
 

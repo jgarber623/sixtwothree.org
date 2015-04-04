@@ -1,7 +1,8 @@
 ---
 date: 2005-12-12 22:03:00 -0500
 excerpt: 'This one covers the basics: who I am, what I do, why I’m here… Ya know, the good stuff.'
-tags: personal
+tags:
+  - personal
 title: Mandatory introductory post
 ---
 

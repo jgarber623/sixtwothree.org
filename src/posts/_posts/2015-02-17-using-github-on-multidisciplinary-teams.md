@@ -8,7 +8,11 @@ copies:
     url: http://viget.com/advance/using-github-on-multidisciplinary-teams
 date: 2015-02-17 09:41:34 -0500
 excerpt: GitHub’s not just for developers. Here are some ideas for getting the entire team involved.
-tags: design development github process
+tags:
+  - design
+  - development
+  - github
+  - process
 title: Using GitHub on Multidisciplinary Teams
 ---
 

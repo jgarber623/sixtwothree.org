@@ -1,7 +1,10 @@
 ---
 date: 2007-05-18 22:27:00 -0400
 excerpt: Did Cindy and I inadvertently invent something?
-tags: links roadtrip travel
+tags:
+  - links
+  - roadtrip
+  - travel
 title: SkypeDriving
 ---
 

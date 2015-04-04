@@ -10,7 +10,10 @@ copies:
     url: http://viget.com/flourish/five-easy-ways-to-be-a-better-web-professional
 date: 2015-02-03 09:49:03 -0500
 excerpt: Old Man Garber lays out some solid advice for anyone building things on the Web.
-tags: advice career work
+tags:
+  - advice
+  - career
+  - work
 title: Five Easy Ways to Be a Better Web Professional
 ---
 
