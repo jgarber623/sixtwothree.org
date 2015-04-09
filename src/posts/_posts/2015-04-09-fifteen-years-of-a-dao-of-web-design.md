@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152696478427343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/586162860490936321
 date: 2015-04-09 09:40:59 -0400
 excerpt: 'This week marks the fifteenth anniversary of one of the seminal articles on Web design: John Allsopp’s, “A Dao of Web Design.”'
 tags: accessibility design
