@@ -3,11 +3,11 @@
 	position: relative;
 
 	&:after {
-		@include border-radius(0 0 0.125rem 0.125rem);
+		@include border-radius(0 0 0.125em 0.125em);
 		bottom: 0;
 		content: "";
 		display: block;
-		height: 0.25rem;
+		height: 0.25em;
 		left: 0;
 		position: absolute;
 		right: 0;
@@ -24,7 +24,7 @@
 	img {
 		@include border-radius;
 		display: block;
-		height: 2.5rem;
+		height: 2.5em;
 		max-width: none;
 	}
 }

@@ -19,7 +19,7 @@
 
 	h1 {
 		@include font-size(4);
-		margin-top: 0.375rem;
+		margin-top: 0.35em;
 	}
 
 	figure {
@@ -32,7 +32,7 @@
 	.cover {
 		display: block;
 		margin: 0 auto $spacing-2 auto;
-		max-width: 18rem;
+		max-width: 18em;
 		text-align: center;
 
 		@include breakpoint($bp-narrow ($tp-medium - 0.001em)) {
@@ -43,7 +43,7 @@
 		}
 
 		img {
-			max-height: 12rem;
+			max-height: 12em;
 			max-width: 100%;
 
 			@include breakpoint($bp-narrow) {

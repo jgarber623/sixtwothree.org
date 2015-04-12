@@ -1,10 +1,10 @@
 .facepile {
+	@extend %clearfix;
 	@extend %reset-list;
-	font-size: 0;
 
 	li {
 		display: inline-block;
-		@include font-size;
+		float: left;
 		margin: 0 $spacing-1 $spacing-1 0;
 	}
 }

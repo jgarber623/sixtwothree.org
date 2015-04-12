@@ -10,8 +10,8 @@
 	}
 
 	menu {
+		@extend %clearfix;
 		@extend %reset-list;
-		font-size: 0;
 
 		+ menu {
 			margin-top: $spacing-2;
@@ -22,14 +22,13 @@
 		}
 
 		li {
-			display: inline-block;
-			@include font-size;
+			float: left;
 			@include margin-x(1);
 		}
 
 		a,
 		button {
-			box-shadow: 0 0 0 0.125rem #fff;
+			box-shadow: 0 0 0 0.125em #fff;
 		}
 
 		a {

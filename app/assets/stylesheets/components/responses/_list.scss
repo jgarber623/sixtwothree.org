@@ -20,14 +20,14 @@
 		}
 
 		&:before {
-			border-bottom: 0.25rem solid transparent;
-			border-right: 0.25rem solid $darken-1;
-			border-top: 0.25rem solid transparent;
+			border-bottom: 0.25em solid transparent;
+			border-right: 0.25em solid $darken-1;
+			border-top: 0.25em solid transparent;
 			content: "";
 			display: none;
 			position: absolute;
 			right: 100%;
-			top: 1.5rem;
+			top: 1.5em;
 		}
 	}
 }

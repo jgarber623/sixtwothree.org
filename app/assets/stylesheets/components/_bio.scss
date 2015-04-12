@@ -15,7 +15,7 @@
 			float: none;
 			position: absolute;
 			right: 100%;
-			top: -0.2rem;
+			top: -0.2em;
 		}
 	}
 
@@ -23,7 +23,7 @@
 		font-family: "Open Sans", sans-serif;
 		@include font-size(4);
 		font-weight: bold;
-		margin: 0 0 0 3.5rem;
+		margin: 0 0 0 2.75em;
 
 		@include breakpoint($tp-wide) {
 			@include font-size(2);
