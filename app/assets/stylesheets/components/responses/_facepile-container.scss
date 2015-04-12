@@ -2,16 +2,20 @@
 	margin-bottom: $spacing-3;
 
 	@include breakpoint($bp-narrow) {
-		&:not(:last-child) {
-			float: left;
-			padding-right: $spacing-2;
-			width: 50%;
-		}
+		float: left;
+		padding-right: $spacing-2;
+		width: 50%;
 
 		& + & {
 			float: right;
 			padding-left: $spacing-2;
 			width: 50%;
+		}
+
+		&:first-of-type:last-of-type {
+			float: none;
+			padding: 0;
+			width: auto;
 		}
 	}
 
