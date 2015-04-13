@@ -57,7 +57,7 @@ If, like me, you want to make available the same code to both registries, using 
 
 My workflow looks a little bit like this:
 
-1. `git commit -am "Fix some bugs."
+1. `git commit -am "Fix some bugs."`
 1. Update the `version` string in `package.json` and `bower.json` by hand to `1.0.1`.
 1. `npm run build`
 1. `git commit -am "Bump version to 1.0.1 and run build script."`
