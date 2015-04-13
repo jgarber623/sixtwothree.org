@@ -4,6 +4,8 @@ copies:
     url: https://www.facebook.com/jgarber623/posts/10152704510232343
   - title: Twitter
     url: https://twitter.com/jgarber/status/587610305498324993
+  - title: Viget Extend
+    url: http://viget.com/extend/an-update-on-updating-npm-and-bower-packages
 date: 2015-04-13 09:32:18 -0400
 excerpt: Turns out I got a couple things less-than-correct in my last post on npm and Bower. This post is a more accurate process for updating packages for each registry.
 tags: bower development javascript npm
