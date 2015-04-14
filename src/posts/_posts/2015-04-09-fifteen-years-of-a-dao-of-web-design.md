@@ -2,6 +2,8 @@
 copies:
   - title: Facebook
     url: https://www.facebook.com/jgarber623/posts/10152696478427343
+  - title: Medium
+    url: https://medium.com/@jgarber/fifteen-years-of-a-dao-of-web-design-df2a7e2b770
   - title: Twitter
     url: https://twitter.com/jgarber/status/586162860490936321
 date: 2015-04-09 09:40:59 -0400
