@@ -32,14 +32,14 @@
 
 				var isHidden = window.matchMedia('(min-width: 50em)').matches;
 
-				this.$button.setAttribute('aria-hidden', isHidden);
+				this.$button[isHidden ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
 				this.toggle(isHidden);
 			}.bind(this), 100);
 		},
 
 		toggle: function(value) {
 			this.$button.setAttribute('aria-expanded', value);
-			this.$list.setAttribute('aria-hidden', !value);
+			this.$list[!value ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
 		}
 	};
 
