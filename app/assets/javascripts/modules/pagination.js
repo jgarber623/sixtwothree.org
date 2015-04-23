@@ -1,7 +1,5 @@
-;(function(root, factory) {
-	root.Pagination = factory();
-}(this, function() {
-	var Pagination = function($el) {
+;(function() {
+	var Pagination = window.Pagination = function($el) {
 		this.$el = $el;
 	};
 
@@ -37,6 +35,4 @@
 			}
 		}
 	};
-
-	return Pagination;
-}));
+}());

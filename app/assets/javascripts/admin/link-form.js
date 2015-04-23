@@ -1,7 +1,5 @@
-;(function(root, factory) {
-	root.LinkForm = factory();
-}(this, function() {
-	var LinkForm = function($el) {
+;(function() {
+	var LinkForm = window.LinkForm = function($el) {
 		this.$el = $el;
 	};
 
@@ -48,6 +46,4 @@
 			}
 		}
 	};
-
-	return LinkForm;
-}));
+}());

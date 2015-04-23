@@ -1,7 +1,5 @@
-;(function(root, factory) {
-	root.DeleteForm = factory();
-}(this, function() {
-	var DeleteForm = function($el) {
+;(function() {
+	var DeleteForm = window.DeleteForm = function($el) {
 		this.$el = $el;
 	};
 
@@ -16,6 +14,4 @@
 			}
 		}
 	};
-
-	return DeleteForm;
-}));
+}());

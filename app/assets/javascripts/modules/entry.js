@@ -1,7 +1,5 @@
-;(function(root, factory) {
-	root.Entry = factory();
-}(this, function() {
-	var Entry = function($el) {
+;(function() {
+	var Entry = window.Entry = function($el) {
 		this.$el = $el;
 	};
 
@@ -15,6 +13,4 @@
 			$title.parentNode.insertBefore($shim, $title);
 		}
 	};
-
-	return Entry;
-}));
+}());

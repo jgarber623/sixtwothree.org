@@ -1,7 +1,5 @@
-;(function(root, factory) {
-	root.SyndicationForm = factory();
-}(this, function() {
-	var SyndicationForm = function($el) {
+;(function() {
+	var SyndicationForm = window.SyndicationForm = function($el) {
 		this.$el = $el;
 	};
 
@@ -23,6 +21,4 @@
 			}
 		}
 	};
-
-	return SyndicationForm;
-}));
+}());

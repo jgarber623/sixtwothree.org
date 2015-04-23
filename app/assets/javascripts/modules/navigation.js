@@ -1,7 +1,5 @@
-;(function(root, factory) {
-	root.Navigation = factory();
-}(this, function() {
-	var Navigation = function($el) {
+;(function() {
+	var Navigation = window.Navigation = function($el) {
 		this.$el = $el;
 	};
 
@@ -42,6 +40,4 @@
 			this.$list[!value ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
 		}
 	};
-
-	return Navigation;
-}));
+}());

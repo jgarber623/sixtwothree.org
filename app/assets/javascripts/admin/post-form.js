@@ -1,7 +1,5 @@
-;(function(root, factory) {
-	root.PostForm = factory();
-}(this, function() {
-	var PostForm = function($el) {
+;(function() {
+	var PostForm = window.PostForm = function($el) {
 		this.$el = $el;
 	};
 
@@ -25,6 +23,4 @@
 			}.bind(this), 500);
 		}
 	};
-
-	return PostForm;
-}));
+}());
