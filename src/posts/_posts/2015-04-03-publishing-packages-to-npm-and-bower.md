@@ -75,7 +75,7 @@ I signed up for an npm account [via the website](https://www.npmjs.com/signup) a
 //registry.npmjs.org/:username = "yourusername"
 ```
 
-With your npm user set, all that's left is to publish your package by running `npm package`. You should see some output confirming that your package was published if everything is in order. If you encounter an error, go through the output and correct any mistakes.
+With your npm user set, all that's left is to publish your package by running `npm publish`. You should see some output confirming that your package was published if everything is in order. If you encounter an error, go through the output and correct any mistakes.
 
 For more on publishing to npm, check out [the docs](https://docs.npmjs.com/getting-started/publishing-npm-packages). [The package.json spec](https://docs.npmjs.com/files/package.json) is also worth a look if you want to provide additional information along with your package.
 
