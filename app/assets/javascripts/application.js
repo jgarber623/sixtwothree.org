@@ -25,7 +25,8 @@
 	};
 
 	// Enhance global navigation…
-	new Navigation(document.querySelector('.global-navigation')).init();
+	// new Navigation(document.querySelector('.global-navigation')).init();
+	new Navigation(document.querySelector('.global-navigation-control')).init();
 
 	// Enhance `/links` and `/posts` pages…
 	Router.route(/(?:links|posts)\/?([A-Za-z0-9\-]+)?$/, function() {

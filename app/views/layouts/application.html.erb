@@ -65,10 +65,10 @@
 		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
 
 		<nav class="global-navigation" role="navigation">
-			<%= link_to '#navigation', aria: { controls: 'navigation', expanded: false, hidden: true }, class: 'global-navigation-toggle' do %>
+			<button aria-controls="navigation" aria-expanded="false" aria-hidden class="global-navigation-control">
 				<svg><use xlink:href="#icon-menu" /></svg>
 				Menu
-			<% end %>
+			</button>
 
 			<ul id="navigation">
 				<li><%= link_to 'Posts', francis_cms.posts_path %></li>
