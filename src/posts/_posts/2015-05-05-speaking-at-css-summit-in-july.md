@@ -1,7 +1,7 @@
 ---
 date: 2015-05-05 10:25:45 -0400
 excerpt: This July 7th, I’ll be speaking at the seventh annual CSS Summit.
-tags: csssummit event speaking
+tags: csssummit event progressiveenhancement speaking
 title: Speaking at CSS Summit in July
 ---
 
