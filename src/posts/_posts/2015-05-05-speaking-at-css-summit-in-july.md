@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152749028302343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/595596297522040832
 date: 2015-05-05 10:25:45 -0400
 excerpt: This July 7th, I’ll be speaking at the seventh annual CSS Summit.
 tags: csssummit event progressiveenhancement speaking
