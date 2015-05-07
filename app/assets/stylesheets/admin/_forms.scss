@@ -44,6 +44,35 @@
 		li {
 			margin-bottom: $spacing-1;
 		}
+
+		a {
+			@include color($red);
+			font-weight: bold;
+
+			&:focus,
+			&:hover {
+				@include color($red, dark);
+			}
+		}
+	}
+
+	.field_with_errors {
+		label {
+			@include color($red);
+			font-weight: bold;
+		}
+
+		.hint {
+			font-weight: normal;
+		}
+
+		input,
+		textarea {
+			&,
+			&:focus {
+				@include border-color($red);
+			}
+		}
 	}
 
 /* @end */
