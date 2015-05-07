@@ -126,6 +126,10 @@ body {
 		cursor: pointer;
 		display: block;
 		margin-bottom: $spacing-1;
+
+		abbr[title] {
+			border: 0;
+		}
 	}
 
 	input[type="text"],

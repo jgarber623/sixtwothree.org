@@ -1,0 +1,6 @@
+.highlight {
+	@include bg-color($yellow);
+	display: inline-block;
+	@include margin-xn(1);
+	padding: $spacing-1;
+}
