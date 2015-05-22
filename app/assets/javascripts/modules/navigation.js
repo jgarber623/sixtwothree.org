@@ -24,14 +24,10 @@
 		},
 
 		handleResize: function(event) {
-			var t = setTimeout(function() {
-				clearTimeout(t);
+			var isHidden = window.matchMedia('(min-width: 50em)').matches;
 
-				var isHidden = window.matchMedia('(min-width: 50em)').matches;
-
-				this.$control[isHidden ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
-				this.toggle(isHidden);
-			}.bind(this), 100);
+			this.$control[isHidden ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
+			this.toggle(isHidden);
 		},
 
 		toggle: function(value) {
