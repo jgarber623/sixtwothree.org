@@ -183,9 +183,9 @@ DEPENDENCIES
   francis_cms!
   pry
   rails (= 4.2.1)
-  rails-assets-html5shiv
-  rails-assets-normalize-css
-  rails-assets-respond
-  rails-assets-routerrouter
+  rails-assets-html5shiv!
+  rails-assets-normalize-css!
+  rails-assets-respond!
+  rails-assets-routerrouter!
   sass-rails (~> 5.0.0)
   uglifier
