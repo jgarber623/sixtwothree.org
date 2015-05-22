@@ -8,6 +8,10 @@
 	box-sizing: inherit;
 }
 
+[aria-hidden] {
+	display: none !important;
+}
+
 [tabindex="-1"]:focus {
 	outline: none;
 }
