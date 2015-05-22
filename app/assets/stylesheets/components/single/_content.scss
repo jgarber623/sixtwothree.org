@@ -84,7 +84,7 @@
 	code {
 		background-color: $darken-1;
 		display: inline-block;
-		@include font-size(6);
+		font-size: 0.8em;
 		padding: $spacing-1;
 	}
 
@@ -94,6 +94,7 @@
 
 		code {
 			background-color: transparent;
+			@include font-size(5);
 			padding: 0;
 		}
 	}
