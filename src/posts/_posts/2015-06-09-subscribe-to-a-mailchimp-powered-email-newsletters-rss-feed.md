@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152828341362343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/608427335696691200
 date: 2015-06-09 20:06:47 -0400
 excerpt: It’s 2015 and Web designers are spinning up email newsletters left and right. What’s an RSS reader to do?
 tags: email feeds mailchimp newsletter
