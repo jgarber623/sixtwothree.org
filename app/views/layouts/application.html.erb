@@ -20,9 +20,9 @@
 	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
 
 	<%- if include_full_css? -%>
-		<link rel="stylesheet" href="<%= asset_path 'application.css' %>">
+		<%= stylesheet_link_tag 'application.css' %>
 		<%- if logged_in? -%>
-			<link rel="stylesheet" href="<%= asset_path 'admin.css' %>">
+			<%= stylesheet_link_tag 'admin.css' %>
 		<%- end -%>
 	<%- else -%>
 		<style>
@@ -44,9 +44,9 @@
 		</script>
 
 		<noscript>
-			<link rel="stylesheet" href="<%= asset_path 'application.css' %>">
+			<%= stylesheet_link_tag 'application.css' %>
 			<%- if logged_in? -%>
-				<link rel="stylesheet" href="<%= asset_path 'admin.css' %>">
+				<%= stylesheet_link_tag 'admin.css' %>
 			<%- end -%>
 		</noscript>
 	<%- end -%>
