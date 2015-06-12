@@ -4,6 +4,6 @@ module ActionView::Helpers::TagHelper
   end
 
   def boolean_tag_option(key)
-    %(#{key})
+    key
   end
 end
