@@ -12,9 +12,10 @@
 	<meta name="twitter:site" content="@jgarber">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="alternate" href="<%= francis_cms.links_path(format: :rss) %>" title="<%= francis_cms_config.site_title %>: Links" type="application/rss+xml">
-	<link rel="alternate" href="<%= francis_cms.posts_path(format: :rss) %>" title="<%= francis_cms_config.site_title %>: Posts" type="application/rss+xml">
-	<link rel="alternate" href="<%= francis_cms.webmentions_path(format: :rss) %>" title="<%= francis_cms_config.site_title %>: Webmentions" type="application/rss+xml">
+	<%= auto_discovery_link_tag :rss, francis_cms.links_path(format: :rss), title: %{#{francis_cms_config.site_title}: Links} %>
+	<%= auto_discovery_link_tag :rss, francis_cms.posts_path(format: :rss), title: %{#{francis_cms_config.site_title}: Posts} %>
+	<%= auto_discovery_link_tag :rss, francis_cms.webmentions_path(format: :rss), title: %{#{francis_cms_config.site_title}: Webmentions} %>
+
 	<link rel="apple-touch-icon" href="<%= asset_path francis_cms_config.user_avatar %>">
 	<link rel="shortcut icon" href="<%= asset_path francis_cms_config.user_avatar %>">
 	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
