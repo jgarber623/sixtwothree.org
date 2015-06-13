@@ -28,7 +28,7 @@
 	new Navigation(document.querySelector('.global-navigation-control')).init();
 
 	// Enhance `/links` and `/posts` pages…
-	Router.route(/(?:links|posts)\/?([A-Za-z0-9\-]+)?$/, function() {
+	Router.route(/(?:links|posts)(?:\/archives)?\/?(?:[A-Za-z0-9\-]+)?$/, function() {
 		entries();
 		pagination();
 	});

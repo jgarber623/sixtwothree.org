@@ -1,6 +1,5 @@
 .highlight {
 	@include bg-color($yellow);
-	display: inline-block;
-	@include margin-xn(1);
-	padding: $spacing-1;
+	@include margin-y(4);
+	padding: $spacing-2;
 }
