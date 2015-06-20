@@ -18,7 +18,7 @@
 		blur: function(event) {
 			var val = this.$url.value;
 
-			if (/^https?:\/\//.test(val)) {
+			if (/^https?:\/\//.test(val) && !this.$title.value) {
 				var authParamName = 'authenticity_token',
 					params = 'url=' + val + '&' +
 					authParamName + '=' + encodeURIComponent(this.$el.querySelector('[name=' + authParamName + ']').value);
