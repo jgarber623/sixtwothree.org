@@ -1,4 +1,7 @@
 ---
+copies:
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/615655458028847104
 date: 2015-06-29 18:43:00 -0400
 excerpt: Should we rebrand progressive enhancement? Betteridge’s Law of Headlines would suggest not.
 tags: progressiveenhancement
