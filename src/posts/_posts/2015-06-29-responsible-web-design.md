@@ -26,7 +26,7 @@ Tim also writes:
 
 > I'm not sure what we call it now. Maybe we do need another term to get people to move away from the "progressive enhancement = working without JS" baggage that distracts from the real goal.
 
-I _completely_ disagree that we should change nomenclature because there exists some small segment of Web designers unwilling to expand their development toolbox. I think progressive enhancement—the term—remains useful, descriptive, and appropriate. But, _okay fine_, if the desire then is to ditch the term and shed whatever baggage it may have accumulated over the years, then I have a proposal.
+I _completely_ disagree that we should change nomenclature because there exists some small segment of Web designers unwilling to expand their development toolbox. I think progressive enhancement—the term—remains useful, descriptive, and appropriate. But, _okay fine_, if the desire is to ditch the term and shed whatever baggage it may have accumulated over the years, then I have a proposal.
 
 Let's call progressive enhancement what it truly is: Responsible Web Design.
 
