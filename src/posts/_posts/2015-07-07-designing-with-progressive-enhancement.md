@@ -12,6 +12,8 @@ title: Designing with Progressive Enhancement
 
 The following is the text (and links!) from my presentation at the seventh annual [CSS Summit](http://csssummit.com/), delivered Tuesday morning, July 7th, 2015. [Slides from this talk](https://speakerdeck.com/jgarber/designing-with-progressive-enhancement) are also available.
 
+I'd like to thank [Jeremy Carbaugh](http://jcarbaugh.com/), [Veronica Erb](http://veronicaerb.com/), [Aaron Gustafson](http://www.aaron-gustafson.com/), and [Tony Pitale](http://tpitale.com/) for reviewing early versions of this presentation.
+
 ---
 
 Good morning!
