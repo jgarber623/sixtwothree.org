@@ -10,7 +10,7 @@ tags: csssummit event progressiveenhancement
 title: Designing with Progressive Enhancement
 ---
 
-The following is the text (and links!) from my presentation at the seventh annual [CSS Summit](http://csssummit.com/), delivered Tuesday morning, July 7th, 2015.
+The following is the text (and links!) from my presentation at the seventh annual [CSS Summit](http://csssummit.com/), delivered Tuesday morning, July 7th, 2015. [Slides from this talk](https://speakerdeck.com/jgarber/designing-with-progressive-enhancement) are also available.
 
 ---
 
