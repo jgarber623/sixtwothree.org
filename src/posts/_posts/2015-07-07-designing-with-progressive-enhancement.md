@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152880106482343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/618432779852881920
 date: 2015-07-07 10:47:07 -0400
 excerpt: Text and links from my presentation at the seventh annual CSS Summit.
 tags: csssummit event progressiveenhancement
@@ -45,7 +50,7 @@ While it was common practice throughout the industry, graceful degradation had i
 
 ### South by Southwest 2003
 
-Way back in March of 2003, at a then-tiny conference in Austin, Texas, [Steve Champeon](http://hesketh.com/) delivered a presentation titled "[Inclusive Web Design for the Future](http://hesketh.com/publications/inclusive_web_design_for_the_future/)." 
+Way back in March of 2003, at a then-tiny conference in Austin, Texas, [Steve Champeon](http://hesketh.com/) delivered a presentation titled "[Inclusive Web Design for the Future](http://hesketh.com/publications/inclusive_web_design_for_the_future/)."
 
 In his presentation, Steve threw the gauntlet squarely at the feet of Web designers, declaring:
 
@@ -111,7 +116,7 @@ The question then is: Does this notion of progressive enhancement, as originally
 
 I contend that, yes, this approach makes more sense now than ever before!
 
-How we think and talk about this approach has evolved dramatically, though. 
+How we think and talk about this approach has evolved dramatically, though.
 
 Over the last twelve years, the conversation around progressive enhancement shifted and lost focus as the term itself became too closely associated with a singular technology: JavaScript. Rather than referring to a broader, layered approach to building websites, "progressive enhancement" became tantamount to "dealing with users who have JavaScript turned off."
 
@@ -226,7 +231,7 @@ For example, here we have a very basic structure for a blog post:
     <div class="blog-post-header">
         <h1>My Sweet Blog Post</h1>
     </div>
-    
+
     <p>…</p>
 </div>
 ```
@@ -238,7 +243,7 @@ With some small changes, we can provide additional semantics to newer browsers a
     <header class="blog-post-header">
         <h1>My Sweet Blog Post</h1>
     </header>
-    
+
     <p>…</p>
 </article>
 ```
@@ -306,7 +311,7 @@ Implementing microformats is a cinch, too. Let's use the blog post markup exampl
     <header class="blog-post-header">
         <h1>My Sweet Blog Post</h1>
     </header>
-    
+
     <p>…</p>
 </article>
 ```
@@ -318,7 +323,7 @@ There's an established microformat for marking up blog posts known as [h-entry](
     <header class="blog-post-header">
         <h1 class="p-name">My Sweet Blog Post</h1>
     </header>
-    
+
     <div class="e-content">
         <p>…</p>
     </div>
@@ -434,9 +439,9 @@ The [`<datalist>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Ele
 ```html
 <label for="state" id="state-label">State</label>
 <datalist id="states">
-    <option value="Alabama">Alabama</option> 
-    <option value="Alaska">Alaska</option> 
-    <option value="Arizona">Arizona</option> 
+    <option value="Alabama">Alabama</option>
+    <option value="Alaska">Alaska</option>
+    <option value="Arizona">Arizona</option>
     <option value="Arkansas">Arkansas</option>
 </datalist>
 <input type="text" id="state" name="state" list="states">
@@ -450,9 +455,9 @@ Jeremy took his demo a step further, wrapping those `<option>` elements in a `<s
 <label for="state" id="state-label">State</label>
 <datalist id="states">
     <select>
-        <option value="Alabama">Alabama</option> 
-        <option value="Alaska">Alaska</option> 
-        <option value="Arizona">Arizona</option> 
+        <option value="Alabama">Alabama</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Arizona">Arizona</option>
         <option value="Arkansas">Arkansas</option>
     </select>
 </datalist>
@@ -470,9 +475,9 @@ Jumping ahead, the completed example's markup looks like:
     <label for="state" id="state-label">State</label>
     <datalist id="states">
         <select name="state" id="state-select" aria-labelledby="state-label">
-            <option value="Alabama">Alabama</option> 
-            <option value="Alaska">Alaska</option> 
-            <option value="Arizona">Arizona</option> 
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
             <option value="Arkansas">Arkansas</option>
         </select>
 
@@ -492,7 +497,7 @@ A little bit of JavaScript solved the problem:
 if (!('list' in document.createElement('input'))) {
     var stateLabel = document.getElementById('state-label'),
         otherLabel = document.getElementById('other-label');
-    
+
     stateLabel.setAttribute('for', 'state-select');
     otherLabel.innerHTML = '<label for="state">' + otherLabel.innerText + '</label>';
 }
