@@ -2,6 +2,8 @@
 copies:
   - title: Facebook
     url: https://www.facebook.com/jgarber623/posts/10152880106482343
+  - title: Medium
+    url: https://medium.com/@jgarber/designing-with-progressive-enhancement-d58b8d3f4bab
   - title: Twitter
     url: https://twitter.com/jgarber/status/618432779852881920
 date: 2015-07-07 10:47:07 -0400
