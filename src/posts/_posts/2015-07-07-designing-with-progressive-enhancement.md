@@ -44,7 +44,7 @@ While alternatives to Internet Explorer were available, for all intents and purp
 
 ### The Participatory Web
 
-The Web at this time was also on the cusp of its second boom cycle—later dubbed "[Web 2.0](https://en.wikipedia.org/wiki/Web_2.0)"—which would blow the Web's doors wide open, inviting everyone to participate online via easy-to-use blogging services and new social networks. Looking at raw numbers, in 2003, [upwards of 700 million people](http://www.internetworldstats.com/emarketing.htm)—roughly 10% of the world's population—were online. An additional hundred million would come online by the end of the following year.
+The Web at this time was also on the cusp of its second boom cycle—later dubbed [Web 2.0](https://en.wikipedia.org/wiki/Web_2.0)—which would blow the Web's doors wide open, inviting everyone to participate online via easy-to-use blogging services and new social networks. Looking at raw numbers, in 2003, [upwards of 700 million people](http://www.internetworldstats.com/emarketing.htm)—roughly 10% of the world's population—were online. An additional hundred million would come online by the end of the following year.
 
 ### Graceful Degradation
 
