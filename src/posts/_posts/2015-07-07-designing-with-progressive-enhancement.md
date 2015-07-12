@@ -214,7 +214,7 @@ Nowhere have we said that, if you build a progressively-enhanced website, you ca
 
 A colleague of mine recently declared: "In 2015, I don’t think JavaScript is an enhancement—it's the baseline."
 
-I reject that notion, though. Based on everything we've looked at so far—devices, browsers, networks, contexts—I can't in good conscience accept a statement like that. Particularly when building progressively-enhanced websites—and yes, even "web apps"—is perfectly achievable with a little bit of planning, know-how, and elbow grease.
+I reject that notion, though. Based on everything we've looked at so far—devices, browsers, networks, contexts—I can't in good conscience accept a statement like that. Particularly when building progressively-enhanced websites—and yes, even _web apps_—is perfectly achievable with a little bit of planning, know-how, and elbow grease.
 
 ## Applying Progressive Enhancement
 
