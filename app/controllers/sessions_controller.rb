@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     rescue Mechanize::ResponseCodeError
     end
 
-    redirect_to session[:previous_path] || root_path
+    redirect_to session[:redirect_to] || root_path
   end
 
   def destroy
