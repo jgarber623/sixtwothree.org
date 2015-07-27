@@ -2,6 +2,7 @@
 	background-color: #262626;
 	@include padding-x(2);
 	@include padding-y;
+	position: relative;
 
 	@include breakpoint($bp-wide) {
 		@include table;

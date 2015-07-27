@@ -62,6 +62,14 @@
 
 	<%= link_to 'Skip to main content', '#main', class: 'skip-link' %>
 
+	<%- if flash.any? -%>
+		<div class="messages" role="alert">
+			<%- flash.each do |name, msg| -%>
+				<p class="<%= name %>"><%= msg %></p>
+			<%- end -%>
+		</div>
+	<%- end -%>
+
 	<header class="global-header" role="banner">
 		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
 

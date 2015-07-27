@@ -18,16 +18,16 @@ class SessionsController < ApplicationController
     rescue Mechanize::ResponseCodeError
     end
 
-    redirect_to session[:redirect_to] || root_path
+    redirect_to (session[:redirect_to] || root_path), notice: 'Welcome back! You look nice today.'
   end
 
   def destroy
     reset_session
 
-    redirect_to root_path
+    redirect_to root_path, notice: 'You’ve successfully logged out. See you again soon!'
   end
 
   def new
-    redirect_to root_path if logged_in?
+    redirect_to root_path, notice: 'You’re already logged in, boss!' if logged_in?
   end
 end

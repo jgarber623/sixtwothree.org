@@ -1,0 +1,17 @@
+.messages {
+	p {
+		color: #fff;
+		margin: 0;
+		padding: $spacing-2;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.alert {
+		@include bg-color($red);
+	}
+
+	.notice {
+		@include bg-color($green);
+	}
+}
