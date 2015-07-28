@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152923415682343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/626049286942425088
 date: 2015-07-28 11:14:32 -0400
 excerpt: Revisiting that old yarn about the Internet and forgetting.
 tags: blogging mixx preserveration
