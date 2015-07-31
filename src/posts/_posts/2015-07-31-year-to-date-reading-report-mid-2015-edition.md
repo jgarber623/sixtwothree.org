@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152928605602343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/627111669077016576
 date: 2015-07-31 09:39:08 -0400
 excerpt: I’ve been reading a lot more this year. This is a good thing.
 tags: books personal
