@@ -26,9 +26,21 @@
   class: github
   url: https://github.com/jgarber623
 
+- name: Goodreads
+  class: goodreads
+  url: https://www.goodreads.com/jgarber623
+
+- name: Huffduffer
+  class: huffduffer
+  url: https://huffduffer.com/jgarber
+
 - name: Instagram
   class: instagram
   url: http://instagram.com/jgarber
+
+- name: Instapaper
+  class: instapaper
+  url: https://www.instapaper.com/p/jgarber
 
 - name: Keybase
   class: keybase
@@ -46,13 +58,17 @@
   class: letterboxd
   url: http://letterboxd.com/jgarber
 
+- name: Medium
+  class: medium
+  url: https://medium.com/@jgarber
+
+- name: npm
+  class: npm
+  url: https://www.npmjs.com/~jgarber
+
 - name: PhotoDrop
   class: photodrop
   url: http://photodrop.in/jgarber
-
-- name: Pinterest
-  class: pinterest
-  url: http://pinterest.com/jgarber623
 
 - name: Polar
   class: polar
@@ -62,6 +78,10 @@
   class: rdio
   url: http://www.rdio.com/people/jgarber
 
+- name: Speaker Deck
+  class: speakerdeck
+  url: https://speakerdeck.com/jgarber
+
 - name: Twitter
   class: twitter
   url: https://twitter.com/jgarber
@@ -70,10 +90,10 @@
   class: vimeo
   url: https://vimeo.com/jgarber
 
+- name: Untappd
+  class: untappd
+  url: https://untappd.com/user/jgarber
+
 - name: VSCO Grid
   class: vsco
   url: http://jgarber.vsco.co/
-
-- name: YouTube
-  class: youtube
-  url: http://www.youtube.com/user/jgarber623
