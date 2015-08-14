@@ -15,4 +15,4 @@
 config/database.yml
 config/secrets.yml
 
-public/system
+public/uploads
