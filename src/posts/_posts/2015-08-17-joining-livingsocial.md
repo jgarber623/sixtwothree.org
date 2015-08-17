@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10152963265707343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/633365381185445888
 date: 2015-08-17 15:47:26 -0400
 excerpt: I’m pleased to announce that, next month, I’ll be joining the fine team at LivingSocial.
 tags: livingsocial work
