@@ -3,11 +3,6 @@
   description: just-for-fun survey built for World Wildlife Fund
   date: 2013-12-16
 
-- title: PhotoDrop
-  url: http://photodrop.in/
-  description: 'Dropbox-powered photo-sharing website created with <a href="http://tpitale.com/">Tony Pitale</a> and <a href="http://viget.com/about/team/mtran">Minh Tran</a> for the <a href="http://railsrumble.com/">2012 Rails Rumble</a>'
-  date: 2012-11-30
-
 - title: Foundation HTML5 with CSS3
   url: http://www.amazon.com/dp/1430238763/?tag=sixtwothree-20
   description: 'co-authored with <a href="http://www.focalcurve.com/">Craig Cook</a>, published by <a href="http://www.apress.com/">Apress</a>'

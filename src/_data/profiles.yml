@@ -66,10 +66,6 @@
   class: npm
   url: https://www.npmjs.com/~jgarber
 
-- name: PhotoDrop
-  class: photodrop
-  url: http://photodrop.in/jgarber
-
 - name: Polar
   class: polar
   url: http://polarb.com/users/jgarber
