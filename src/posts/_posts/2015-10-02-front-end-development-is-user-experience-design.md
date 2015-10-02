@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10153048402847343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/649957126987771904
 date: 2015-10-02 10:29:37 -0400
 excerpt: It may not be in your title, but it’s definitely part of your job.
 tags: design development ux
