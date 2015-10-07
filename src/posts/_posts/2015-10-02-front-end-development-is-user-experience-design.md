@@ -2,6 +2,8 @@
 copies:
   - title: Facebook
     url: https://www.facebook.com/jgarber623/posts/10153048402847343
+  - title: LivingSocial UX Blog
+    url: http://ux.livingsocial.com/2015/10/front-end-development-is-user-experience-design/
   - title: Twitter
     url: https://twitter.com/jgarber/status/649957126987771904
 date: 2015-10-02 10:29:37 -0400
