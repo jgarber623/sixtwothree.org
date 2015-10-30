@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150810233720) do
+ActiveRecord::Schema.define(version: 20151030160826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20150810233720) do
     t.text     "author_photo_url"
     t.text     "author_url"
     t.datetime "published_at"
+    t.text     "author_avatar"
   end
 
   create_table "francis_cms_webmentions", force: :cascade do |t|
