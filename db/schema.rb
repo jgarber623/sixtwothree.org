@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 20150810233720) do
     t.text     "author_photo_url"
     t.text     "author_url"
     t.datetime "published_at"
-    t.string   "author_avatar_uid"
   end
 
   create_table "francis_cms_webmentions", force: :cascade do |t|
