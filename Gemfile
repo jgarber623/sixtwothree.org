@@ -8,9 +8,11 @@ source 'https://rubygems.org' do
   # Assets
   gem 'breakpoint', '~> 2.5.0'
   gem 'sass-rails', '~> 5.0.0'
+  gem 'svgeez', path: '~/Projects/svgeez'
   gem 'uglifier'
 
   group :development do
+    gem 'foreman'
     gem 'pry'
     gem 'quiet_assets'
   end
