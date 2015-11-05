@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10153095752552343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/662266753267953665
 date: 2015-11-05 08:40:13 -0500
 excerpt: Take some of the pain out of managing SVG icon sprites with this little Ruby gem.
 tags: development ruby svg
