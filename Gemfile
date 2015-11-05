@@ -13,8 +13,8 @@ source 'https://rubygems.org' do
   group :development do
     gem 'foreman'
     gem 'pry'
-    gem 'svgeez'
     gem 'quiet_assets'
+    gem 'svgeez'
   end
 end
 
