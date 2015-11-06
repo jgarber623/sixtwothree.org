@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10153097674592343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/662747353594634240
 date: 2015-11-06 16:37:37 -0500
 excerpt: How to get clean URLs with nginx and Jekyll.
 tags: development jekyll nginx
