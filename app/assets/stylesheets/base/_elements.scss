@@ -23,8 +23,12 @@ html {
 
 body {
 	@include color($grey, darker);
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: sans-serif;
 	line-height: 1.4;
+
+	@include breakpoint($tp-medium) {
+		font-family: "Source Sans Pro", sans-serif;
+	}
 }
 
 /* @group Links */
@@ -49,10 +53,13 @@ body {
 	h4,
 	h5,
 	h6 {
-		font-family: "Open Sans", sans-serif;
 		line-height: 1.25;
 		margin-bottom: 0.5em;
 		margin-top: 1em;
+
+		@include breakpoint($tp-medium) {
+			font-family: "Open Sans", sans-serif;
+		}
 	}
 
 	@for $i from 1 through 6 {
