@@ -42,10 +42,6 @@
   class: instapaper
   url: https://www.instapaper.com/p/jgarber
 
-- name: Keybase
-  class: keybase
-  url: https://keybase.io/jgarber
-
 - name: Kickstarter
   class: kickstarter
   url: http://www.kickstarter.com/profile/jgarber
