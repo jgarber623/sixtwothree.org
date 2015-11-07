@@ -85,7 +85,7 @@
 		background-color: $darken-1;
 		display: inline-block;
 		font-size: 0.8em;
-		padding: $spacing-1;
+		padding: ($spacing-1 / 2) $spacing-1;
 	}
 
 	pre {
