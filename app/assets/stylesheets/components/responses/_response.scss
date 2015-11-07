@@ -41,4 +41,8 @@
 	.permalink {
 		@extend %anchor--grey;
 	}
+
+	time {
+		white-space: nowrap;
+	}
 }
