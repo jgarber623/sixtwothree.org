@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10153107508262343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/665245405077180416
 date: 2015-11-13 14:08:02 -0500
 excerpt: Demonstrating a useful technique for providing fallback content to browsers lacking support for inline SVGs.
 tags: development png progressiveenhancement svg
