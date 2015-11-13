@@ -14,11 +14,11 @@
 	}
 
 	&.facebook-com:after {
-		background-color: #3b5998;
+		@include bg-color($profiles, facebook);
 	}
 
 	&.twitter-com:after {
-		background-color: #4099ff;
+		@include bg-color($profiles, twitter);
 	}
 
 	img {

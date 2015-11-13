@@ -21,6 +21,19 @@
 		padding: $spacing-1 $spacing-2;
 	}
 
+	.photo-form img {
+		border: 0.25em solid $darken-1;
+		padding: 0.25em;
+
+		@include breakpoint($bp-narrow) {
+			width: 75%;
+		}
+
+		@include breakpoint($tp-medium) {
+			width: 50%;
+		}
+	}
+
 /* @end */
 
 /* @group Form errors */

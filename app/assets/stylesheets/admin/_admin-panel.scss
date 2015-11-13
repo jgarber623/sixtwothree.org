@@ -2,7 +2,7 @@
 	@extend %clearfix;
 	padding: $spacing-2 $spacing-1;
 
-	@include breakpoint($bp-narrow) {
+	@include breakpoint($tp-medium) {
 		bottom: 0;
 		left: 0;
 		position: fixed;
@@ -16,19 +16,26 @@
 		+ menu {
 			margin-top: $spacing-2;
 
-			@include breakpoint($bp-narrow) {
+			@include breakpoint($tp-medium) {
 				margin-top: 0;
 			}
 		}
 
 		li {
-			float: left;
-			@include margin-x(1);
+			@include margin-y(1);
+
+			@include breakpoint($bp-narrow) {
+				float: left;
+				margin: 0 $spacing-1;
+			}
 		}
 
 		a,
 		button {
 			box-shadow: 0 0 0 0.125em #fff;
+			display: block;
+			text-align: center;
+			width: 100%;
 		}
 
 		a {
@@ -45,7 +52,7 @@
 		}
 	}
 
-	@include breakpoint($bp-narrow) {
+	@include breakpoint($tp-medium) {
 		.local {
 			float: right;
 		}

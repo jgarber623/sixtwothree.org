@@ -5,12 +5,14 @@
 
 	Entry.prototype = {
 		init: function() {
-			var $shim = document.createElement('i'),
-				$title = this.$el.querySelector('.entry-title');
+			var $title = this.$el.querySelector('.entry-title');
 
-			$shim.innerHTML = '<svg><use xlink:href="#icons-' + this.$el.getAttribute('data-entry-type') + '"></svg>';
+			if ($title) {
+				var $shim = document.createElement('i');
 
-			$title.parentNode.insertBefore($shim, $title);
+				$shim.innerHTML = '<svg><use xlink:href="#icons-' + this.$el.getAttribute('data-entry-type') + '"></svg>';
+				$title.parentNode.insertBefore($shim, $title);
+			}
 		}
 	};
 }());

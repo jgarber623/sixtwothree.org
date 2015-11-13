@@ -60,6 +60,8 @@
 
 .entry-content,
 .entry-excerpt {
+	position: relative;
+
 	p {
 		margin-bottom: $spacing-2;
 	}
@@ -74,6 +76,18 @@
 		i {
 			font-style: normal;
 		}
+	}
+
+	img {
+		display: block;
+		border: 0.25em solid $darken-1;
+		margin-bottom: $spacing-2;
+		padding: 0.25em;
+	}
+
+	&:focus img,
+	&:hover img {
+		border-color: $darken-2;
 	}
 }
 

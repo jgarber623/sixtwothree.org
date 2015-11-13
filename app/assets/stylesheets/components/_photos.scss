@@ -1,0 +1,58 @@
+.photos {
+	@extend %clearfix;
+	@extend %reset-list;
+	margin-bottom: $spacing-3;
+
+	@include breakpoint($tp-ultra) {
+		@include margin-xn(5);
+	}
+
+	li {
+		margin-bottom: $spacing-3;
+
+		@include breakpoint($bp-narrow) {
+			float: left;
+			width: 50%;
+
+			&:nth-child(odd) {
+				clear: left;
+				padding-right: $spacing-2;
+			}
+
+			&:nth-child(even) {
+				padding-left: $spacing-2;
+			}
+		}
+
+		@include breakpoint($tp-ultra) {
+			width: 33.33333%;
+
+			&:nth-child(odd),
+			&:nth-child(even) {
+				clear: none;
+				padding: 0;
+			}
+
+			&:nth-child(3n) {
+				padding-left: $spacing-2;
+			}
+
+			&:nth-child(3n+1) {
+				clear: left;
+				padding-right: $spacing-2;
+			}
+
+			&:nth-child(3n+2) {
+				@include padding-x(1);
+			}
+		}
+	}
+
+	.entry-content {
+		position: relative;
+	}
+
+	img {
+		margin: 0;
+	}
+}

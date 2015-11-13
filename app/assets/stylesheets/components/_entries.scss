@@ -4,4 +4,14 @@
 	> li {
 		margin-bottom: $spacing-4;
 	}
+
+	img {
+		@include breakpoint($bp-narrow) {
+			width: 75%;
+		}
+
+		@include breakpoint($tp-medium) {
+			width: 50%;
+		}
+	}
 }

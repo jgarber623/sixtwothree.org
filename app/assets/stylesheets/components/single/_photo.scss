@@ -1,0 +1,7 @@
+.single-photo {
+	margin-bottom: $spacing-3;
+
+	+ p {
+		font-weight: bold;
+	}
+}
