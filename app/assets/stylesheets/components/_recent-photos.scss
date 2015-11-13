@@ -1,0 +1,30 @@
+.recent-photos {
+	height: calc(90vh + 1em);
+	margin-bottom: $spacing-1;
+	max-height: 21em;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	width: 100%;
+}
+
+.recent-photos-list {
+	display: table;
+	@extend %reset-list;
+	width: 100%;
+
+	li {
+		display: table-cell;
+		padding-right: $spacing-2;
+
+		&:last-child {
+			padding: 0;
+		}
+	}
+
+	img {
+		height: 90vh;
+		margin: 0;
+		max-height: 20em;
+		max-width: none;
+	}
+}

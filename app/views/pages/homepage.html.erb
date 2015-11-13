@@ -59,6 +59,24 @@
 		</section>
 	<%- end -%>
 
+	<%- if @photos.any? -%>
+		<section class="section h-feed">
+			<h1 class="p-name">Recent Photos</h1>
+
+			<div class="recent-photos">
+				<ol class="recent-photos-list" reversed>
+					<%- @photos.each do |photo| -%>
+						<li>
+							<%= render 'francis_cms/shared/photo_hentry', photo: photo, is_expanded: false %>
+						</li>
+					<%- end -%>
+				</ol>
+			</div>
+
+			<%= link_to 'See more photos →', francis_cms.photos_path %>
+		</section>
+	<%- end -%>
+
 	<section class="section">
 		<h1>Selected Works</h1>
 
