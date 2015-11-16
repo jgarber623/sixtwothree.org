@@ -2,6 +2,8 @@
 copies:
   - title: Facebook
     url: https://www.facebook.com/jgarber623/posts/10153107508262343
+  - title: LivingSocial Tech Blog
+    url: https://techblog.livingsocial.com/blog/2015/11/16/inline-svg-with-png-fallback/
   - title: Twitter
     url: https://twitter.com/jgarber/status/665245405077180416
 date: 2015-11-13 14:08:02 -0500
