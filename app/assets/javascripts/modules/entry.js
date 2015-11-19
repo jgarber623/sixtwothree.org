@@ -10,7 +10,7 @@
 			if ($title) {
 				var $shim = document.createElement('i');
 
-				$shim.innerHTML = '<svg><use xlink:href="#icons-' + this.$el.getAttribute('data-entry-type') + '"></svg>';
+				$shim.innerHTML = '<svg role="img" version="1.1"><use xlink:href="#icons-' + this.$el.getAttribute('data-entry-type') + '"></svg>';
 				$title.parentNode.insertBefore($shim, $title);
 			}
 		}
