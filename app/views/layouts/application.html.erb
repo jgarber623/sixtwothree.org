@@ -23,9 +23,7 @@
 
 	<%- if css_is_cached? -%>
 		<%= stylesheet_link_tag 'application.css' %>
-		<%- if logged_in? -%>
-			<%= stylesheet_link_tag 'admin.css' %>
-		<%- end -%>
+		<%= stylesheet_link_tag 'admin.css' if logged_in? %>
 	<%- else -%>
 		<style>
 			<%= raw assets.find_asset('critical.css') %>
@@ -38,18 +36,14 @@
 			}
 
 			loadCSS('<%= asset_path 'application.css' %>');
-			<%- if logged_in? -%>
-				loadCSS('<%= asset_path 'admin.css' %>');
-			<%- end -%>
+			<%= raw %{loadCSS('#{ asset_path 'admin.css' }');} if logged_in? %>
 
 			document.cookie='cssIsCached=true;expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>;path=/';
 		</script>
 
 		<noscript>
 			<%= stylesheet_link_tag 'application.css' %>
-			<%- if logged_in? -%>
-				<%= stylesheet_link_tag 'admin.css' %>
-			<%- end -%>
+			<%= stylesheet_link_tag 'admin.css' if logged_in? %>
 		</noscript>
 	<%- end -%>
 
@@ -123,10 +117,7 @@
 
 		if ('querySelector' in document && 'addEventListener' in window) {
 			loadJS('<%= asset_path 'application.js' %>');
-
-			<%- if logged_in? -%>
-				loadJS('<%= asset_path 'admin.js' %>');
-			<%- end -%>
+			<%= raw %{loadJS('#{ asset_path 'admin.js' }');} if logged_in? %>
 		}
 	</script>
 </body>
