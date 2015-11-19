@@ -21,7 +21,7 @@
 	<link rel="shortcut icon" href="<%= asset_path francis_cms_config.user_avatar %>">
 	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
 
-	<%- if include_full_css? -%>
+	<%- if css_is_cached? -%>
 		<%= stylesheet_link_tag 'application.css' %>
 		<%- if logged_in? -%>
 			<%= stylesheet_link_tag 'admin.css' %>
@@ -42,7 +42,7 @@
 				loadCSS('<%= asset_path 'admin.css' %>');
 			<%- end -%>
 
-			document.cookie='fullCSS=true;expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>;path=/';
+			document.cookie='cssIsCached=true;expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>;path=/';
 		</script>
 
 		<noscript>

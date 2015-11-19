@@ -8,7 +8,7 @@ module ApplicationHelper
     "#{francis_cms_config.site_title} — #{francis_cms_config.site_description}"
   end
 
-  def include_full_css?
-    cookies.has_key?(:fullCSS)
+  def css_is_cached?
+    cookies.has_key?(:cssIsCached)
   end
 end
