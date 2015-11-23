@@ -66,10 +66,6 @@
   class: polar
   url: http://polarb.com/users/jgarber
 
-- name: Rdio
-  class: rdio
-  url: http://www.rdio.com/people/jgarber
-
 - name: Speaker Deck
   class: speakerdeck
   url: https://speakerdeck.com/jgarber
