@@ -32,8 +32,8 @@
 
 		<script>
 			function loadCSS(e) {
-				var d=document,l=d.createElement('link'),o=d.getElementsByTagName('script')[0],s=d.styleSheets;l.rel='stylesheet';l.href=e;l.media='only x';o.parentNode.insertBefore(l,o);
-				function m(){var x;for(var i=0;i<s.length;i++){if(s[i].href&&s[i].href.indexOf(e)>-1){x=true;}}if(x){l.media='all';}else{setTimeout(m);}}m();return l;
+				var d=document,l=d.createElement('link'),o=(d.body||d.getElementsByTagName('head')[0]).childNodes,p=o[o.length-1],s=d.styleSheets;l.rel='stylesheet';l.href=e;l.media='only x';p.parentNode.insertBefore(l,p.nextSibling);
+				function m(cb){var h=l.href,i=s.length;while(i--){if(s[i].href===h)return cb();}setTimeout(function(){m(cb);});}m(function(){l.media='all';});return l;
 			}
 
 			loadCSS('<%= asset_path 'application.css' %>');
