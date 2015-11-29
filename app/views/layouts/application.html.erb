@@ -37,14 +37,12 @@
 			}
 
 			loadCSS('<%= asset_path 'application.css' %>');
-			<%= raw %{loadCSS('#{ asset_path 'admin.css' }');} if logged_in? %>
 
 			document.cookie='cssIsCached=true;expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>;path=/';
 		</script>
 
 		<noscript>
 			<%= stylesheet_link_tag 'application.css' %>
-			<%= stylesheet_link_tag 'admin.css' if logged_in? %>
 		</noscript>
 	<%- end -%>
 
