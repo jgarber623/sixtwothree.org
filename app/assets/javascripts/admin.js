@@ -9,7 +9,7 @@
 	var Router = new RouterRouter();
 
 	// Enhance delete forms…
-	Router.route(/(?:links|posts|webmentions)(?:\/.+)?/, function() {
+	Router.route(/(?:links|photos|posts|webmentions)(?:\/.+)?/, function() {
 		var $forms = document.querySelectorAll('.delete-form');
 
 		$forms.forEach(function($form) {
