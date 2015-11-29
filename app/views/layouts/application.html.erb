@@ -14,6 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<%= auto_discovery_link_tag :rss, francis_cms.links_path(format: :rss), title: %{#{francis_cms_config.site_title}: Links} %>
+	<%= auto_discovery_link_tag :rss, francis_cms.photos_path(format: :rss), title: %{#{francis_cms_config.site_title}: Photos} %>
 	<%= auto_discovery_link_tag :rss, francis_cms.posts_path(format: :rss), title: %{#{francis_cms_config.site_title}: Posts} %>
 	<%= auto_discovery_link_tag :rss, francis_cms.webmentions_path(format: :rss), title: %{#{francis_cms_config.site_title}: Webmentions} %>
 
