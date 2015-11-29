@@ -116,7 +116,7 @@
 
 		if ('querySelector' in document && 'addEventListener' in window) {
 			loadJS('<%= asset_path 'application.js' %>');
-			<%= raw %{loadJS('#{ asset_path 'admin.js' }');} if logged_in? %>
+			<%= raw %{loadJS('#{asset_path 'admin.js'}');} if logged_in? %>
 		}
 	</script>
 </body>
