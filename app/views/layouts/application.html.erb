@@ -111,7 +111,7 @@
 	<script>
 		function loadJS(e) {
 			var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
-			r.src=e;o.parentNode.insertBefore(r,o);return r;
+			r.src=e;r.async=true;o.parentNode.insertBefore(r,o);return r;
 		}
 
 		if ('querySelector' in document && 'addEventListener' in window) {
