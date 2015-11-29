@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108042924) do
+ActiveRecord::Schema.define(version: 20151129063316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,11 +26,20 @@ ActiveRecord::Schema.define(version: 20151108042924) do
   end
 
   create_table "francis_cms_photos", force: :cascade do |t|
-    t.text     "photo",        null: false
+    t.text     "photo",          null: false
     t.text     "body"
     t.datetime "published_at"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "street_address"
+    t.text     "city"
+    t.text     "state"
+    t.text     "state_code"
+    t.text     "postal_code"
+    t.text     "country"
+    t.text     "country_code"
   end
 
   create_table "francis_cms_posts", force: :cascade do |t|
