@@ -8,12 +8,13 @@
 	<meta name="apple-mobile-web-app-title" content="<%= francis_cms_config.site_title %>">
 	<meta name="application-name" content="<%= francis_cms_config.site_title %>">
 	<meta name="description" content="<%= page_description %>">
-	<meta name="twitter:card" content="<%= page_card_type %>">
-	<meta name="twitter:description" property="og:description" content="<%= page_description %>">
-	<meta name="twitter:image" property="og:image" content="<%= asset_url page_image %>">
-	<meta name="twitter:site" content="@jgarber">
-	<meta name="twitter:title" property="og:title" content="<%= page_title %>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="twitter:card" content="<%= page_card_type %>">
+	<meta name="twitter:site" content="@jgarber">
+	<meta property="og:description" content="<%= page_description %>">
+	<meta property="og:image" content="<%= asset_url page_image %>">
+	<meta property="og:title" content="<%= page_title %>">
 
 	<%= auto_discovery_link_tag :rss, francis_cms.links_path(format: :rss), title: %{#{francis_cms_config.site_title}: Links} %>
 	<%= auto_discovery_link_tag :rss, francis_cms.photos_path(format: :rss), title: %{#{francis_cms_config.site_title}: Photos} %>
