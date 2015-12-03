@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151129063316) do
+ActiveRecord::Schema.define(version: 20151203034847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20151129063316) do
     t.text     "postal_code"
     t.text     "country"
     t.text     "country_code"
+    t.datetime "taken_at"
   end
 
   create_table "francis_cms_posts", force: :cascade do |t|
