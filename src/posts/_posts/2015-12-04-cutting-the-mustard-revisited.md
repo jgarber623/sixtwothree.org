@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10153138027342343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/672828075021901825
 date: 2015-12-04 12:15:40 -0500
 excerpt: Taking a look at a few possible updates to the BBC News team’s classic JavaScript feature detection.
 tags: development featuredetection javascript progressiveenhancement
