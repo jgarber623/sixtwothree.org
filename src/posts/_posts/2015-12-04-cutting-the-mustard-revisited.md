@@ -10,7 +10,7 @@ tags: development featuredetection javascript progressiveenhancement
 title: Cutting the Mustard Revisited
 ---
 
-Three years ago, the team working on the redesigned BBC News website posted "[Cutting the Mustard,](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard)" outlining their method for bucketing browsers based on capability. While JavaScript feature detection isn't new, the BBC News team's approach is a novel rethinking of the technique.
+Three years ago, the team working on the redesigned BBC News website posted "[Cutting the Mustard](http://responsivenews.co.uk/post/18948466399/cutting-the-mustard)," outlining their method for bucketing browsers based on capability. While JavaScript feature detection isn't new, the BBC News team's approach is a novel rethinking of the technique.
 
 With the following lines of code, browsers are categorized as being either "HTML4" or "HTML5" capable.
 
