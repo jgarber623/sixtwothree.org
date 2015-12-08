@@ -36,7 +36,7 @@ These are just a few of the many useful stats in <cite>Designing for Performance
 
 > The mobile experience shouldn't be bare-bones. It should be a deliberate experience.
 
-This bit of insight ties in with the quote from above: users expect not only that your website perform consistently regardless of how they access it, they also expect to be able to accomplish the same tasks regardless of the device they're using.
+This bit of insight ties in with the quote from above: users expect not only that your website perform consistently regardless of how they access it, they also expect to accomplish the same tasks regardless of the device they're using.
 
 > Performance is closely linked to aesthetics. Front-end architect and consultant Harry Roberts notes, "it's not about how nice something looks, it's about how nicely it works, how it feels. There's no point designing a nice, shiny, beautiful UI if it's going to take 20 seconds to end up on a user's device. They'll have left before they even got to see it."
 
