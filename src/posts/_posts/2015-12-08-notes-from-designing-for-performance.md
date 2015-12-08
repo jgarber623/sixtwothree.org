@@ -13,7 +13,7 @@ The following is a collection of my favorite quotes from <cite>Designing for Per
 
 As you might imagine, <cite>Designing for Performance</cite> is jam-packed with statistics. Early on, Lara throws down the performance gauntlet:
 
-> If you’re looking for a page load time benchmark for your site, this is it: users expect pages to load in two seconds, and after three seconds, up to [40% of users](http://www.mcrinc.com/Documents/Newsletters/201110_why_web_performance_matters.pdf) will abandon your site. Moreover, [85% of mobile users](http://www.radware.com/Products/FastView/) expect sites to load at least as fast or faster than sites on their desktop.
+> If you're looking for a page load time benchmark for your site, this is it: users expect pages to load in two seconds, and after three seconds, up to [40% of users](http://www.mcrinc.com/Documents/Newsletters/201110_why_web_performance_matters.pdf) will abandon your site. Moreover, [85% of mobile users](http://www.radware.com/Products/FastView/) expect sites to load at least as fast or faster than sites on their desktop.
 
 Two seconds is all the time you have to get usable content in front of your website's visitors before they start bailing. More importantly, your users expect your website to function consistently across all of their devices, regardless of the nature of that device or the conditions under which they're attempting to access it. This may sound unfair—or frustrating or infuriating—but that's the reality we face.
 
@@ -29,21 +29,21 @@ These are just a few of the many useful stats in <cite>Designing for Performance
 
 ## Designing the Experience
 
-> The mobile experience shouldn’t be bare-bones. It should be a deliberate experience.
+> The mobile experience shouldn't be bare-bones. It should be a deliberate experience.
 
 This bit of insight ties in with the quote from above: users expect not only that your website perform consistently regardless of how they access it, they also expect to be able to accomplish the same tasks regardless of the device they're using.
 
-> Performance is closely linked to aesthetics. Front-end architect and consultant Harry Roberts notes, “it’s not about how nice something looks, it’s about how nicely it works, how it feels. There’s no point designing a nice, shiny, beautiful UI if it’s going to take 20 seconds to end up on a user’s device. They’ll have left before they even got to see it.”
+> Performance is closely linked to aesthetics. Front-end architect and consultant Harry Roberts notes, "it's not about how nice something looks, it's about how nicely it works, how it feels. There's no point designing a nice, shiny, beautiful UI if it's going to take 20 seconds to end up on a user's device. They'll have left before they even got to see it."
 
 I've written previously about [the intersection of front-end development and user experience design](/posts/front-end-development-is-user-experience-design). Visual designers, front-end developers, and user experience designers all shoulder the responsibility of designing a high-performance website.
 
-> When an outcome of an experiment is better for your business metrics, gut-check it to make sure it’s still great for your users.
+> When an outcome of an experiment is better for your business metrics, gut-check it to make sure it's still great for your users.
 
 Ferocious user advocates of the world: unite!
 
 ## Culture
 
-> Culture change is perhaps the hardest part of improving a site’s performance.
+> Culture change is perhaps the hardest part of improving a site's performance.
 
 Lara dedicates an entire chapter to this very topic. Like so much of software development, the hard part is _people_. As developers, we have a tendency to ignore that so it's noteworthy that <cite>Designing for Performance</cite> covers culture in-depth. In fact, Lara penned today's [24 ways](https://24ways.org/) article "[Helping VIPs Care About Performance](https://24ways.org/2015/helping-vips-care-about-performance/)" in which she summarizes many of her points from <cite>Designing for Performance</cite>.
 
