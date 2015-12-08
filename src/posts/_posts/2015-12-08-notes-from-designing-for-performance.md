@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10153146558897343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/674273542800850945
 date: 2015-12-08 11:54:33 -0500
 excerpt: If you build websites for a living or work with people who do, stop what you’re doing and get yourself (or your team) a copy of this book.
 tags: design development performance
