@@ -2,7 +2,7 @@
 date: 2015-12-08 11:54:33 -0500
 excerpt: If you build websites for a living or work with people who do, stop what you’re doing and get yourself (or your team) a copy of this book.
 tags: design development performance
-title: Notes from Designing for Performance
+title: Notes from “Designing for Performance”
 ---
 
 I recently finished [Lara Hogan](http://larahogan.me/)'s brilliant and informative book <cite>[Designing for Performance: Weighing Aesthetics and Speed](http://www.amazon.com/dp/1491902515/?tag=sixtwothree-20)</cite>. If you build websites for a living or work with people who do, stop what you're doing and get yourself (or your team) a copy! It's an easy read, replete with clearly and concisely explained examples detailing how you can test and improve the performance of your websites.
