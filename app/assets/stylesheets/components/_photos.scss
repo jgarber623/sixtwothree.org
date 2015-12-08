@@ -8,17 +8,21 @@
 	}
 
 	li {
-		float: left;
-		margin-bottom: $spacing-2;
-		width: 50%;
+		margin-bottom: $spacing-3;
 
-		&:nth-child(odd) {
-			clear: left;
-			padding-right: $spacing-1;
-		}
+		@include breakpoint($bp-narrow) {
+			float: left;
+			margin-bottom: $spacing-2;
+			width: 50%;
 
-		&:nth-child(even) {
-			padding-left: $spacing-1;
+			&:nth-child(odd) {
+				clear: left;
+				padding-right: $spacing-1;
+			}
+
+			&:nth-child(even) {
+				padding-left: $spacing-1;
+			}
 		}
 
 		@include breakpoint($tp-ultra) {
@@ -47,6 +51,7 @@
 
 	.entry-content {
 		position: relative;
+		text-align: center;
 	}
 
 	img {
