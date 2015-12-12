@@ -1,4 +1,9 @@
 ---
+copies:
+  - title: Facebook
+    url: https://www.facebook.com/jgarber623/posts/10153154134197343
+  - title: Twitter
+    url: https://twitter.com/jgarber/status/675715023294103552
 date: 2015-12-12 11:27:35 -0500
 excerpt: Ten years ago today, I launched the most-recent version of this site.
 tags: blogging personal
