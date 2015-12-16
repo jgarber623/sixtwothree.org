@@ -6,10 +6,10 @@
 		@include margin-xn(4);
 	}
 
-	p {
+	small {
 		@include color($grey, light);
+		display: block;
 		@include font-size(6);
-		margin: 0;
 
 		@include breakpoint($bp-narrow) {
 			@include font-size;
