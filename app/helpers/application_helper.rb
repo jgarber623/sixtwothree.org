@@ -8,7 +8,7 @@ module ApplicationHelper
   end
 
   def page_image
-    @photo ? @photo.photo.url(:medium) : francis_cms_config.user_avatar
+    @photo.try(:photo).try(:file) ? @photo.photo.url(:medium_jpg) : francis_cms_config.user_avatar
   end
 
   def page_title
