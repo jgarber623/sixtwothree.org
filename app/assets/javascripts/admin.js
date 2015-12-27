@@ -17,18 +17,18 @@
 		});
 	});
 
-	// Enhance post editing form…
-	Router.route(/posts\/(?:.+?\/edit|new)/, function() {
-		var $form = document.querySelector('.post-form');
-
-		new PostForm($form).init();
-	});
-
 	// Enhance link editing form…
 	Router.route(/links\/new/, function() {
 		var $form = document.getElementById('new_link');
 
 		new LinkForm($form).init();
+	});
+
+	// Enhance post editing form…
+	Router.route(/posts\/(?:.+?\/edit|new)/, function() {
+		var $form = document.querySelector('.post-form');
+
+		new PostForm($form).init();
 	});
 
 	// Enhance syndication form…

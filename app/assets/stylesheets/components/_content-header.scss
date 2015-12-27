@@ -12,17 +12,22 @@
 
 	small {
 		@include color($grey, light);
-		display: inline-block;
-		@include font-size(2);
+		display: block;
+		@include font-size(3);
 		font-weight: bold;
-		margin-left: $spacing-1;
+
+		@include breakpoint($bp-narrow) {
+			display: inline-block;
+			@include font-size(2);
+			margin-left: $spacing-1;
+		}
 
 		&:before {
-			content: "("
+			content: "(";
 		}
 
 		&:after {
-			content: ")"
+			content: ")";
 		}
 	}
 }

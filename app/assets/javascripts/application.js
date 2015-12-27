@@ -27,8 +27,8 @@
 	// Enhance global navigation…
 	new Navigation(document.querySelector('.global-navigation-control')).init();
 
-	// Enhance `/links`, `photos`, and `/posts` pages…
-	Router.route(/(?:links|photos|posts)(?:\/archives)?\/?(?:[A-Za-z0-9\-]+)?$/, function() {
+	// Enhance `/links`, `/photos`, `/posts`, and `/webmentions` pages…
+	Router.route(/(?:links|photos|posts|webmentions)(?:\/archives)?\/?(?:[A-Za-z0-9\-]+)?$/, function() {
 		entries();
 		pagination();
 	});
