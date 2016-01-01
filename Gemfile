@@ -2,19 +2,19 @@ ruby '2.2.4'
 
 source 'https://rubygems.org' do
   # Application
-  gem 'rails', '4.2.1'
+  gem 'rails', '~> 4.2'
   gem 'francis_cms', path: '~/Projects/FrancisCMS'
 
   # Assets
-  gem 'breakpoint', '~> 2.5.0'
-  gem 'sass-rails', '~> 5.0.0'
-  gem 'uglifier'
+  gem 'breakpoint', '~> 2.5'
+  gem 'sass-rails', '~> 5.0'
+  gem 'uglifier', '~> 2.7'
 
   group :development do
-    gem 'foreman'
-    gem 'pry'
-    gem 'quiet_assets'
-    gem 'svgeez'
+    gem 'foreman', '~> 0.78.0'
+    gem 'pry', '~> 0.10.3'
+    gem 'quiet_assets', '~> 1.1'
+    gem 'svgeez', '~> 0.2.0'
   end
 end
 

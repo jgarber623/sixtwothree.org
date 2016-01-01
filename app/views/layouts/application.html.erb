@@ -30,7 +30,7 @@
 		<%= stylesheet_link_tag 'admin.css' if logged_in? %>
 	<%- else -%>
 		<style>
-			<%= raw assets.find_asset('critical.css') %>
+			<%= raw Rails.application.assets.find_asset('critical.css') %>
 		</style>
 
 		<script>
@@ -109,7 +109,7 @@
 
 	<%= francis_cms_admin_panel if logged_in? %>
 
-	<%= raw assets.find_asset('icons.svg') %>
+	<%= raw Rails.application.assets.find_asset('icons.svg') %>
 
 	<script>
 		function loadJS(e) {
