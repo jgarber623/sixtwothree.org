@@ -1,5 +1,6 @@
-PATH
-  remote: ~/Projects/FrancisCMS
+GIT
+  remote: https://github.com/jgarber623/FrancisCMS.git
+  revision: 424145a2f4e4d0651cb61536d5a741fc7e536aae
   specs:
     francis_cms (0.1.0)
       acts-as-taggable-on (~> 3.5)
