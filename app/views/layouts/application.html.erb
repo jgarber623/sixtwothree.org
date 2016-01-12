@@ -117,7 +117,7 @@
 			r.src=e;r.async=true;o.parentNode.insertBefore(r,o);return r;
 		}
 
-		if ('querySelector' in document && 'addEventListener' in window) {
+		if (document.querySelector && window.addEventListener) {
 			loadJS('<%= asset_path 'application.js' %>');
 			<%= raw %{loadJS('#{asset_path 'admin.js'}');} if logged_in? %>
 		}
