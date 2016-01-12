@@ -121,6 +121,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (2.15.3)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -202,6 +203,7 @@ DEPENDENCIES
   foreman (~> 0.78.0)!
   francis_cms!
   pry (~> 0.10.3)!
+  puma (~> 2.15)!
   quiet_assets (~> 1.1)!
   rails (~> 4.2)!
   rails-assets-html5shiv!
