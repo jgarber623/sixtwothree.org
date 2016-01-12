@@ -14,7 +14,7 @@ source 'https://rubygems.org' do
     gem 'foreman', '~> 0.78.0'
     gem 'pry', '~> 0.10.3'
     gem 'quiet_assets', '~> 1.1'
-    gem 'svgeez', '~> 0.2.0'
+    gem 'svgeez', '~> 0.2.3'
   end
 end
 
