@@ -41,10 +41,12 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp')
 
 namespace :deploy do
 
-  desc 'Restart the application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute 'sudo /usr/sbin/service sixtwothree-org-puma restart'
+  %w{restart start stop}.each do |cmd|
+    desc "#{cmd.capitalize} the application"
+    task cmd do
+      on roles(:app), in: :sequence, wait: 5 do
+        execute "sudo /usr/sbin/service sixtwothree-org-puma #{cmd}"
+      end
     end
   end
 
