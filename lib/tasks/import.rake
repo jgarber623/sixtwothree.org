@@ -66,7 +66,7 @@ namespace :import do
     webmentions_file_path = File.expand_path(STDIN.gets.chomp!)
     webmentions = JSON.load(File.open(webmentions_file_path, 'r'))
 
-    puts %{Importing links from `#{webmentions_file_path}`...}
+    puts %{Importing webmentions from `#{webmentions_file_path}`...}
 
     webmentions.each do |webmention|
       puts %{Importing `#{webmention['source']}`...}
