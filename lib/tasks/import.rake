@@ -28,7 +28,7 @@ namespace :import do
     puts 'Enter path to posts folder:'
 
     posts_folder_path = File.expand_path(STDIN.gets.chomp!)
-    filepaths = Dir.glob(File.join(posts_folder_path, '*.md'))
+    filepaths = Dir.glob(File.join(posts_folder_path, '*.md')).sort!
 
     puts %{Importing posts from `#{posts_folder_path}`...}
 
