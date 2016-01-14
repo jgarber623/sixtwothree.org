@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/jgarber623/FrancisCMS.git
-  revision: 424145a2f4e4d0651cb61536d5a741fc7e536aae
+  revision: 216d1e5ebfb329100c5a27cf79ec1badf7ea8925
   specs:
     francis_cms (0.1.0)
       acts-as-taggable-on (~> 3.5)
@@ -171,7 +171,7 @@ GEM
       activesupport (= 4.2.5)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.4.2)
+    rake (10.5.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
