@@ -41,10 +41,13 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
+  # Disable ActionDispatch's default headers as NGINX handles this.
+  config.action_dispatch.default_headers = {}
+
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
 
-  # Disable ActionDispatch::SSL's default Strict-Transport-Security setting as nginx handles this.
+  # Disable ActionDispatch::SSL's default Strict-Transport-Security setting as NGINX handles this.
   config.ssl_options = {
     hsts: false
   }
