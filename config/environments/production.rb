@@ -44,6 +44,11 @@ Rails.application.configure do
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   config.force_ssl = true
 
+  # Disable ActionDispatch::SSL's default Strict-Transport-Security setting as nginx handles this.
+  config.ssl_options = {
+    hsts: false
+  }
+
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
   config.log_level = :debug
