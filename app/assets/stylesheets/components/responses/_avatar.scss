@@ -13,12 +13,10 @@
 		right: 0;
 	}
 
-	&.facebook-com:after {
-		@include bg-color($profiles, facebook);
-	}
-
-	&.twitter-com:after {
-		@include bg-color($profiles, twitter);
+	@each $network in facebook, flickr, instagram, twitter {
+		&.#{$network}-com:after {
+			@include bg-color($profiles, $network);
+		}
 	}
 
 	img {
