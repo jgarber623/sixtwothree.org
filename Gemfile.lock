@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/jgarber623/FrancisCMS.git
+  remote: https://github.com/FrancisCMS/FrancisCMS.git
   revision: ea5e0cd9436ad3412891181aeb1d8a0be4e0b74c
   specs:
     francis_cms (0.1.0)
