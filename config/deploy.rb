@@ -6,7 +6,6 @@ set :chruby_ruby, '2.2.4'
 set :ssh_options, { forward_agent: true }
 
 set :repo_url, 'git@github.com:jgarber623/sixtwothree.org.git'
-set :branch, 'rails-app'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
