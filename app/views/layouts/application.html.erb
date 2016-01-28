@@ -35,8 +35,10 @@
 
 		<script>
 			function loadCSS(e) {
-				var d=document,l=d.createElement('link'),o=(d.body||d.getElementsByTagName('head')[0]).childNodes,p=o[o.length-1],s=d.styleSheets;l.rel='stylesheet';l.href=e;l.media='only x';p.parentNode.insertBefore(l,p.nextSibling);
-				function m(cb){var h=l.href,i=s.length;while(i--){if(s[i].href===h)return cb();}setTimeout(function(){m(cb);});}m(function(){l.media='all';});return l;
+				var d=document,l=d.createElement('link'),n='all',o=(d.body||d.getElementsByTagName('head')[0]).childNodes,p=o[o.length-1],s=d.styleSheets;
+				l.rel='stylesheet';l.href=e;l.media='only x';p.parentNode.insertBefore(l,p.nextSibling);
+				function m(cb){var i=s.length;while(i--){if(s[i].href===l.href)return cb();}setTimeout(function(){m(cb);});}
+				if(l.addEventListener){l.addEventListener('load',function(){this.media=n;});}m(function(){if( l.media!==n){l.media=n;}});return l;
 			}
 
 			loadCSS('<%= asset_path 'application.css' %>');
