@@ -2,10 +2,9 @@ ruby '2.2.4'
 
 source 'https://rubygems.org' do
   # Application
-  gem 'rails', '~> 4.2'
-  gem 'puma', '~> 2.15'
   gem 'francis_cms', git: 'https://github.com/FrancisCMS/FrancisCMS.git'
   # gem 'francis_cms', path: '~/Projects/FrancisCMS'
+  gem 'puma', '~> 2.15'
 
   # Assets
   gem 'breakpoint', '~> 2.5'
