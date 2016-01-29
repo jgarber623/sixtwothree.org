@@ -11,19 +11,19 @@
 		},
 
 		bindEvents: function() {
-			window.addEventListener('load', this.handleResize.bind(this));
-			window.addEventListener('resize', this.handleResize.bind(this));
+			window.addEventListener('load', this.resize.bind(this));
+			window.addEventListener('resize', this.resize.bind(this));
 
-			this.$control.addEventListener('click', this.handleClick.bind(this));
+			this.$control.addEventListener('click', this.click.bind(this));
 		},
 
-		handleClick: function(event) {
+		click: function(event) {
 			event.preventDefault();
 
 			this.toggle(this.$control.getAttribute('aria-expanded') !== 'true');
 		},
 
-		handleResize: function(event) {
+		resize: function(event) {
 			var isHidden = window.matchMedia('(min-width: 50em)').matches;
 
 			this.$control[isHidden ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);

@@ -109,7 +109,14 @@
 		</div>
 	</footer>
 
-	<%= francis_cms_admin_panel if logged_in? %>
+	<%- if logged_in? -%>
+		<div class="admin-panel-container">
+			<button aria-hidden class="admin-panel-control">
+				<svg aria-label="Toggle Admin Panel" role="img" version="1.1"><use xlink:href="#icons-menu"></svg>
+			</button>
+			<%= francis_cms_admin_panel %>
+		</div>
+	<%- end -%>
 
 	<%= raw Rails.application.assets.find_asset('icons.svg') %>
 

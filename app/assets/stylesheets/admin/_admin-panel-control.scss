@@ -1,0 +1,18 @@
+.admin-panel-control {
+	height: auto;
+
+	@include breakpoint($tp-medium) {
+		float: left;
+		margin-right: $spacing-2;
+	}
+
+	svg {
+		display: inline-block;
+		fill: #fff;
+		height: 1em;
+		position: relative;
+		top: -1px;
+		vertical-align: middle;
+		width: 1em;
+	}
+}

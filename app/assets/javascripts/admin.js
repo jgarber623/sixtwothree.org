@@ -8,6 +8,9 @@
 	// Initialize a new router…
 	var Router = new RouterRouter();
 
+	// Enhance admin panel…
+	new AdminPanel(document.querySelector('.admin-panel-container')).init();
+
 	// Enhance delete forms…
 	Router.route(/(?:links|photos|posts|webmentions)(?:\/.+)?/, function() {
 		var $forms = document.querySelectorAll('.delete-form');

@@ -1,39 +1,18 @@
 .admin-panel {
-	background-color: $darken-2;
-	@extend %clearfix;
-	padding: $spacing-2 $spacing-1;
-
-	@include breakpoint($tp-medium) {
-		bottom: 0;
-		left: 0;
-		position: fixed;
-		right: 0;
-	}
-
 	menu {
-		@extend %clearfix;
 		@extend %reset-list;
+		margin-top: $spacing-2;
+		table-layout: fixed;
+		width: 100%;
 
-		+ menu {
-			margin-top: $spacing-2;
-
-			@include breakpoint($tp-medium) {
-				margin-top: 0;
-			}
-		}
-
-		li {
-			@include margin-y(1);
-
-			@include breakpoint($bp-narrow) {
-				float: left;
-				margin: 0 $spacing-1;
-			}
+		@include breakpoint($tp-medium) {
+			margin: 0;
 		}
 
 		a,
 		button {
 			display: block;
+			height: auto;
 			text-align: center;
 			width: 100%;
 		}
@@ -46,15 +25,56 @@
 				color: #fff;
 			}
 		}
+	}
 
-		button {
-			height: auto;
+	.local {
+		display: table;
+
+		@include breakpoint($bp-narrow) {
+			@include padding-x;
+		}
+
+		@include breakpoint($tp-medium) {
+			float: right;
+			padding: 0;
+			width: auto;
+		}
+
+		li {
+			display: table-cell;
+			padding-right: $spacing-1;
+			vertical-align: middle;
+
+			+ li {
+				padding: 0 0 0 $spacing-1;
+			}
 		}
 	}
 
-	@include breakpoint($tp-medium) {
-		.local {
-			float: right;
+	.global {
+		@include breakpoint($bp-narrow) {
+			display: table;
+			padding: 0;
+		}
+
+		@include breakpoint($tp-medium) {
+			width: auto;
+		}
+
+		li {
+			@include margin-y(1);
+
+			@include breakpoint($bp-narrow) {
+				display: table-cell;
+				@include padding-x;
+				vertical-align: middle;
+			}
+
+			@include breakpoint($tp-medium) {
+				&:first-child {
+					padding-left: 0;
+				}
+			}
 		}
 	}
 }
