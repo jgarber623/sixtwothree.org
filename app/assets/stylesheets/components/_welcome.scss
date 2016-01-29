@@ -1,31 +1,28 @@
 .welcome {
+	padding-left: $spacing-3 * 1.75;
 	position: relative;
 
-	@include breakpoint($bp-narrow ($tp-ultra - 0.001em)) {
+	@include breakpoint($bp-narrow) {
 		padding-left: $spacing-5;
 	}
 
+	@include breakpoint($tp-ultra) {
+		padding-left: 0;
+	}
+
 	.avatar {
-		display: inline-block;
-		margin-bottom: $spacing-2;
-
-		@include breakpoint($bp-narrow) {
-			left: 0;
-			margin: 0;
-			position: absolute;
-			top: 0;
-
-			img {
-				height: 5em;
-			}
-		}
+		left: 0;
+		position: absolute;
+		top: 0;
 
 		@include breakpoint($tp-ultra) {
 			left: -$spacing-5;
 		}
 
-		&:after {
-			display: none;
+		@include breakpoint($bp-narrow) {
+			img {
+				height: 5em;
+			}
 		}
 	}
 

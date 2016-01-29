@@ -20,13 +20,10 @@
 	}
 
 	p {
+		font-family: "Open Sans", sans-serif;
 		@include font-size(4);
 		font-weight: bold;
 		margin: 0 0 0 2.75em;
-
-		@include breakpoint($tp-medium) {
-			font-family: "Open Sans", sans-serif;
-		}
 
 		@include breakpoint($tp-wide) {
 			@include font-size(2);
