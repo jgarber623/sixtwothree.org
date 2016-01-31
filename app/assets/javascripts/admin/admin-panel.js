@@ -14,6 +14,7 @@
 
 			this.$region.setAttribute('id', 'admin-panel');
 			this.$region.setAttribute('aria-hidden', true);
+			this.$region.setAttribute('tabindex', -1);
 
 			this.bindEvents();
 
@@ -41,6 +42,10 @@
 		toggle: function(value) {
 			this.$control.setAttribute('aria-expanded', value);
 			this.$region[!value ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
+
+			if (value) {
+				this.$region.focus();
+			}
 		}
 	};
 }());
