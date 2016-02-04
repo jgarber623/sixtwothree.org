@@ -5,16 +5,16 @@
 
 	AdminPanel.prototype = {
 		init: function() {
-			this.$control = this.$el.querySelector('.admin-panel-control');
-			this.$region = this.$el.querySelector('.admin-panel');
+			var $control = this.$control = this.$el.querySelector('.admin-panel-control'),
+				$region = this.$region = this.$el.querySelector('.admin-panel');
 
-			this.$control.setAttribute('aria-controls', 'admin-panel');
-			this.$control.setAttribute('aria-expanded', false);
-			this.$control.removeAttribute('aria-hidden');
+			$control.setAttribute('aria-controls', 'admin-panel');
+			$control.setAttribute('aria-expanded', false);
+			$control.removeAttribute('aria-hidden');
 
-			this.$region.setAttribute('id', 'admin-panel');
-			this.$region.setAttribute('aria-hidden', true);
-			this.$region.setAttribute('tabindex', -1);
+			$region.setAttribute('id', 'admin-panel');
+			$region.setAttribute('aria-hidden', true);
+			$region.setAttribute('tabindex', -1);
 
 			this.bindEvents();
 
