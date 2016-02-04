@@ -19,16 +19,12 @@
 			var val = this.$url.value;
 
 			if (/^https?:\/\//.test(val) && !this.$title.value) {
-				var authParamName = 'authenticity_token',
-					params = 'url=' + val + '&' +
-					authParamName + '=' + encodeURIComponent(this.$el.querySelector('[name=' + authParamName + ']').value);
-
 				this.xhr.open('POST', '/links/fetch');
 
 				this.xhr.setRequestHeader('Accept', 'application/json');
 				this.xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-				this.xhr.send(params);
+				this.xhr.send('url=' + val + '&authenticity_token=' + encodeURIComponent(this.$el.querySelector('[name=authenticity_token]').value));
 			}
 		},
 
