@@ -1,26 +1,26 @@
 ;(function() {
-	var PostForm = window.PostForm = function($el) {
-		this.$el = $el;
-	};
+	'use strict';
+
+	var $title = document.getElementById('post_title'),
+		$slug = document.getElementById('post_slug');
+
+	var PostForm = window.PostForm = function() {};
 
 	PostForm.prototype = {
 		init: function() {
-			this.$title = document.getElementById('post_title');
-			this.$slug = document.getElementById('post_slug');
-
-			if (!this.$slug.value) {
-				this.$title.addEventListener('keyup', this.keyup.bind(this));
+			if ($title && $slug && !$slug.value) {
+				$title.addEventListener('keyup', this.keyup);
 			}
 		},
 
 		keyup: function(event) {
 			setTimeout(function() {
-				var val = this.$title.value;
+				var titleValue = $title.value;
 
-				if (val) {
-					this.$slug.value = val.toLowerCase().replace(/\s/g, '-').replace(/[^a-z0-9\-]/g, '');
+				if (titleValue) {
+					$slug.value = titleValue.toLowerCase().replace(/\s/g, '-').replace(/[^a-z0-9\-]/g, '');
 				}
-			}.bind(this), 500);
+			}, 500);
 		}
 	};
 }());

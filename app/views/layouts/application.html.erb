@@ -128,7 +128,14 @@
 
 		if (document.querySelector && window.addEventListener) {
 			loadJS('<%= asset_path 'application.js' %>');
-			<%= raw %{loadJS('#{asset_path 'admin.js'}');} if logged_in? %>
+
+			<%- if logged_in? -%>
+				if (!window.fetch) {
+					loadJS('<%= asset_path 'fetch.js' %>');
+				}
+
+				loadJS('<%= asset_path 'admin.js' %>');
+			<%- end -%>
 		}
 	</script>
 </body>

@@ -29,15 +29,11 @@
 
 	// Enhance post editing form…
 	Router.route(/posts\/(?:.+?\/edit|new)/, function() {
-		var $form = document.querySelector('.post-form');
-
-		new PostForm($form).init();
+		new PostForm().init();
 	});
 
 	// Enhance syndication form…
 	Router.route(/\/edit$/, function() {
-		var $form = document.getElementById('new_syndication');
-
-		new SyndicationForm($form).init();
+		new SyndicationForm().init();
 	});
 })(document);

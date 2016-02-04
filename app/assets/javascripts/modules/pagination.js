@@ -1,4 +1,13 @@
 ;(function() {
+	var appendHint = function($el) {
+		var $hint = document.createElement('p');
+
+		$hint.className = 'hint';
+		$hint.innerHTML = '<b>Hint:</b> Use the left and right arrow keys to navigate between pages.';
+
+		$el.appendChild($hint);
+	};
+
 	var Pagination = window.Pagination = function($el) {
 		this.$el = $el;
 	};
@@ -10,17 +19,8 @@
 
 			if (this.$next || this.$prev) {
 				window.addEventListener('keyup', this.keyup.bind(this));
-				this.appendHint();
+				appendHint(this.$el);
 			}
-		},
-
-		appendHint: function() {
-			var $hint = document.createElement('p');
-
-			$hint.className = 'hint';
-			$hint.innerHTML = '<b>Hint:</b> Use the left and right arrow keys to navigate between pages.';
-
-			this.$el.appendChild($hint);
 		},
 
 		keyup: function(event) {

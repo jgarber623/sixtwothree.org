@@ -1,44 +1,47 @@
 ;(function() {
+	'use strict';
+
+	var $url = document.getElementById('link_url'),
+		$title = document.getElementById('link_title'),
+		$tags = document.getElementById('link_tag_list');
+
+	var handleResponse = function(response) {
+		return response.json().then(function(json) {
+			if (json.success) {
+				$title.value = json.title;
+
+				if ($tags && json.tags) {
+					$tags.value = json.tags.join(', ');
+				}
+			}
+		});
+	};
+
 	var LinkForm = window.LinkForm = function($el) {
 		this.$el = $el;
 	};
 
 	LinkForm.prototype = {
 		init: function() {
-			this.$url = document.getElementById('link_url');
-			this.$title = document.getElementById('link_title');
-			this.$tags = document.getElementById('link_tag_list');
-
-			this.xhr = new XMLHttpRequest();
-			this.xhr.onload = this.onload.bind(this);
-
-			this.$url.addEventListener('blur', this.blur.bind(this));
-		},
-
-		blur: function(event) {
-			var val = this.$url.value;
-
-			if (/^https?:\/\//.test(val) && !this.$title.value) {
-				this.xhr.open('POST', '/links/fetch');
-
-				this.xhr.setRequestHeader('Accept', 'application/json');
-				this.xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-				this.xhr.send('url=' + val + '&authenticity_token=' + encodeURIComponent(this.$el.querySelector('[name=authenticity_token]').value));
+			if ($url && $title) {
+				$url.addEventListener('blur', this.blur.bind(this));
 			}
 		},
 
-		onload: function() {
-			if (this.xhr.status === 200) {
-				var response = JSON.parse(this.xhr.responseText);
+		blur: function(event) {
+			var urlValue = $url.value;
 
-				if (response.success) {
-					this.$title.value = response.title;
+			if (/^https?:\/\//.test(urlValue) && !$title.value) {
+				var options = {
+					body: new Blob(['url=' + urlValue + '&authenticity_token=' + encodeURIComponent(this.$el.querySelector('[name=authenticity_token]').value)]),
+					credentials: 'include',
+					headers: new Headers({
+						'Accept': 'application/json'
+					}),
+					method: 'POST'
+				};
 
-					if (response.tags) {
-						this.$tags.value = response.tags.join(', ');
-					}
-				}
+				window.fetch('/links/fetch', options).then(handleResponse);
 			}
 		}
 	};
