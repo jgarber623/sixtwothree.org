@@ -45,6 +45,7 @@
 		@include padding-x(3);
 		@include thick-border(left);
 
+		code,
 		em,
 		i {
 			font-style: normal;

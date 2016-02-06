@@ -72,6 +72,7 @@
 		@include padding-x(3);
 		@include thick-border(left);
 
+		code,
 		em,
 		i {
 			font-style: normal;
@@ -88,6 +89,13 @@
 	&:focus img,
 	&:hover img {
 		border-color: $darken-2;
+	}
+
+	code {
+		background-color: $darken-1;
+		display: inline-block;
+		font-size: 0.8em;
+		padding: ($spacing-1 / 2) $spacing-1;
 	}
 }
 
