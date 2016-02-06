@@ -1,0 +1,24 @@
+.entry-meta-list {
+	@extend %reset-list;
+
+	dt,
+	dd {
+		display: inline-block;
+	}
+
+	dt {
+		margin-right: $spacing-1;
+	}
+
+	dd {
+		margin: 0;
+
+		&:after {
+			content: ", ";
+		}
+
+		&:last-child:after {
+			content: "";
+		}
+	}
+}

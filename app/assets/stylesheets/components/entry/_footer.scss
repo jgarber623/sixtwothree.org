@@ -1,0 +1,12 @@
+.entry-footer {
+	@include color($grey, light);
+	@include font-size(6);
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		@extend %anchor--grey;
+	}
+}

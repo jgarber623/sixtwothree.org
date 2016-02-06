@@ -1,0 +1,34 @@
+.entry-header {
+	margin-bottom: $spacing-2;
+	position: relative;
+
+	i {
+		display: block;
+		height: 1.5em;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 1.5em;
+
+		@include breakpoint($bp-narrow) {
+			left: 0;
+			right: auto;
+		}
+
+		@include breakpoint($tp-medium) {
+			height: 2em;
+			width: 2em;
+		}
+
+		@include breakpoint($tp-wide) {
+			left: auto;
+			margin-right: $spacing-1;
+			right: 100%;
+		}
+	}
+
+	svg {
+		fill: $darken-1;
+		width: 100%;
+	}
+}
