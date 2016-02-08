@@ -35,4 +35,4 @@
 			this.$region[!value ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
 		}
 	};
-}());
+})();
