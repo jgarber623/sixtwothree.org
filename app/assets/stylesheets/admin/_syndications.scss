@@ -37,7 +37,7 @@
 }
 
 @each $network in flickr, twitter {
-	.#{$network}-syndication-form button {
+	[data-syndicate-to="#{$network}"] button {
 		@include bg-color($profiles, $network);
 
 		&:focus,
