@@ -10,13 +10,39 @@
 
 .automated-syndications-container {
 	@include margin-y(4);
+
+	ul {
+		@extend %reset-list;
+	}
+
+	li {
+		margin-right: $spacing-1;
+
+		+ li {
+			margin-top: $spacing-1;
+		}
+
+		@include breakpoint($bp-narrow) {
+			display: inline-block;
+
+			+ li {
+				margin-top: 0;
+			}
+		}
+
+		button {
+			width: 100%;
+		}
+	}
 }
 
-.flickr-syndication-form button {
-	@include bg-color($profiles, flickr);
+@each $network in flickr, twitter {
+	.#{$network}-syndication-form button {
+		@include bg-color($profiles, $network);
 
-	&:focus,
-	&:hover {
-		background-color: darken(map-get($profiles, flickr), 6.25%);
+		&:focus,
+		&:hover {
+			background-color: darken(map-get($profiles, $network), 6.25%);
+		}
 	}
 }
