@@ -4,6 +4,7 @@
 ;(function(document) {
 	// Modifying prototypes… ¯\_(Y O L O)_/¯
 	NodeList.prototype.forEach = Array.prototype.forEach;
+	NodeList.prototype.map = Array.prototype.map;
 
 	// Initialize a new router…
 	var Router = new RouterRouter();
@@ -16,7 +17,7 @@
 		var $forms = document.querySelectorAll('.delete-form');
 
 		$forms.forEach(function($form) {
-			new DeleteForm($form).init();
+			new FormConfirmation($form, 'Are you sure you want to delete this?').init();
 		});
 	});
 
@@ -34,6 +35,12 @@
 
 	// Enhance syndication form…
 	Router.route(/\/edit$/, function() {
+		var $forms = document.querySelectorAll('.automated-syndication-form');
+
+		$forms.forEach(function($form) {
+			new FormConfirmation($form, 'Are you sure you want to syndicate this?').init();
+		});
+
 		new SyndicationForm().init();
 	});
 })(document);
