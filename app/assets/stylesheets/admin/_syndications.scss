@@ -1,10 +1,22 @@
 .syndications-container {
 	background-color: $darken-1;
-	@include border-radius;
 	margin-top: $spacing-4;
 	padding: $spacing-1 $spacing-2;
 
 	@include breakpoint($bp-narrow) {
 		padding: $spacing-1 $spacing-3;
+	}
+}
+
+.automated-syndications-container {
+	@include margin-y(4);
+}
+
+.flickr-syndication-form button {
+	@include bg-color($profiles, flickr);
+
+	&:focus,
+	&:hover {
+		background-color: darken(map-get($profiles, flickr), 6.25%);
 	}
 }
