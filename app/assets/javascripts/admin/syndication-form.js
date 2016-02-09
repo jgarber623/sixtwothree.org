@@ -1,4 +1,4 @@
-;(function() {
+;(function(document) {
 	'use strict';
 
 	var $name = document.getElementById('syndication_name'),
@@ -23,4 +23,4 @@
 			}
 		}
 	};
-})();
+})(document);
