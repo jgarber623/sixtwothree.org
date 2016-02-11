@@ -1,18 +1,18 @@
 .draft {
 	@extend %button--red;
 	@include caps;
-	font-size: 50%;
 	font-weight: bold;
-	margin-left: $spacing-1;
 	vertical-align: middle;
 
-	.photos &,
-	.entries & {
-		font-size: 100%;
+	.photos & {
 		left: $spacing-2;
-		margin: 0;
 		position: absolute;
 		bottom: $spacing-2;
+	}
+
+	.single-header & {
+		font-size: 50%;
+		margin-left: $spacing-1;
 	}
 
 	.single-photo & {

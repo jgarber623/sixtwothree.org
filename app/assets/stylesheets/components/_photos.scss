@@ -9,6 +9,7 @@
 
 	li {
 		margin-bottom: $spacing-3;
+		position: relative;
 
 		@include breakpoint($bp-narrow) {
 			float: left;
@@ -52,9 +53,13 @@
 	.entry-content {
 		position: relative;
 		text-align: center;
+
+		img {
+			margin: 0;
+		}
 	}
 
-	img {
-		margin: 0;
+	.entry-footer {
+		margin-top: $spacing-1;
 	}
 }

@@ -20,10 +20,14 @@
 		}
 	}
 
-	img {
+	.entry-content img {
 		height: 90vh;
 		margin: 0;
 		max-height: 20em;
 		max-width: none;
+	}
+
+	.entry-footer {
+		display: none;
 	}
 }
