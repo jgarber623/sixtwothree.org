@@ -130,10 +130,7 @@
 			loadJS('<%= asset_path 'application.js' %>');
 
 			<%- if logged_in? -%>
-				if (!window.fetch) {
-					loadJS('<%= asset_path 'fetch.js' %>');
-				}
-
+				if(!window.fetch)loadJS('<%= asset_path 'fetch.js' %>');
 				loadJS('<%= asset_path 'admin.js' %>');
 			<%- end -%>
 		}
