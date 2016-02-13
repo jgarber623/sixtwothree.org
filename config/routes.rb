@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   post 'links/fetch', to: 'links#fetch'
 
+  get 'sitemap.xml', to: 'pages#sitemap', format: 'xml'
+
   mount FrancisCms::Engine, at: '/'
 end

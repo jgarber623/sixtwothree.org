@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+	<url>
+		<loc><%= root_url %></loc>
+	</url>
+	<url>
+		<loc><%= francis_cms.links_url %></loc>
+	</url>
+	<url>
+		<loc><%= francis_cms.photos_url %></loc>
+	</url>
+	<url>
+		<loc><%= francis_cms.tags_url %></loc>
+	</url>
+	<url>
+		<loc><%= francis_cms.posts_url %></loc>
+	</url>
+
+	<%- if @links.any? -%>
+		<%- @links.each do |link| -%>
+			<url>
+				<loc><%= francis_cms.link_url link %></loc>
+			</url>
+		<%- end -%>
+	<%- end -%>
+
+	<%- if @photos.any? -%>
+		<%- @photos.each do |photo| -%>
+			<url>
+				<loc><%= francis_cms.photo_url photo %></loc>
+				<image:image>
+					<image:loc><%= asset_url photo.photo.url(:large_jpg) %></image:loc>
+					<image:caption><%= photo.title %></image:caption>
+				</image:image>
+			</url>
+		<%- end -%>
+	<%- end -%>
+
+	<%- if @posts.any? -%>
+		<%- @posts.each do |post| -%>
+			<url>
+				<loc><%= francis_cms.post_url post %></loc>
+			</url>
+		<%- end -%>
+	<%- end -%>
+
+</urlset>
