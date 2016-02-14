@@ -1,11 +1,6 @@
-//= require routerrouter
 //= require_tree ./admin
 
 ;(function(document) {
-	// Modifying prototypes… ¯\_(Y O L O)_/¯
-	NodeList.prototype.forEach = Array.prototype.forEach;
-	NodeList.prototype.map = Array.prototype.map;
-
 	// Initialize a new router…
 	var Router = new RouterRouter();
 

@@ -121,17 +121,22 @@
 	<%= raw Rails.application.assets.find_asset('icons.svg') %>
 
 	<script>
-		function loadJS(e) {
+		function loadJS(e,c) {
 			var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
-			r.src=e;r.async=true;o.parentNode.insertBefore(r,o);return r;
+			r.src=e;r.async=true;o.parentNode.insertBefore(r,o);if(typeof c==='function')r.onload=c;return r;
 		}
 
 		if (document.querySelector && window.addEventListener) {
-			loadJS('<%= asset_path 'application.js' %>');
-
 			<%- if logged_in? -%>
-				if(!window.fetch)loadJS('<%= asset_path 'fetch.js' %>');
-				loadJS('<%= asset_path 'admin.js' %>');
+				if (!window.fetch) {
+					loadJS('<%= asset_path 'fetch.js' %>');
+				}
+
+				loadJS('<%= asset_path 'application.js' %>', function() {
+					loadJS('<%= asset_path 'admin.js' %>');
+				});
+			<%- else -%>
+				loadJS('<%= asset_path 'application.js' %>');
 			<%- end -%>
 		}
 	</script>
