@@ -1,4 +1,4 @@
-//= require_tree ./admin
+//= require_tree ./admin_modules
 
 ;(function(document) {
 	// Initialize a new router…
