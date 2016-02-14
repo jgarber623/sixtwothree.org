@@ -3,6 +3,10 @@
 	@extend %reset-list;
 	margin-bottom: $spacing-3;
 
+	@include breakpoint($bp-narrow) {
+		@include margin-xn(1);
+	}
+
 	@include breakpoint($tp-ultra) {
 		@include margin-xn(5);
 	}
@@ -13,38 +17,23 @@
 
 		@include breakpoint($bp-narrow) {
 			float: left;
+			@include padding-x;
 			width: 50%;
 
 			&:nth-child(odd) {
 				clear: left;
-				padding-right: $spacing-1;
-			}
-
-			&:nth-child(even) {
-				padding-left: $spacing-1;
 			}
 		}
 
 		@include breakpoint($tp-ultra) {
 			width: 33.33333%;
 
-			&:nth-child(odd),
-			&:nth-child(even) {
+			&:nth-child(odd) {
 				clear: none;
-				padding: 0;
-			}
-
-			&:nth-child(3n) {
-				padding-left: $spacing-1;
 			}
 
 			&:nth-child(3n+1) {
 				clear: left;
-				padding-right: $spacing-1;
-			}
-
-			&:nth-child(3n+2) {
-				@include padding-x(1);
 			}
 		}
 	}
