@@ -67,10 +67,10 @@
 		</div>
 	<%- end -%>
 
-	<header class="global-header" role="banner">
+	<header class="global-header">
 		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
 
-		<nav class="global-navigation" role="navigation">
+		<nav class="global-navigation">
 			<button aria-controls="navigation" aria-expanded="true" aria-hidden class="global-navigation-control">
 				<svg aria-label="Site Navigation" role="img" version="1.1"><use xlink:href="#icons-menu"></svg>
 				Menu
@@ -97,13 +97,13 @@
 		</nav>
 	</header>
 
-	<main class="global-content" id="main" role="main" tabindex="-1">
+	<main class="global-content" id="main" tabindex="-1">
 		<div class="container">
 			<%= yield %>
 		</div>
 	</main>
 
-	<footer class="global-footer" role="contentinfo">
+	<footer class="global-footer">
 		<div class="container">
 			<p>Some rights reserved. This site’s content is licensed under a <%= link_to %{#{francis_cms_config.license_title} license}, francis_cms_config.license_url, rel: 'license' %>. Source code available on <%= link_to 'GitHub', 'https://github.com/jgarber623/sixtwothree.org', rel: 'source' %>.</p>
 		</div>
