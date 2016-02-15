@@ -22,6 +22,7 @@
 	<%= auto_discovery_link_tag :rss, francis_cms.webmentions_path(format: :rss), title: %{#{francis_cms_config.site_title}: Webmentions} %>
 
 	<link rel="apple-touch-icon" href="<%= asset_path francis_cms_config.user_avatar %>">
+	<link rel="search" href="/opensearch.xml" type="application/opensearchdescription+xml">
 	<link rel="shortcut icon" href="<%= asset_path francis_cms_config.user_avatar %>">
 	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
 
