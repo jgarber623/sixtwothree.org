@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
   private
 
   def set_headers
+    response.headers['Link'] = %{<#{Rails.application.config.asset_host}>; rel="dns-prefetch"}
     response.headers['Link'] = %{<#{francis_cms.webmentions_url}>; rel="webmention"}
   end
 end
