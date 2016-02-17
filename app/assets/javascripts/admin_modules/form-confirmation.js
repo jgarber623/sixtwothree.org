@@ -1,7 +1,8 @@
-;(function() {
-	var FormConfirmation = window.FormConfirmation = function($el, message) {
+(function(window) {
+	'use strict';
+
+	var FormConfirmation = window.FormConfirmation = function($el) {
 		this.$el = $el;
-		this.message = message;
 	};
 
 	FormConfirmation.prototype = {
@@ -10,9 +11,9 @@
 		},
 
 		submit: function(event) {
-			if (!window.confirm(this.message)) {
+			if (!window.confirm(this.$el.getAttribute('data-confirm'))) {
 				event.preventDefault();
 			}
 		}
 	};
-})();
+})(window);

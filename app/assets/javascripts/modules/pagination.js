@@ -1,26 +1,31 @@
-;(function() {
-	var appendHint = function($el) {
+(function() {
+	'use strict';
+
+	var $pagination = document.querySelector('.pagination');
+
+	var appendHint = function() {
 		var $hint = document.createElement('p');
 
 		$hint.className = 'hint';
 		$hint.innerHTML = '<b>Hint:</b> Use the left and right arrow keys to navigate between pages.';
 
-		$el.appendChild($hint);
+		$pagination.appendChild($hint);
 	};
 
-	var Pagination = window.Pagination = function($el) {
-		this.$el = $el;
-	};
+	var Pagination = window.Pagination = function() {};
 
 	Pagination.prototype = {
 		init: function() {
-			this.$next = this.$el.querySelector('a.next_page');
-			this.$prev = this.$el.querySelector('a.previous_page');
+			if ($pagination) {
+				this.$next = $pagination.querySelector('a.next_page');
+				this.$prev = $pagination.querySelector('a.previous_page');
 
-			if (this.$next || this.$prev) {
-				window.addEventListener('keyup', this.keyup.bind(this));
-				appendHint(this.$el);
+				if (this.$next || this.$prev) {
+					window.addEventListener('keyup', this.keyup.bind(this));
+					appendHint();
+				}
 			}
+
 		},
 
 		keyup: function(event) {

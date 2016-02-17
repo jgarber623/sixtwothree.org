@@ -1,4 +1,4 @@
-;(function(document) {
+(function(document) {
 	'use strict';
 
 	var $name = document.getElementById('syndication_name'),

@@ -1,4 +1,4 @@
-;(function() {
+(function(document) {
 	'use strict';
 
 	var $title = document.getElementById('post_title'),
@@ -23,4 +23,4 @@
 			}, 500);
 		}
 	};
-})();
+})(document);

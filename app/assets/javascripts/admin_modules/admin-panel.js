@@ -1,12 +1,14 @@
-;(function() {
-	var AdminPanel = window.AdminPanel = function($el) {
-		this.$el = $el;
-	};
+(function(window) {
+	'use strict';
+
+	var $container = document.querySelector('.admin-panel-container');
+
+	var AdminPanel = window.AdminPanel = function() {};
 
 	AdminPanel.prototype = {
 		init: function() {
-			var $control = this.$control = this.$el.querySelector('.admin-panel-control'),
-				$region = this.$region = this.$el.querySelector('.admin-panel');
+			var $control = this.$control = $container.querySelector('.admin-panel-control'),
+				$region = this.$region = $container.querySelector('.admin-panel');
 
 			$control.setAttribute('aria-controls', 'admin-panel');
 			$control.setAttribute('aria-expanded', false);
@@ -18,7 +20,7 @@
 
 			this.bindEvents();
 
-			this.$el.classList.add('fixed');
+			$container.classList.add('fixed');
 		},
 
 		bindEvents: function() {
@@ -48,4 +50,4 @@
 			}
 		}
 	};
-})();
+})(window);

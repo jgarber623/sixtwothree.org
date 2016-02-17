@@ -1,7 +1,8 @@
-;(function() {
+(function(window, document) {
 	'use strict';
 
-	var $url = document.getElementById('link_url'),
+	var $form = document.getElementById('new_link'),
+		$url = document.getElementById('link_url'),
 		$title = document.getElementById('link_title'),
 		$tags = document.getElementById('link_tag_list');
 
@@ -17,14 +18,12 @@
 		});
 	};
 
-	var LinkForm = window.LinkForm = function($el) {
-		this.$el = $el;
-	};
+	var LinkForm = window.LinkForm = function() {};
 
 	LinkForm.prototype = {
 		init: function() {
 			if ($url && $title) {
-				$url.addEventListener('blur', this.blur.bind(this));
+				$url.addEventListener('blur', this.blur);
 			}
 		},
 
@@ -33,7 +32,7 @@
 
 			if (/^https?:\/\//.test(urlValue) && !$title.value) {
 				var options = {
-					body: new Blob(['url=' + urlValue + '&authenticity_token=' + encodeURIComponent(this.$el.querySelector('[name=authenticity_token]').value)]),
+					body: new Blob(['url=' + urlValue + '&authenticity_token=' + encodeURIComponent($form.querySelector('[name=authenticity_token]').value)]),
 					credentials: 'include',
 					headers: new Headers({
 						'Accept': 'application/json'
@@ -45,4 +44,4 @@
 			}
 		}
 	};
-})();
+})(window, document);

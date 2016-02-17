@@ -1,4 +1,6 @@
-;(function() {
+(function() {
+	'use strict';
+
 	var Entry = window.Entry = function($el) {
 		this.$el = $el;
 	};
