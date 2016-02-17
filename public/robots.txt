@@ -1,4 +1,1 @@
 # www.robotstxt.org/
-
-User-agent: *
-Disallow: /assets/
