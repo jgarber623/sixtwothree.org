@@ -1,25 +1,29 @@
 (function(window) {
 	'use strict';
 
-	var $container = document.querySelector('.admin-panel-container'),
-		$control = $container.querySelector('.admin-panel-control');
+	var $control = document.querySelector('.admin-panel-control');
 
 	window.AdminPanel = function() {
+		var collapsible = new Collapsible($control);
+
 		return {
 			init: function() {
-				new Collapsible($control).init();
+				collapsible.init();
 
 				$control.setAttribute('aria-expanded', false);
 				$control.removeAttribute('aria-hidden');
-				$container.classList.add('fixed');
 
-				window.addEventListener('keyup', this.keyup);
+				window.addEventListener('load', this.resize);
+				window.addEventListener('resize', this.resize);
+
+				document.querySelector('.admin-panel-container').classList.add('fixed');
 			},
 
-			keyup: function(event) {
-				if (event.ctrlKey && event.which === 65) {
-					$control.click();
-				}
+			resize: function() {
+				var isHidden = window.matchMedia('(min-width: 40em)').matches;
+
+				$control[isHidden ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
+				collapsible.toggle(isHidden);
 			}
 		};
 	};

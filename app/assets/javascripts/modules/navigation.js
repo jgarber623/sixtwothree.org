@@ -1,39 +1,28 @@
-(function() {
+(function(window) {
 	'use strict';
 
-	var $control = document.querySelector('.global-navigation-control'),
-		$region = document.getElementById($control.getAttribute('aria-controls'));
+	var $control = document.querySelector('.global-navigation-control');
 
-	var Navigation = window.Navigation = function() {};
+	window.Navigation = function() {
+		var collapsible = new Collapsible($control);
 
-	Navigation.prototype = {
-		init: function() {
-			this.bindEvents();
-		},
+		return {
+			init: function() {
+				collapsible.init();
 
-		bindEvents: function() {
-			window.addEventListener('load', this.resize.bind(this));
-			window.addEventListener('resize', this.resize.bind(this));
+				$control.setAttribute('aria-expanded', false);
+				$control.removeAttribute('aria-hidden');
 
-			$control.addEventListener('click', this.click.bind(this));
-		},
+				window.addEventListener('load', this.resize);
+				window.addEventListener('resize', this.resize);
+			},
 
-		click: function(event) {
-			event.preventDefault();
+			resize: function() {
+				var isHidden = window.matchMedia('(min-width: 50em)').matches;
 
-			this.toggle($control.getAttribute('aria-expanded') !== 'true');
-		},
-
-		resize: function(event) {
-			var isHidden = window.matchMedia('(min-width: 50em)').matches;
-
-			$control[isHidden ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
-			this.toggle(isHidden);
-		},
-
-		toggle: function(value) {
-			$control.setAttribute('aria-expanded', value);
-			$region[!value ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
-		}
+				$control[isHidden ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
+				collapsible.toggle(isHidden);
+			}
+		};
 	};
-})();
+})(window);

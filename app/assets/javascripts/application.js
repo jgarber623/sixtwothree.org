@@ -1,3 +1,4 @@
+//= require aria-collapsible
 //= require routerrouter
 //= require_tree ./modules
 
@@ -8,7 +9,7 @@
 	NodeList.prototype.forEach = Array.prototype.forEach;
 
 	// Initialize a new router…
-	var Router = new RouterRouter();
+	var router = new RouterRouter();
 
 	// Function for enhancing entries…
 	var entries = function() {
@@ -21,13 +22,13 @@
 	new Navigation().init();
 
 	// Enhance `/links`, `/photos`, `/posts`, and `/webmentions` pages…
-	Router.route(/(?:links|photos|posts|webmentions)(?:\/archives)?\/?(?:[A-Za-z0-9\-]+)?$/, function() {
+	router.route(/(?:links|photos|posts|webmentions)(?:\/archives)?\/?(?:[A-Za-z0-9\-]+)?$/, function() {
 		entries();
 		new Pagination().init();
 	});
 
 	// Enhance tag listing pages…
-	Router.route('tags/:tag', function() {
+	router.route('tags/:tag', function() {
 		entries();
 	});
 })();

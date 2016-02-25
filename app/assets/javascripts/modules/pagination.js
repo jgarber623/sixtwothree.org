@@ -1,4 +1,4 @@
-(function() {
+(function(window) {
 	'use strict';
 
 	var $pagination = document.querySelector('.pagination');
@@ -12,32 +12,31 @@
 		$pagination.appendChild($hint);
 	};
 
-	var Pagination = window.Pagination = function() {};
+	window.Pagination = function() {
+		if ($pagination) {
+			var $next = $pagination.querySelector('a.next_page'),
+				$prev = $pagination.querySelector('a.previous_page');
+		}
 
-	Pagination.prototype = {
-		init: function() {
-			if ($pagination) {
-				this.$next = $pagination.querySelector('a.next_page');
-				this.$prev = $pagination.querySelector('a.previous_page');
-
-				if (this.$next || this.$prev) {
-					window.addEventListener('keyup', this.keyup.bind(this));
+		return {
+			init: function() {
+				if ($next || $prev) {
+					window.addEventListener('keyup', this.keyup);
 					appendHint();
 				}
+			},
+
+			keyup: function(event) {
+				var keyCode = event.which;
+
+				if (keyCode === 37 && $prev) {
+					location.href = $prev.href;
+				}
+
+				if (keyCode === 39 && $next) {
+					location.href = $next.href;
+				}
 			}
-
-		},
-
-		keyup: function(event) {
-			var keyCode = event.which;
-
-			if (keyCode === 37 && this.$prev) {
-				location.href = this.$prev.href;
-			}
-
-			if (keyCode === 39 && this.$next) {
-				location.href = this.$next.href;
-			}
-		}
+		};
 	};
-})();
+})(window);
