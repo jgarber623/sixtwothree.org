@@ -10,9 +10,6 @@
 			init: function() {
 				collapsible.init();
 
-				$control.setAttribute('aria-expanded', false);
-				$control.removeAttribute('aria-hidden');
-
 				window.addEventListener('load', this.resize);
 				window.addEventListener('resize', this.resize);
 			},
