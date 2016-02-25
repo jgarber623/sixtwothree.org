@@ -1,19 +1,17 @@
 (function(window) {
 	'use strict';
 
-	var FormConfirmation = window.FormConfirmation = function($el) {
-		this.$el = $el;
-	};
+	window.FormConfirmation = function($el) {
+		return {
+			init: function() {
+				$el.addEventListener('submit', this.submit);
+			},
 
-	FormConfirmation.prototype = {
-		init: function() {
-			this.$el.addEventListener('submit', this.submit.bind(this));
-		},
-
-		submit: function(event) {
-			if (!window.confirm(this.$el.getAttribute('data-confirm'))) {
-				event.preventDefault();
+			submit: function(event) {
+				if (!window.confirm($el.getAttribute('data-confirm'))) {
+					event.preventDefault();
+				}
 			}
-		}
+		};
 	};
 })(window);

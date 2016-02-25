@@ -1,7 +1,12 @@
+//= require aria-collapsible
+//= require routerrouter
 //= require_tree ./admin_modules
 
 (function() {
 	'use strict';
+
+	// Modifying prototypes… ¯\_(Y O L O)_/¯
+	NodeList.prototype.forEach = Array.prototype.forEach;
 
 	// Initialize a new router…
 	var Router = new RouterRouter();

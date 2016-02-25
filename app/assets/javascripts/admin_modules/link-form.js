@@ -18,30 +18,30 @@
 		});
 	};
 
-	var LinkForm = window.LinkForm = function() {};
+	window.LinkForm = function() {
+		return {
+			init: function() {
+				if ($url && $title) {
+					$url.addEventListener('blur', this.blur);
+				}
+			},
 
-	LinkForm.prototype = {
-		init: function() {
-			if ($url && $title) {
-				$url.addEventListener('blur', this.blur);
+			blur: function(event) {
+				var urlValue = $url.value;
+
+				if (/^https?:\/\//.test(urlValue) && !$title.value) {
+					var options = {
+						body: new Blob(['url=' + urlValue + '&authenticity_token=' + encodeURIComponent($form.querySelector('[name=authenticity_token]').value)]),
+						credentials: 'include',
+						headers: new Headers({
+							'Accept': 'application/json'
+						}),
+						method: 'POST'
+					};
+
+					window.fetch('/links/fetch', options).then(handleResponse);
+				}
 			}
-		},
-
-		blur: function(event) {
-			var urlValue = $url.value;
-
-			if (/^https?:\/\//.test(urlValue) && !$title.value) {
-				var options = {
-					body: new Blob(['url=' + urlValue + '&authenticity_token=' + encodeURIComponent($form.querySelector('[name=authenticity_token]').value)]),
-					credentials: 'include',
-					headers: new Headers({
-						'Accept': 'application/json'
-					}),
-					method: 'POST'
-				};
-
-				window.fetch('/links/fetch', options).then(handleResponse);
-			}
-		}
+		};
 	};
 })(window, document);

@@ -113,10 +113,13 @@
 
 	<%- if logged_in? -%>
 		<div class="admin-panel-container">
-			<button aria-hidden class="admin-panel-control">
+			<button aria-controls="admin-panel" aria-expanded="true" aria-hidden class="admin-panel-control">
 				<svg aria-label="Toggle Admin Panel" role="img" version="1.1"><use xlink:href="#icons-menu"></svg>
 			</button>
-			<%= francis_cms_admin_panel %>
+
+			<div id="admin-panel">
+				<%= francis_cms_admin_panel %>
+			</div>
 		</div>
 	<%- end -%>
 
@@ -129,16 +132,14 @@
 		}
 
 		if (document.querySelector && window.addEventListener) {
+			loadJS('<%= asset_path 'application.js' %>');
+
 			<%- if logged_in? -%>
 				if (!window.fetch) {
 					loadJS('<%= asset_path 'fetch.js' %>');
 				}
 
-				loadJS('<%= asset_path 'application.js' %>', function() {
-					loadJS('<%= asset_path 'admin.js' %>');
-				});
-			<%- else -%>
-				loadJS('<%= asset_path 'application.js' %>');
+				loadJS('<%= asset_path 'admin.js' %>');
 			<%- end -%>
 		}
 	</script>
