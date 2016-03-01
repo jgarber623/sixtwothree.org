@@ -7,7 +7,7 @@ source 'https://rubygems.org' do
   gem 'puma', '~> 2.15'
 
   # Assets
-  gem 'breakpoint', '~> 2.5'
+  gem 'breakpoint', '~> 2.7'
   gem 'sass-rails', '~> 5.0'
   gem 'uglifier', '~> 2.7'
 
