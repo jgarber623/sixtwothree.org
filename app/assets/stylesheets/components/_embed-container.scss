@@ -1,0 +1,12 @@
+.embed-container {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	position: relative;
+
+	iframe {
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
+}

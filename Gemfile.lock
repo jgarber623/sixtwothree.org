@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/FrancisCMS/FrancisCMS.git
-  revision: 654155ebf3da20d87a3c6e40d409e6c6335d8995
+  revision: 6bbe874d2190f91ef0142123a7552a5eec6d4121
   specs:
     francis_cms (0.1.0)
       acts-as-taggable-on (~> 3.5)
@@ -88,7 +88,7 @@ GEM
     coderay (1.1.0)
     colored (1.2)
     concurrent-ruby (1.0.0)
-    domain_name (0.5.20160128)
+    domain_name (0.5.20160216)
       unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.10)
     erubis (2.7.0)
@@ -145,7 +145,7 @@ GEM
       activesupport
       json
       nokogiri
-    mime-types (2.99)
+    mime-types (2.99.1)
     mini_magick (4.4.0)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
