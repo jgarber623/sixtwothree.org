@@ -18,16 +18,16 @@ class SessionsController < ApplicationController
     rescue Mechanize::ResponseCodeError
     end
 
-    redirect_to (session[:redirect_to] || root_path), notice: 'Welcome back! You look nice today.'
+    redirect_to (session[:redirect_to] || root_path), notice: t('flashes.sessions.create_notice')
   end
 
   def destroy
     reset_session
 
-    redirect_to root_path, notice: 'You’ve successfully logged out. See you again soon!'
+    redirect_to root_path, notice: t('flashes.sessions.destroy_notice')
   end
 
   def new
-    redirect_to root_path, notice: 'You’re already logged in, boss!' if logged_in?
+    redirect_to root_path, notice: t('flashes.sessions.new_notice') if logged_in?
   end
 end
