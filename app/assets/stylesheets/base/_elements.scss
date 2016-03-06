@@ -13,7 +13,7 @@
 }
 
 [tabindex="-1"]:focus {
-	outline: none;
+	outline: 0;
 }
 
 html {
@@ -190,18 +190,10 @@ section {
 		margin: 0;
 	}
 
-	button,
-	input {
-		&::-moz-focus-inner,
-		&::-moz-focus-inner {
-			border: 0;
-			padding: 0;
-		}
-
-		&:-moz-focusring,
-		&:-moz-focusring {
-			outline: 1px dotted ButtonText;
-		}
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+		border: 0;
+		padding: 0;
 	}
 
 	button {
