@@ -23,12 +23,14 @@
 
 	<link rel="apple-touch-icon" href="<%= asset_path francis_cms_config.user_avatar %>">
 	<link rel="preconnect" href="<%= Rails.application.config.action_controller.asset_host %>" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 	<link rel="search" href="/opensearch.xml" type="application/opensearchdescription+xml">
 	<link rel="shortcut icon" href="<%= asset_path francis_cms_config.user_avatar %>">
 	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
 
 	<%- if css_is_cached? -%>
-		<%= stylesheet_link_tag 'application.css' %>
+		<%= stylesheet_link_tag 'application.css', google_fonts_url %>
 		<%= stylesheet_link_tag 'admin.css' if logged_in? %>
 	<%- else -%>
 		<style>
@@ -44,12 +46,13 @@
 			}
 
 			loadCSS('<%= asset_path 'application.css' %>');
+			loadCSS('<%= google_fonts_url %>');
 
 			document.cookie='cssIsCached=true;expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>;path=/';
 		</script>
 
 		<noscript>
-			<%= stylesheet_link_tag 'application.css' %>
+			<%= stylesheet_link_tag 'application.css', google_fonts_url %>
 		</noscript>
 	<%- end -%>
 
