@@ -6,8 +6,10 @@
 	display: inline-block;
 	height: auto;
 	line-height: 1.125;
+	overflow: visible;
 	padding: $spacing-1 $spacing-2;
 	text-decoration: none;
+	text-transform: none;
 	white-space: nowrap;
 }
 

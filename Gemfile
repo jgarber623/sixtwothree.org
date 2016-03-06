@@ -26,7 +26,6 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-aria-collapsible'
   gem 'rails-assets-fetch'
   gem 'rails-assets-html5shiv'
-  gem 'rails-assets-normalize-css'
   gem 'rails-assets-respond'
   gem 'rails-assets-routerrouter'
 end

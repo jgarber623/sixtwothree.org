@@ -185,7 +185,6 @@ GEM
     rails-assets-aria-collapsible (2.0.1)
     rails-assets-fetch (0.11.0)
     rails-assets-html5shiv (3.7.3)
-    rails-assets-normalize-css (3.0.3)
     rails-assets-respond (1.4.2)
     rails-assets-routerrouter (1.0.1)
     rails-deprecated_sanitizer (1.0.3)
@@ -272,7 +271,6 @@ DEPENDENCIES
   rails-assets-aria-collapsible!
   rails-assets-fetch!
   rails-assets-html5shiv!
-  rails-assets-normalize-css!
   rails-assets-respond!
   rails-assets-routerrouter!
   sass-rails (~> 5.0)!

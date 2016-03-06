@@ -19,19 +19,41 @@
 html {
 	background-color: #fff;
 	box-sizing: border-box;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
 }
 
 body {
 	@include color($grey, darker);
 	font-family: "Source Sans Pro", sans-serif;
 	line-height: 1.4;
+	margin: 0;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section {
+	display: block;
 }
 
 /* @group Links */
 
 	a {
+		background-color: transparent;
 		@include color($blue);
 		text-decoration: underline;
+
+		&:active,
+		&:hover {
+			outline: 0;
+		}
 
 		&:focus,
 		&:hover {
@@ -42,6 +64,16 @@ body {
 /* @end */
 
 /* @group Text-level semantics */
+
+	abbr[title] {
+		border: 0;
+		text-decoration: underline dotted;
+	}
+
+	b,
+	strong {
+		font-weight: bolder;
+	}
 
 	h1,
 	h2,
@@ -83,6 +115,8 @@ body {
 
 	sup {
 		font-size: 100%;
+		line-height: 0;
+		position: relative;
 		top: auto;
 		vertical-align: baseline;
 	}
@@ -92,6 +126,7 @@ body {
 /* @group Embedded content */
 
 	img {
+		border: 0;
 		-ms-interpolation-mode: bicubic;
 		max-width: 100%;
 		vertical-align: middle;
@@ -99,16 +134,29 @@ body {
 
 	svg {
 		max-height: 100%;
+
+		&:not(:root) {
+			overflow: hidden;
+		}
 	}
 
 /* @end */
 
 /* @group Grouping content */
 
+	hr {
+		box-sizing: content-box;
+		overflow: visible;
+	}
+
 	code,
 	pre {
 		font-family: Monaco, "Courier New", Courier, monospace;
 		font-size: 1em;
+	}
+
+	pre {
+		overflow: auto;
 	}
 
 /* @end */
@@ -131,15 +179,52 @@ body {
 		margin-bottom: $spacing-1;
 
 		abbr[title] {
-			border: 0;
 			text-decoration: none;
 		}
 	}
 
-	input[type="text"],
-	input[type="url"],
+	button,
+	input,
+	textarea {
+		font: inherit;
+		margin: 0;
+	}
+
+	button,
+	input {
+		&::-moz-focus-inner,
+		&::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+		}
+
+		&:-moz-focusring,
+		&:-moz-focusring {
+			outline: 1px dotted ButtonText;
+		}
+	}
+
 	button {
+		@extend %button--blue;
 		height: 2.5em;
+	}
+
+	input {
+		line-height: normal;
+
+		&[type="checkbox"] {
+			box-sizing: border-box;
+			padding: 0;
+		}
+
+		&[type="file"] {
+			width: 100%;
+		}
+
+		&[type="text"],
+		&[type="url"] {
+			height: 2.5em;
+		}
 	}
 
 	input[type="text"],
@@ -160,12 +245,8 @@ body {
 		}
 	}
 
-	input[type="file"] {
-		width: 100%;
-	}
-
-	button {
-		@extend %button--blue;
+	textarea {
+		overflow: auto;
 	}
 
 /* @end */
