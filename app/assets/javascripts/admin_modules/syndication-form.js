@@ -12,7 +12,7 @@
 				}
 			},
 
-			keyup: function(event) {
+			keyup: function() {
 				var urlValue = $url.value;
 
 				if (urlValue.match(/^https?:\/\//)) {

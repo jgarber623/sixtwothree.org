@@ -26,7 +26,7 @@
 				}
 			},
 
-			blur: function(event) {
+			blur: function() {
 				var urlValue = $url.value;
 
 				if (/^https?:\/\//.test(urlValue) && !$title.value) {

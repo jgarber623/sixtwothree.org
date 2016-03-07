@@ -12,7 +12,7 @@
 				}
 			},
 
-			keyup: function(event) {
+			keyup: function() {
 				setTimeout(function() {
 					var titleValue = $title.value;
 
