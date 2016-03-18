@@ -9,7 +9,7 @@
 	NodeList.prototype.forEach = Array.prototype.forEach;
 
 	// Initialize a new router…
-	var Router = new RouterRouter();
+	var router = new RouterRouter();
 
 	// Enhance admin panel…
 	new AdminPanel().init();
@@ -20,17 +20,17 @@
 	});
 
 	// Enhance link editing form…
-	Router.route(/links\/new/, function() {
+	router.route(/links\/new/, function() {
 		new LinkForm().init();
 	});
 
 	// Enhance post editing form…
-	Router.route(/posts\/(?:.+?\/edit|new)/, function() {
+	router.route(/posts\/(?:.+?\/edit|new)/, function() {
 		new PostForm().init();
 	});
 
 	// Enhance syndication form…
-	Router.route(/\/edit$/, function() {
+	router.route(/\/edit$/, function() {
 		new SyndicationForm().init();
 	});
 })();

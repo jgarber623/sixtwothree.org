@@ -2,10 +2,10 @@
 	'use strict';
 
 	window.Entry = function($el) {
+		var $title = $el.querySelector('.entry-title');
+
 		return {
 			init: function() {
-				var $title = $el.querySelector('.entry-title');
-
 				if ($title) {
 					var $shim = document.createElement('i');
 

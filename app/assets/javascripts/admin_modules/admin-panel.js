@@ -1,26 +1,21 @@
 (function(window) {
 	'use strict';
 
-	var $control = document.querySelector('.admin-panel-control');
-
 	window.AdminPanel = function() {
-		var collapsible = new Collapsible($control);
+		var collapsible = new Collapsible(document.querySelector('.admin-panel-control'));
+
+		var handleResize = function() {
+			collapsible[window.matchMedia('(min-width: 50em)').matches ? 'teardown' : 'init']();
+		};
 
 		return {
 			init: function() {
 				collapsible.init();
 
-				window.addEventListener('load', this.resize);
-				window.addEventListener('resize', this.resize);
+				window.addEventListener('load', handleResize);
+				window.addEventListener('resize', handleResize);
 
 				document.querySelector('.admin-panel-container').classList.add('fixed');
-			},
-
-			resize: function() {
-				var isHidden = window.matchMedia('(min-width: 40em)').matches;
-
-				$control[isHidden ? 'setAttribute' : 'removeAttribute']('aria-hidden', true);
-				collapsible.toggle(isHidden);
 			}
 		};
 	};
