@@ -9,9 +9,9 @@
 			var urlValue = $url.value;
 
 			if (urlValue.match(/^https?:\/\//)) {
-				var hostname = urlValue.match(/^https?:\/\/(?:[a-zA-Z]+\.){0,1}([a-zA-Z0-9][a-zA-Z0-9-]+){1}\.[A-Za-z]{2,}/)[1];
+				var hostname = urlValue.match(/^https?:\/\/(?:[a-zA-Z]+\.){0,1}([a-zA-Z0-9][a-zA-Z0-9-]+){1}\.[a-zA-Z]{2,}/)[1];
 
-				$name.value = hostname.charAt(0).toUpperCase() + hostname.slice(1);
+				$name.value = hostname[0].toUpperCase() + hostname.slice(1);
 			}
 		};
 
