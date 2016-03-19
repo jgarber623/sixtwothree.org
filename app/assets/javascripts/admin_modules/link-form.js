@@ -3,17 +3,14 @@
 
 	window.LinkForm = function() {
 		var $form = document.getElementById('new_link'),
-			$authenticityToken = $form.querySelector('[name=authenticity_token]'),
 			$url = document.getElementById('link_url'),
 			$title = document.getElementById('link_title'),
 			$tags = document.getElementById('link_tag_list');
 
 		var handleBlur = function() {
-			var urlValue = $url.value;
-
-			if (/^https?:\/\//.test(urlValue) && !$title.value) {
+			if (/^https?:\/\//.test($url.value) && !$title.value) {
 				var options = {
-					body: new Blob(['url=' + urlValue + '&authenticity_token=' + encodeURIComponent($authenticityToken.value)]),
+					body: new FormData($form),
 					credentials: 'include',
 					headers: new Headers({
 						'Accept': 'application/json'
