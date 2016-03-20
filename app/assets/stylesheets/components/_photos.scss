@@ -11,6 +11,10 @@
 		@include margin-xn(5);
 	}
 
+	@include breakpoint($bp-ultra) {
+		@include margin-xn(6);
+	}
+
 	li {
 		margin-bottom: $spacing-3;
 		position: relative;
@@ -33,6 +37,18 @@
 			}
 
 			&:nth-child(4n+1) {
+				clear: left;
+			}
+		}
+
+		@include breakpoint($bp-ultra) {
+			width: 20%;
+
+			&:nth-child(4n+1) {
+				clear: none;
+			}
+
+			&:nth-child(5n+1) {
 				clear: left;
 			}
 		}
