@@ -242,3 +242,45 @@ section {
 	}
 
 /* @end */
+
+/* @group Tables */
+
+	table {
+		border-collapse: collapse;
+		margin: $spacing-1 0 $spacing-4 0;
+		width: 100%;
+
+		caption {
+			caption-side: bottom;
+			@include font-size(6);
+			margin-top: $spacing-2;
+			text-align: center;
+		}
+
+		th {
+			padding: $spacing-1 $spacing-1 $spacing-1 0;
+			text-align: left;
+		}
+
+		tbody {
+			@include font-size(6);
+
+			tr {
+				border-bottom: 2px solid $darken-1;
+
+				&:first-child {
+					border-top: 2px solid $darken-1;
+				}
+			}
+
+			td {
+				padding: $spacing-1 $spacing-1 $spacing-1 0;
+
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+/* @end */
