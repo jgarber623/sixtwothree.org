@@ -23,4 +23,17 @@ module ApplicationHelper
   def google_fonts_url
     'https://fonts.googleapis.com/css?family=Open+Sans:700|Source+Sans+Pro:400,400italic,700'
   end
+
+  def inline_asset(filename)
+    if Rails.application.config.assets.compile
+      Rails.application.assets.find_asset(filename)
+    else
+      manifest = Rails.application.assets_manifest
+      asset_path = manifest.assets[filename]
+
+      unless asset_path.nil?
+        File.read(Rails.root.join(manifest.directory, asset_path))
+      end
+    end
+  end
 end

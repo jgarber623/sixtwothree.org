@@ -31,7 +31,7 @@
 		<%= stylesheet_link_tag 'admin.css' if logged_in? %>
 	<%- else -%>
 		<style>
-			<%= raw Rails.application.assets.find_asset('critical.css') %>
+			<%= raw inline_asset('critical.css') %>
 		</style>
 
 		<script>
@@ -123,7 +123,7 @@
 		</div>
 	<%- end -%>
 
-	<%= raw Rails.application.assets.find_asset('icons.svg') %>
+	<%= raw inline_asset('icons.svg') %>
 
 	<script>
 		function loadJS(e,c) {
