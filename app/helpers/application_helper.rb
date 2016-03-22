@@ -25,15 +25,19 @@ module ApplicationHelper
   end
 
   def inline_asset(filename)
+    output = ''
+
     if Rails.application.config.assets.compile
-      Rails.application.assets.find_asset(filename)
+      output = Rails.application.assets.find_asset(filename).to_s
     else
       manifest = Rails.application.assets_manifest
       asset_path = manifest.assets[filename]
 
       unless asset_path.nil?
-        File.read(Rails.root.join(manifest.directory, asset_path))
+        output = File.read(Rails.root.join(manifest.directory, asset_path))
       end
     end
+
+    output.html_safe
   end
 end
