@@ -38,6 +38,11 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'public/uploads', 'tmp')
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+# Defaults to nil (no asset cleanup is performed)
+# If you use Rails 4+ and you'd like to clean up old assets after each deploy,
+# set this to the number of versions to keep
+set :keep_assets, 3
+
 namespace :deploy do
 
   %w{restart start stop}.each do |cmd|
