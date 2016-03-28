@@ -28,7 +28,7 @@ module ApplicationHelper
     output = ''
 
     if Rails.application.config.assets.compile
-      output = Rails.application.assets.find_asset(filename).to_s
+      output = Rails.application.assets[filename].to_s
     else
       manifest = Rails.application.assets_manifest
       asset_path = manifest.assets[filename]
