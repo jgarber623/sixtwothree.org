@@ -1,11 +1,11 @@
-(function(window, document) {
+(function(window, $) {
 	'use strict';
 
 	window.LinkForm = function() {
-		var $form = document.getElementById('new_link'),
-			$url = document.getElementById('link_url'),
-			$title = document.getElementById('link_title'),
-			$tags = document.getElementById('link_tag_list');
+		var $form = $('#new_link')[0],
+			$url = $('#link_url')[0],
+			$title = $('#link_title')[0],
+			$tags = $('#link_tag_list')[0];
 
 		var handleBlur = function() {
 			if (/^https?:\/\//.test($url.value) && !$title.value) {
@@ -42,4 +42,4 @@
 			}
 		};
 	};
-})(window, document);
+})(window, CashCash);

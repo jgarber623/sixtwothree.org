@@ -1,8 +1,8 @@
-(function(window) {
+(function(window, $) {
 	'use strict';
 
 	window.Navigation = function() {
-		var collapsible = new Collapsible(document.querySelector('.global-navigation-control'));
+		var collapsible = new Collapsible($('.global-navigation-control')[0]);
 
 		var handleResize = function() {
 			collapsible[window.matchMedia('(min-width: 50em)').matches ? 'teardown' : 'init']();
@@ -17,4 +17,4 @@
 			}
 		};
 	};
-})(window);
+})(window, CashCash);

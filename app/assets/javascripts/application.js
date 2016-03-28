@@ -1,19 +1,17 @@
 //= require aria-collapsible
+//= require cashcash
 //= require routerrouter
 //= require_tree ./modules
 
-(function() {
+(function($) {
 	'use strict';
-
-	// Modifying prototypes… ¯\_(Y O L O)_/¯
-	NodeList.prototype.forEach = Array.prototype.forEach;
 
 	// Initialize a new router…
 	var router = new RouterRouter();
 
 	// Function for enhancing entries…
 	var entries = function() {
-		document.querySelectorAll('.entry').forEach(function($entry) {
+		$('.entry').toArray().forEach(function($entry) {
 			new Entry($entry).init();
 		});
 	};
@@ -31,4 +29,4 @@
 	router.route('tags/:tag', function() {
 		entries();
 	});
-})();
+})(CashCash);

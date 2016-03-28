@@ -1,8 +1,8 @@
-(function(window) {
+(function(window, $) {
 	'use strict';
 
 	window.AdminPanel = function() {
-		var collapsible = new Collapsible(document.querySelector('.admin-panel-control'));
+		var collapsible = new Collapsible($('.admin-panel-control')[0]);
 
 		var handleResize = function() {
 			collapsible[window.matchMedia('(min-width: 50em)').matches ? 'teardown' : 'init']();
@@ -15,8 +15,8 @@
 				window.addEventListener('load', handleResize);
 				window.addEventListener('resize', handleResize);
 
-				document.querySelector('.admin-panel-container').classList.add('fixed');
+				$('.admin-panel-container')[0].classList.add('fixed');
 			}
 		};
 	};
-})(window);
+})(window, CashCash);

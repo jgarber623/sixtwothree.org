@@ -1,12 +1,12 @@
-(function(window) {
+(function(window, $) {
 	'use strict';
 
 	window.Pagination = function() {
-		var $pagination = document.querySelector('.pagination');
+		var $pagination = $('.pagination')[0];
 
 		if ($pagination) {
-			var $next = $pagination.querySelector('a.next_page'),
-				$prev = $pagination.querySelector('a.previous_page');
+			var $next = $('a.next_page', $pagination)[0],
+				$prev = $('a.previous_page', $pagination)[0];
 		}
 
 		var appendHint = function() {
@@ -39,4 +39,4 @@
 			}
 		};
 	};
-})(window);
+})(window, CashCash);

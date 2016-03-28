@@ -1,9 +1,9 @@
-(function(document) {
+(function($) {
 	'use strict';
 
 	window.PostForm = function() {
-		var $title = document.getElementById('post_title'),
-			$slug = document.getElementById('post_slug');
+		var $title = $('#post_title')[0],
+			$slug = $('#post_slug')[0];
 
 		var handleKeyup = function() {
 			setTimeout(function() {
@@ -23,4 +23,4 @@
 			}
 		};
 	};
-})(document);
+})(CashCash);

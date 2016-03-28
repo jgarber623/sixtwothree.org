@@ -1,8 +1,8 @@
-(function() {
+(function($) {
 	'use strict';
 
 	window.Entry = function($el) {
-		var $title = $el.querySelector('.entry-title');
+		var $title = $('.entry-title', $el)[0];
 
 		return {
 			init: function() {
@@ -15,4 +15,4 @@
 			}
 		};
 	};
-})();
+})(CashCash);

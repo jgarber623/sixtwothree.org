@@ -1,9 +1,9 @@
-(function(document) {
+(function($) {
 	'use strict';
 
 	window.SyndicationForm = function() {
-		var $name = document.getElementById('syndication_name'),
-			$url = document.getElementById('syndication_url');
+		var $name = $('#syndication_name')[0],
+			$url = $('#syndication_url')[0];
 
 		var handleKeyup = function() {
 			var urlValue = $url.value;
@@ -23,4 +23,4 @@
 			}
 		};
 	};
-})(document);
+})(CashCash);

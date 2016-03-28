@@ -1,12 +1,10 @@
 //= require aria-collapsible
+//= require cashcash
 //= require routerrouter
 //= require_tree ./admin_modules
 
-(function() {
+(function($) {
 	'use strict';
-
-	// Modifying prototypes… ¯\_(Y O L O)_/¯
-	NodeList.prototype.forEach = Array.prototype.forEach;
 
 	// Initialize a new router…
 	var router = new RouterRouter();
@@ -15,7 +13,7 @@
 	new AdminPanel().init();
 
 	// Enhance confirmation forms…
-	document.querySelectorAll('form[data-confirm]').forEach(function($form) {
+	$('form[data-confirm]').toArray().forEach(function($form) {
 		new FormConfirmation($form).init();
 	});
 
@@ -33,4 +31,4 @@
 	router.route(/\/edit$/, function() {
 		new SyndicationForm().init();
 	});
-})();
+})(CashCash);
