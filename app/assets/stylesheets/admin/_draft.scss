@@ -8,6 +8,10 @@
 		left: $spacing-2;
 		position: absolute;
 		bottom: $spacing-2;
+
+		@include breakpoint($bp-narrow) {
+			left: $spacing-1 + $spacing-2;
+		}
 	}
 
 	.single-header & {
