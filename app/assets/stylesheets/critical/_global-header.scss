@@ -4,20 +4,12 @@
 	@include padding-y;
 	position: relative;
 
-	@include breakpoint($bp-wide) {
-		@include table;
-	}
-
 	h1 {
 		@include font-size(4);
 		margin: 0;
 
 		@include breakpoint($bp-narrow) {
 			@include font-size(2);
-		}
-
-		@include breakpoint($bp-wide) {
-			@include table-cell;
 		}
 
 		a {

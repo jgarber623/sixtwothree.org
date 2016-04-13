@@ -41,9 +41,8 @@
 		}
 
 		li {
-			display: table-cell;
 			padding-right: $spacing-1;
-			vertical-align: middle;
+			@include table-cell;
 
 			+ li {
 				padding: 0 0 0 $spacing-1;
@@ -65,9 +64,8 @@
 			@include margin-y(1);
 
 			@include breakpoint($bp-narrow) {
-				display: table-cell;
 				@include padding-x;
-				vertical-align: middle;
+				@include table-cell;
 			}
 
 			@include breakpoint($tp-medium) {

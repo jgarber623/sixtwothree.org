@@ -16,7 +16,7 @@
 	.next_page {
 		float: right;
 
-		&:after {
+		&::after {
 			content: "→";
 			display: inline-block;
 			margin-left: $spacing-1;
@@ -26,7 +26,7 @@
 	.previous_page {
 		float: left;
 
-		&:before {
+		&::before {
 			content: "←";
 			display: inline-block;
 			margin-right: $spacing-1;

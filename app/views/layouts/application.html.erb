@@ -72,32 +72,32 @@
 	<header class="global-header">
 		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
 
-		<nav class="global-navigation">
-			<button aria-controls="navigation" aria-expanded="true" aria-hidden class="global-navigation-control">
-				<svg aria-label="Site Navigation" height="1em" role="img" version="1.1" width="1em"><use xlink:href="#icons-menu"></svg>
-				Menu
-			</button>
-
-			<ul id="navigation">
-				<li><%= link_to 'Posts', francis_cms.posts_path %></li>
-				<li><%= link_to 'Links', francis_cms.links_path %></li>
-				<li><%= link_to 'Photos', francis_cms.photos_path %></li>
-				<li><%= link_to 'Tags', francis_cms.tags_path %></li>
-				<%- if logged_in? -%>
-					<li><%= link_to 'Webmentions', francis_cms.webmentions_path %></li>
-				<%- end -%>
-				<li>
-					<%- if logged_in? -%>
-						<%= form_tag main_app.logout_path, method: :delete do %>
-							<button type="submit">Log Out</button>
-						<% end %>
-					<%- else -%>
-						<%= link_to 'Log In', main_app.login_path %>
-					<%- end -%>
-				</li>
-			</ul>
-		</nav>
+		<%= link_to '#navigation', 'aria-controls': 'navigation', 'aria-expanded': true, class: 'global-navigation-control' do %>
+			<svg aria-label="Site Navigation" height="1em" role="img" version="1.1" width="1em"><use xlink:href="#icons-menu"></svg>
+			Menu
+		<% end %>
 	</header>
+
+	<nav class="global-navigation" id="navigation">
+		<ul>
+			<li><%= link_to 'Posts', francis_cms.posts_path %></li>
+			<li><%= link_to 'Links', francis_cms.links_path %></li>
+			<li><%= link_to 'Photos', francis_cms.photos_path %></li>
+			<li><%= link_to 'Tags', francis_cms.tags_path %></li>
+			<%- if logged_in? -%>
+				<li><%= link_to 'Webmentions', francis_cms.webmentions_path %></li>
+			<%- end -%>
+			<li>
+				<%- if logged_in? -%>
+					<%= form_tag main_app.logout_path, method: :delete do %>
+						<button type="submit">Log Out</button>
+					<% end %>
+				<%- else -%>
+					<%= link_to 'Log In', main_app.login_path %>
+				<%- end -%>
+			</li>
+		</ul>
+	</nav>
 
 	<main class="global-content" id="main" tabindex="-1">
 		<div class="container">

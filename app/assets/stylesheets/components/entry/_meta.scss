@@ -13,11 +13,11 @@
 	dd {
 		margin: 0;
 
-		&:after {
+		&::after {
 			content: ", ";
 		}
 
-		&:last-child:after {
+		&:last-child::after {
 			content: "";
 		}
 	}

@@ -22,11 +22,11 @@
 			margin-left: $spacing-1;
 		}
 
-		&:before {
+		&::before {
 			content: "(";
 		}
 
-		&:after {
+		&::after {
 			content: ")";
 		}
 	}

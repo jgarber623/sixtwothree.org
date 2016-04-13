@@ -2,7 +2,7 @@
 	display: block;
 	position: relative;
 
-	&:after {
+	&::after {
 		@include border-radius(0 0 0.125em 0.125em);
 		bottom: 0;
 		content: "";
@@ -14,7 +14,7 @@
 	}
 
 	@each $network in facebook, flickr, instagram, twitter {
-		&.#{$network}-com:after {
+		&.#{$network}-com::after {
 			@include bg-color($profiles, $network);
 		}
 	}

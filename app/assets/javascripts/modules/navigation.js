@@ -2,18 +2,24 @@
 	'use strict';
 
 	window.Navigation = function() {
-		var collapsible = new Collapsible($('.global-navigation-control')[0]);
+		var $navigation = $('#navigation')[0],
+			$control = $('.global-navigation-control')[0],
+			collapsible = new Collapsible($control);
 
-		var handleResize = function() {
-			collapsible[window.matchMedia('(min-width: 50em)').matches ? 'teardown' : 'init']();
+		var handleKeyup = function(event) {
+			if (event.which === 27 && $control.getAttribute('aria-expanded') === 'true') {
+				collapsible.toggle();
+				$control.focus();
+			}
 		};
 
 		return {
 			init: function() {
 				collapsible.init();
 
-				window.addEventListener('load', handleResize);
-				window.addEventListener('resize', handleResize);
+				window.addEventListener('keyup', handleKeyup);
+
+				$navigation.className = $navigation.className + ' enhanced';
 			}
 		};
 	};

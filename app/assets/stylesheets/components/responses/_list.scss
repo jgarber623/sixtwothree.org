@@ -13,13 +13,13 @@
 			background-color: $darken-1;
 
 			@include breakpoint($tp-wide) {
-				&:before {
+				&::before {
 					display: block;
 				}
 			}
 		}
 
-		&:before {
+		&::before {
 			border-bottom: 0.25em solid transparent;
 			border-right: 0.25em solid $darken-1;
 			border-top: 0.25em solid transparent;
