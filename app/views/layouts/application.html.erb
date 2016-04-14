@@ -72,7 +72,7 @@
 	<header class="global-header">
 		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
 
-		<%= link_to '#navigation', 'aria-controls': 'navigation', 'aria-expanded': true, class: 'global-navigation-control' do %>
+		<%= link_to '#navigation', aria: { controls: 'navigation', expanded: true }, class: 'global-navigation-control' do %>
 			<svg aria-label="Site Navigation" height="1em" role="img" version="1.1" width="1em"><use xlink:href="#icons-menu"></svg>
 			Menu
 		<% end %>
