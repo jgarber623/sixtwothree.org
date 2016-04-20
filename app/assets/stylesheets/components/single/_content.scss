@@ -25,6 +25,10 @@
 		}
 	}
 
+	[data-entry-type="link"] & > p:last-of-type a::after {
+		content: " →";
+	}
+
 	p,
 	li {
 		@include font-size(4);
