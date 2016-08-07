@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/FrancisCMS/FrancisCMS.git
-  revision: f4e71a8ce92c18f8b3a43b85e632eaf1af9b9b9e
+  revision: bf845076032e44d5119029a4cd85677f71460385
   specs:
     francis_cms (0.1.0)
       acts-as-taggable-on (~> 3.5)
@@ -109,7 +109,7 @@ GEM
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     geocoder (1.3.7)
-    globalid (0.3.6)
+    globalid (0.3.7)
       activesupport (>= 4.1.0)
     http (1.0.4)
       addressable (~> 2.3)
@@ -148,7 +148,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.1)
     mercenary (0.3.5)
     method_source (0.8.2)
-    microformats2 (2.0.2)
+    microformats2 (2.0.3)
       activesupport
       json
       nokogiri
