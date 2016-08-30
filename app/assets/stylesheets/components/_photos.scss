@@ -16,7 +16,7 @@
 	}
 
 	li {
-		margin-bottom: $spacing-3;
+		margin-bottom: $spacing-2;
 		position: relative;
 
 		@include breakpoint($bp-narrow) {
@@ -43,8 +43,25 @@
 	}
 
 	.entry-content {
-		position: relative;
-		text-align: center;
+		@supports (object-fit: cover) {
+			height: 0;
+			padding-bottom: 100%;
+			position: relative;
+
+			a {
+				bottom: 0;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			img {
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
 
 		img {
 			margin: 0;
@@ -52,6 +69,25 @@
 	}
 
 	.entry-footer {
-		margin-top: $spacing-2;
+		background-color: $darken-3;
+		bottom: $spacing-1;
+		color: #fff;
+		left: $spacing-1;
+		opacity: 0;
+		padding: $spacing-1;
+		pointer-events: none;
+		position: absolute;
+		right: $spacing-1;
+		text-shadow: 1px 1px 0 $darken-4;
+		transition: opacity 0.25s ease-out;
+
+		@include breakpoint($bp-narrow) {
+			left: $spacing-2;
+			right: $spacing-2;
+		}
+	}
+
+	li:hover .entry-footer {
+		opacity: 1;
 	}
 }
