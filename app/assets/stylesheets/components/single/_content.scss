@@ -87,6 +87,10 @@
 		padding: 0.25em;
 	}
 
+	img {
+		max-height: 95vh;
+	}
+
 	code {
 		background-color: $darken-1;
 		display: inline-block;
