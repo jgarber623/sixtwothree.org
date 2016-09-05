@@ -13,14 +13,10 @@
 			}
 		};
 
-		return {
-			init: function() {
-				collapsible.init();
+		collapsible.init();
 
-				window.addEventListener('keyup', handleKeyup);
+		window.addEventListener('keyup', handleKeyup);
 
-				$navigation.className = $navigation.className + ' enhanced';
-			}
-		};
+		$navigation.className = $navigation.className + ' enhanced';
 	};
 })(window, CashCash);

@@ -8,15 +8,11 @@
 			collapsible[window.matchMedia('(min-width: 50em)').matches ? 'teardown' : 'init']();
 		};
 
-		return {
-			init: function() {
-				collapsible.init();
+		collapsible.init();
 
-				window.addEventListener('load', handleResize);
-				window.addEventListener('resize', handleResize);
+		window.addEventListener('load', handleResize);
+		window.addEventListener('resize', handleResize);
 
-				$('.admin-panel-container')[0].classList.add('fixed');
-			}
-		};
+		$('.admin-panel-container')[0].classList.add('fixed');
 	};
 })(window, CashCash);

@@ -10,25 +10,25 @@
 	var router = new RouterRouter();
 
 	// Enhance admin panel…
-	new AdminPanel().init();
+	new AdminPanel();
 
 	// Enhance confirmation forms…
 	$('form[data-confirm]').toArray().forEach(function($form) {
-		new FormConfirmation($form).init();
+		new FormConfirmation($form);
 	});
 
 	// Enhance link editing form…
 	router.route(/links\/new/, function() {
-		new LinkForm().init();
+		new LinkForm();
 	});
 
 	// Enhance post editing form…
 	router.route(/posts\/(?:.+?\/edit|new)/, function() {
-		new PostForm().init();
+		new PostForm();
 	});
 
 	// Enhance syndication form…
 	router.route(/\/edit$/, function() {
-		new SyndicationForm().init();
+		new SyndicationForm();
 	});
 })(CashCash);

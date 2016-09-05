@@ -10,10 +10,6 @@
 			}
 		};
 
-		return {
-			init: function() {
-				$el.addEventListener('submit', handleSubmit);
-			}
-		};
+		$el.addEventListener('submit', handleSubmit);
 	};
 })(window);

@@ -15,12 +15,8 @@
 			}
 		};
 
-		return {
-			init: function() {
-				if ($url && $name) {
-					$url.addEventListener('keyup', handleKeyup);
-				}
-			}
-		};
+		if ($url && $name) {
+			$url.addEventListener('keyup', handleKeyup);
+		}
 	};
 })(CashCash);

@@ -2,12 +2,9 @@
 	'use strict';
 
 	window.Pagination = function() {
-		var $pagination = $('.pagination')[0];
-
-		if ($pagination) {
-			var $next = $('a.next_page', $pagination)[0],
-				$prev = $('a.previous_page', $pagination)[0];
-		}
+		var $pagination = $('.pagination')[0],
+			$next = $('a.next_page', $pagination)[0],
+			$prev = $('a.previous_page', $pagination)[0];
 
 		var appendHint = function() {
 			var $hint = document.createElement('p');
@@ -30,13 +27,9 @@
 			}
 		};
 
-		return {
-			init: function() {
-				if ($next || $prev) {
-					window.addEventListener('keyup', handleKeyup);
-					appendHint();
-				}
-			}
-		};
+		if ($pagination && ($next || $prev)) {
+			window.addEventListener('keyup', handleKeyup);
+			appendHint();
+		}
 	};
 })(window, CashCash);

@@ -15,12 +15,8 @@
 			}, 500);
 		};
 
-		return {
-			init: function() {
-				if ($title && $slug && !$slug.value) {
-					$title.addEventListener('keyup', handleKeyup);
-				}
-			}
-		};
+		if ($title && $slug && !$slug.value) {
+			$title.addEventListener('keyup', handleKeyup);
+		}
 	};
 })(CashCash);

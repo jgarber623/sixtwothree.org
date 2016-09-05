@@ -34,12 +34,8 @@
 			});
 		};
 
-		return {
-			init: function() {
-				if ($url && $title) {
-					$url.addEventListener('blur', handleBlur);
-				}
-			}
-		};
+		if ($url && $title) {
+			$url.addEventListener('blur', handleBlur);
+		}
 	};
 })(window, CashCash);
