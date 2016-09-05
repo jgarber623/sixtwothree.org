@@ -49,6 +49,11 @@
 		@include padding-x(3);
 		@include thick-border(left);
 
+		ol,
+		ul {
+			padding-left: $spacing-2;
+		}
+
 		code,
 		em,
 		i {
