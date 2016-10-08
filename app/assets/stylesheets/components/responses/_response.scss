@@ -14,9 +14,9 @@
 	}
 
 	img {
-		display: block;
+		display: inline-block;
 		border: 0.25em solid $darken-1;
-		margin: $spacing-3 auto;
+		margin: $spacing-2 0;
 		max-height: 50vh;
 		padding: 0.25em;
 	}
