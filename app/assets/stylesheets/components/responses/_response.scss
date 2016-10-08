@@ -12,6 +12,14 @@
 	p {
 		margin: 0;
 	}
+
+	img {
+		display: block;
+		border: 0.25em solid $darken-1;
+		margin: $spacing-3 auto;
+		max-height: 50vh;
+		padding: 0.25em;
+	}
 }
 
 .response-footer {
