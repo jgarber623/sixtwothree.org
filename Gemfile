@@ -20,6 +20,15 @@ source 'https://rubygems.org' do
     gem 'quiet_assets', '~> 1.1'
     gem 'svgeez', '~> 0.2.3'
   end
+
+  group :development, :test do
+    gem 'rspec-rails', '~> 3.5'
+    gem 'rubocop', '~> 0.44.1', require: false
+  end
+
+  group :test do
+    gem 'codeclimate-test-reporter', '~> 0.6.0', require: false
+  end
 end
 
 source 'https://rails-assets.org' do
