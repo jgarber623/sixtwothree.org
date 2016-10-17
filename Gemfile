@@ -28,6 +28,8 @@ source 'https://rubygems.org' do
 
   group :test do
     gem 'codeclimate-test-reporter', '~> 0.6.0', require: false
+    gem 'simplecov', '~> 0.12.0', require: false
+    gem 'simplecov-console', '~> 0.3.1', require: false
   end
 end
 
