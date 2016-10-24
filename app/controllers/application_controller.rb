@@ -11,10 +11,7 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in?
 
   def capture_redirect_to
-    return unless request.get?
-
-    if !['/auth', '/login', '/logout'].include?(request.path) && !request.xhr?
-      session[:redirect_to] = request.fullpath
-    end
+    return if !request.get? || request.xhr? || ['/auth', '/login', '/logout'].include?(request.path)
+    session[:redirect_to] = request.fullpath
   end
 end

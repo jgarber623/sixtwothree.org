@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def css_is_cached?
-    cookies.has_key?(:cssIsCached)
+    cookies.key?(:cssIsCached)
   end
 
   def google_fonts_url
@@ -25,19 +25,6 @@ module ApplicationHelper
   end
 
   def inline_asset(filename)
-    output = ''
-
-    if Rails.application.config.assets.compile
-      output = Rails.application.assets[filename].to_s
-    else
-      manifest = Rails.application.assets_manifest
-      asset_path = manifest.assets[filename]
-
-      unless asset_path.nil?
-        output = File.read(Rails.root.join(manifest.directory, asset_path))
-      end
-    end
-
-    output.html_safe
+    Rails.application.assets_manifest.find_sources(filename).first.html_safe
   end
 end

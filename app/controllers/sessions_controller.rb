@@ -1,19 +1,12 @@
 class SessionsController < ApplicationController
+  AUTHORIZATION_ENDPOINT = 'https://indieauth.com/auth'.freeze
+
   def create
-    auth_code = params[:code]
-
     begin
-      agent = Mechanize.new
+      url = CGI.parse(source_page.content)['me'].first
 
-      page = agent.post('https://indieauth.com/auth', { client_id: root_url, code: auth_code, redirect_uri: auth_url })
-      response = CGI::parse(page.content)
-
-      if response.key?('me')
-        url = response['me'].first
-
-        if url == Rails.application.config.francis_cms.site_url
-          session[:user_id] = url
-        end
+      if url == Rails.application.config.francis_cms.site_url
+        session[:user_id] = url
       end
     rescue Mechanize::ResponseCodeError
     end
@@ -29,5 +22,19 @@ class SessionsController < ApplicationController
 
   def new
     redirect_to root_path, notice: t('flashes.sessions.new_notice') if logged_in?
+  end
+
+  private
+
+  def auth_params
+    {
+      client_id: root_url,
+      code: params[:code],
+      redirect_uri: auth_url
+    }
+  end
+
+  def source_page
+    @source_page ||= Mechanize.new.post(AUTHORIZATION_ENDPOINT, auth_params)
   end
 end

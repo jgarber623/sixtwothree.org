@@ -3,7 +3,7 @@ lock '3.4.0'
 
 set :application, 'sixtwothree.org'
 set :chruby_ruby, '2.2.4'
-set :ssh_options, { forward_agent: true }
+set :ssh_options, forward_agent: true
 
 set :repo_url, 'git@github.com:jgarber623/sixtwothree.org.git'
 
@@ -44,8 +44,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'public/uploads', 'tmp')
 set :keep_assets, 3
 
 namespace :deploy do
-
-  %w{restart start stop}.each do |cmd|
+  %w(restart start stop).each do |cmd|
     desc "#{cmd.capitalize} the application"
     task cmd do
       on roles(:app), in: :sequence, wait: 5 do
@@ -64,5 +63,4 @@ namespace :deploy do
   #     # end
   #   end
   # end
-
 end
