@@ -1,6 +1,25 @@
 require 'rails_helper'
 
 RSpec.describe 'sessions', type: :request do
+  describe 'DELETE #destroy' do
+    it 'redirects to the homepage.' do
+      delete '/logout'
+
+      expect(response).to have_http_status(:redirect)
+      expect(response).to redirect_to('/')
+    end
+  end
+
+  describe 'GET #create' do
+    skip 'redirects to session[:redirect_to].' do
+      #
+    end
+
+    skip 'redirects to the homepage.' do
+      #
+    end
+  end
+
   describe 'GET #new' do
     it 'renders the login page.' do
       get '/login'

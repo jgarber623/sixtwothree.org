@@ -51,7 +51,7 @@ RSpec.describe ApplicationHelper, type: :helper do
 
     context 'when @photo exists' do
       skip 'returns the photo URL.' do
-        expect(helper.page_image).to eq('/foo.jpg')
+        #
       end
     end
   end

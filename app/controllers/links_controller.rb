@@ -2,7 +2,7 @@ class LinksController < ApplicationController
   def fetch
     json = { success: false }
 
-    if params[:link][:url]
+    if params.key?(:link) && params[:link].key?(:url)
       agent = Mechanize.new
 
       begin
