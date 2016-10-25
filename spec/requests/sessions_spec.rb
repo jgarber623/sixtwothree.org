@@ -11,12 +11,29 @@ RSpec.describe 'sessions', type: :request do
   end
 
   describe 'GET #create' do
-    skip 'redirects to session[:redirect_to].' do
+    context 'when #url matches the configured site URL' do
+      let(:site_url) { 'https://sixtwothree.org/' }
+
+      before do
+        allow_any_instance_of(SessionsController).to receive(:url).and_return(site_url)
+      end
+
+      it 'sets a session variable.' do
+        get '/auth'
+
+        expect(session[:user_id]).to eq(site_url)
+      end
+    end
+
+    skip 'redirects to a session-stored path.' do
       #
     end
 
-    skip 'redirects to the homepage.' do
-      #
+    it 'redirects to the homepage.' do
+      get '/auth'
+
+      expect(response).to have_http_status(:redirect)
+      expect(response).to redirect_to('/')
     end
   end
 
@@ -24,7 +41,6 @@ RSpec.describe 'sessions', type: :request do
     it 'renders the login page.' do
       get '/login'
 
-      expect(response).to be_success
       expect(response).to have_http_status(:success)
       expect(response).to render_template('sessions/new')
     end

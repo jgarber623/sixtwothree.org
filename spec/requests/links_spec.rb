@@ -11,7 +11,6 @@ RSpec.describe 'links', type: :request do
     it 'renders an unsuccessful JSON response.' do
       post '/links/fetch', {}, headers
 
-      expect(response).to be_success
       expect(response).to have_http_status(:success)
       expect(response.content_type).to eq('application/json')
       expect(JSON.parse(response.body)['success']).to eq(false)
@@ -20,7 +19,6 @@ RSpec.describe 'links', type: :request do
     it 'it renders a successful JSON response.' do
       post '/links/fetch', { link: { url: 'http://example.com/' } }, headers
 
-      expect(response).to be_success
       expect(response).to have_http_status(:success)
       expect(response.content_type).to eq('application/json')
       expect(JSON.parse(response.body)['success']).to eq(true)

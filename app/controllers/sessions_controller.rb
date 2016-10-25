@@ -2,15 +2,11 @@ class SessionsController < ApplicationController
   AUTHORIZATION_ENDPOINT = 'https://indieauth.com/auth'.freeze
 
   def create
-    begin
-      url = CGI.parse(source_page.content)['me'].first
-
-      if url == Rails.application.config.francis_cms.site_url
-        session[:user_id] = url
-      end
-    rescue Mechanize::ResponseCodeError
+    if url == Rails.application.config.francis_cms.site_url
+      session[:user_id] = url
     end
-
+  rescue Mechanize::ResponseCodeError
+  ensure
     redirect_to (session[:redirect_to] || root_path), notice: t('flashes.sessions.create_notice')
   end
 
@@ -36,5 +32,9 @@ class SessionsController < ApplicationController
 
   def source_page
     @source_page ||= Mechanize.new.post(AUTHORIZATION_ENDPOINT, auth_params)
+  end
+
+  def url
+    @url ||= CGI.parse(source_page.content)['me'].first
   end
 end
