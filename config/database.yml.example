@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
-  encoding: utf8
-  pool: 5
+  encoding: unicode
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
 
 development:
   <<: *default
@@ -10,9 +10,3 @@ development:
 test:
   <<: *default
   database: sixtwothree_test
-
-production:
-  <<: *default
-  database: sixtwothree_production
-  username: sixtwothree
-  password: <%= ENV['SIXTWOTHREE_DATABASE_PASSWORD'] %>

@@ -1,13 +1,3 @@
 Rails.application.routes.draw do
-  root 'pages#homepage'
-
-  get    'login',  to: 'sessions#new'
-  get    'auth',   to: 'sessions#create'
-  delete 'logout', to: 'sessions#destroy'
-
-  post 'links/fetch', to: 'links#fetch'
-
-  get 'sitemap.xml', to: 'pages#sitemap', format: 'xml'
-
-  mount FrancisCms::Engine, at: '/'
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

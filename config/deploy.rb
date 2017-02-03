@@ -1,39 +1,36 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.7.2'
 
 set :application, 'sixtwothree.org'
-set :chruby_ruby, '2.2.4'
-set :ssh_options, forward_agent: true
-
+set :chruby_ruby, 'ruby-2.4.0'
 set :repo_url, 'git@github.com:jgarber623/sixtwothree.org.git'
+set :ssh_options, forward_agent: true
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
+# set :deploy_to, '/var/www/my_app_name'
 set :deploy_to, '/var/www/sixtwothree-org'
 
-# Default value for :scm is :git
-# set :scm, :git
+# Default value for :format is :airbrussh.
+# set :format, :airbrussh
 
-# Default value for :format is :pretty
-# set :format, :pretty
-
-# Default value for :log_level is :debug
-# set :log_level, :debug
+# You can configure the Airbrussh format using :format_options.
+# These are the defaults.
+# set :format_options, command_output: true, log_file: 'log/capistrano.log', color: :auto, truncate: :auto
 
 # Default value for :pty is false
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+append :linked_files, 'config/database.yml', 'config/secrets.yml'
 
 # Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'public/uploads', 'tmp')
+append :linked_dirs, 'log', 'tmp', 'public/uploads'
 
 # Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+# set :default_env, { path: '/opt/ruby/bin:$PATH' }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
@@ -43,24 +40,4 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'public/uploads', 'tmp')
 # set this to the number of versions to keep
 set :keep_assets, 3
 
-namespace :deploy do
-  %w(restart start stop).each do |cmd|
-    desc "#{cmd.capitalize} the application"
-    task cmd do
-      on roles(:app), in: :sequence, wait: 5 do
-        execute "sudo /usr/sbin/service sixtwothree-org-puma #{cmd}"
-      end
-    end
-  end
-
-  after :publishing, :restart
-
-  # after :restart, :clear_cache do
-  #   on roles(:web), in: :groups, limit: 3, wait: 10 do
-  #     # Here we can do anything such as:
-  #     # within release_path do
-  #     #   execute :rake, 'cache:clear'
-  #     # end
-  #   end
-  # end
-end
+after 'deploy:published', 'puma:restart'

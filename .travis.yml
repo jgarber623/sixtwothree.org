@@ -1,10 +1,12 @@
 language: ruby
 rvm:
-  - 2.2.4
+  - 2.4.0
 before_script:
   - psql -c 'create database sixtwothree_test;' -U postgres
   - cp config/database.yml.example config/database.yml
   - cp config/secrets.yml.example config/secrets.yml
+after_success:
+  - bundle exec codeclimate-test-reporter
 notifications:
   email: false
   slack: sixtwothree:yATLmjTW15443qR7jbCWr3RO

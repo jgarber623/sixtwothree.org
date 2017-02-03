@@ -1,1 +1,1 @@
-# www.robotstxt.org/
+# http://www.robotstxt.org

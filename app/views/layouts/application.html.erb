@@ -1,148 +1,17 @@
 <!doctype html>
-<html lang="<%= francis_cms_config.site_language %>">
+<html>
 <head>
 	<meta charset="utf-8">
 
-	<title><%= page_title %></title>
+	<title>sixtwothree.org</title>
 
-	<meta name="apple-mobile-web-app-title" content="<%= francis_cms_config.site_title %>">
-	<meta name="application-name" content="<%= francis_cms_config.site_title %>">
-	<meta name="author" content="<%= francis_cms_config.user_name %>">
-	<meta name="description" content="<%= page_description %>">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<%= csrf_meta_tags %>
 
-	<meta name="twitter:card" content="<%= page_card_type %>">
-	<meta name="twitter:site" content="@jgarber">
-	<meta property="og:description" content="<%= page_description %>">
-	<meta property="og:image" content="<%= asset_url page_image %>">
-	<meta property="og:title" content="<%= page_title %>">
-
-	<%= auto_discovery_link_tag :rss, francis_cms.links_path(format: :rss), title: %{#{francis_cms_config.site_title}: Links} %>
-	<%= auto_discovery_link_tag :rss, francis_cms.photos_path(format: :rss), title: %{#{francis_cms_config.site_title}: Photos} %>
-	<%= auto_discovery_link_tag :rss, francis_cms.posts_path(format: :rss), title: %{#{francis_cms_config.site_title}: Posts} %>
-	<%= auto_discovery_link_tag :rss, francis_cms.webmentions_path(format: :rss), title: %{#{francis_cms_config.site_title}: Webmentions} %>
-
-	<link rel="apple-touch-icon" href="<%= asset_path francis_cms_config.user_avatar %>">
-	<link rel="search" href="/opensearch.xml" type="application/opensearchdescription+xml">
-	<link rel="shortcut icon" href="<%= asset_path francis_cms_config.user_avatar %>">
-	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
-
-	<%- if css_is_cached? -%>
-		<%= stylesheet_link_tag 'application.css', google_fonts_url %>
-		<%= stylesheet_link_tag 'admin.css' if logged_in? %>
-	<%- else -%>
-		<style>
-			<%= inline_asset('critical.css') %>
-		</style>
-
-		<script>
-			function loadCSS(e) {
-				var d=document,l=d.createElement('link'),n='all',o=(d.body||d.getElementsByTagName('head')[0]).childNodes,p=o[o.length-1],s=d.styleSheets;
-				l.rel='stylesheet';l.href=e;l.media='only x';function r(c){if(d.body)return c();setTimeout(function(){r(c);});}
-				function m(c){var i=s.length;while(i--)if(s[i].href===l.href)return c();setTimeout(function(){m(c);});}r(function(){p.parentNode.insertBefore(l,p.nextSibling);});
-				if(l.addEventListener)l.addEventListener('load',function(){this.media=n;});l.onloadcssdefined=m;m(function(){if(l.media!==n)l.media=n;});return l;
-			}
-
-			loadCSS('<%= asset_path 'application.css' %>');
-			loadCSS('<%= google_fonts_url %>');
-
-			document.cookie='cssIsCached=true;expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>;path=/';
-		</script>
-
-		<noscript>
-			<%= stylesheet_link_tag 'application.css', google_fonts_url %>
-		</noscript>
-	<%- end -%>
-
-	<!--[if lt IE 9]>
-		<%= javascript_include_tag 'legacy' %>
-	<![endif]-->
+	<%= stylesheet_link_tag 'application', media: 'all' %>
 </head>
 <body>
 
-	<%= link_to 'Skip to main content', '#main', class: 'skip-link' %>
+	<%= yield %>
 
-	<%- if flash.any? -%>
-		<div class="messages" role="alert">
-			<%- flash.each do |name, msg| -%>
-				<p class="<%= name %>"><%= msg %></p>
-			<%- end -%>
-		</div>
-	<%- end -%>
-
-	<header class="global-header">
-		<h1><%= link_to francis_cms_config.site_title, main_app.root_path, rel: 'home' %></h1>
-
-		<%= link_to '#navigation', aria: { controls: 'navigation', expanded: true }, class: 'global-navigation-control' do %>
-			<svg aria-label="Site Navigation" height="1em" role="img" version="1.1" width="1em"><use xlink:href="#icons-menu"></svg>
-			Menu
-		<% end %>
-	</header>
-
-	<nav class="global-navigation" id="navigation">
-		<ul>
-			<li><%= link_to 'Posts', francis_cms.posts_path %></li>
-			<li><%= link_to 'Links', francis_cms.links_path %></li>
-			<li><%= link_to 'Photos', francis_cms.photos_path %></li>
-			<li><%= link_to 'Tags', francis_cms.tags_path %></li>
-			<%- if logged_in? -%>
-				<li><%= link_to 'Webmentions', francis_cms.webmentions_path %></li>
-			<%- end -%>
-			<li>
-				<%- if logged_in? -%>
-					<%= form_tag main_app.logout_path, method: :delete do %>
-						<button type="submit">Log Out</button>
-					<% end %>
-				<%- else -%>
-					<%= link_to 'Log In', main_app.login_path %>
-				<%- end -%>
-			</li>
-		</ul>
-	</nav>
-
-	<main class="global-content" id="main" tabindex="-1">
-		<div class="container">
-			<%= yield %>
-		</div>
-	</main>
-
-	<footer class="global-footer">
-		<div class="container">
-			<p>Some rights reserved. This site’s content is licensed under a <%= link_to %{#{francis_cms_config.license_title} license}, francis_cms_config.license_url, rel: 'license' %>. Source code available on <%= link_to 'GitHub', 'https://github.com/jgarber623/sixtwothree.org', rel: 'source' %>.</p>
-		</div>
-	</footer>
-
-	<%- if logged_in? -%>
-		<div class="admin-panel-container">
-			<button aria-controls="admin-panel" aria-expanded="true" aria-hidden class="admin-panel-control">
-				<svg aria-label="Toggle Admin Panel" height="1em" role="img" version="1.1" width="1em"><use xlink:href="#icons-menu"></svg>
-			</button>
-
-			<div id="admin-panel">
-				<%= francis_cms_admin_panel %>
-			</div>
-		</div>
-	<%- end -%>
-
-	<%= inline_asset('icons.svg') %>
-
-	<script>
-		function loadJS(e,c) {
-			var d=document,r=d.createElement('script'),o=d.getElementsByTagName('script')[0];
-			r.src=e;r.async=true;o.parentNode.insertBefore(r,o);if(typeof c==='function')r.onload=c;return r;
-		}
-
-		if (document.querySelector && window.addEventListener) {
-			loadJS('<%= asset_path 'application.js' %>');
-
-			<%- if logged_in? -%>
-				if (!window.fetch) {
-					loadJS('<%= asset_path 'fetch.js' %>');
-				}
-
-				loadJS('<%= asset_path 'admin.js' %>');
-			<%- end -%>
-		}
-	</script>
 </body>
 </html>
