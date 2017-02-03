@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.4.0
+before_install:
+  - gem update --system
 before_script:
   - psql -c 'create database sixtwothree_test;' -U postgres
   - cp config/database.yml.example config/database.yml
