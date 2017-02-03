@@ -5,8 +5,8 @@ before_install:
   - gem update --system
 before_script:
   - psql -c 'create database sixtwothree_test;' -U postgres
-  - cp config/database.yml.example config/database.yml
-  - cp config/secrets.yml.example config/secrets.yml
+  - cp config/database.yml{.example,}
+  - cp config/secrets.yml{.example,}
 after_success:
   - bundle exec codeclimate-test-reporter
 notifications:
