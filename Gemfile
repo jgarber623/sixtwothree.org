@@ -9,6 +9,7 @@ source 'https://rubygems.org' do
   gem 'uglifier', '~> 3.0', '>= 3.0.4'
 
   group :development, :test do
+    gem 'rails-controller-testing', '~> 1.0', '>= 1.0.1'
     gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
     gem 'rubocop', '~> 0.47.1', require: false
   end
