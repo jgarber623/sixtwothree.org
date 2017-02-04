@@ -5,13 +5,20 @@
 
 	<title>sixtwothree.org</title>
 
-	<%= csrf_meta_tags %>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<%= stylesheet_link_tag 'application', media: 'all' %>
+	<%= stylesheet_link_tag 'application' %>
 </head>
 <body>
 
-	<%= yield %>
+	<nav>
+		<%= link_to 'Home', root_path, rel: 'home' %>
+		<%= link_to 'Colophon', colophon_path %>
+	</nav>
+
+	<main>
+		<%= yield %>
+	</main>
 
 </body>
 </html>
