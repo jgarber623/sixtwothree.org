@@ -1,6 +1,6 @@
 AllCops:
   Exclude:
-    - 'db/schema.rb'
+    - 'db/**/*'
 
 Metrics/LineLength:
   Enabled: false
