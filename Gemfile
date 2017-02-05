@@ -1,12 +1,14 @@
 ruby '2.4.0'
 
 source 'https://rubygems.org' do
+  gem 'friendly_id', '~> 5.2'
   # gem 'jbuilder', '~> 2.5'
   gem 'pg', '~> 0.19.0'
   gem 'puma', '~> 3.7'
   gem 'rails', '~> 5.0', '>= 5.0.1'
   gem 'sass-rails', '~> 5.0', '>= 5.0.6'
   gem 'uglifier', '~> 3.0', '>= 3.0.4'
+  gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 
   group :development, :test do
     gem 'rails-controller-testing', '~> 1.0', '>= 1.0.1'
