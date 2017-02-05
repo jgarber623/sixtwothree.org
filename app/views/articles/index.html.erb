@@ -1,0 +1,15 @@
+<h1>Posts</h1>
+
+<%- if @articles.any? -%>
+	<ol reversed>
+		<%- @articles.each do |article| -%>
+			<li>
+				<%= link_to article.title, article_path(article) %>
+			</li>
+		<%- end -%>
+	</ol>
+
+	<%= will_paginate @articles %>
+<%- else -%>
+	<p>No posts found!</p>
+<%- end -%>

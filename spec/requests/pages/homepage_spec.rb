@@ -9,7 +9,7 @@ RSpec.describe PagesController, type: :request do
     end
 
     it 'renders the homepage template' do
-      assert_template('homepage')
+      assert_template 'homepage'
     end
 
     it 'displays the page heading' do

@@ -10,9 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170205025407) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "articles", force: :cascade do |t|
+    t.text     "title",        null: false
+    t.text     "slug",         null: false
+    t.text     "content",      null: false
+    t.text     "summary"
+    t.datetime "published_at"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.float    "latitude",          null: false
+    t.float    "longitude",         null: false
+    t.text     "formatted_address"
+    t.text     "street_address"
+    t.text     "neighborhood"
+    t.text     "locality"
+    t.text     "region"
+    t.text     "region_code"
+    t.text     "postal_code"
+    t.text     "country"
+    t.text     "country_code"
+    t.string   "locatable_type"
+    t.integer  "locatable_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["locatable_type", "locatable_id"], name: "index_locations_on_locatable_type_and_locatable_id", using: :btree
+  end
 
 end
