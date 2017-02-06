@@ -17,24 +17,18 @@ RSpec.describe TagsController, type: :request do
         Article.create!(
           title: 'Test Article Title 1',
           content: 'This is a test article’s content.',
-          tag_list: 'foo, bar, biz, baz',
+          tag_list: 'White House',
           published_at: Time.now.utc
         )
 
         Article.create!(
           title: 'Test Article Title 2',
           content: 'This is a test article’s content.',
-          tag_list: 'foo, bar, biz, baz',
+          tag_list: 'White House',
           published_at: Time.now.utc
         )
 
-        Article.create!(
-          title: 'Test Article Title 3',
-          content: 'This is a test article’s content.',
-          tag_list: 'foo, bar, biz, baz'
-        )
-
-        get '/tags/foo'
+        get '/tags/white-house'
 
         assert_select '.h-feed' do
           assert_select 'li:nth-child(1) .p-name', text: 'Test Article Title 2'

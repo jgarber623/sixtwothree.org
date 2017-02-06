@@ -1,6 +1,6 @@
 <div class="h-feed">
 	<header>
-		<h1 class="p-name">Content tagged “<%= @tag %>”</h1>
+		<h1 class="p-name">Content tagged “<%= @tag.name %>”</h1>
 	</header>
 
 	<%- if @results.any? -%>
@@ -14,6 +14,6 @@
 			<%- end -%>
 		</ol>
 	<%- else -%>
-		<p>No content tagged “<%= @tag %>” found!</p>
+		<p>No content tagged “<%= @tag.name %>” found!</p>
 	<%- end -%>
 </div>
