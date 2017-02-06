@@ -5,6 +5,7 @@ class Article < ApplicationRecord
   include Taggable
 
   validates :title, :slug, :content, presence: true
+  validates :slug, uniqueness: true
 
   friendly_id :title
 
