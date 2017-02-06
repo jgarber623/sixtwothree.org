@@ -1,15 +1,21 @@
-<h1>Posts</h1>
+<section class="h-feed">
+	<header>
+		<h1 class="p-name">Posts</h1>
+	</header>
 
-<%- if @articles.any? -%>
-	<ol reversed>
-		<%- @articles.each do |article| -%>
-			<li>
-				<%= link_to article.title, article_path(article) %>
-			</li>
-		<%- end -%>
-	</ol>
+	<%- if @articles.any? -%>
+		<ol reversed>
+			<%- @articles.each do |article| -%>
+				<li>
+					<div class="h-entry">
+						<%= link_to article.title, article_path(article), class: 'u-url p-name' %>
+					</div>
+				</li>
+			<%- end -%>
+		</ol>
 
-	<%= will_paginate @articles %>
-<%- else -%>
-	<p>No posts found!</p>
-<%- end -%>
+		<%= will_paginate @articles %>
+	<%- else -%>
+		<p>No posts found!</p>
+	<%- end -%>
+</section>

@@ -6,4 +6,21 @@
 	<div class="e-content">
 		<%= @article.content %>
 	</div>
+
+	<%- if @article.location -%>
+		<p class="h-geo p-location">
+			<span class="p-latitude"><%= @article.location.latitude %></span>,
+			<span class="p-longitude"><%= @article.location.longitude %></span>
+		</p>
+	<%- end -%>
+
+	<%- if @article.tags.any? -%>
+		<ul>
+			<%- @article.tags.each do |tag| -%>
+				<li>
+					<span class="p-category"><%= tag.name %></span>
+				</li>
+			<%- end -%>
+		</ul>
+	<%- end -%>
 </article>
