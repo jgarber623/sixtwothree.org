@@ -1,0 +1,19 @@
+<div class="h-feed">
+	<header>
+		<h1 class="p-name">Content tagged “<%= @tag %>”</h1>
+	</header>
+
+	<%- if @results.any? -%>
+		<ol reversed>
+			<%- @results.each do |result| -%>
+				<li>
+					<div class="h-entry">
+						<%= link_to result.title, article_path(result), class: 'u-url p-name' %>
+					</div>
+				</li>
+			<%- end -%>
+		</ol>
+	<%- else -%>
+		<p>No content tagged “<%= @tag %>” found!</p>
+	<%- end -%>
+</div>
