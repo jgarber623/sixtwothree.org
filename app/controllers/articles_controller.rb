@@ -10,10 +10,10 @@ class ArticlesController < ApplicationController
   private
 
   def articles
-    @articles ||= Article.order('created_at DESC').page(params[:page])
+    @articles ||= Article.published.page(params[:page])
   end
 
   def article
-    @article ||= Article.find(params[:id])
+    @article ||= Article.published.find(params[:id])
   end
 end

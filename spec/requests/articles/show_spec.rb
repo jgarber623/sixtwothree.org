@@ -1,7 +1,7 @@
 RSpec.describe ArticlesController, type: :request do
   describe 'GET #show' do
     before do
-      Article.create!(title: 'Test Article Title', content: 'This is a test article’s content.')
+      Article.create!(title: 'Test Article Title', content: 'This is a test article’s content.', published_at: Time.now.utc)
 
       get '/posts/test-article-title'
     end

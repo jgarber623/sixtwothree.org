@@ -14,8 +14,8 @@ RSpec.describe ArticlesController, type: :request do
 
     context 'when articles exist' do
       it 'displays a reverse chronological list of articles' do
-        Article.create!(title: 'Test Article Title 1', content: 'This is a test article’s content.')
-        Article.create!(title: 'Test Article Title 2', content: 'This is a test article’s content.')
+        Article.create!(title: 'Test Article Title 1', content: 'This is a test article’s content.', published_at: Time.now.utc)
+        Article.create!(title: 'Test Article Title 2', content: 'This is a test article’s content.', published_at: Time.now.utc)
 
         get '/posts'
 
