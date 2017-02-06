@@ -1,6 +1,7 @@
 ruby '2.4.0'
 
 source 'https://rubygems.org' do
+  gem 'acts-as-taggable-on', '~> 4.0'
   gem 'friendly_id', '~> 5.2'
   # gem 'jbuilder', '~> 2.5'
   gem 'pg', '~> 0.19.0'
