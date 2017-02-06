@@ -12,13 +12,13 @@ source 'https://rubygems.org' do
   gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 
   group :development, :test do
+    gem 'byebug', '~> 9.0', '>= 9.0.6'
     gem 'rails-controller-testing', '~> 1.0', '>= 1.0.1'
     gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
     gem 'rubocop', '~> 0.47.1', require: false
   end
 
   group :development do
-    gem 'byebug', '~> 9.0', '>= 9.0.6'
     gem 'capistrano-chruby', '~> 0.1.2', require: false
     gem 'capistrano-rails', '~> 1.2', '>= 1.2.2', require: false
     # gem 'web-console', '>= 3.3.0'
