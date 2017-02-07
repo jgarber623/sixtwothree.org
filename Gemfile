@@ -26,6 +26,7 @@ source 'https://rubygems.org' do
 
   group :test do
     gem 'codeclimate-test-reporter', '~> 1.0', '>= 1.0.5', require: false
+    gem 'factory_girl_rails', '~> 4.8'
     gem 'simplecov', '~> 0.13.0', require: false
     gem 'simplecov-console', '~> 0.4.1', require: false
   end
