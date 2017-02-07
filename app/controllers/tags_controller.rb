@@ -15,7 +15,7 @@ class TagsController < ApplicationController
   end
 
   def tag
-    @tag ||= ActsAsTaggableOn::Tag.find_or_create_with_like_by_name(params[:id].gsub('-', ' '))
+    @tag ||= ActsAsTaggableOn::Tag.find_or_create_with_like_by_name(params[:id].tr('-', ' '))
   end
 
   def tags
