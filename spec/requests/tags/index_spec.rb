@@ -1,5 +1,9 @@
 RSpec.describe TagsController, type: :request do
   describe 'GET #index' do
+    before do
+      get '/tags'
+    end
+
     it 'returns HTTP success status code' do
       get '/tags'
 
@@ -13,17 +17,12 @@ RSpec.describe TagsController, type: :request do
     end
 
     context 'when tags exist' do
-      it 'displays a list of tags' do
-        Article.create!(
-          title: 'Test Article Title',
-          content: 'This is a test article’s content.',
-          tag_list: 'foo, bar, biz, baz',
-          published_at: Time.now.utc
-        )
+      let!(:article) { create(:published_tagged_article) }
 
+      it 'displays a list of tags' do
         get '/tags'
 
-        assert_select 'ul li', count: 4
+        assert_select 'ul li', count: article.tags.length
       end
     end
 

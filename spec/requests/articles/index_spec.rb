@@ -13,15 +13,14 @@ RSpec.describe ArticlesController, type: :request do
     end
 
     context 'when articles exist' do
-      it 'displays a reverse chronological list of articles' do
-        Article.create!(title: 'Test Article Title 1', content: 'This is a test article’s content.', published_at: Time.now.utc)
-        Article.create!(title: 'Test Article Title 2', content: 'This is a test article’s content.', published_at: Time.now.utc)
+      let!(:articles) { create_list(:published_article, 2) }
 
+      it 'displays a reverse chronological list of articles' do
         get '/posts'
 
         assert_select '.h-feed' do
-          assert_select 'li:nth-child(1) .p-name', text: 'Test Article Title 2'
-          assert_select 'li:nth-child(2) .p-name', text: 'Test Article Title 1'
+          assert_select 'li:nth-child(1) .p-name', text: articles.last.title
+          assert_select 'li:nth-child(2) .p-name', text: articles.first.title
         end
       end
     end

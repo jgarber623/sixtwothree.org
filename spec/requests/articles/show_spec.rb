@@ -1,15 +1,9 @@
 RSpec.describe ArticlesController, type: :request do
   describe 'GET #show' do
-    before do
-      Article.create!(
-        title: 'Test Article Title',
-        content: 'This is a test article’s content.',
-        location: Location.new(latitude: 38.9281453, longitude: -77.0334985),
-        tag_list: 'foo, bar, biz, baz',
-        published_at: Time.now.utc
-      )
+    let!(:article) { create(:published_tagged_article, location: build(:location)) }
 
-      get '/posts/test-article-title'
+    before do
+      get "/posts/#{article.slug}"
     end
 
     it 'returns HTTP success status code' do
@@ -22,16 +16,16 @@ RSpec.describe ArticlesController, type: :request do
 
     it 'displays the article' do
       assert_select '.h-entry' do
-        assert_select '.p-name', text: 'Test Article Title'
-        assert_select '.e-content', text: 'This is a test article’s content.'
+        assert_select '.p-name', text: article.title
+        assert_select '.e-content', text: article.content
       end
 
       assert_select '.h-geo' do
-        assert_select '.p-latitude', text: '38.9281453'
-        assert_select '.p-longitude', text: '-77.0334985'
+        assert_select '.p-latitude', text: article.location.latitude.to_s
+        assert_select '.p-longitude', text: article.location.longitude.to_s
       end
 
-      assert_select '.p-category', count: 4
+      assert_select '.p-category', count: 3
     end
   end
 end

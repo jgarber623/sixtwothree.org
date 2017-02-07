@@ -2,6 +2,10 @@ AllCops:
   Exclude:
     - 'db/**/*'
 
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
 Metrics/LineLength:
   Enabled: false
 
