@@ -4,6 +4,7 @@ AllCops:
 
 Metrics/BlockLength:
   Exclude:
+    - '**/Gemfile'
     - 'spec/**/*.rb'
 
 Metrics/LineLength:
