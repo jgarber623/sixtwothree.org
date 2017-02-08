@@ -8,7 +8,7 @@
 			<%- @results.each do |result| -%>
 				<li>
 					<div class="h-entry">
-						<%= link_to result.title, article_path(result), class: 'u-url p-name' %>
+						<%= link_to result.title.smarten, article_path(result), class: 'u-url p-name' %>
 					</div>
 				</li>
 			<%- end -%>

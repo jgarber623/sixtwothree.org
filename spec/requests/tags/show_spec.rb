@@ -19,8 +19,8 @@ RSpec.describe TagsController, type: :request do
         get '/tags/white-house'
 
         assert_select '.h-feed' do
-          assert_select 'li:nth-child(1) .p-name', text: articles.last.title
-          assert_select 'li:nth-child(2) .p-name', text: articles.first.title
+          assert_select 'li:nth-child(1) .p-name', text: articles.last.title.smarten
+          assert_select 'li:nth-child(2) .p-name', text: articles.first.title.smarten
         end
       end
     end

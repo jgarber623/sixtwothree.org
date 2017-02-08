@@ -16,8 +16,8 @@ RSpec.describe ArticlesController, type: :request do
 
     it 'displays the article' do
       assert_select '.h-entry' do
-        assert_select '.p-name', text: article.title
-        assert_select '.e-content', text: article.content
+        assert_select '.p-name', text: article.title.smarten
+        assert_select '.e-content', text: article.content.to_html.chomp
       end
 
       assert_select '.h-geo' do

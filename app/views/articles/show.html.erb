@@ -1,10 +1,10 @@
 <article class="h-entry">
 	<header>
-		<h1 class="p-name"><%= @article.title %></h1>
+		<h1 class="p-name"><%= @article.title.smarten %></h1>
 	</header>
 
 	<div class="e-content">
-		<%= @article.content %>
+		<%= @article.content.to_html %>
 	</div>
 
 	<%- if @article.location -%>
