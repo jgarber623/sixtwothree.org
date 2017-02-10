@@ -4,6 +4,8 @@ rvm:
   - 2.4.0
 addons:
   postgresql: 9.6
+services:
+  - postgresql
 before_install:
   - gem update --system
 before_script:
