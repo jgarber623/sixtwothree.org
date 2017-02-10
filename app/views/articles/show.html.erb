@@ -18,7 +18,7 @@
 		<ul>
 			<%- @article.tags.each do |tag| -%>
 				<li>
-					<span class="p-category"><%= tag.name %></span>
+					<%= link_to tag.name, tag_path(tag), class: 'p-category' %>
 				</li>
 			<%- end -%>
 		</ul>
