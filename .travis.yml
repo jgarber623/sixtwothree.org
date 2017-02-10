@@ -1,11 +1,13 @@
+sudo: required
+dist: trusty
+addons:
+  postgresql: 9.6
+  services:
+    - postgresql
 language: ruby
 cache: bundler
 rvm:
   - 2.4.0
-addons:
-  postgresql: 9.6
-services:
-  - postgresql
 before_install:
   - gem update --system
 before_script:
