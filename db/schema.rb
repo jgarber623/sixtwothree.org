@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206023156) do
+ActiveRecord::Schema.define(version: 20170209213344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,17 @@ ActiveRecord::Schema.define(version: 20170206023156) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.index ["locatable_type", "locatable_id"], name: "index_locations_on_locatable_type_and_locatable_id", using: :btree
+  end
+
+  create_table "que_jobs", primary_key: ["queue", "priority", "run_at", "job_id"], force: :cascade, comment: "3" do |t|
+    t.integer   "priority",    limit: 2, default: 100,            null: false
+    t.datetime  "run_at",                default: -> { "now()" }, null: false
+    t.bigserial "job_id",                                         null: false
+    t.text      "job_class",                                      null: false
+    t.json      "args",                  default: [],             null: false
+    t.integer   "error_count",           default: 0,              null: false
+    t.text      "last_error"
+    t.text      "queue",                 default: "",             null: false
   end
 
   create_table "taggings", force: :cascade do |t|
