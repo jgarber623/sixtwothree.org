@@ -3,7 +3,7 @@ FactoryGirl.define do
 
   factory :article do
     title
-    content %(This is a test article's content.)
+    content 'Test article content.'
 
     trait :published do
       published_at Time.now.utc
