@@ -4,7 +4,7 @@ source 'https://rubygems.org' do
   gem 'acts-as-taggable-on', '~> 4.0'
   gem 'friendly_id', '~> 5.2'
   gem 'geocoder', '~> 1.4', '>= 1.4.3'
-  # gem 'jbuilder', '~> 2.5'
+  gem 'jbuilder', '~> 2.6', '>= 2.6.1'
   gem 'pg', '~> 0.19.0'
   gem 'puma', '~> 3.7'
   gem 'que', '~> 0.12.1'

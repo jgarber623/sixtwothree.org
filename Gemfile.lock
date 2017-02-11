@@ -84,6 +84,9 @@ GEM
       activesupport (>= 4.1.0)
     hirb (0.7.3)
     i18n (0.7.0)
+    jbuilder (2.6.1)
+      activesupport (>= 3.0.0, < 5.1)
+      multi_json (~> 1.2)
     json (2.0.3)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -95,6 +98,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    multi_json (1.12.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.0.1)
@@ -217,6 +221,7 @@ DEPENDENCIES
   foreman (~> 0.83.0)!
   friendly_id (~> 5.2)!
   geocoder (~> 1.4, >= 1.4.3)!
+  jbuilder (~> 2.6, >= 2.6.1)!
   pg (~> 0.19.0)!
   puma (~> 3.7)!
   que (~> 0.12.1)!
