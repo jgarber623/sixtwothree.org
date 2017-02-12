@@ -1,6 +1,12 @@
 RSpec.describe ArticlesController, type: :request do
   describe 'GET #show' do
-    let!(:article) { create(:published_tagged_article, location: build(:location)) }
+    let! :article do
+      create(
+        :published_tagged_article,
+        location: build(:location),
+        syndications: build_list(:syndication, 3)
+      )
+    end
 
     before do
       get "/posts/#{article.slug}", headers: { 'Accept': 'application/json' }
@@ -20,11 +26,12 @@ RSpec.describe ArticlesController, type: :request do
 
       expect(props['name'][0]).to eq(article.title.smarten)
       expect(props['content'][0]['value']).to eq(article.content.to_s)
+      expect(props['category'].length).to eq(3)
 
       expect(location_props['latitude'][0]).to eq(article.location.latitude)
       expect(location_props['longitude'][0]).to eq(article.location.longitude)
 
-      expect(props['category'].length).to eq(3)
+      expect(props['syndication'].length).to eq(3)
     end
   end
 end

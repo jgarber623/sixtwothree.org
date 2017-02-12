@@ -19,4 +19,6 @@ json.properties do
       json.partial! 'location', location: location
     end
   end
+
+  json.syndication article.sorted_syndications.map(&:url) if article.syndications.any?
 end

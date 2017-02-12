@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170209213344) do
+ActiveRecord::Schema.define(version: 20170211213913) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,13 @@ ActiveRecord::Schema.define(version: 20170209213344) do
     t.integer   "error_count",           default: 0,              null: false
     t.text      "last_error"
     t.text      "queue",                 default: "",             null: false
+  end
+
+  create_table "syndications", force: :cascade do |t|
+    t.text    "url",               null: false
+    t.string  "syndicatable_type"
+    t.integer "syndicatable_id"
+    t.index ["syndicatable_type", "syndicatable_id"], name: "index_syndications_on_syndicatable_type_and_syndicatable_id", using: :btree
   end
 
   create_table "taggings", force: :cascade do |t|
