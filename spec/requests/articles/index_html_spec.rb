@@ -1,13 +1,13 @@
 RSpec.describe ArticlesController, type: :request do
   describe 'GET #index' do
     it 'returns HTTP success status code' do
-      get '/posts'
+      get '/articles'
 
       expect(response).to have_http_status(:success)
     end
 
     it 'renders the index template' do
-      get '/posts'
+      get '/articles'
 
       assert_template 'index'
     end
@@ -16,7 +16,7 @@ RSpec.describe ArticlesController, type: :request do
       let!(:articles) { create_list(:published_article, 2) }
 
       it 'displays a reverse chronological list of articles' do
-        get '/posts'
+        get '/articles'
 
         assert_select '.h-feed' do
           assert_select 'li:nth-child(1) .p-name', text: articles.last.title.smarten
@@ -27,9 +27,9 @@ RSpec.describe ArticlesController, type: :request do
 
     context 'when no articles exist' do
       it 'displays a message' do
-        get '/posts'
+        get '/articles'
 
-        assert_select 'p', text: 'No posts found!'
+        assert_select 'p', text: 'No articles found!'
       end
     end
   end

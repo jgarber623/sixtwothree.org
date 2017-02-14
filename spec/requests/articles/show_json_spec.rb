@@ -9,7 +9,7 @@ RSpec.describe ArticlesController, type: :request do
     end
 
     before do
-      get "/posts/#{article.slug}", headers: { 'Accept': 'application/json' }
+      get "/articles/#{article.slug}", headers: { 'Accept': 'application/json' }
     end
 
     it 'returns HTTP success status code' do

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'pages#homepage'
 
-  resources :articles, only: [:index, :show], path: '/posts', constraints: { format: :json }
+  resources :articles, only: [:index, :show]
   resources :tags, only: [:index, :show], format: false
 
   get '/colophon', to: 'pages#colophon', as: 'colophon', format: false

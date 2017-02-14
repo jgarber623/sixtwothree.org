@@ -9,7 +9,7 @@ RSpec.describe ArticlesController, type: :request do
     end
 
     before do
-      get "/posts/#{article.slug}"
+      get "/articles/#{article.slug}"
     end
 
     it 'returns HTTP success status code' do

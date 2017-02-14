@@ -1,6 +1,6 @@
 <section class="h-feed">
 	<header>
-		<h1 class="p-name">Posts</h1>
+		<h1 class="p-name">Articles</h1>
 	</header>
 
 	<%- if @articles.any? -%>
@@ -16,6 +16,6 @@
 
 		<%= will_paginate @articles %>
 	<%- else -%>
-		<p>No posts found!</p>
+		<p>No articles found!</p>
 	<%- end -%>
 </section>

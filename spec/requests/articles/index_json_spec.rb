@@ -1,13 +1,13 @@
 RSpec.describe ArticlesController, type: :request do
   describe 'GET #index' do
     it 'returns HTTP success status code' do
-      get '/posts', headers: { 'Accept': 'application/json' }
+      get '/articles', headers: { 'Accept': 'application/json' }
 
       expect(response).to have_http_status(:success)
     end
 
     it 'renders the index template' do
-      get '/posts', headers: { 'Accept': 'application/json' }
+      get '/articles', headers: { 'Accept': 'application/json' }
 
       assert_template 'index'
     end
@@ -16,7 +16,7 @@ RSpec.describe ArticlesController, type: :request do
       let!(:articles) { create_list(:published_article, 2) }
 
       it 'displays a JSON representation of a reverse chronological list of articles' do
-        get '/posts', headers: { 'Accept': 'application/json' }
+        get '/articles', headers: { 'Accept': 'application/json' }
 
         items = JSON.parse(response.body)['items']
 
@@ -27,7 +27,7 @@ RSpec.describe ArticlesController, type: :request do
 
     context 'when no articles exist' do
       it 'displays an empty JSON representation' do
-        get '/posts', headers: { 'Accept': 'application/json' }
+        get '/articles', headers: { 'Accept': 'application/json' }
 
         expect(JSON.parse(response.body)['items'].length).to eq(0)
       end
