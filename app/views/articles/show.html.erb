@@ -1,6 +1,10 @@
 <article class="h-entry">
 	<header>
 		<h1 class="p-name"><%= @article.title.smarten %></h1>
+
+		<%- if @article.published_at? -%>
+			<small>Published on <%= render partial: 'time', object: @article.published_at %>.</small>
+		<%- end -%>
 	</header>
 
 	<div class="e-content">
