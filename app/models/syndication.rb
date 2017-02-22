@@ -13,8 +13,12 @@ class Syndication < ApplicationRecord
   belongs_to :syndicatable, polymorphic: true
 
   def name
-    host = URI.parse(url).host
-
     KNOWN_HOSTS.key?(host) ? KNOWN_HOSTS[host] : host
+  end
+
+  private
+
+  def host
+    @host ||= URI.parse(url).host
   end
 end
