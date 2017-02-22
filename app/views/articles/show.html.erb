@@ -23,8 +23,10 @@
 
 	<%- if @article.location -%>
 		<p class="h-geo p-location">
-			<span class="p-latitude"><%= @article.location.latitude %></span>,
-			<span class="p-longitude"><%= @article.location.longitude %></span>
+			<%= link_to @article.location.map_url do %>
+				<span class="p-latitude"><%= @article.location.latitude %></span>,
+				<span class="p-longitude"><%= @article.location.longitude %></span>
+			<% end %>
 		</p>
 	<%- end -%>
 

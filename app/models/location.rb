@@ -5,6 +5,10 @@ class Location < ApplicationRecord
 
   belongs_to :locatable, polymorphic: true
 
+  def map_url
+    "https://www.openstreetmap.org/#map=15/#{latitude}/#{longitude}"
+  end
+
   # rubocop:disable Metrics/AbcSize
   def reverse_geocode
     return if place.nil?
