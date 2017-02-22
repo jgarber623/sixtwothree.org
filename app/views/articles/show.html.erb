@@ -13,7 +13,7 @@
 
 	<%- if @article.tags.any? -%>
 		<ul>
-			<%- @article.tags.each do |tag| -%>
+			<%- @article.sorted_tags.each do |tag| -%>
 				<li>
 					<%= link_to tag.name, tag_path(tag), class: 'p-category' %>
 				</li>
