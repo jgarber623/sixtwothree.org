@@ -1,26 +1,39 @@
 <!doctype html>
-<html>
+<html lang="<%= I18n.locale %>">
 <head>
 	<meta charset="utf-8">
 
-	<title>sixtwothree.org</title>
+	<title><%= t('site.name') %></title>
 
+	<meta name="apple-mobile-web-app-title" content="<%= t('site.name') %>">
+	<meta name="application-name" content="<%= t('site.name') %>">
+	<meta name="author" content="<%= t('user.name') %>">
+	<meta name="description" content="<%= t('site.description') %>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<%= auto_discovery_link_tag :rss, articles_path(format: :rss), title: "#{t('site.name')}: Articles" %>
 
 	<%= stylesheet_link_tag 'application' %>
 </head>
 <body>
 
-	<nav>
-		<%= link_to 'Home', root_path, rel: 'home' %>
-		<%= link_to 'Colophon', colophon_path %>
-		<%= link_to 'Articles', articles_path %>
-		<%= link_to 'Tags', tags_path %>
-	</nav>
+	<header>
+		<h1><%= link_to t('site.name'), root_path, rel: 'home' %></h1>
+
+		<nav>
+			<%= link_to 'Articles', articles_path %>
+			<%= link_to 'Tags', tags_path %>
+			<%= link_to 'Colophon', colophon_path %>
+		</nav>
+	</header>
 
 	<main>
 		<%= yield %>
 	</main>
+
+	<footer>
+		<p>Some rights reserved. This site’s content is licensed under a <%= link_to "#{t('site.license.name')} license", t('site.license.url'), rel: 'license' %>. Source code available on <%= link_to 'GitHub', t('site.repo_url'), rel: 'source' %>.</p>
+	</footer>
 
 </body>
 </html>
