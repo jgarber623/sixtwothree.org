@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/FrancisCMS/FrancisCMS.git
-  revision: 3ff71a99793745b97d99127733637b5f36e08b3e
+  revision: 13da4780eb5021087ec7940c35b3b72bb538d0c4
   specs:
     francis_cms (0.1.0)
       acts-as-taggable-on (~> 3.5)
