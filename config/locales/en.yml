@@ -30,22 +30,25 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  layout:
+    footer_html: >
+      <p>Some rights reserved. This site’s content is licensed under a <a href="%{license_url}" rel="license">%{license_name} license</a>. Source code available on <a href="%{repo_url}" rel="source">GitHub</a>.</p>
   pages:
     colophon:
-      title: 'Colophon'
+      title: Colophon
     homepage:
-      title: 'Homepage'
+      title: Homepage
   site:
-    description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
-    host: 'https://sixtwothree.org'
+    description: Online home to Jason Garber, one of the Internet’s top Jason Garbers.
+    host: https://sixtwothree.org
     license:
-      name: 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International'
-      url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/'
-    name: 'sixtwothree.org'
-    repo_url: 'https://github.com/jgarber623/sixtwothree.org'
+      name: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+      url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+    name: sixtwothree.org
+    repo_url: https://github.com/jgarber623/sixtwothree.org
   user:
-    email: 'jason@sixtwothree.org'
-    name: 'Jason Garber'
+    email: jason@sixtwothree.org
+    name: Jason Garber
   will_paginate:
-    next_label: 'Older'
-    previous_label: 'Newer'
+    next_label: Older
+    previous_label: Newer
