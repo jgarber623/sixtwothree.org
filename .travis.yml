@@ -1,10 +1,20 @@
+dist: trusty
+addons:
+  postgresql: 9.6
+services:
+  - postgresql
 language: ruby
+cache: bundler
 rvm:
-  - 2.2.4
+  - 2.4.1
+before_install:
+  - gem update --system
 before_script:
   - psql -c 'create database sixtwothree_test;' -U postgres
-  - cp config/database.yml.example config/database.yml
-  - cp config/secrets.yml.example config/secrets.yml
+  - cp config/database.yml{.example,}
+  - cp config/secrets.yml{.example,}
+after_success:
+  - bundle exec codeclimate-test-reporter
 notifications:
   email: false
   slack: sixtwothree:yATLmjTW15443qR7jbCWr3RO

@@ -8,20 +8,18 @@ engines:
     enabled: true
     config:
       languages:
-      - ruby
-      - javascript
+        - ruby
+        - javascript
   fixme:
     enabled: true
   rubocop:
     enabled: true
 ratings:
   paths:
-    - Gemfile.lock
-    - "**.erb"
-    - "**.rake"
+    - "app/**/*"
+    - "lib/**/*"
     - "**.rb"
 exclude_paths:
-  - config/
-  - db/
-  - public/presentations
-  - vendor/
+  - "public/**/*"
+  - "spec/**/*"
+  - "vendor/**/*"

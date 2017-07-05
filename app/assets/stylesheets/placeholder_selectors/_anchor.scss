@@ -1,8 +1,0 @@
-%anchor--grey {
-	@include color($grey);
-
-	&:focus,
-	&:hover {
-		@include color($grey, darker);
-	}
-}
