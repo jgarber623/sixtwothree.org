@@ -112,6 +112,8 @@ GEM
     rainbow (2.2.2)
       rake
     rake (12.0.0)
+    redcarpet (3.4.0)
+    rouge (2.1.1)
     rspec-core (3.6.0)
       rspec-support (~> 3.6.0)
     rspec-expectations (3.6.0)
@@ -189,6 +191,8 @@ DEPENDENCIES
   puma (~> 3.9, >= 3.9.1)!
   rails (~> 5.1, >= 5.1.2)!
   rails-controller-testing (~> 1.0, >= 1.0.2)!
+  redcarpet (~> 3.4)!
+  rouge (~> 2.1, >= 2.1.1)!
   rspec-rails (~> 3.6)!
   rubocop (~> 0.49.1)!
   sass-rails (~> 5.0, >= 5.0.6)!

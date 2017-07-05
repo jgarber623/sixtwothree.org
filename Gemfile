@@ -11,6 +11,8 @@ source 'https://rubygems.org' do
   gem 'pg', '~> 0.21.0'
   gem 'puma', '~> 3.9', '>= 3.9.1'
   gem 'rails', '~> 5.1', '>= 5.1.2'
+  gem 'redcarpet', '~> 3.4'
+  gem 'rouge', '~> 2.1', '>= 2.1.1'
   gem 'sass-rails', '~> 5.0', '>= 5.0.6'
   gem 'uglifier', '~> 3.2'
   gem 'will_paginate', '~> 3.1', '>= 3.1.6'
