@@ -30,6 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  pages:
+    colophon:
+      title: 'Colophon'
+    homepage:
+      title: 'Homepage'
   site:
     description: 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.'
     host: 'https://sixtwothree.org'
