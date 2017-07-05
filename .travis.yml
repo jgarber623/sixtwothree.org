@@ -10,11 +10,14 @@ rvm:
 before_install:
   - gem update --system
 before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
   - psql -c 'create database sixtwothree_test;' -U postgres
   - cp config/database.yml{.example,}
   - cp config/secrets.yml{.example,}
 after_success:
-  - bundle exec codeclimate-test-reporter
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 notifications:
   email: false
   slack: sixtwothree:yATLmjTW15443qR7jbCWr3RO

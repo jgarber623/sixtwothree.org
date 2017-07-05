@@ -25,7 +25,6 @@ source 'https://rubygems.org' do
   end
 
   group :test do
-    gem 'codeclimate-test-reporter', '~> 1.0', '>= 1.0.8', require: false
     gem 'simplecov', '~> 0.13.0', require: false
     gem 'simplecov-console', '~> 0.4.2', require: false
   end

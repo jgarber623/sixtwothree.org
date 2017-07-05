@@ -7,7 +7,5 @@ if RSpec.configuration.files_to_run.length > 1
 end
 
 SimpleCov.start 'rails' do
-  coverage_dir 'tmp/coverage'
-
   formatter SimpleCov::Formatter::MultiFormatter.new(formatters)
 end
