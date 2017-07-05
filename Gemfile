@@ -6,12 +6,14 @@ git_source(:github) do |repo_name|
 end
 
 source 'https://rubygems.org' do
+  gem 'friendly_id', '~> 5.2', '>= 5.2.1'
   gem 'jbuilder', '~> 2.7'
   gem 'pg', '~> 0.21.0'
   gem 'puma', '~> 3.9', '>= 3.9.1'
   gem 'rails', '~> 5.1', '>= 5.1.2'
   gem 'sass-rails', '~> 5.0', '>= 5.0.6'
   gem 'uglifier', '~> 3.2'
+  gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
   group :development, :test do
     gem 'byebug', '~> 9.0', '>= 9.0.6'

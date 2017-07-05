@@ -46,3 +46,6 @@ en:
   user:
     email: 'jason@sixtwothree.org'
     name: 'Jason Garber'
+  will_paginate:
+    next_label: 'Older'
+    previous_label: 'Newer'
