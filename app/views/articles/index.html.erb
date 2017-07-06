@@ -1,0 +1,21 @@
+<section class="h-feed">
+	<header>
+		<h1 class="p-name"><%= t('articles.index.title') %></h1>
+	</header>
+
+	<%- if @articles.any? -%>
+		<ol reversed>
+			<%- @articles.each do |article| -%>
+				<li>
+					<div class="h-entry">
+						<%= link_to article.title.smarten, article_path(article), class: 'u-url p-name' %>
+					</div>
+				</li>
+			<%- end -%>
+		</ol>
+
+		<%= will_paginate @articles %>
+	<%- else -%>
+		<p><%= t('articles.index.none') %></p>
+	<%- end -%>
+</section>

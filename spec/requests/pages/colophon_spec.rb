@@ -9,7 +9,7 @@ RSpec.describe PagesController, type: :request do
     end
 
     it 'renders the colophon template' do
-      assert_template('colophon')
+      assert_template 'colophon'
     end
 
     it 'displays the page heading' do

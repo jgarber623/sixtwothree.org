@@ -1,0 +1,22 @@
+<article class="h-entry">
+	<header>
+		<h1 class="p-name"><%= @article.title.smarten %></h1>
+
+		<%- if @article.published_at? -%>
+			<small>Published on <%= render partial: 'time', object: @article.published_at %>.</small>
+		<%- end -%>
+	</header>
+
+	<div class="e-content">
+		<%= raw @article.content.to_html %>
+	</div>
+
+	<%- if @article.location -%>
+		<p class="h-geo p-location">
+			<%= link_to @article.location.map_url do %>
+				<span class="p-latitude"><%= @article.location.latitude %></span>,
+				<span class="p-longitude"><%= @article.location.longitude %></span>
+			<% end %>
+		</p>
+	<%- end -%>
+</article>
