@@ -3,7 +3,7 @@ class Location < ApplicationRecord
 
   after_save :enqueue_reverse_geocode, if: -> { saved_change_to_latitude? || saved_change_to_longitude? }
 
-  belongs_to :locatable, polymorphic: true
+  belongs_to :locatable, optional: true, polymorphic: true
 
   def map_url
     "https://www.openstreetmap.org/#map=15/#{latitude}/#{longitude}"
