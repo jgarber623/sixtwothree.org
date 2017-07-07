@@ -33,6 +33,7 @@ source 'https://rubygems.org' do
   end
 
   group :test do
+    gem 'factory_girl_rails', '~> 4.8'
     gem 'simplecov', '~> 0.13.0', require: false
     gem 'simplecov-console', '~> 0.4.2', require: false
   end
