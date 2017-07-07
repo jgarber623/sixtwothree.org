@@ -17,6 +17,6 @@
 1. Install Ruby dependencies: `bundle install`
 1. Start PostgreSQL: `brew services start postgresql`
 1. Create and migrate databases: `bundle exec rails db:create` and `bundle exec rails db:migrate`
-1. Start the application: `bundle exec rails server`
+1. Start the application: `bundle exec foreman start`
 
 The app should now be running locally and accessible in a Web browser at [http://localhost:3000](http://localhost:3000).
