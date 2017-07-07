@@ -1,6 +1,6 @@
 <div class="h-feed">
 	<header>
-		<h1 class="p-name"><%= t('tags.show.title', tag: @tag) %></h1>
+		<h1 class="p-name"><%= t('tags.show.title', tag: @tag.name) %></h1>
 	</header>
 
 	<%- if @results.any? -%>
@@ -8,12 +8,12 @@
 			<%- @results.each do |result| -%>
 				<li>
 					<div class="h-entry">
-						<%= link_to result.title, article_path(result), class: 'u-url p-name' %>
+						<%= link_to result.title.smarten, article_path(result), class: 'u-url p-name' %>
 					</div>
 				</li>
 			<%- end -%>
 		</ol>
 	<%- else -%>
-		<p><%= t('tags.show.none', tag: @tag) %></p>
+		<p><%= t('tags.show.none', tag: @tag.name) %></p>
 	<%- end -%>
 </div>
