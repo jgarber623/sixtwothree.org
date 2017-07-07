@@ -3,7 +3,7 @@
 		<h1 class="p-name"><%= @article.title.smarten %></h1>
 
 		<%- if @article.published_at? -%>
-			<small>Published on <%= render partial: 'time', object: @article.published_at %>.</small>
+			<small><%= t('articles.show.published_at', published_at_iso8601: @article.published_at.to_s(:iso8601), published_at_dislpay: @article.published_at.strftime("%B %e<sup>#{time.day.ordinal}</sup>, %Y at %l:%M %P %Z")) %></small>
 		<%- end -%>
 	</header>
 

@@ -40,6 +40,9 @@ en:
     index:
       none: No articles found!
       title: Articles
+    show:
+      published_at_html: >
+        Published on <time class="dt-published" datetime="%{published_at_iso8601}">%{published_at_display}</time>
   pages:
     colophon:
       title: Colophon
