@@ -1,7 +1,7 @@
 class Location < ApplicationRecord
   validates :latitude, :longitude, numericality: true, presence: true
 
-  after_save :enqueue_reverse_geocode, if: -> { latitude_changed? || longitude_changed? }
+  after_save :enqueue_reverse_geocode, if: -> { saved_change_to_latitude? || saved_change_to_longitude? }
 
   belongs_to :locatable, polymorphic: true
 
