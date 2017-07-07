@@ -3,7 +3,8 @@ RSpec.describe ArticlesController, type: :request do
     let! :article do
       create(
         :published_tagged_article,
-        location: build(:location)
+        location: build(:location),
+        syndications: build_list(:syndication, 3)
       )
     end
 
@@ -29,6 +30,8 @@ RSpec.describe ArticlesController, type: :request do
 
       expect(location_props['latitude'][0]).to eq(article.location.latitude)
       expect(location_props['longitude'][0]).to eq(article.location.longitude)
+
+      expect(props['syndication'].length).to eq(3)
     end
   end
 end

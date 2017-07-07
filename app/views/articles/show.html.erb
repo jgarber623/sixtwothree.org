@@ -29,4 +29,14 @@
 			<% end %>
 		</p>
 	<%- end -%>
+
+  <%- if @article.syndications.any? -%>
+    <ul>
+      <%- @article.sorted_syndications.each do |syndication| -%>
+        <li>
+          <%= link_to syndication.name, syndication.url, class: 'u-syndication' %>
+        </li>
+      <%- end -%>
+    </ul>
+  <%- end -%>
 </article>

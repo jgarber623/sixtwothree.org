@@ -3,7 +3,8 @@ RSpec.describe ArticlesController, type: :request do
     let! :article do
       create(
         :published_tagged_article,
-        location: build(:location)
+        location: build(:location),
+        syndications: build_list(:syndication, 3)
       )
     end
 
@@ -29,6 +30,8 @@ RSpec.describe ArticlesController, type: :request do
           assert_select '.p-latitude', text: article.location.latitude.to_s
           assert_select '.p-longitude', text: article.location.longitude.to_s
         end
+
+        assert_select '.u-syndication', count: 3
       end
     end
   end
