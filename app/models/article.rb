@@ -3,6 +3,7 @@ class Article < ApplicationRecord
   include Locatable
   include Publishable
   include Redcarpetable
+  include Taggable
 
   validates :title, :slug, :content, presence: true
   validates :slug, uniqueness: true

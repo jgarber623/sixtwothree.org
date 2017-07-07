@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'pages#homepage'
 
   resources :articles, only: [:index, :show]
+  resources :tags, only: [:index, :show]
 
   get '/colophon', to: 'pages#colophon', as: 'colophon'
 

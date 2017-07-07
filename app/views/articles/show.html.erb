@@ -11,6 +11,16 @@
 		<%= raw @article.content.to_html %>
 	</div>
 
+  <%- if @article.tags.any? -%>
+    <ul>
+      <%- @article.sorted_tags.each do |tag| -%>
+        <li>
+          <%= link_to tag.name, tag_path(tag), class: 'p-category' %>
+        </li>
+      <%- end -%>
+    </ul>
+  <%- end -%>
+
 	<%- if @article.location -%>
 		<p class="h-geo p-location">
 			<%= link_to @article.location.map_url do %>
