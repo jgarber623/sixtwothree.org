@@ -42,7 +42,7 @@ en:
       title: Articles
     show:
       published_at_html: >
-        Published on <time class="dt-published" datetime="%{published_at_iso8601}">%{published_at_display}</time>
+        Published on <time class="dt-published" datetime="%{published_at_iso8601}">%{published_at_long_ordinal}</time>
   pages:
     colophon:
       title: Colophon
