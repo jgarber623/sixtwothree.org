@@ -8,9 +8,11 @@ end
 source 'https://rubygems.org' do
   gem 'acts-as-taggable-on', '~> 5.0'
   gem 'friendly_id', '~> 5.2', '>= 5.2.1'
+  gem 'geocoder', '~> 1.4', '>= 1.4.4'
   gem 'jbuilder', '~> 2.7'
   gem 'pg', '~> 0.21.0'
   gem 'puma', '~> 3.9', '>= 3.9.1'
+  gem 'que', '~> 0.13.1'
   gem 'rails', '~> 5.1', '>= 5.1.2'
   gem 'redcarpet', '~> 3.4'
   gem 'rouge', '~> 2.1', '>= 2.1.1'
@@ -20,6 +22,7 @@ source 'https://rubygems.org' do
 
   group :development, :test do
     gem 'byebug', '~> 9.0', '>= 9.0.6'
+    gem 'foreman', '~> 0.84.0'
     gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
     gem 'rspec-rails', '~> 3.6'
     gem 'rubocop', '~> 0.49.1', require: false
