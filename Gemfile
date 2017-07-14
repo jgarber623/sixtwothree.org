@@ -21,6 +21,7 @@ source 'https://rubygems.org' do
   gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
   group :development, :test do
+    gem 'brakeman', '~> 3.7', require: false
     gem 'byebug', '~> 9.0', '>= 9.0.6'
     gem 'foreman', '~> 0.84.0', require: false
     gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'

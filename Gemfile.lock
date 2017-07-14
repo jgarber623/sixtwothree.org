@@ -44,6 +44,7 @@ GEM
     arel (8.0.0)
     ast (2.3.0)
     bindex (0.5.0)
+    brakeman (3.7.0)
     builder (3.2.3)
     byebug (9.0.6)
     concurrent-ruby (1.0.5)
@@ -204,6 +205,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on (~> 5.0)!
+  brakeman (~> 3.7)!
   byebug (~> 9.0, >= 9.0.6)!
   factory_girl_rails (~> 4.8)!
   foreman (~> 0.84.0)!
