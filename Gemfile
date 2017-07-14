@@ -22,7 +22,7 @@ source 'https://rubygems.org' do
 
   group :development, :test do
     gem 'byebug', '~> 9.0', '>= 9.0.6'
-    gem 'foreman', '~> 0.84.0'
+    gem 'foreman', '~> 0.84.0', require: false
     gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
     gem 'rspec-rails', '~> 3.6'
     gem 'rubocop', '~> 0.49.1', require: false
@@ -34,7 +34,7 @@ source 'https://rubygems.org' do
 
   group :test do
     gem 'factory_girl_rails', '~> 4.8'
-    gem 'simplecov', '~> 0.13.0', require: false
+    gem 'simplecov', '~> 0.14.1', require: false
     gem 'simplecov-console', '~> 0.4.2', require: false
   end
 end
