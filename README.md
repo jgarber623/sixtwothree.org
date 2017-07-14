@@ -10,13 +10,13 @@
 
 **Note:** These installation instructions are written for users who are comfortable with the command line and using macOS Sierra (or newer).
 
-1. Install [Homebrew](https://brew.sh) and [Homebrew Services](https://github.com/Homebrew/homebrew-services): `brew tap homebrew/services`
-1. Install [PostgreSQL](https://www.postgresql.org) (version 9.6.3): `brew install postgresql`
-1. Install [Ruby](https://www.ruby-lang.org) (version 2.4.1) using [rbenv](https://github.com/rbenv/rbenv) (or [chruby](https://github.com/postmodern/chruby) or [RVM](https://rvm.io))
-1. Install [Bundler](http://bundler.io): `gem install bundler`
-1. Install Ruby dependencies: `bundle install`
-1. Start PostgreSQL: `brew services start postgresql`
-1. Create and migrate databases: `bundle exec rails db:create` and `bundle exec rails db:migrate`
-1. Start the application: `bundle exec foreman start`
+1. Install [Homebrew](https://brew.sh)
+1. Install [Homebrew Services](https://github.com/Homebrew/homebrew-services): `brew tap homebrew/services`
+1. Install [PostgreSQL](https://www.postgresql.org) (9.6.3): `brew install postgresql`
+1. Install [Ruby](https://www.ruby-lang.org) (2.4.1) using [rbenv](https://github.com/rbenv/rbenv): `rbenv install 2.4.1`
+1. Start PostgreSQL: `brew services run postgresql`
+1. Run setup script: `bin/setup`
+1. Update `config/secrets.yml` configuration (`bin/rails secret`)
+1. Start the application: `bin/foreman start`
 
 The app should now be running locally and accessible in a Web browser at [http://localhost:3000](http://localhost:3000).

@@ -1,2 +1,2 @@
-rails: bundle exec rails server
-que:   bundle exec que ./config/environment.rb
+rails: bin/rails server
+que:   bin/que ./config/environment.rb
