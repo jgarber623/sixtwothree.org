@@ -8,7 +8,7 @@ class Syndication < ApplicationRecord
     'twitter.com' => 'Twitter'
   }.freeze
 
-  validates :url, format: { with: %r{\Ahttps?://} }, presence: true, uniqueness: true
+  validates :url, format: { with: URI.regexp }, presence: true, uniqueness: true
 
   belongs_to :syndicatable, optional: true, polymorphic: true
 
