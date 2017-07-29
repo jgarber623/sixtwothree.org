@@ -8,9 +8,9 @@ class Syndication < ApplicationRecord
     'twitter.com' => 'Twitter'
   }.freeze
 
-  validates :url, format: { with: URI.regexp }, presence: true, uniqueness: true
-
   belongs_to :syndicatable, optional: true, polymorphic: true
+
+  validates :url, format: { with: URI.regexp }, presence: true, uniqueness: true
 
   def name
     KNOWN_HOSTS.key?(host) ? KNOWN_HOSTS[host] : host

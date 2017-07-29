@@ -6,12 +6,11 @@ class Article < ApplicationRecord
   include Syndicatable
   include Taggable
 
-  validates :title, :slug, :content, presence: true
-  validates :slug, uniqueness: true
-
   friendly_id :title
-
   redcarpet :content, :summary, :title
+
+  validates :content, :slug, :title, presence: true
+  validates :slug, uniqueness: true
 
   self.per_page = 10
 end
