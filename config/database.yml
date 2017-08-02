@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS') { 5 } %>
 
 development:
   <<: *default
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: sixtwothree_production
-  username: sixtwothree
+  database: <%= ENV['SIXTWOTHREE_DATABASE_URL'] %>
+  username: <%= ENV['SIXTWOTHREE_DATABASE_USERNAME'] %>
   password: <%= ENV['SIXTWOTHREE_DATABASE_PASSWORD'] %>

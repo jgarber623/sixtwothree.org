@@ -15,8 +15,6 @@ before_script:
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
   - psql -c 'create database sixtwothree_test;' -U postgres
-  - cp config/database.yml{.sample,}
-  - cp config/secrets.yml{.sample,}
 script:
   - bundle exec rake
   - bundle exec rubocop
