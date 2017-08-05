@@ -10,6 +10,8 @@
   <meta name="author" content="<%= t('user.name') %>">
   <meta name="description" content="<%= t('site.description') %>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <%= tag.link href: articles_path(format: :rss), rel: 'alternate', title: "#{t('site.name')}: #{t('articles.index.title')}", type: 'application/rss+xml' %>
 </head>
 <body>
 
