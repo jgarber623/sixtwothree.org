@@ -1,6 +1,8 @@
+<%- @page_title = t('tags.show.title', tag: @tag.name) -%>
+
 <div class="h-feed">
 	<header>
-		<h1 class="p-name"><%= t('tags.show.title', tag: @tag.name) %></h1>
+		<h1 class="p-name"><%= @page_title %></h1>
 	</header>
 
 	<%- if @tagged_articles.any? -%>

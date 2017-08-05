@@ -1,4 +1,6 @@
-<h1><%= t('tags.index.title') %></h1>
+<%- @page_title = t('tags.index.title') -%>
+
+<h1><%= @page_title %></h1>
 
 <%- if @tags.any? -%>
   <small><%= t('tags.index.tag_count', tag_count: pluralize(@tags.length, 'tag')) %></small>

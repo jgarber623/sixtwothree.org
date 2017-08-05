@@ -1,6 +1,8 @@
+<%- @page_title = t('articles.index.title') -%>
+
 <section class="h-feed">
 	<header>
-		<h1 class="p-name"><%= t('articles.index.title') %></h1>
+		<h1 class="p-name"><%= @page_title %></h1>
 	</header>
 
 	<%- if @articles.any? -%>
