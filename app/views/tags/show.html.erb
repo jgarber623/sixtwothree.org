@@ -3,12 +3,12 @@
 		<h1 class="p-name"><%= t('tags.show.title', tag: @tag.name) %></h1>
 	</header>
 
-	<%- if @results.any? -%>
+	<%- if @tagged_articles.any? -%>
 		<ol reversed>
-			<%- @results.each do |result| -%>
+			<%- @tagged_articles.each do |article| -%>
 				<li>
 					<div class="h-entry">
-						<%= link_to result.title.smarten, article_path(result), class: 'u-url p-name' %>
+						<%= link_to article.title.smarten, article_path(article), class: 'u-url p-name' %>
 					</div>
 				</li>
 			<%- end -%>

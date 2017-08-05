@@ -22,7 +22,7 @@ RSpec.describe TagsController, type: :request do
       it 'displays a list of tags' do
         get '/tags'
 
-        assert_select 'ul li', count: article.tags.length
+        assert_select 'dl li', count: article.tags.length
       end
     end
 

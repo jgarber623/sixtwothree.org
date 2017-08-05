@@ -1,11 +1,22 @@
 <h1><%= t('tags.index.title') %></h1>
 
 <%- if @tags.any? -%>
-	<ul>
-		<%- @tags.each do |tag| -%>
-			<li><%= link_to tag.name, tag_path(tag) %></li>
-		<%- end -%>
-	</ul>
+  <small><%= t('tags.index.tag_count', tag_count: pluralize(@tags.length, 'tag')) %></small>
+<%- end -%>
+
+<%- if @grouped_tags.any? -%>
+  <dl>
+    <%- @grouped_tags.each do |group_title, tags| -%>
+      <dl><%= t('tags.index.group_title', group_title: group_title) %></dl>
+      <dd>
+        <ol>
+					<%- tags.each do |tag| -%>
+						<li><%= link_to tag.name, tag_path(tag) %></li>
+					<%- end -%>
+				</ol>
+      </dd>
+    <%- end -%>
+  </dl>
 <%- else -%>
 	<p><%= t('tags.index.none') %></p>
 <%- end -%>

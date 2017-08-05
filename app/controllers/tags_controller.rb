@@ -1,21 +1,24 @@
 class TagsController < ApplicationController
   def index
-    tags
+    grouped_tags
   end
 
   def show
-    tag
-    results
+    tagged_articles
   end
 
   private
 
-  def results
-    @results ||= Article.published.reverse_order.tagged_with(tag)
+  def grouped_tags
+    @grouped_tags ||= tags.group_by { |tag| tag.name.downcase.first }
   end
 
   def tag
-    @tag ||= ActsAsTaggableOn::Tag.find_or_create_with_like_by_name(params[:id].tr('-', ' '))
+    @tag ||= ActsAsTaggableOn::Tag.friendly.find(params[:id])
+  end
+
+  def tagged_articles
+    @tagged_articles ||= Article.published.reverse_order.tagged_with(tag)
   end
 
   def tags
