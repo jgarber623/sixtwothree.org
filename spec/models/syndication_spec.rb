@@ -6,7 +6,7 @@ RSpec.describe Syndication, type: :model do
       end
 
       it 'returns the host name' do
-        expect(syndication.name).to eq('www.example.com')
+        expect(syndication.name).to eq('example.com')
       end
     end
 

@@ -19,6 +19,6 @@ class Syndication < ApplicationRecord
   private
 
   def host
-    @host ||= URI.parse(url).host
+    @host ||= URI.parse(url).host.gsub(/\Awww\./, '')
   end
 end
