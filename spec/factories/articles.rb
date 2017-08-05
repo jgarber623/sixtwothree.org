@@ -6,7 +6,7 @@ FactoryGirl.define do
     content 'Test article content.'
 
     trait :published do
-      published_at Time.now.utc
+      published_at { Time.now.utc }
     end
 
     trait :tagged do

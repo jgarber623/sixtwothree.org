@@ -11,7 +11,7 @@ class TagsController < ApplicationController
   private
 
   def results
-    @results ||= Article.published.tagged_with(tag)
+    @results ||= Article.published.reverse_order.tagged_with(tag)
   end
 
   def tag

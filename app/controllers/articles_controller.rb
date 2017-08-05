@@ -14,6 +14,6 @@ class ArticlesController < ApplicationController
   end
 
   def articles
-    @articles ||= Article.published.page(params[:page])
+    @articles ||= Article.published.reverse_order.page(params[:page])
   end
 end
