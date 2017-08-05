@@ -71,6 +71,7 @@ GEM
       activesupport (>= 4.2.0)
     high_voltage (3.0.0)
     hirb (0.7.3)
+    htmlentities (4.3.4)
     i18n (0.8.6)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
@@ -218,6 +219,7 @@ DEPENDENCIES
   friendly_id (~> 5.2, >= 5.2.1)!
   geocoder (~> 1.4, >= 1.4.4)!
   high_voltage (~> 3.0)!
+  htmlentities (~> 4.3, >= 4.3.4)!
   jbuilder (~> 2.7)!
   pg (~> 0.21.0)!
   puma (~> 3.9, >= 3.9.1)!

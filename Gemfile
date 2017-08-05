@@ -10,6 +10,7 @@ source 'https://rubygems.org' do
   gem 'friendly_id', '~> 5.2', '>= 5.2.1'
   gem 'geocoder', '~> 1.4', '>= 1.4.4'
   gem 'high_voltage', '~> 3.0'
+  gem 'htmlentities', '~> 4.3', '>= 4.3.4'
   gem 'jbuilder', '~> 2.7'
   gem 'pg', '~> 0.21.0'
   gem 'puma', '~> 3.9', '>= 3.9.1'

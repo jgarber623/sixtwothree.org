@@ -31,7 +31,7 @@ module Redcarpetable
       end
 
       def smarten
-        Redcarpet::Render::SmartyPants.render(@markdown)
+        html_entities.decode Redcarpet::Render::SmartyPants.render(@markdown)
       end
 
       def to_html
@@ -40,6 +40,12 @@ module Redcarpetable
 
       def to_s
         @markdown
+      end
+
+      private
+
+      def html_entities
+        @html_entities ||= HTMLEntities.new
       end
     end
 
