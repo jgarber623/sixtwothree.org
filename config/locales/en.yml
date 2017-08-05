@@ -32,8 +32,7 @@
 en:
   # Layout-specific content
   layout:
-    footer_html: >
-      <p>Some rights reserved. This site’s content is licensed under a <a href="%{license_url}" rel="license">%{license_name} license</a>. Source code available on <a href="%{repo_url}" rel="source">GitHub</a>.</p>
+    footer_html: <p>Some rights reserved. This site’s content is licensed under a <a href="%{license_url}" rel="license">%{license_name} license</a>. Source code available on <a href="%{repo_url}" rel="source">GitHub</a>.</p>
 
   # Page-specific content
   articles:
@@ -41,8 +40,13 @@ en:
       none: No articles found!
       title: Articles
     show:
-      published_at_html: >
-        Published on <time class="dt-published" datetime="%{published_at_iso8601}">%{published_at_long_ordinal}</time>
+      footer_html: <p><cite><a href="%{article_url}" class="u-url">%{article_title}</a></cite> is also available as <a href="%{article_json_url}" download="%{article_title}.json" rel="alternate" type="application/json">JSON</a>.</p>
+      metadata:
+        location: Location
+        syndications: Syndicated
+        tags: Tagged
+      published_at_html: Published on <time class="dt-published" datetime="%{published_at_iso8601}">%{published_at_long_ordinal}</time>
+      updated_at_html: Updated on <time class="dt-updated" datetime="%{updated_at_iso8601}">%{updated_at_long_ordinal}</time>
   pages:
     colophon:
       title: Colophon
