@@ -20,3 +20,5 @@
 /yarn-error.log
 
 .byebug_history
+
+/db/seeds/*

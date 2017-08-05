@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Dir.glob(Rails.root.join('db', 'seeds', '**', '*.rb')).each do |file_path|
+  puts "== Seeding database with `#{file_path}` =="
+  load file_path
+end
