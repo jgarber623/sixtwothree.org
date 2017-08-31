@@ -13,18 +13,18 @@ source 'https://rubygems.org' do
   gem 'htmlentities', '~> 4.3', '>= 4.3.4'
   gem 'jbuilder', '~> 2.7'
   gem 'pg', '~> 0.21.0'
-  gem 'puma', '~> 3.9', '>= 3.9.1'
-  gem 'que', '~> 0.13.1'
+  gem 'puma', '~> 3.10'
+  gem 'que', '~> 0.14.0'
   gem 'rails', '~> 5.1', '>= 5.1.3'
   gem 'redcarpet', '~> 3.4'
-  gem 'rouge', '~> 2.1', '>= 2.1.1'
+  gem 'rouge', '~> 2.2', '>= 2.2.1'
   gem 'sass-rails', '~> 5.0', '>= 5.0.6'
   gem 'uglifier', '~> 3.2'
   gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 
   group :development, :test do
     gem 'brakeman', '~> 3.7', require: false
-    gem 'byebug', '~> 9.0', '>= 9.0.6'
+    gem 'byebug', '~> 9.1'
     gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
     gem 'foreman', '~> 0.84.0', require: false
     gem 'rails-controller-testing', '~> 1.0', '>= 1.0.2'
@@ -38,7 +38,7 @@ source 'https://rubygems.org' do
 
   group :test do
     gem 'factory_girl_rails', '~> 4.8'
-    gem 'simplecov', '~> 0.14.1', require: false
+    gem 'simplecov', '~> 0.15.0', require: false
     gem 'simplecov-console', '~> 0.4.2', require: false
   end
 end
