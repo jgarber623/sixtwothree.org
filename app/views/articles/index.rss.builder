@@ -7,8 +7,8 @@ xml.rss version: 2.0, 'xmlns:atom': 'http://www.w3.org/2005/Atom' do
     xml.link articles_url
     xml.description t('site.description')
     xml.pubDate @articles.first.published_at.to_formatted_s(:rfc822)
-    xml.managingEditor "#{t('user.email')} (#{t('user.name')})"
-    xml.webMaster "#{t('user.email')} (#{t('user.name')})"
+    xml.managingEditor "#{t('site.user.email')} (#{t('site.user.name')})"
+    xml.webMaster "#{t('site.user.email')} (#{t('site.user.name')})"
     xml.language I18n.locale.to_s
     xml.copyright t('site.license.name')
 

@@ -7,7 +7,7 @@
 
   <meta name="apple-mobile-web-app-title" content="<%= t('site.name') %>">
   <meta name="application-name" content="<%= t('site.name') %>">
-  <meta name="author" content="<%= t('user.name') %>">
+  <meta name="author" content="<%= t('site.user.name') %>">
   <meta name="description" content="<%= t('site.description') %>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,7 +30,7 @@
   </main>
 
   <footer>
-    <%= t('layout.footer_html', license_name: t('site.license.name'), license_url: t('site.license.url'), repo_url: t('site.repo_url')) %>
+    <p>Some rights reserved. This site’s content is licensed under a <%= link_to "#{t('site.license.name')} license", t('site.license.url'), rel: 'license' %>. Source code available on <%= link_to 'GitHub', 'https://github.com/jgarber623/sixtwothree.org', rel: 'source' %>.</p>
   </footer>
 
 </body>

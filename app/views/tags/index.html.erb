@@ -3,13 +3,13 @@
 <h1><%= @page_title %></h1>
 
 <%- if @tags.any? -%>
-  <small><%= t('tags.index.tag_count', tag_count: pluralize(@tags.length, 'tag')) %></small>
+  <small>All <%= pluralize @tags.length, 'tag' %></small>
 <%- end -%>
 
 <%- if @grouped_tags.any? -%>
   <dl>
-    <%- @grouped_tags.each do |group_title, tags| -%>
-      <dl><%= t('tags.index.group_title', group_title: group_title) %></dl>
+    <%- @grouped_tags.each do |group_name, tags| -%>
+      <dl>Tagged content beginning with “<%= group_name %>”</dl>
       <dd>
         <ol>
 					<%- tags.each do |tag| -%>
