@@ -16,4 +16,10 @@ RSpec.describe ApplicationHelper, type: :helper do
       end
     end
   end
+
+  describe '#rss_link_tag' do
+    it 'returns a <link> element' do
+      expect(helper.rss_link_tag(href: '/foo.rss', title: 'bar')).to eq('<link href="/foo.rss" rel="alternate" title="bar" type="application/rss+xml">')
+    end
+  end
 end
