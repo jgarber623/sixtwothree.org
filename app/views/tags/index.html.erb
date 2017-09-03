@@ -9,7 +9,7 @@
 <%- if @grouped_tags.any? -%>
   <dl>
     <%- @grouped_tags.each do |group_name, tags| -%>
-      <dl>Tagged content beginning with “<%= group_name %>”</dl>
+      <dt>Tags beginning with “<%= group_name %>”</dt>
       <dd>
         <ol>
 					<%- tags.each do |tag| -%>
