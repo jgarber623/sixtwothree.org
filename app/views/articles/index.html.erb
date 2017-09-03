@@ -3,6 +3,10 @@
 <section class="h-feed">
 	<header>
 		<h1 class="p-name"><%= @page_title %></h1>
+
+    <%- if @articles.total_pages > 1 -%>
+      <small>Viewing page <%= @articles.current_page %> of <%= @articles.total_pages %></small>
+    <%- end -%>
 	</header>
 
 	<%- if @articles.any? -%>
