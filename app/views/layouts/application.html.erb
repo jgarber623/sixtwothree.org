@@ -15,21 +15,21 @@
 </head>
 <body>
 
-  <header>
+  <header role="banner">
     <h1><%= link_to t('site.name'), root_path, rel: 'home' %></h1>
 
-    <nav>
+    <nav role="navigation">
       <%= link_to t('articles.index.title'), articles_path %>
       <%= link_to t('tags.index.title'), tags_path %>
       <%= link_to t('pages.colophon.title'), page_path('colophon') %>
     </nav>
   </header>
 
-  <main>
+  <main role="main">
     <%= yield %>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <small>Some rights reserved. This site’s content is licensed under a <%= link_to "#{t('site.license.name')} license", t('site.license.url'), rel: 'license' %>. Source code available on <%= link_to 'GitHub', 'https://github.com/jgarber623/sixtwothree.org', rel: 'source' %>.</small>
   </footer>
 
