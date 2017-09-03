@@ -3,7 +3,7 @@
 <h1><%= @page_title %></h1>
 
 <%- if @tags.any? -%>
-  <small>All <%= pluralize @tags.length, 'tag' %></small>
+  <small>Viewing all <%= pluralize @tags.length, 'tag' %></small>
 <%- end -%>
 
 <%- if @grouped_tags.any? -%>
