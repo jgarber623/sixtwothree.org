@@ -19,8 +19,8 @@ RSpec.describe ArticlesController, type: :request do
         get '/articles'
 
         assert_select '.h-feed' do
-          assert_select 'li:nth-child(1) .p-name', text: articles.last.title.smarten
-          assert_select 'li:nth-child(2) .p-name', text: articles.first.title.smarten
+          assert_select 'li:nth-child(1) .p-name', text: articles.last.name.smarten
+          assert_select 'li:nth-child(2) .p-name', text: articles.first.name.smarten
         end
       end
     end

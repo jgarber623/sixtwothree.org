@@ -20,8 +20,8 @@ RSpec.describe ArticlesController, type: :request do
 
         items = JSON.parse(response.body)['items']
 
-        expect(items[0]['properties']['name'][0]).to eq(articles.last.title.smarten)
-        expect(items[1]['properties']['name'][0]).to eq(articles.first.title.smarten)
+        expect(items[0]['properties']['name'][0]).to eq(articles.last.name.smarten)
+        expect(items[1]['properties']['name'][0]).to eq(articles.first.name.smarten)
       end
     end
 

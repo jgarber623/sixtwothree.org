@@ -22,7 +22,7 @@ RSpec.describe ArticlesController, type: :request do
 
     it 'displays the article' do
       assert_select '.h-entry' do
-        assert_select '.p-name', text: article.title.smarten
+        assert_select '.p-name', text: article.name.smarten
         assert_select '.e-content', html: article.content.to_html.chomp
         assert_select '.p-category', count: 3
 

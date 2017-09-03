@@ -16,8 +16,8 @@ RSpec.describe ArticlesController, type: :request do
 
     it 'displays an XML feed of a reverse chronological list of articles' do
       assert_select 'channel' do
-        assert_select 'item:nth-of-type(1) title', articles.last.title.smarten
-        assert_select 'item:nth-of-type(2) title', articles.first.title.smarten
+        assert_select 'item:nth-of-type(1) title', articles.last.name.smarten
+        assert_select 'item:nth-of-type(2) title', articles.first.name.smarten
       end
     end
   end

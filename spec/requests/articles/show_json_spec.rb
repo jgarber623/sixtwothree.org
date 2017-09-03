@@ -24,7 +24,7 @@ RSpec.describe ArticlesController, type: :request do
       props = JSON.parse(response.body)['items'][0]['properties']
       location_props = props['location'][0]['properties']
 
-      expect(props['name'][0]).to eq(article.title.smarten)
+      expect(props['name'][0]).to eq(article.name.smarten)
       expect(props['content'][0]['value']).to eq(article.content.to_s)
       expect(props['category'].length).to eq(3)
 

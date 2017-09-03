@@ -1,7 +1,7 @@
 json.type ['h-entry', 'h-as-article']
 
 json.properties do
-  json.name [article.title.smarten]
+  json.name [article.name.smarten]
   json.summary [article.summary.smarten] if article.summary?
 
   json.content [article.content] do |content|

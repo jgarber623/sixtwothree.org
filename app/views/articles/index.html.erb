@@ -14,7 +14,7 @@
 			<%- @articles.each do |article| -%>
 				<li>
 					<div class="h-entry">
-						<%= link_to article.title.smarten, article_path(article), class: 'u-url p-name' %>
+						<%= link_to article.name.smarten, article_path(article), class: 'u-url p-name' %>
 					</div>
 				</li>
 			<%- end -%>

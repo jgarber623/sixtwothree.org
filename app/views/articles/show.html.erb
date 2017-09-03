@@ -1,8 +1,8 @@
-<%- @page_title = "#{@article.title.smarten} — #{t('articles.index.title')}" -%>
+<%- @page_title = "#{@article.name.smarten} — #{t('articles.index.title')}" -%>
 
 <article class="h-entry h-as-article">
 	<header>
-		<h1 class="p-name"><%= @article.title.smarten %></h1>
+		<h1 class="p-name"><%= @article.name.smarten %></h1>
 
 		<%- if @article.published_at? -%>
 			<small>
@@ -20,7 +20,7 @@
 	</div>
 
   <footer>
-    <p><cite><%= link_to @article.title.smarten, article_path(@article), class: 'u-url' %></cite> is also available as <%= link_to 'JSON', article_path(@article, format: :json), download: "#{@article.title.smarten}.json", rel: 'alternate', type: 'application/json' %>.</p>
+    <p><cite><%= link_to @article.name.smarten, article_path(@article), class: 'u-url' %></cite> is also available as <%= link_to 'JSON', article_path(@article, format: :json), download: "#{@article.name.smarten}.json", rel: 'alternate', type: 'application/json' %>.</p>
 
     <dl>
       <%- if @article.location -%>

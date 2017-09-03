@@ -1,8 +1,8 @@
 FactoryGirl.define do
-  sequence :title { |n| "Test Article Title #{n}" }
+  sequence :name { |n| "Test Article Title #{n}" }
 
   factory :article do
-    title
+    name
     content 'Test article content.'
 
     trait :published do

@@ -15,7 +15,7 @@ xml.rss version: 2.0, 'xmlns:atom': 'http://www.w3.org/2005/Atom' do
     @articles.each do |article|
       xml.item do
         xml.guid article_url(article)
-        xml.title article.title.smarten
+        xml.title article.name.smarten
         xml.link article_url(article)
         xml.pubDate article.published_at.to_formatted_s(:rfc822)
 
