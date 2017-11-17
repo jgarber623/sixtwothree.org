@@ -3,8 +3,10 @@
 **Welcome to my website.**
 
 [![Build Status](https://img.shields.io/travis/jgarber623/sixtwothree.org/the-grand-rewrite.svg?label=build%20status)](https://travis-ci.org/jgarber623/sixtwothree.org)
-[![Code Climate](https://img.shields.io/codeclimate/github/jgarber623/sixtwothree.org.svg)](https://codeclimate.com/github/jgarber623/sixtwothree.org)
-[![Coverage](https://img.shields.io/codeclimate/coverage/github/jgarber623/sixtwothree.org.svg)](https://codeclimate.com/github/jgarber623/sixtwothree.org/coverage)
+[![Code Climate GPA](https://img.shields.io/codeclimate/github/jgarber623/sixtwothree.org.svg)](https://codeclimate.com/github/jgarber623/sixtwothree.org)
+[![Code Climate Coverage](https://img.shields.io/codeclimate/coverage/github/jgarber623/sixtwothree.org.svg)](https://codeclimate.com/github/jgarber623/sixtwothree.org/coverage)
+[![Code Climate Issues](https://img.shields.io/codeclimate/issues/github/jgarber623/sixtwothree.org.svg)](https://codeclimate.com/github/jgarber623/sixtwothree.org/issues)
+[![Known Vulnerabilities](https://snyk.io/test/github/jgarber623/sixtwothree.org/badge.svg)](https://snyk.io/test/github/jgarber623/sixtwothree.org)
 
 ## Installation
 
