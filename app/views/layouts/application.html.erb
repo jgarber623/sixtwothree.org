@@ -46,7 +46,7 @@
 			loadCSS('<%= asset_path 'application.css' %>');
 			loadCSS('<%= google_fonts_url %>');
 
-			document.cookie='cssIsCached=true;expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>;path=/';
+			document.cookie='cssIsCached=true; Expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>; Path=/; SameSite=Strict; HttpOnly';
 		</script>
 
 		<noscript>
