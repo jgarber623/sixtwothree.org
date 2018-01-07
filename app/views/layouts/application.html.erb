@@ -27,32 +27,8 @@
 	<link rel="shortcut icon" href="<%= asset_path francis_cms_config.user_avatar %>">
 	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
 
-	<%- if css_is_cached? -%>
-		<%= stylesheet_link_tag 'application.css', google_fonts_url %>
-		<%= stylesheet_link_tag 'admin.css' if logged_in? %>
-	<%- else -%>
-		<style>
-			<%= inline_asset('critical.css') %>
-		</style>
-
-		<script>
-			function loadCSS(e) {
-				var d=document,l=d.createElement('link'),n='all',o=(d.body||d.getElementsByTagName('head')[0]).childNodes,p=o[o.length-1],s=d.styleSheets;
-				l.rel='stylesheet';l.href=e;l.media='only x';function r(c){if(d.body)return c();setTimeout(function(){r(c);});}
-				function m(c){var i=s.length;while(i--)if(s[i].href===l.href)return c();setTimeout(function(){m(c);});}r(function(){p.parentNode.insertBefore(l,p.nextSibling);});
-				if(l.addEventListener)l.addEventListener('load',function(){this.media=n;});l.onloadcssdefined=m;m(function(){if(l.media!==n)l.media=n;});return l;
-			}
-
-			loadCSS('<%= asset_path 'application.css' %>');
-			loadCSS('<%= google_fonts_url %>');
-
-			document.cookie='cssIsCached=true; Expires=<%= (DateTime.now.utc + 7).strftime("%a, %d %b %Y %T GMT") %>; Path=/; SameSite=Strict; HttpOnly';
-		</script>
-
-		<noscript>
-			<%= stylesheet_link_tag 'application.css', google_fonts_url %>
-		</noscript>
-	<%- end -%>
+	<%= stylesheet_link_tag 'application.css', google_fonts_url %>
+	<%= stylesheet_link_tag 'admin.css' if logged_in? %>
 
 	<!--[if lt IE 9]>
 		<%= javascript_include_tag 'legacy' %>
