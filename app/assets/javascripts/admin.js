@@ -31,4 +31,8 @@
 	router.route(/\/edit$/, function() {
 		new SyndicationForm();
 	});
+
+	router.route(/photos\/(?:.+)\/edit$/, function() {
+		new InstagramSyndicationButton();
+	});
 })(CashCash);

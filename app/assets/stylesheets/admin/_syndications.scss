@@ -22,7 +22,7 @@
 			margin-top: $spacing-1;
 		}
 
-		@include breakpoint($bp-narrow) {
+		@include breakpoint(34em) {
 			display: inline-block;
 
 			+ li {
@@ -36,7 +36,7 @@
 	}
 }
 
-@each $network in flickr, medium, twitter {
+@each $network in flickr, instagram, medium, twitter {
 	[data-syndicate-to="#{$network}"] button {
 		@include bg-color($profiles, $network);
 
