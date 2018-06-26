@@ -2,8 +2,8 @@ ruby '2.2.4'
 
 source 'https://rubygems.org' do
   # Application
-  gem 'francis_cms', git: 'https://github.com/FrancisCMS/FrancisCMS.git'
-  # gem 'francis_cms', path: '~/Projects/FrancisCMS'
+  gem 'francis_cms', git: 'https://github.com/FrancisCMS/FrancisCMS'
+  # gem 'francis_cms', path: '~/Developer/FrancisCMS'
   gem 'puma', '~> 2.15'
 
   # Assets
@@ -23,13 +23,13 @@ source 'https://rubygems.org' do
 
   group :development, :test do
     gem 'rspec-rails', '~> 3.5'
-    gem 'rubocop', '~> 0.44.1', require: false
+    gem 'rubocop', '~> 0.57.2', require: false
   end
 
   group :test do
     gem 'codeclimate-test-reporter', '~> 0.6.0', require: false
-    gem 'simplecov', '~> 0.12.0', require: false
-    gem 'simplecov-console', '~> 0.3.1', require: false
+    gem 'simplecov', '~> 0.16.1', require: false
+    gem 'simplecov-console', '~> 0.4.2', require: false
   end
 end
 
