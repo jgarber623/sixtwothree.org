@@ -1,10 +1,18 @@
 language: ruby
 rvm:
   - 2.2.4
+cache: bundler
 before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
   - psql -c 'create database sixtwothree_test;' -U postgres
-  - cp config/database.yml.example config/database.yml
-  - cp config/secrets.yml.example config/secrets.yml
+  - cp config/database.yml{.example,}
+  - cp config/secrets.yml{.example,}
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 notifications:
   email: false
-  slack: sixtwothree:yATLmjTW15443qR7jbCWr3RO
+  slack:
+    rooms:
+      secure: jRKjBswZWi8zPQXjkfURDB9Cu1nivzfKyWCoqiRNRuJveH8ob+RLMww/mq69krrTLGN8PmW+KxPmMn0JZz1czdOLEa+qKcjIfQb9ZFMK4UL1HuF3babQsFKkfYMMcbEkK8N+kwxhGNnsVzCFEJq/FkmO8BXWsZZGLAGdeC8Tum28r1MdHc/s3wNGHty43N635YihPGr7EHj0ivAoSL6Qgz7ePcAdX2nYy+xJn05oGqqowQw2t1D7fpxjlc8K4p6QPq8NdZls7uy/fH5xCsGlpfjVwBWJbi5XPceSBw0AS1W8PQ5HOIWx2c07ih2gy9lnTHDSEQRyx5tX551LH5thfhbNoebPPu0+qm/F7ZDd5wonxmw5o0yw/i61H8o4KiMTDE/Lh214VbquFBrtWv0LG63QeBIQbdUjPMt+YiExQn9AqAoQcSAGXkMe4R3gDlWRIszeoTWruGgA3d44t3u7QOdaD+r4gCAcvET14Mdf/MzDK640YEL2Nfcp6DjzTa0/5qk0dvzxTA5o7ElfXaDcBkmyH+cf7I1imUZTocjA/GYBfdncu1B4Jgm/VoFV0cRlslEL7uEedu6Q+5FTeUKpnB7BLCgR61WeGRtAi4aYR44lFCehtlGkGLIkI4lNPHqIWhOFkoq+NH8NRNzpFp9t+/8JRswJPqQtp4fVYOzdP+I=
