@@ -44,7 +44,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'public/uploads', 'tmp')
 set :keep_assets, 3
 
 namespace :deploy do
-  %w(restart start stop).each do |cmd|
+  %w[restart start stop].each do |cmd|
     desc "#{cmd.capitalize} the application"
     task cmd do
       on roles(:app), in: :sequence, wait: 5 do

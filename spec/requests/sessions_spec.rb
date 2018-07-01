@@ -27,7 +27,6 @@ RSpec.describe 'sessions', type: :request do
     end
 
     skip 'redirects to a session-stored path.' do
-      #
     end
 
     skip 'redirects to the homepage.' do

@@ -51,7 +51,6 @@ RSpec.describe ApplicationHelper, type: :helper do
 
     context 'when @photo exists' do
       skip 'returns the photo URL.' do
-        #
       end
     end
   end

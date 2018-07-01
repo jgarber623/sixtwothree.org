@@ -4,7 +4,7 @@ namespace :import do
     puts 'Enter path to JSON file:'
 
     links_file_path = File.expand_path(STDIN.gets.chomp!)
-    links = JSON.load(File.open(links_file_path, 'r'))
+    links = JSON.parse(File.open(links_file_path, 'r'))
 
     puts %(Importing links from `#{links_file_path}`...)
 
@@ -67,7 +67,7 @@ namespace :import do
     puts 'Enter path to JSON file:'
 
     webmentions_file_path = File.expand_path(STDIN.gets.chomp!)
-    webmentions = JSON.load(File.open(webmentions_file_path, 'r'))
+    webmentions = JSON.parse(File.open(webmentions_file_path, 'r'))
 
     puts %(Importing webmentions from `#{webmentions_file_path}`...)
 
