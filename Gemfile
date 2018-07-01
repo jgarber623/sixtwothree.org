@@ -4,12 +4,12 @@ source 'https://rubygems.org' do
   # Application
   gem 'francis_cms', git: 'https://github.com/FrancisCMS/FrancisCMS'
   # gem 'francis_cms', path: '~/Developer/FrancisCMS'
-  gem 'puma', '~> 2.15'
+  gem 'puma', '~> 2.16'
 
   # Assets
   gem 'breakpoint', '~> 2.7', '>= 2.7.1'
-  gem 'sass-rails', '~> 5.0'
-  gem 'uglifier', '~> 2.7'
+  gem 'sass-rails', '~> 5.0', '>= 5.0.7'
+  gem 'uglifier', '~> 2.7', '>= 2.7.2'
 
   group :development do
     gem 'capistrano', '~> 3.11', require: false
