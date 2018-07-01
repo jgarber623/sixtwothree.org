@@ -1,0 +1,3 @@
+pager: false
+quiet: true
+run_all_checks: true
