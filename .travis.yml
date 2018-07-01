@@ -9,6 +9,10 @@ before_script:
   - psql -c 'create database sixtwothree_test;' -U postgres
   - cp config/database.yml{.example,}
   - cp config/secrets.yml{.example,}
+script:
+  - bundle exec rubocop
+  - bundle exec brakeman
+  - bundle exec rake
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 notifications:
