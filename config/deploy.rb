@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.0'
+lock '3.11.0'
 
 set :application, 'sixtwothree.org'
 set :chruby_ruby, '2.2.4'

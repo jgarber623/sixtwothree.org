@@ -12,13 +12,13 @@ source 'https://rubygems.org' do
   gem 'uglifier', '~> 2.7'
 
   group :development do
-    gem 'capistrano', '~> 3.4', require: false
+    gem 'capistrano', '~> 3.11', require: false
     gem 'capistrano-chruby', '~> 0.1.2', require: false
-    gem 'capistrano-rails', '~> 1.1', require: false
+    gem 'capistrano-rails', '~> 1.4', require: false
     gem 'foreman', '~> 0.82.0'
     gem 'pry', '~> 0.10.4'
     gem 'quiet_assets', '~> 1.1'
-    gem 'svgeez', '~> 0.2.3'
+    gem 'svgeez', '0.2.3'
   end
 
   group :development, :test do
