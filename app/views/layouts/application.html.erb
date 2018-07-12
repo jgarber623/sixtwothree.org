@@ -25,6 +25,9 @@
 	<link rel="apple-touch-icon" href="<%= asset_path francis_cms_config.user_avatar %>">
 	<link rel="search" href="/opensearch.xml" type="application/opensearchdescription+xml">
 	<link rel="shortcut icon" href="<%= asset_path francis_cms_config.user_avatar %>">
+
+	<link rel="authorization_endpoint" href="https://indieauth.com/auth">
+	<link rel="token_endpoint" href="https://tokens.indieauth.com/token">
 	<link rel="webmention" href="<%= francis_cms.webmentions_url %>">
 
 	<%= stylesheet_link_tag 'application.css', google_fonts_url %>
