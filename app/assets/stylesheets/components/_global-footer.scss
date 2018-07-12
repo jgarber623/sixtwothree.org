@@ -5,9 +5,18 @@
 		@include color($grey, light);
 		@include font-size(6);
 		margin: 0;
+
+		+ p {
+			@include margin-y(2);
+		}
 	}
 
 	a {
 		@extend %anchor--grey;
+	}
+
+	a[rel="next"],
+	a[rel="previous"] {
+		@include margin-x(1);
 	}
 }

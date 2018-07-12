@@ -88,6 +88,12 @@
 	<footer class="global-footer">
 		<div class="container">
 			<p>Some rights reserved. This site’s content is licensed under a <%= link_to %{#{francis_cms_config.license_title} license}, francis_cms_config.license_url, rel: 'license' %>. Source code available on <%= link_to 'GitHub', 'https://github.com/jgarber623/sixtwothree.org', rel: 'source' %>.</p>
+
+			<p>
+				<%= link_to raw('<span aria-label="Previous Website">←</span>'), 'https://xn--sr8hvo.ws/💓/previous', rel: 'previous' %>
+				<%= francis_cms_config.site_title %> is a member of an <%= link_to 'IndieWebRing', 'https://xn--sr8hvo.ws' %>.
+				<%= link_to raw('<span aria-label="Next Website">→</span>'), 'https://xn--sr8hvo.ws/💓/next', rel: 'next' %>
+			</p>
 		</div>
 	</footer>
 
