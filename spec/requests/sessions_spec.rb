@@ -29,7 +29,7 @@ RSpec.describe 'sessions', type: :request do
     skip 'redirects to a session-stored path.' do
     end
 
-    skip 'redirects to the homepage.' do
+    it 'redirects to the homepage.' do
       get '/auth'
 
       expect(response).to have_http_status(:redirect)
