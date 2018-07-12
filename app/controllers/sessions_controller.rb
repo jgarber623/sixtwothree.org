@@ -1,5 +1,7 @@
+require 'http'
+
 class SessionsController < ApplicationController
-  AUTHORIZATION_ENDPOINT = 'https://indieauth.com/auth'.freeze
+  AUTHORIZATION_ENDPOINT = 'https://indielogin.com/auth'.freeze
 
   def create
     if url == Rails.application.config.francis_cms.site_url
@@ -31,10 +33,11 @@ class SessionsController < ApplicationController
   end
 
   def source_page
-    @source_page ||= Mechanize.new.post(AUTHORIZATION_ENDPOINT, auth_params)
+    # @source_page ||= Mechanize.new.post(AUTHORIZATION_ENDPOINT, auth_params)
+    @source_page ||= HTTP.headers(accept: 'application/json').post(AUTHORIZATION_ENDPOINT, form: auth_params)
   end
 
   def url
-    @url ||= CGI.parse(source_page.content)['me'].first
+    @url ||= JSON.parse(source_page.body.to_s)['me']
   end
 end
