@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - bin/**/*
     - db/**/*
+    - vendor/**/*
 
 Metrics/BlockLength:
   Exclude:
