@@ -15,8 +15,11 @@
 		@extend %anchor--grey;
 	}
 
-	a[rel="next"],
 	a[rel="previous"] {
-		@include margin-x(1);
+		margin-right: $spacing-1;
+	}
+
+	a[rel="next"] {
+		margin-left: $spacing-1;
 	}
 }
