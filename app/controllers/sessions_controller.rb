@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-  AUTHORIZATION_ENDPOINT = 'https://indieauth.com/auth'.freeze
-
   def create
     if url == Rails.application.config.francis_cms.site_url
       session[:user_id] = url
@@ -31,7 +29,7 @@ class SessionsController < ApplicationController
   end
 
   def source_page
-    @source_page ||= Mechanize.new.post(AUTHORIZATION_ENDPOINT, auth_params)
+    @source_page ||= Mechanize.new.post(Rails.application.config.authorization_endpoint, auth_params)
   end
 
   def url

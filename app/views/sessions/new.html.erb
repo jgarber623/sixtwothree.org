@@ -4,7 +4,7 @@
 	<h1>Log In</h1>
 </header>
 
-<%= form_tag 'https://indieauth.com/auth', method: 'get' do %>
+<%= form_tag Rails.application.config.authorization_endpoint, method: 'get' do %>
 	<%= hidden_field_tag :client_id, root_url %>
 	<%= hidden_field_tag :redirect_uri, auth_url %>
 
