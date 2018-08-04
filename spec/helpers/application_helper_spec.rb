@@ -4,13 +4,6 @@ RSpec.describe ApplicationHelper, type: :helper do
   let(:site_title) { 'sixtwothree.org' }
   let(:site_description) { 'Online home to Jason Garber, one of the Internet’s top Jason Garbers.' }
   let(:user_avatar) { '/jgarber.png' }
-  let(:google_fonts_url) { 'https://fonts.googleapis.com/css?family=Open+Sans:700|Source+Sans+Pro:400,400italic,700' }
-
-  describe '#google_fonts_url' do
-    it 'returns the Google Fonts URL.' do
-      expect(helper.google_fonts_url).to eq(google_fonts_url)
-    end
-  end
 
   describe '#page_card_type' do
     context 'when @photo does not exist' do

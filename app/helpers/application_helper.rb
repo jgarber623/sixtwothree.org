@@ -16,10 +16,6 @@ module ApplicationHelper
     "#{francis_cms_config.site_title} — #{francis_cms_config.site_description}"
   end
 
-  def google_fonts_url
-    'https://fonts.googleapis.com/css?family=Open+Sans:700|Source+Sans+Pro:400,400italic,700'
-  end
-
   # rubocop:disable Rails/OutputSafety
   def inline_asset(filename)
     Rails.application.assets_manifest.find_sources(filename).first.html_safe
