@@ -27,14 +27,14 @@ group :development do
   gem 'capistrano-chruby', '~> 0.1.2', require: false
   gem 'capistrano-rails', '~> 1.4', require: false
   gem 'foreman', '~> 0.85.0'
-  gem 'pry', '~> 0.11.3'
+  gem 'pry', '~> 0.12.2'
   gem 'quiet_assets', '~> 1.1'
   gem 'svgeez', '0.2.3'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
-  gem 'rubocop', '~> 0.58.1', require: false
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.1'
+  gem 'rubocop', '~> 0.60.0', require: false
 end
 
 group :test do
