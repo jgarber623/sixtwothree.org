@@ -1,8 +1,6 @@
 class SessionsController < ApplicationController
   def create
-    if url == Rails.application.config.francis_cms.site_url
-      session[:user_id] = url
-    end
+    session[:user_id] = url if url == Rails.application.config.francis_cms.site_url
   rescue Mechanize::ResponseCodeError
   ensure
     redirect_to (session[:redirect_to] || root_path), notice: t('flashes.sessions.create_notice')

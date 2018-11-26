@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
 
   def capture_redirect_to
     return if !request.get? || request.xhr? || ['/auth', '/login', '/logout'].include?(request.path)
+
     session[:redirect_to] = request.fullpath
   end
 end

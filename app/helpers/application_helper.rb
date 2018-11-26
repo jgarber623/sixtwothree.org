@@ -13,6 +13,7 @@ module ApplicationHelper
 
   def page_title
     return "#{@page_title} — #{francis_cms_config.site_title}" if @page_title
+
     "#{francis_cms_config.site_title} — #{francis_cms_config.site_description}"
   end
 
