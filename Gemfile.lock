@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/FrancisCMS/FrancisCMS
-  revision: 0a878ff4a7ef47165ce10208a9789f759f6b849a
+  revision: 69f413549bc3052a5f7cfbb388515a93f334aea8
   specs:
     francis_cms (0.1.0)
       acts-as-taggable-on (~> 3.5)
@@ -8,7 +8,7 @@ GIT
       colored (~> 1.2)
       flickr-objects (~> 0.6.3)
       friendly_id (~> 5.2, >= 5.2.4)
-      geocoder (~> 1.4, >= 1.4.9)
+      geocoder (~> 1.5)
       mechanize (~> 2.7, >= 2.7.6)
       medium-sdk-ruby (~> 1.0, >= 1.0.2)
       microformats2 (~> 2.9)
@@ -146,7 +146,7 @@ GEM
     loofah (2.2.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    mail (2.7.0)
+    mail (2.7.1)
       mini_mime (>= 0.1.1)
     mechanize (2.7.6)
       domain_name (~> 0.5, >= 0.5.1)
