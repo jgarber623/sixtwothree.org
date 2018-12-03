@@ -1,10 +1,12 @@
 class SessionsController < ApplicationController
+  # rubocop:disable Lint/HandleExceptions
   def create
     session[:user_id] = url if url == Rails.application.config.francis_cms.site_url
   rescue Mechanize::ResponseCodeError
   ensure
     redirect_to (session[:redirect_to] || root_path), notice: t('flashes.sessions.create_notice')
   end
+  # rubocop:enable Lint/HandleExceptions
 
   def destroy
     reset_session
