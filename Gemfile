@@ -11,7 +11,7 @@ gem 'puma', '~> 2.16'
 # Assets
 gem 'breakpoint', '~> 2.7', '>= 2.7.1'
 gem 'sass-rails', '~> 5.0', '>= 5.0.7'
-gem 'uglifier', '~> 2.7', '>= 2.7.2'
+gem 'uglifier', '~> 4.1', '>= 4.1.20'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-aria-collapsible'
