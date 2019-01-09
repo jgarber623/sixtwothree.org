@@ -2,7 +2,7 @@
 lock '~> 3.11.0'
 
 set :application, 'sixtwothree.org'
-set :chruby_ruby, '2.2.4'
+set :chruby_ruby, '2.3.8'
 set :repo_url, 'git@github.com:jgarber623/sixtwothree.org.git'
 
 # Default branch is :master
