@@ -1,4 +1,4 @@
-ruby '2.3.8'
+ruby '2.4.5'
 
 source 'https://rubygems.org'
 source 'https://rails-assets.org'
