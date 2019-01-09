@@ -47,6 +47,7 @@ namespace :import do
       post.excerpt = yaml['excerpt'] unless yaml['excerpt'].nil?
       post.tag_list = yaml['tags'].join(', ') unless yaml['tags'].nil?
 
+      # rubocop:disable Style/SafeNavigation
       unless yaml['copies'].nil?
         yaml['copies'].each do |copy|
           post.syndications.new(
@@ -55,6 +56,7 @@ namespace :import do
           )
         end
       end
+      # rubocop:enable Style/SafeNavigation
 
       post.save!
 
