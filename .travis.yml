@@ -1,5 +1,5 @@
-language: ruby
 dist: trusty
+language: ruby
 addons:
   postgresql: 9.4
 cache:
