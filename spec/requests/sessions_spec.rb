@@ -11,13 +11,13 @@ RSpec.describe 'sessions', type: :request do
 
   describe 'GET #create' do
     context 'when #url matches the configured site URL' do
-      let(:sessions_controller_instance) { instance_double(SessionsController) }
       let(:site_url) { 'https://sixtwothree.org/' }
 
+      # rubocop:disable RSpec/AnyInstance
       before do
-        allow(SessionsController).to receive(:new).and_return(sessions_controller_instance)
-        allow(sessions_controller_instance).to receive(:url).and_return(site_url)
+        allow_any_instance_of(SessionsController).to receive(:url).and_return(site_url)
       end
+      # rubocop:enable RSpec/AnyInstance
 
       it 'sets a session variable' do
         get '/auth'
@@ -40,12 +40,11 @@ RSpec.describe 'sessions', type: :request do
 
   describe 'GET #new' do
     context 'when logged in' do
-      let(:application_controller_instance) { instance_double(ApplicationController) }
-
+      # rubocop:disable RSpec/AnyInstance
       before do
-        allow(ApplicationController).to receive(:new).and_return(application_controller_instance)
-        allow(application_controller_instance).to receive(:logged_in?).and_return(true)
+        allow_any_instance_of(ApplicationController).to receive(:logged_in?).and_return(true)
       end
+      # rubocop:enable RSpec/AnyInstance
 
       it 'redirects to the homepage' do
         get '/login'
