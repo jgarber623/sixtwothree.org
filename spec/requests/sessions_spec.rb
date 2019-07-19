@@ -1,8 +1,6 @@
-require 'rails_helper'
-
 RSpec.describe 'sessions', type: :request do
   describe 'DELETE #destroy' do
-    it 'redirects to the homepage.' do
+    it 'redirects to the homepage' do
       delete '/logout'
 
       expect(response).to have_http_status(:redirect)
@@ -13,23 +11,25 @@ RSpec.describe 'sessions', type: :request do
 
   describe 'GET #create' do
     context 'when #url matches the configured site URL' do
+      let(:sessions_controller_instance) { instance_double(SessionsController) }
       let(:site_url) { 'https://sixtwothree.org/' }
 
       before do
-        allow_any_instance_of(SessionsController).to receive(:url).and_return(site_url)
+        allow(SessionsController).to receive(:new).and_return(sessions_controller_instance)
+        allow(sessions_controller_instance).to receive(:url).and_return(site_url)
       end
 
-      it 'sets a session variable.' do
+      it 'sets a session variable' do
         get '/auth'
 
         expect(session[:user_id]).to eq(site_url)
       end
     end
 
-    skip 'redirects to a session-stored path.' do
+    skip 'redirects to a session-stored path' do
     end
 
-    it 'redirects to the homepage.' do
+    it 'redirects to the homepage' do
       get '/auth'
 
       expect(response).to have_http_status(:redirect)
@@ -40,11 +40,14 @@ RSpec.describe 'sessions', type: :request do
 
   describe 'GET #new' do
     context 'when logged in' do
+      let(:application_controller_instance) { instance_double(ApplicationController) }
+
       before do
-        allow_any_instance_of(ApplicationController).to receive(:logged_in?).and_return(true)
+        allow(ApplicationController).to receive(:new).and_return(application_controller_instance)
+        allow(application_controller_instance).to receive(:logged_in?).and_return(true)
       end
 
-      it 'redirects to the homepage.' do
+      it 'redirects to the homepage' do
         get '/login'
 
         expect(response).to have_http_status(:redirect)
@@ -53,7 +56,7 @@ RSpec.describe 'sessions', type: :request do
       end
     end
 
-    it 'renders the login page.' do
+    it 'renders the login page' do
       get '/login'
 
       expect(response).to have_http_status(:success)

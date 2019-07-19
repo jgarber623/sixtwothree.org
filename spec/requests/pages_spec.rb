@@ -1,8 +1,6 @@
-require 'rails_helper'
-
 RSpec.describe 'pages', type: :request do
   describe 'GET #homepage' do
-    it 'renders the homepage.' do
+    it 'renders the homepage' do
       get '/'
 
       expect(response).to have_http_status(:success)
@@ -11,7 +9,7 @@ RSpec.describe 'pages', type: :request do
   end
 
   describe 'GET #sitemap' do
-    it 'renders the sitemap.' do
+    it 'renders the sitemap' do
       get '/sitemap.xml'
 
       expect(response).to have_http_status(:success)

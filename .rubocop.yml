@@ -17,6 +17,13 @@ Metrics/BlockLength:
 Metrics/LineLength:
   Enabled: false
 
+Rails/HelperInstanceVariable:
+  Exclude:
+    - app/helpers/application_helper.rb
+
+RSpec/MultipleExpectations:
+  Max: 3
+
 Style/Documentation:
   Enabled: false
 
