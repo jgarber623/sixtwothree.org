@@ -22,7 +22,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development do
-  gem 'brakeman', '~> 4.3', '>= 4.3.1', require: false
+  gem 'brakeman', '~> 4.5', require: false
   gem 'capistrano', '~> 3.11', require: false
   gem 'capistrano-chruby', '~> 0.1.2', require: false
   gem 'capistrano-rails', '~> 1.4', require: false
@@ -33,11 +33,14 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.8', '>= 3.8.1'
-  gem 'rubocop', '~> 0.62.0', require: false
+  gem 'rspec-rails', '~> 3.8'
+  gem 'rubocop', '~> 0.73.0', require: false
+  gem 'rubocop-performance', '~> 1.4', require: false
+  gem 'rubocop-rails', '~> 2.2', require: false
+  gem 'rubocop-rspec', '~> 1.33', require: false
 end
 
 group :test do
-  gem 'simplecov', '~> 0.16.1', require: false
-  gem 'simplecov-console', '~> 0.4.2', require: false
+  gem 'simplecov', '~> 0.17.0', require: false
+  gem 'simplecov-console', '~> 0.5.0', require: false
 end
