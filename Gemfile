@@ -28,7 +28,7 @@ group :development do
   gem 'foreman', '~> 0.85.0'
   gem 'pry', '~> 0.12.2'
   gem 'quiet_assets', '~> 1.1'
-  gem 'svgeez', '0.2.3'
+  gem 'svgeez', '~> 3.0'
 end
 
 group :development, :test do
