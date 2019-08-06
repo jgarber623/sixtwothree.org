@@ -1,7 +1,6 @@
 ruby '2.4.5'
 
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 # Application
 gem 'francis_cms', git: 'https://github.com/FrancisCMS/FrancisCMS'
@@ -9,9 +8,9 @@ gem 'francis_cms', git: 'https://github.com/FrancisCMS/FrancisCMS'
 gem 'puma', '~> 2.16'
 
 # Assets
-gem 'breakpoint', '~> 2.7', '>= 2.7.1'
-gem 'sass-rails', '~> 5.0', '>= 5.0.7'
-gem 'uglifier', '~> 4.1', '>= 4.1.20'
+gem 'breakpoint', '~> 2.7'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '~> 4.1'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-aria-collapsible'
@@ -22,7 +21,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development do
-  gem 'brakeman', '~> 4.5', require: false
+  gem 'brakeman', '~> 4.6', require: false
   gem 'capistrano', '~> 3.11', require: false
   gem 'capistrano-chruby', '~> 0.1.2', require: false
   gem 'capistrano-rails', '~> 1.4', require: false
@@ -34,10 +33,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
-  gem 'rubocop', '~> 0.73.0', require: false
+  gem 'rubocop', '~> 0.74.0', require: false
   gem 'rubocop-performance', '~> 1.4', require: false
   gem 'rubocop-rails', '~> 2.2', require: false
-  gem 'rubocop-rspec', '~> 1.33', require: false
+  gem 'rubocop-rspec', '~> 1.35', require: false
 end
 
 group :test do
