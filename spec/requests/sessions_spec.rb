@@ -34,7 +34,7 @@ RSpec.describe 'sessions', type: :request do
 
       expect(response).to have_http_status(:redirect)
       expect(response).to redirect_to('/')
-      expect(flash[:notice]).to eq('Welcome back! You look nice today.')
+      expect(flash[:alert]).to eq('There was a problem logging you in. Mind trying again?')
     end
   end
 
