@@ -59,7 +59,7 @@ class SessionsController < ApplicationController
   end
 
   def url
-    @url ||= CGI.parse(source_page.content)['me'].first
+    @url ||= JSON.parse(source_page.content)['me']
   end
 
   def valid_auth_request_params?
