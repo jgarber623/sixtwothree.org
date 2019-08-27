@@ -7,8 +7,16 @@
 		<h1 class="salutation">Hi! I'm <%= mail_to francis_cms_config.user_email, francis_cms_config.user_name, class: 'p-name u-email', rel: 'me' %>.</h1>
 
 		<div class="content p-note">
-			<p>I’m a <%= link_to 'Web developer', 'https://github.com/jgarber623', class: 'p-role' %>, <%= link_to 'musician', 'https://whoistheorchid.com/', class: 'p-role', title: 'Listen to my band, The Orchid.' %>, <%= link_to 'community organizer', 'https://refresh-dc.org/', class: 'p-role', title: 'Visit the Refresh DC website.' %>, <%= link_to 'photographer', 'https://www.flickr.com/photos/jgarber', class: 'p-role', rel: 'me', title: 'View my Flickr photos.' %>, and <%= link_to 'occasional author', francis_cms.posts_path, class: 'p-role', title: 'Read my semi-regular ramblings.' %> living in <span class="p-locality">Washington</span>, <abbr class="p-region" title="District of Columbia">DC</abbr>.</p>
-			<p>You can find me all over the Web, typically as “<span class="p-nickname" title="And sometimes, jgarber623.">jgarber</span>.”</p>
+			<p>
+				I’m a
+				<%= link_to 'Web developer', 'https://github.com/jgarber623', class: 'p-role' %>,
+				<%= link_to 'musician', 'https://whoistheorchid.com/', class: 'p-role', title: 'Listen to my band, The Orchid.' %>,
+				<%= link_to 'community organizer', 'https://refresh-dc.org/', class: 'p-role', title: 'Visit the Refresh DC website.' %>,
+				<%= link_to 'photographer', 'https://www.flickr.com/photos/jgarber', class: 'p-role', rel: 'me', title: 'View my Flickr photos.' %>, and
+				<%= link_to 'occasional author', francis_cms.posts_path, class: 'p-role', title: 'Read my semi-regular ramblings.' %>
+				living in <span class="p-locality">Washington</span>, <abbr class="p-region" title="District of Columbia">DC</abbr>.
+			</p>
+			<p>You can find me all over the Web, typically as “<span class="p-nickname" title="…and sometimes, jgarber623.">jgarber</span>.” I use the pronouns <%= link_to_pronouns('he', 'him', 'his') %>.</p>
 		</div>
 	</section>
 

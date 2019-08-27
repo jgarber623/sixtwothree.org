@@ -1,4 +1,12 @@
 module ApplicationHelper
+  # rubocop:disable Rails/OutputSafety
+  def link_to_pronouns(*args)
+    link_to "https://my.pronoun.is/#{args.join('/')}" do
+      %w[nominative oblique possessive].map { |form| %(<span class="p-x-pronoun-#{form}">#{args.shift}</span>) }.join('/').html_safe
+    end
+  end
+  # rubocop:enable Rails/OutputSafety
+
   def page_card_type
     @photo ? 'summary_large_image' : 'summary'
   end
