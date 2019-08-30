@@ -1,7 +1,7 @@
 module ApplicationHelper
   # rubocop:disable Rails/OutputSafety
   def link_to_pronouns(*args)
-    link_to "https://my.pronoun.is/#{args.join('/')}" do
+    link_to "http://my.pronoun.is/#{args.join('/')}" do
       %w[nominative oblique possessive].map { |form| %(<span class="p-x-pronoun-#{form}">#{args.shift}</span>) }.join('/').html_safe
     end
   end
