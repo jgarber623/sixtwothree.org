@@ -9,7 +9,7 @@ gem 'puma', '~> 2.16'
 
 # Assets
 gem 'breakpoint', '~> 2.7'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.7'
 gem 'uglifier', '~> 4.1'
 
 source 'https://rails-assets.org' do
@@ -27,12 +27,12 @@ group :development do
   gem 'capistrano-rails', '~> 1.4', require: false
   gem 'foreman', '~> 0.85.0'
   gem 'pry', '~> 0.12.2'
-  gem 'quiet_assets', '~> 1.1'
+  gem 'quiet_assets', '~> 1.1', '>= 1.1.0'
   gem 'svgeez', '~> 3.0'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.8'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
   gem 'rubocop', '~> 0.74.0', require: false
   gem 'rubocop-performance', '~> 1.4', require: false
   gem 'rubocop-rails', '~> 2.3', require: false
