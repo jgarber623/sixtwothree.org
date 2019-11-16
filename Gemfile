@@ -21,7 +21,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development do
-  gem 'brakeman', '~> 4.7', '>= 4.7.1', require: false
+  gem 'brakeman', '~> 4.7', require: false
   gem 'capistrano', '~> 3.11', require: false
   gem 'capistrano-chruby', '~> 0.1.2', require: false
   gem 'capistrano-rails', '~> 1.4', require: false
