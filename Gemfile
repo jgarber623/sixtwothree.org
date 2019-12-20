@@ -22,10 +22,10 @@ end
 group :development, :test do
   gem 'brakeman', '~> 4.7', require: false
   gem 'rspec-rails', '~> 3.9'
-  gem 'rubocop', '~> 0.76.0', require: false
+  gem 'rubocop', '~> 0.78.0', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
-  gem 'rubocop-rails', '~> 2.3', require: false
-  gem 'rubocop-rspec', '~> 1.36', require: false
+  gem 'rubocop-rails', '~> 2.4', require: false
+  gem 'rubocop-rspec', '~> 1.37', require: false
 end
 
 group :development do
