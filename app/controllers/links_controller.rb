@@ -1,5 +1,5 @@
 class LinksController < ApplicationController
-  # rubocop:disable Lint/HandleExceptions, Style/RescueStandardError
+  # rubocop:disable Lint/SuppressedException, Style/RescueStandardError
   def fetch
     json = { success: false }
 
@@ -14,7 +14,7 @@ class LinksController < ApplicationController
 
     render json: json
   end
-  # rubocop:enable Lint/HandleExceptions, Style/RescueStandardError
+  # rubocop:enable Lint/SuppressedException, Style/RescueStandardError
 
   private
 

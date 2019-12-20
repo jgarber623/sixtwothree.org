@@ -9,13 +9,13 @@ AllCops:
     - db/**/*
     - vendor/**/*
 
+Layout/LineLength:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - lib/tasks/**/*
     - spec/**/*
-
-Metrics/LineLength:
-  Enabled: false
 
 Rails/HelperInstanceVariable:
   Exclude:
@@ -28,4 +28,7 @@ Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/SymbolArray:
   Enabled: false
