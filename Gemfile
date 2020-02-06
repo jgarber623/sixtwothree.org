@@ -22,7 +22,7 @@ end
 group :development, :test do
   gem 'brakeman', '~> 4.7', require: false
   gem 'rspec-rails', '~> 3.9'
-  gem 'rubocop', '~> 0.78.0', require: false
+  gem 'rubocop', '~> 0.79.0', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
   gem 'rubocop-rails', '~> 2.4', require: false
   gem 'rubocop-rspec', '~> 1.37', require: false
@@ -42,6 +42,6 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov', '~> 0.17.1', require: false
+  gem 'simplecov', '~> 0.18.1', require: false
   gem 'simplecov-console', '~> 0.6.0', require: false
 end
