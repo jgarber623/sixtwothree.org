@@ -34,7 +34,7 @@ group :development do
   gem 'capistrano-chruby', '~> 0.1.2', require: false
   gem 'capistrano-rails', '~> 1.4', require: false
   gem 'ed25519', '~> 1.2' # https://github.com/net-ssh/net-ssh/issues/565
-  gem 'pry-byebug', '~> 3.7'
+  gem 'pry-byebug', '~> 3.8'
   gem 'pry-rails', '~> 0.3.9'
   gem 'quiet_assets', '~> 1.1'
   gem 'svgeez', '~> 3.0'
