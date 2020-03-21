@@ -8,7 +8,7 @@ gem 'breakpoint', '~> 2.7'
 gem 'francis_cms', github: 'FrancisCMS/FrancisCMS', ref: 'efaa79c'
 # gem 'francis_cms', path: '~/Developer/FrancisCMS'
 gem 'puma', '~> 2.16'
-gem 'sass-rails', '~> 6.0'
+gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem 'uglifier', '~> 4.2'
 
 source 'https://rails-assets.org' do
@@ -21,7 +21,7 @@ end
 
 group :development, :test do
   gem 'brakeman', '~> 4.7', require: false
-  gem 'rspec-rails', '~> 3.9'
+  gem 'rspec-rails', '~> 3.9', '>= 3.9.0'
   gem 'rubocop', '~> 0.79.0', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
   gem 'rubocop-rails', '~> 2.4', require: false
