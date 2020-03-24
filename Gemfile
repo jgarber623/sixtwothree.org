@@ -20,12 +20,12 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 4.7', require: false
+  gem 'brakeman', '~> 4.8', require: false
   gem 'rspec-rails', '~> 3.9'
-  gem 'rubocop', '~> 0.79.0', require: false
+  gem 'rubocop', '~> 0.80.1', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
-  gem 'rubocop-rails', '~> 2.4', require: false
-  gem 'rubocop-rspec', '~> 1.37', require: false
+  gem 'rubocop-rails', '~> 2.5', require: false
+  gem 'rubocop-rspec', '~> 1.38', require: false
 end
 
 group :development do
@@ -41,6 +41,6 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov', '~> 0.18.1', require: false
-  gem 'simplecov-console', '~> 0.6.0', require: false
+  gem 'simplecov', '~> 0.18.5', require: false
+  gem 'simplecov-console', '~> 0.7.2', require: false
 end
