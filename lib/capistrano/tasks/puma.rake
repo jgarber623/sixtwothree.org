@@ -1,4 +1,3 @@
-# rubocop:disable Rails/RakeEnvironment
 namespace :puma do
   %w[restart start stop].each do |cmd|
     desc "#{cmd.capitalize} the application"
@@ -9,4 +8,3 @@ namespace :puma do
     end
   end
 end
-# rubocop:enable Rails/RakeEnvironment
