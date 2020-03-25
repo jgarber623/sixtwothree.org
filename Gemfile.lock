@@ -219,8 +219,6 @@ GEM
       sprockets-rails
     rails-assets-aria-collapsible (2.2.1)
     rails-assets-cashcash (0.1.1)
-    rails-assets-html5shiv (3.7.3)
-    rails-assets-respond (1.4.2)
     rails-assets-routerrouter (1.0.2)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -360,8 +358,6 @@ DEPENDENCIES
   quiet_assets (~> 1.1)
   rails-assets-aria-collapsible!
   rails-assets-cashcash!
-  rails-assets-html5shiv!
-  rails-assets-respond!
   rails-assets-routerrouter!
   rspec-rails (~> 3.9)
   rubocop (~> 0.80.1)
