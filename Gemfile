@@ -12,9 +12,9 @@ gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem 'uglifier', '~> 4.2'
 
 source 'https://rails-assets.org' do
-  gem 'rails-assets-aria-collapsible'
-  gem 'rails-assets-cashcash'
-  gem 'rails-assets-routerrouter'
+  gem 'rails-assets-aria-collapsible', '~> 2.2'
+  gem 'rails-assets-cashcash', '~> 0.1'
+  gem 'rails-assets-routerrouter', '~> 1.0'
 end
 
 group :development, :test do
