@@ -1,10 +1,10 @@
 GIT
   remote: https://github.com/FrancisCMS/FrancisCMS.git
-  revision: c44227eb5cf285b00037cae3614f72c830a9d34f
-  ref: c44227e
+  revision: 0424ea5d4c994caaca809d7371b8d08d5fe1ec00
+  ref: 0424ea5
   specs:
     francis_cms (0.1.0)
-      acts-as-taggable-on (~> 4.0)
+      acts-as-taggable-on (~> 5.0)
       carrierwave (~> 0.11.2)
       colored (~> 1.2)
       flickr-objects (~> 0.6.3)
@@ -59,8 +59,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    acts-as-taggable-on (4.0.0)
-      activerecord (>= 4.0)
+    acts-as-taggable-on (5.0.0)
+      activerecord (>= 4.2.8)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     airbrussh (1.4.0)
