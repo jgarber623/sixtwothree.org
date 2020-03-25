@@ -363,12 +363,12 @@ DEPENDENCIES
   rails-assets-html5shiv!
   rails-assets-respond!
   rails-assets-routerrouter!
-  rspec-rails (~> 3.9)
+  rspec-rails (~> 3.9, >= 3.9.1)
   rubocop (~> 0.80.1)
   rubocop-performance (~> 1.5)
   rubocop-rails (~> 2.5)
   rubocop-rspec (~> 1.38)
-  sass-rails (~> 6.0)
+  sass-rails (~> 6.0, >= 6.0.0)
   simplecov (~> 0.18.5)
   simplecov-console (~> 0.7.2)
   svgeez (~> 3.1)
