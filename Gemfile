@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'breakpoint', '~> 2.7'
-gem 'francis_cms', github: 'FrancisCMS/FrancisCMS', ref: '0424ea5'
+gem 'francis_cms', github: 'FrancisCMS/FrancisCMS', ref: 'be56a63'
 # gem 'francis_cms', path: '~/Developer/FrancisCMS'
 gem 'puma', '~> 2.16'
 gem 'sass-rails', '~> 6.0', '>= 6.0.0'
@@ -20,10 +20,10 @@ end
 group :development, :test do
   gem 'brakeman', '~> 4.8', require: false
   gem 'rspec-rails', '~> 3.9', '>= 3.9.1'
-  gem 'rubocop', '~> 0.80.1', require: false
+  gem 'rubocop', '~> 0.83.0', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
   gem 'rubocop-rails', '~> 2.5', require: false
-  gem 'rubocop-rspec', '~> 1.38', require: false
+  gem 'rubocop-rspec', '~> 1.39', require: false
 end
 
 group :development do
