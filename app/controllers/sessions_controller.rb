@@ -63,7 +63,7 @@ class SessionsController < ApplicationController
   end
 
   def valid_auth_request_params?
-    params[:me].match?(URI.regexp(%w[http https]))
+    params[:me].match?(URI::DEFAULT_PARSER.make_regexp(%w[http https]))
   end
 
   def valid_auth_response?
