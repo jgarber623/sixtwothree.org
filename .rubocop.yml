@@ -8,6 +8,7 @@ AllCops:
     - bin/**/*
     - db/**/*
     - vendor/**/*
+  NewCops: enable
 
 Layout/LineLength:
   Enabled: false
