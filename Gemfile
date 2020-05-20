@@ -22,7 +22,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.9', '>= 3.9.1'
   gem 'rubocop', '~> 0.83.0', require: false
   gem 'rubocop-performance', '~> 1.5', require: false
-  gem 'rubocop-rails', '~> 2.5', require: false
+  gem 'rubocop-rails', '~> 2.5', '>= 2.5.2', require: false
   gem 'rubocop-rspec', '~> 1.39', require: false
 end
 
@@ -34,7 +34,7 @@ group :development do
   gem 'ed25519', '~> 1.2' # https://github.com/net-ssh/net-ssh/issues/565
   gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails', '~> 0.3.9'
-  gem 'quiet_assets', '~> 1.1'
+  gem 'quiet_assets', '~> 1.1', '>= 1.1.0'
   gem 'svgeez', '~> 3.1'
 end
 
