@@ -19,7 +19,7 @@ end
 
 group :development, :test do
   gem 'brakeman', '~> 4.8', require: false
-  gem 'rspec-rails', '~> 4.0'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'rubocop', '~> 0.85.1', require: false
   gem 'rubocop-performance', '~> 1.6', require: false
   gem 'rubocop-rails', '~> 2.6', require: false
