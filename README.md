@@ -1,5 +1,5 @@
 # sixtwothree.org
 
-[![Build Status](https://travis-ci.org/jgarber623/sixtwothree.org.svg?branch=master)](https://travis-ci.org/jgarber623/sixtwothree.org)
-[![Code Climate](https://codeclimate.com/github/jgarber623/sixtwothree.org/badges/gpa.svg)](https://codeclimate.com/github/jgarber623/sixtwothree.org)
-[![Test Coverage](https://codeclimate.com/github/jgarber623/sixtwothree.org/badges/coverage.svg)](https://codeclimate.com/github/jgarber623/sixtwothree.org/coverage)
+[![Build](https://img.shields.io/travis/com/jgarber623/sixtwothree.org/main.svg?style=for-the-badge)](https://travis-ci.com/github/jgarber623/sixtwothree.org)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/jgarber623/sixtwothree.org.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/sixtwothree.org)
+[![Coverage](https://img.shields.io/codeclimate/c/jgarber623/sixtwothree.org.svg?style=for-the-badge)](https://codeclimate.com/github/jgarber623/sixtwothree.org/code)
