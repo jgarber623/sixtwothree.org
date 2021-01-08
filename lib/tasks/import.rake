@@ -3,7 +3,7 @@ namespace :import do
   task links: :environment do
     puts 'Enter path to JSON file:'
 
-    links_file_path = File.expand_path(STDIN.gets.chomp!)
+    links_file_path = File.expand_path($stdin.gets.chomp!)
     links = JSON.parse(File.open(links_file_path, 'r'))
 
     puts %(Importing links from `#{links_file_path}`...)
@@ -27,7 +27,7 @@ namespace :import do
   task posts: :environment do
     puts 'Enter path to posts folder:'
 
-    posts_folder_path = File.expand_path(STDIN.gets.chomp!)
+    posts_folder_path = File.expand_path($stdin.gets.chomp!)
     filepaths = Dir.glob(File.join(posts_folder_path, '*.md')).sort!
 
     puts %(Importing posts from `#{posts_folder_path}`...)
@@ -68,7 +68,7 @@ namespace :import do
   task webmentions: :environment do
     puts 'Enter path to JSON file:'
 
-    webmentions_file_path = File.expand_path(STDIN.gets.chomp!)
+    webmentions_file_path = File.expand_path($stdin.gets.chomp!)
     webmentions = JSON.parse(File.open(webmentions_file_path, 'r'))
 
     puts %(Importing webmentions from `#{webmentions_file_path}`...)
