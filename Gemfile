@@ -35,7 +35,7 @@ group :development do
   gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails', '~> 0.3.9'
   gem 'quiet_assets', '~> 1.1', '>= 1.1.0'
-  gem 'svgeez', '~> 3.1'
+  gem 'svgeez', '~> 3.2'
 end
 
 group :test do
