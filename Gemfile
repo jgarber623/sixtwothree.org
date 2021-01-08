@@ -18,19 +18,19 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 4.8', require: false
-  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
-  gem 'rubocop', '~> 0.85.1', require: false
-  gem 'rubocop-performance', '~> 1.6', require: false
-  gem 'rubocop-rails', '~> 2.6', require: false
-  gem 'rubocop-rspec', '~> 1.40', require: false
+  gem 'brakeman', '~> 4.10', require: false
+  gem 'rspec-rails', '~> 4.0'
+  gem 'rubocop', '~> 1.8', require: false
+  gem 'rubocop-performance', '~> 1.9', require: false
+  gem 'rubocop-rails', '~> 2.9', require: false
+  gem 'rubocop-rspec', '~> 2.1', require: false
 end
 
 group :development do
-  gem 'bcrypt_pbkdf', '~> 1.0' # https://github.com/net-ssh/net-ssh/issues/565
-  gem 'capistrano', '~> 3.14', require: false
+  gem 'bcrypt_pbkdf', '~> 1.1' # https://github.com/net-ssh/net-ssh/issues/565
+  gem 'capistrano', '~> 3.15', require: false
   gem 'capistrano-chruby', '~> 0.1.2', require: false
-  gem 'capistrano-rails', '~> 1.5', require: false
+  gem 'capistrano-rails', '~> 1.6', require: false
   gem 'ed25519', '~> 1.2' # https://github.com/net-ssh/net-ssh/issues/565
   gem 'pry-byebug', '~> 3.9'
   gem 'pry-rails', '~> 0.3.9'
@@ -40,5 +40,5 @@ end
 
 group :test do
   gem 'simplecov', '~> 0.18.5', require: false
-  gem 'simplecov-console', '~> 0.7.2', require: false
+  gem 'simplecov-console', '~> 0.8.0', require: false
 end
