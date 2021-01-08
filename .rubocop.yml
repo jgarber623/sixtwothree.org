@@ -13,6 +13,10 @@ AllCops:
 Layout/LineLength:
   Enabled: false
 
+Lint/EmptyBlock:
+  Exclude:
+    - spec/**/*
+
 Metrics/BlockLength:
   Exclude:
     - lib/tasks/**/*
