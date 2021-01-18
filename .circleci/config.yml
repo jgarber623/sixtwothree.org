@@ -37,6 +37,11 @@ jobs:
       - image: circleci/postgres:9.4.22-alpine
     steps:
       - checkout
+      - run:
+          name: Install Node.js
+          command: |
+            sudo apt update
+            sudo apt install -y nodejs
       - ruby/install-deps
       - run:
           name: Install CodeClimate test reporter
