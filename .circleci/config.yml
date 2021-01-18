@@ -4,10 +4,10 @@ orbs:
   ruby: circleci/ruby@1.1.2
 
 jobs:
-  install-deps:
-    executor:
-      name: ruby/default
-      tag: 2.4.9
+  test:
+    docker:
+      - image: cimg/ruby:2.6.6
+      - image: circleci/postgres/9.4.22-alpine
     steps:
       - checkout
       - run:
@@ -16,9 +16,24 @@ jobs:
             sudo apt update
             sudo apt install -y libpq-dev
       - ruby/install-deps
+      - run:
+          name: Install CodeClimate test reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+            ./cc-test-reporter before-build
+      - run:
+          name: Run Rake tasks
+          command: |
+            bundle exec rubocop
+            bundle exec brakeman
+            bundle exec rake
+      - run:
+          name: Upload coverage report to CodeClimate
+          command: ./cc-test-reporter after-build
 
 workflows:
   version: 2
   default:
     jobs:
-      - install-deps
+      - test
