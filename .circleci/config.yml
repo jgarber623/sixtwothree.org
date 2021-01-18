@@ -6,8 +6,8 @@ orbs:
 jobs:
   install-deps:
     executor:
-      - name: ruby/default
-        tag: 2.4.9
+      name: ruby/default
+      tag: 2.4.9
     steps:
       - checkout
       - run:
