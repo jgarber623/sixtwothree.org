@@ -1,10 +1,6 @@
-require 'simplecov_json_formatter'
 require 'simplecov-console'
 
-formatters = [
-  SimpleCov::Formatter::HTMLFormatter,
-  SimpleCov::Formatter::JSONFormatter
-]
+formatters = [SimpleCov::Formatter::HTMLFormatter]
 
 # rubocop:disable Style/IfUnlessModifier
 if RSpec.configuration.files_to_run.length > 1
