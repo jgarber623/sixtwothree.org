@@ -13,7 +13,5 @@ end
 # rubocop:enable Style/IfUnlessModifier
 
 SimpleCov.start 'rails' do
-  coverage_dir 'tmp/coverage'
-
   formatter SimpleCov::Formatter::MultiFormatter.new(formatters)
 end
