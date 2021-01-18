@@ -41,7 +41,7 @@ jobs:
           name: Install system dependencies
           command: |
             sudo apt update
-            sudo apt install -y nodejs tzdata
+            sudo apt install -y libpq-dev nodejs tzdata
       - ruby/install-deps
       - run:
           name: Install CodeClimate test reporter
