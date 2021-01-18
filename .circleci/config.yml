@@ -3,55 +3,20 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@1.1.2
 
-references:
-  docker: &docker
-    - image: cimg/ruby:2.4.9
-    - image: circleci/postgres:9.4.22-alpine
-
 jobs:
   install-deps:
-    docker: *docker
+    executor:
+      - name: ruby/default
+        tag: 2.4.9
     steps:
       - checkout
+      - run:
+          name: Install PostgreSQL client
+          command: sudo apt install -y postgresql-client
       - ruby/install-deps
-
-  lint:
-    docker: *docker
-    steps:
-      - checkout
-      - ruby/install-deps
-      - run:
-          name: Run lint Rake tasks
-          command: |
-            bundle exec rubocop
-            bundle exec brakeman
-
-  test:
-    docker: *docker
-    steps:
-      - checkout
-      - ruby/install-deps
-      - run:
-          name: Install CodeClimate test reporter
-          command: |
-            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-            chmod +x ./cc-test-reporter
-            ./cc-test-reporter before-build
-      - run:
-          name: Run default Rake task
-          command: bundle exec rake
-      - run:
-          name: Upload coverage report to CodeClimate
-          command: ./cc-test-reporter after-build
 
 workflows:
   version: 2
   default:
     jobs:
       - install-deps
-      - lint:
-          requires:
-            - install-deps
-      - test:
-          requires:
-            - install-deps
