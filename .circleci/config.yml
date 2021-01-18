@@ -14,7 +14,7 @@ jobs:
           name: Install PostgreSQL client
           command: |
             sudo apt update
-            sudo apt install -y postgresql-client-9.4
+            sudo apt install -y postgresql-client
       - ruby/install-deps
 
 workflows:
