@@ -1,0 +1,58 @@
+version: 2.1
+
+orbs:
+  ruby: circleci/ruby@1.1.2
+
+jobs:
+  install-deps:
+    executor:
+      name: ruby/default
+      tag: 2.4.9
+    steps:
+      - checkout
+      - ruby/install-deps
+
+  lint:
+    executor:
+      name: ruby/default
+      tag: 2.4.9
+    steps:
+      - checkout
+      - ruby/install-deps
+      - run:
+          name: Run lint Rake tasks
+          command: |
+            bundle exec rubocop
+            bundle exec brakeman
+
+  test:
+    docker:
+      - image: cimg/ruby:2.4.9
+      - image: circleci/postgres:9.4.22-alpine
+    steps:
+      - checkout
+      - ruby/install-deps
+      - run:
+          name: Install CodeClimate test reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+            ./cc-test-reporter before-build
+      - run:
+          name: Run default Rake task
+          command: bundle exec rake
+      - run:
+          name: Upload coverage report to CodeClimate
+          command: ./cc-test-reporter after-build
+
+workflows:
+  version: 2
+  default:
+    jobs:
+      - install-deps
+      - lint:
+          requires:
+            - install-deps
+      - test:
+          requires:
+            - install-deps
