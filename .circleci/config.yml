@@ -3,19 +3,20 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@1.1.2
 
+references:
+  docker: &docker
+    - image: cimg/ruby:2.4.9
+    - image: circleci/postgres:9.4.22-alpine
+
 jobs:
   install-deps:
-    executor:
-      name: ruby/default
-      tag: 2.4.9
+    docker: *docker
     steps:
       - checkout
       - ruby/install-deps
 
   lint:
-    executor:
-      name: ruby/default
-      tag: 2.4.9
+    docker: *docker
     steps:
       - checkout
       - ruby/install-deps
@@ -26,9 +27,7 @@ jobs:
             bundle exec brakeman
 
   test:
-    docker:
-      - image: cimg/ruby:2.4.9
-      - image: circleci/postgres:9.4.22-alpine
+    docker: *docker
     steps:
       - checkout
       - ruby/install-deps
