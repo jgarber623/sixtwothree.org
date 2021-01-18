@@ -12,7 +12,9 @@ jobs:
       - checkout
       - run:
           name: Install PostgreSQL client
-          command: sudo apt install -y postgresql-client
+          command: |
+            sudo apt update
+            sudo apt install -y postgresql-client
       - ruby/install-deps
 
 workflows:
