@@ -70,7 +70,7 @@ jobs:
           command: bundle exec rake
       - run:
           name: Upload coverage report to CodeClimate
-          command: ./cc-test-reporter after-build --prefix ./tmp
+          command: ./cc-test-reporter after-build
 
 workflows:
   version: 2
