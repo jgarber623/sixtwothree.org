@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install PostgreSQL client
+          name: Install PostgreSQL development libraries
           command: |
             sudo apt update
             sudo apt install -y libpq-dev
