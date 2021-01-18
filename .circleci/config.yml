@@ -50,6 +50,9 @@ jobs:
             chmod +x ./cc-test-reporter
             ./cc-test-reporter before-build
       - run:
+          name: Copy database configuration file
+          command: cp config/database.yml{.example,}
+      - run:
           name: Run default Rake task
           command: bundle exec rake
       - run:
