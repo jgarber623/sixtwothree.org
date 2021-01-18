@@ -38,10 +38,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install Node.js
+          name: Install system dependencies
           command: |
             sudo apt update
-            sudo apt install -y nodejs
+            sudo apt install -y nodejs tzdata
       - ruby/install-deps
       - run:
           name: Install CodeClimate test reporter
