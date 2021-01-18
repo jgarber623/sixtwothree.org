@@ -50,6 +50,9 @@ jobs:
             chmod +x ./cc-test-reporter
             ./cc-test-reporter before-build
       - run:
+          name: Wait for database service
+          command: dockerize -wait tcp://localhost:5432 -timeout 1m
+      - run:
           name: Copy database configuration file
           command: cp config/database.yml{.example,}
       - run:
