@@ -183,6 +183,7 @@ GEM
     net-scp (3.0.0)
       net-ssh (>= 2.6.5, < 7.0.0)
     net-ssh (6.1.0)
+    nio4r (2.5.4)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
@@ -199,7 +200,8 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (4.0.6)
-    puma (3.12.6)
+    puma (5.1.1)
+      nio4r (~> 2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.13)
@@ -360,7 +362,7 @@ DEPENDENCIES
   francis_cms!
   pry-byebug (~> 3.9)
   pry-rails (~> 0.3.9)
-  puma (~> 3.12)
+  puma (~> 5.1)
   quiet_assets (~> 1.1, >= 1.1.0)
   rails-assets-aria-collapsible (~> 2.2)!
   rails-assets-cashcash (~> 0.2)!
