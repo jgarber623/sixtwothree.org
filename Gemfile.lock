@@ -217,7 +217,7 @@ GEM
       railties (= 4.2.11.3)
       sprockets-rails
     rails-assets-aria-collapsible (2.2.1)
-    rails-assets-cashcash (0.2.1)
+    rails-assets-cashcash (1.2.0)
     rails-assets-routerrouter (1.0.3)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
@@ -363,7 +363,7 @@ DEPENDENCIES
   puma (~> 3.12)
   quiet_assets (~> 1.1, >= 1.1.0)
   rails-assets-aria-collapsible (~> 2.2)!
-  rails-assets-cashcash (~> 0.2)!
+  rails-assets-cashcash (~> 1.2)!
   rails-assets-routerrouter (~> 1.0)!
   rspec-rails (~> 4.0)
   rubocop (~> 1.8)
