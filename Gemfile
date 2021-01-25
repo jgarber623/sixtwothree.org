@@ -41,5 +41,5 @@ end
 group :test do
   gem 'simplecov', '~> 0.18.5', require: false
   gem 'simplecov_json_formatter', '~> 0.1.2', require: false
-  gem 'simplecov-console', '~> 0.8.0', require: false
+  gem 'simplecov-console', '~> 0.9.0', require: false
 end
