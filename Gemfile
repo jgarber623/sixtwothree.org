@@ -18,7 +18,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 4.10', require: false
+  gem 'brakeman', '~> 5.0', require: false
   gem 'rspec-rails', '~> 4.0'
   gem 'rubocop', '~> 1.8', require: false
   gem 'rubocop-performance', '~> 1.9', require: false
