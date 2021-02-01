@@ -2,7 +2,7 @@ RSpec.describe 'links', type: :request do
   describe 'POST #fetch' do
     let :headers do
       {
-        'ACCEPT': 'application/json'
+        ACCEPT: 'application/json'
       }
     end
 
