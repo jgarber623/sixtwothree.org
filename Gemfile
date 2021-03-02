@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'breakpoint', '~> 2.7'
-gem 'francis_cms', github: 'FrancisCMS/FrancisCMS', ref: '8cfe67d'
+gem 'francis_cms', github: 'FrancisCMS/FrancisCMS', ref: 'e629c98'
 # gem 'francis_cms', path: '~/Developer/FrancisCMS'
 gem 'puma', '~> 3.12'
 gem 'sass-rails', '~> 6.0', '>= 6.0.0'

@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/FrancisCMS/FrancisCMS.git
-  revision: 8cfe67d1762a6a086c52a2f1229e0a5519bd08e0
-  ref: 8cfe67d
+  revision: e629c984d2812db3993640457d063ecca33d70eb
+  ref: e629c98
   specs:
     francis_cms (0.1.0)
       acts-as-taggable-on (~> 5.0)
@@ -120,7 +120,7 @@ GEM
       simple_oauth (~> 0.3.1)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
-    geocoder (1.6.4)
+    geocoder (1.6.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     http (2.2.2)
@@ -169,12 +169,12 @@ GEM
       nokogiri
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2020.1104)
+    mime-types-data (3.2021.0225)
     mimemagic (0.3.5)
     mini_magick (4.11.0)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.3)
+    minitest (5.14.4)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
     naught (1.1.0)
@@ -220,7 +220,7 @@ GEM
     rails-assets-aria-collapsible (2.2.1)
     rails-assets-cashcash (0.2.1)
     rails-assets-routerrouter (1.0.3)
-    rails-deprecated_sanitizer (1.0.3)
+    rails-deprecated_sanitizer (1.0.4)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.9)
       activesupport (>= 4.2.0, < 5.0)
