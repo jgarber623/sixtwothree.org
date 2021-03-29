@@ -18,28 +18,28 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', '~> 5.0', require: false
-  gem 'rspec-rails', '~> 4.1'
-  gem 'rubocop', '~> 1.12', require: false
-  gem 'rubocop-performance', '~> 1.10', require: false
-  gem 'rubocop-rails', '~> 2.9', require: false
-  gem 'rubocop-rspec', '~> 2.2', require: false
+  gem 'brakeman', require: false
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :development do
-  gem 'bcrypt_pbkdf', '~> 1.1' # https://github.com/net-ssh/net-ssh/issues/565
+  gem 'bcrypt_pbkdf' # https://github.com/net-ssh/net-ssh/issues/565
   gem 'capistrano', '~> 3.16', require: false
   gem 'capistrano-chruby', '~> 0.1.2', require: false
   gem 'capistrano-rails', '~> 1.6', require: false
-  gem 'ed25519', '~> 1.2' # https://github.com/net-ssh/net-ssh/issues/565
-  gem 'pry-byebug', '~> 3.9'
-  gem 'pry-rails', '~> 0.3.9'
-  gem 'quiet_assets', '~> 1.1', '>= 1.1.0'
+  gem 'ed25519' # https://github.com/net-ssh/net-ssh/issues/565
+  gem 'pry-byebug'
+  gem 'pry-rails'
+  gem 'quiet_assets'
   gem 'svgeez', '~> 3.2'
 end
 
 group :test do
-  gem 'simplecov', '~> 0.18.5', require: false
-  gem 'simplecov-console', '~> 0.9.1', require: false
-  gem 'simplecov_json_formatter', '~> 0.1.2', require: false
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
+  gem 'simplecov_json_formatter', require: false
 end
