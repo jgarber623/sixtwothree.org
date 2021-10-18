@@ -7,7 +7,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gem 'breakpoint', '~> 2.7'
 gem 'francis_cms', github: 'FrancisCMS/FrancisCMS', ref: '3c6e939'
 # gem 'francis_cms', path: '~/Developer/FrancisCMS'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 5.5'
 gem 'sass-rails', '~> 6.0', '>= 6.0.0'
 gem 'uglifier', '~> 4.2'
 
