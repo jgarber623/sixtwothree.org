@@ -28,7 +28,7 @@ end
 
 group :development do
   gem 'bcrypt_pbkdf' # https://github.com/net-ssh/net-ssh/issues/565
-  gem 'capistrano', '~> 3.16', require: false
+  gem 'capistrano', '~> 3.17', require: false
   gem 'capistrano-chruby', '~> 0.1.2', require: false
   gem 'capistrano-rails', '~> 1.6', require: false
   gem 'ed25519' # https://github.com/net-ssh/net-ssh/issues/565
