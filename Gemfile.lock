@@ -219,7 +219,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.11.3)
       sprockets-rails
-    rails-assets-aria-collapsible (2.2.1)
+    rails-assets-aria-collapsible (4.0.1)
     rails-assets-cashcash (0.2.1)
     rails-assets-routerrouter (1.0.3)
     rails-deprecated_sanitizer (1.0.4)
@@ -366,7 +366,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.12)
   quiet_assets
-  rails-assets-aria-collapsible (~> 2.2)!
+  rails-assets-aria-collapsible (~> 4.0)!
   rails-assets-cashcash (~> 0.2)!
   rails-assets-routerrouter (~> 1.0)!
   rspec-rails
