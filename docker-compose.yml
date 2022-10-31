@@ -1,0 +1,26 @@
+services:
+  app:
+    image: jgarber623/sixtwothree-org-app
+    build:
+      context: .
+      target: development
+    container_name: sixtwothree-org-app
+    entrypoint: tail -f /dev/null
+    ports:
+      - "3000:3000"
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src/app
+        consistency: delegated
+      - type: volume
+        target: /usr/src/dependencies
+  db:
+    image: postgres:9.4.22-alpine
+    container_name: sixtwothree-org-db
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+networks:
+  default:
+    name: sixtwothree-org-network
