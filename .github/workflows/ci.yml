@@ -52,6 +52,19 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:9.4.22-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-retries 5
+          --health-timeout 5s
+          --mount type=tmpfs,destination=/var/lib/postgresql/data
     steps:
       - uses: actions/checkout@v3
       - uses: ruby/setup-ruby@v1
