@@ -25,4 +25,4 @@
 !/vendor/.keep
 Capfile
 Dockerfile
-Procfile.dev
+Procfile*
