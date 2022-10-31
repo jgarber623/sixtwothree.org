@@ -8,12 +8,37 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/coverage/
 /log/*
+/tmp/*
 !/log/.keep
-/tmp
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+/public/assets
+
+/coverage/
+
+# Ignore remote RuboCop config files used in `inherit_from` directives.
+.rubocop-https?--*
+
+# Ignore certain dotenv files.
+.env
+.env.*.local
+.env.local
+
+.irb_history
+
+# Documentation cache and generated files:
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
 
 config/database.yml
-config/secrets.yml
+# config/secrets.yml
 
 public/uploads
