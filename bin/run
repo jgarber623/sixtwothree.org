@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+echo "[ bin/run ] 🏃🏻‍♂️ Running the application..."
+foreman start -f Procfile.dev -p 3000
