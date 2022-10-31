@@ -18,13 +18,7 @@ source 'https://rails-assets.org' do
 end
 
 group :development, :test do
-  gem 'brakeman', require: false
   gem 'dotenv-rails'
-  gem 'rspec-rails'
-  gem 'rubocop', require: false
-  gem 'rubocop-performance', require: false
-  gem 'rubocop-rails', require: false
-  gem 'rubocop-rspec', require: false
 end
 
 group :development do
@@ -35,6 +29,15 @@ group :development do
 end
 
 group :test do
+  gem 'brakeman', require: false
+  gem 'bundler-audit', require: false
+  gem 'code-scanning-rubocop', require: false
+  gem 'rspec-github', require: false
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
   gem 'simplecov', require: false
   gem 'simplecov-console', require: false
   gem 'simplecov_json_formatter', require: false

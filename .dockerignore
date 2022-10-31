@@ -10,7 +10,6 @@
 **/*.DS_Store
 **/*.log
 **/*.md
-/.circleci/
 /bin/
 /config/brakeman.yml
 /config/deploy*
