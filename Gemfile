@@ -19,6 +19,7 @@ end
 
 group :development, :test do
   gem 'brakeman', require: false
+  gem 'dotenv-rails'
   gem 'rspec-rails'
   gem 'rubocop', require: false
   gem 'rubocop-performance', require: false
