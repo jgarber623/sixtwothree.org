@@ -53,6 +53,7 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     env:
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/sixtwothree_org_test
       RAILS_ENV: test
     services:
       postgres:
@@ -76,8 +77,6 @@ jobs:
         run: bundle exec rake db:schema:load
       - name: Run RSpec
         run: bundle exec rspec --format RSpec::Github::Formatter
-        env:
-          DATABASE_URL: postgres://postgres:postgres@localhost:5432/sixtwothree_org_test
       - uses: paambaati/codeclimate-action@v3.2.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
