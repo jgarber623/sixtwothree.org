@@ -175,6 +175,7 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.1)
       connection_pool (~> 2.2)
+    nio4r (2.5.8)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
@@ -191,7 +192,8 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (4.0.6)
-    puma (3.12.6)
+    puma (6.0.2)
+      nio4r (~> 2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.13)
@@ -350,7 +352,7 @@ DEPENDENCIES
   francis_cms!
   pry-byebug
   pry-rails
-  puma (~> 3.12)
+  puma (~> 6.0)
   quiet_assets
   rails-assets-aria-collapsible (~> 2.2)!
   rails-assets-cashcash (~> 0.2)!
