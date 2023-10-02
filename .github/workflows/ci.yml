@@ -5,10 +5,6 @@ on:
     branches-ignore: [production]
   pull_request:
     branches-ignore: [production]
-  workflow_call:
-    secrets:
-      CC_TEST_REPORTER_ID:
-        required: true
   workflow_dispatch:
 
 jobs:
@@ -79,6 +75,3 @@ jobs:
           bundle exec rake db:schema:load
       - name: Run RSpec
         run: bundle exec rspec --format RSpec::Github::Formatter
-      - uses: paambaati/codeclimate-action@v3.2.0
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
