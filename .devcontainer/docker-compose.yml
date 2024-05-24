@@ -1,0 +1,15 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    volumes:
+      - ..:/workspaces:cached
+    command: sleep infinity
+  db:
+    image: postgres:9.4.22-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
